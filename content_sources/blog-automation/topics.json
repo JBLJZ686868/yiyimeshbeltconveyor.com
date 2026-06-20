@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "spiral-freezer-belt-selection-for-iqf-lines",
+    "title": "How to Choose a Spiral Freezer Belt for IQF and Spiral Freezing Lines",
+    "meta": "A practical engineering guide for OEM buyers and replacement teams choosing spiral freezer belts for IQF, spiral tower, and frozen food processing lines.",
+    "cluster": "Spiral Freezer Belt",
+    "intent": "selection",
+    "buyer": "OEM builders, frozen food plants, replacement buyers",
+    "primaryProduct": "spiral-freezer-belt.html",
+    "supportLinks": ["self-stacking-belt.html", "drive-sprockets.html", "engineering-oem.html", "quality-control.html"],
+    "imagePrompts": [
+      "Industrial technical illustration of a stainless steel spiral freezer belt running through a spiral tower, dark navy background, clean engineering style, no logo, no text.",
+      "Close-up technical diagram of spiral freezer belt edge links, rods, and mesh structure, brushed stainless steel, white studio lighting, no logo, no text.",
+      "B2B process infographic showing drawing review, belt matching, drum diameter check, and final QA for a spiral freezer belt, blue industrial style, no logo.",
+      "Realistic factory scene of robotic welding and stainless steel conveyor belt production for food freezing equipment, professional industrial photography, no logo."
+    ]
+  },
+  {
+    "slug": "why-in-house-wire-drawing-improves-metal-conveyor-belt-quality",
+    "title": "Why In-House Wire Drawing Improves Metal Conveyor Belt Quality and Delivery",
+    "meta": "Learn why in-house wire drawing, raw material stock, and early material control help reduce risk for OEM and replacement metal conveyor belt projects.",
+    "cluster": "Manufacturing Assurance",
+    "intent": "trust",
+    "buyer": "procurement teams, OEM engineers, distributors",
+    "primaryProduct": "raw-material.html",
+    "supportLinks": ["manufacturing.html", "quality-control.html", "engineering-oem.html", "products.html"],
+    "imagePrompts": [
+      "Industrial photo style image of stainless steel wire drawing machines in a clean factory workshop, coils of stainless wire, no logo, no text.",
+      "Technical diagram showing raw material control from wire drawing to welding, inspection, packing, and shipment, navy and steel color palette.",
+      "Close-up of stainless steel wire coils used for metal conveyor belt manufacturing, high clarity, realistic factory lighting, no logo.",
+      "Quality control workflow illustration for metal conveyor belt manufacturing, material inspection and traceability checkpoints, clean B2B style."
+    ]
+  },
+  {
+    "slug": "metal-conveyor-belt-replacement-drawing-review-checklist",
+    "title": "Metal Conveyor Belt Replacement: Drawing Review Checklist Before You Request a Quote",
+    "meta": "A buyer-focused checklist for sending belt drawings, photos, dimensions, and operating conditions before requesting a replacement metal conveyor belt quote.",
+    "cluster": "Replacement Belt Projects",
+    "intent": "conversion",
+    "buyer": "maintenance managers, replacement buyers, distributors",
+    "primaryProduct": "replacement-review.html",
+    "supportLinks": ["belt-matching.html", "drive-sprockets.html", "contact.html?intent=drawing", "engineering-oem.html"],
+    "imagePrompts": [
+      "Engineering desk scene with metal conveyor belt drawing, caliper, old belt sample, and measurement notes, professional B2B industrial style, no logo.",
+      "Checklist infographic for metal conveyor belt replacement: belt width, pitch, rod diameter, edge type, sprocket, operating temperature, no logo.",
+      "Close-up of worn stainless steel conveyor belt edge and replacement measurement process, realistic factory maintenance style, no logo.",
+      "Industrial packing and shipment inspection scene for replacement conveyor belts, wooden crate, labels blurred, export-ready B2B style."
+    ]
+  }
+]

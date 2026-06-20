@@ -131,7 +131,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .trust-strip-inner{max-width:var(--W);margin:0 auto;padding:14px var(--px);display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 @media(min-width:1024px){.trust-strip-inner{justify-content:space-between;gap:0}}
 .ts-item{display:flex;align-items:center;gap:8px;padding:0 12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.7)}
-.ts-item::before{content:'&#10003;;color:#4ADE80;font-size:12px}
+.ts-item::before{content:'\\2713';color:#4ADE80;font-size:12px}
 
 /* FOOTER */
 .yiyi-footer{background:#0D1B2E;padding:56px 0 0}
@@ -176,7 +176,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .wa-qb{background:white;border:1px solid rgba(37,211,102,.4);border-radius:16px;padding:5px 12px;font-size:12px;color:#128C7E;cursor:pointer;transition:all .18s;font-family:inherit;margin:4px 4px 0 0}
 .wa-qb:hover{background:#25D366;color:white;border-color:#25D366}
 
-/* 鈺愨晲鈺?PAGE SPECIFIC 鈺愨晲鈺?*/
+    /* PAGE SPECIFIC */
 
 /* HERO */
 .hero{background:var(--navy-dark);position:relative;overflow:hidden;padding:80px 0}
@@ -212,6 +212,20 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .ps-val{font-family:var(--mono);font-size:12px;color:rgba(255,255,255,.8);font-weight:500}
 .ps-val.blue{color:#5BAAE8}
 .pom-cta{padding:0 22px 22px;display:flex;flex-direction:column;gap:8px}
+.pom-real-img{width:100%;max-height:300px;object-fit:cover;display:block}
+.media-proof{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:40px}
+.media-panel{background:#fff;border:1px solid var(--rule);border-radius:6px;overflow:hidden;box-shadow:0 18px 45px rgba(13,27,42,.08)}
+.media-panel.dark{background:var(--navy-mid);border-color:var(--w12)}
+.media-img,.media-video{width:100%;height:100%;min-height:280px;object-fit:cover;display:block}
+.media-caption{padding:18px 20px}
+.media-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--pom);margin-bottom:7px}
+.media-title{font-size:18px;font-weight:800;color:var(--ink);line-height:1.25}
+.media-panel.dark .media-title{color:white}
+.media-copy{font-size:14px;color:var(--ink3);line-height:1.65;margin-top:8px}
+.media-panel.dark .media-copy{color:var(--w55)}
+.media-stack{display:grid;gap:22px}
+.media-stack img{height:220px}
+@media(max-width:900px){.media-proof{grid-template-columns:1fr}.media-img,.media-video{min-height:220px}}
 
 /* VS COMPARISON */
 .vs-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:stretch;border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-top:40px}
@@ -226,7 +240,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .vs-head.plastic-h{color:#5BAAE8}
 .vs-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.55;margin-bottom:10px}
 .vs-item.pro{color:rgba(255,255,255,.75)}
-.vs-item.pro::before{content:'&#10003;;color:#4ADE80;font-weight:700;flex-shrink:0;margin-top:1px}
+.vs-item.pro::before{content:'\\2713';color:#4ADE80;font-weight:700;flex-shrink:0;margin-top:1px}
 .vs-item.con{color:rgba(255,255,255,.4)}
 .vs-item.con::before{content:' - ;color:var(--ink4);font-weight:700;flex-shrink:0;margin-top:1px}
 
@@ -287,7 +301,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 
 @media(max-width:640px){.W{padding:0 20px}.tb-badges{display:none}.yiyi-topbar{display:none}}
 
-    /* 鈹€鈹€ Logo system override (locked: index-20260312) 鈹€鈹€ */
+    /* Logo system override (locked: index-20260312) */
     .nav-logo { display: flex; align-items: center; gap: 0; text-decoration: none; flex-shrink: 0; }
     .nav-brand { font-size: 16px; font-weight: 700; letter-spacing: .06em; color: white; white-space: nowrap; padding-left: 12px; border-left: 2px solid #C8922A; }
     .foot-logo-row { display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 18px; }
@@ -296,6 +310,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     .foot-slogan { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #C8922A; margin-bottom: 8px; display: block; }
     .foot-identity { font-size: 12px; color: rgba(255,255,255,.40); line-height: 1.6; max-width: 240px; display: block; margin-bottom: 0; }
   </style>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
 
@@ -347,19 +362,19 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       <a href="index.html" class="nav-link-simple">Home</a>
 
       <div class="nd">
-        <button class="nd-btn gold-btn">
+        <a href="products.html#strategic" class="nd-btn gold-btn nd-link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          Core Systems
+          Core Belt Systems
           <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
+        </a>
         <div class="drop-panel" style="min-width:320px">
           <div class="drop-box">
             <div class="drop-gold-bar"></div>
             <div class="drop-body" style="padding:16px">
               <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">&#10052;</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
               <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">&#8635;</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
               <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">&#10145;</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
-              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div></a>
               <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">&#9646;</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Conveyor Belt</span></div></a>
               <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">&#9881;</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span><span class="cdl-sub">(System Matched)</span></div></a>
             </div>
@@ -368,42 +383,40 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="products.html" class="nd-btn nd-link">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="left:-180px">
           <div class="drop-box">
             <div class="mega-grid">
               <div class="mega-col">
-                <div class="mega-head">IQF &amp; Freezing</div>
+                <div class="mega-head">Core Pages</div>
                 <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Freezer Belt</span><span class="dl-badge">OEM</span></a>
-                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacking Belt</span></a>
+                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacker Belt</span><span class="dl-badge">OEM</span></a>
+                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye Link Belt</span><span class="dl-badge">Food</span></a>
                 <a href="side-driven-belt.html" class="dl"><span class="dl-icon">&#10145;</span><span class="dl-label">Side-Driven Belt</span></a>
-                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye-Link Belt</span></a>
-                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
+                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
               </div>
               <div class="mega-col">
-                <div class="mega-head">Baking &amp; Processing</div>
+                <div class="mega-head">Food Processing</div>
+                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
                 <a href="biscuit-belt.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Biscuit Belt</span></a>
                 <a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">&#9878;</span><span class="dl-label">Balanced Weave Belt</span></a>
                 <a href="plastic-modular-belt.html" class="dl"><span class="dl-icon">&#10035;</span><span class="dl-label">Plastic Modular Belt</span></a>
-                <div class="mega-head" style="margin-top:14px">Heavy Load</div>
+              </div>
+              <div class="mega-col">
+                <div class="mega-head">Heavy Duty &amp; Parts</div>
                 <a href="compound-weave-belt.html" class="dl"><span class="dl-icon">&#12336;</span><span class="dl-label">Compound Weave Belt</span></a>
                 <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Chain-Driven Belt</span></a>
                 <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">&#127959;</span><span class="dl-label">Chain Plate Belt</span></a>
                 <a href="trapezoidal-mesh-belt.html" class="dl"><span class="dl-icon">&#9650;</span><span class="dl-label">Trapezoidal Mesh Belt</span></a>
-              </div>
-              <div class="mega-col">
-                <div class="mega-head">Accessories &amp; Tools</div>
-                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
                 <a href="connecting-accessories.html" class="dl"><span class="dl-icon">&#128204;</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
                 <a href="replacement-parts.html" class="dl"><span class="dl-icon">&#128297;</span><span class="dl-label">Replacement Parts</span></a>
-                <div class="mega-head" style="margin-top:14px">Selection Tools</div>
-                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
-                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
               </div>
               <div class="mega-col">
-                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Product Index</div>
-                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Built around the belt systems that support OEM manufacturing and long-term replacement supply.</p>
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Need Help Choosing?</div>
+                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Start with the right path for your project: browse, send a drawing, or ask engineering to confirm the belt type.</p>
                 <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All Products &#8594;</a>
+            <a href="contact.html?intent=drawing" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Send Your Belt Drawing &#8594;</a>
+            <a href="engineering-oem.html?intent=engineering" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Get Engineering Support &#8594;</a>
               </div>
             </div>
           </div>
@@ -411,7 +424,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="industries.html" class="nd-btn nd-link">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel">
           <div class="drop-box">
             <div class="two-col">
@@ -437,16 +450,17 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="engineering-oem.html" class="nd-btn nd-link">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel">
           <div class="drop-box">
             <div class="two-col">
               <div class="two-col-main">
                 <div class="mega-head">Technical Resources</div>
-                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
-                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
-                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Engineering &amp; OEM Overview</span></a>
                 <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Drawing Review</span></a>
+                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
+                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
                 <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#127991;</span><span class="dl-label">OEM Private Label</span></a>
               </div>
               <div class="two-col-side">
@@ -462,7 +476,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="manufacturing.html" class="nd-btn nd-link">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:260px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
@@ -478,46 +492,47 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="about.html" class="nd-btn nd-link">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:260px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Profile</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Recognition</span></a>
-              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Presence</span></a>
+              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Overview</span></a>
+              <a href="quality-control.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications &amp; QA</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Manufacturing Strength</span></a>
+              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions &amp; Visits</span></a>
+              <a href="global-delivery.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Delivery</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="knowledge-center.html" class="nd-btn nd-link">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:240px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Technical Articles</span></a>
-              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Spiral Engineering</span></a>
+              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Knowledge Center Overview</span></a>
+              <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Selection Guide</span></a>
+              <a href="what-is-a-spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Engineering Basics</span></a>
               <a href="case-studies.html" class="dl"><span class="dl-icon">&#128202;</span><span class="dl-label">Case Studies</span></a>
-              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads</span></a>
+              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads &amp; Resources</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="contact.html" class="nd-btn nd-link">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:240px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Request a Quote</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Drawing</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Talk to Engineer</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
+          <a href="contact.html?intent=quote" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Ask For A Quick Quote</span></a>
+          <a href="contact.html?intent=drawing" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Your Belt Drawing</span></a>
+          <a href="contact.html?intent=engineering" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Get Engineering Support</span></a>
+              <a href="contact.html?intent=visit" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
             </div>
           </div>
         </div>
@@ -525,7 +540,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     </div>
 
     <div class="nav-right">
-      <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;</a>
+  <a href="contact.html?intent=quote" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
       <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()">
         <span></span><span></span><span></span>
       </button>
@@ -536,8 +551,9 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     <div class="mob-inner">
       <a href="index.html" class="mob-link">Home</a>
 
-      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Systems</div>
-      <a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Belt Systems</div>
+      <a href="products.html#strategic" class="mob-link">Core Belt Systems Overview</a>
+<a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
       <a href="self-stacking-belt.html" class="mob-link">Self-Stacker Belt</a>
       <a href="side-driven-belt.html" class="mob-link">Side Driven Belt</a>
       <a href="eye-link-belt.html" class="mob-link">Eye Link Belt</a>
@@ -553,7 +569,8 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       <a href="replacement-parts.html" class="mob-link">Replacement Parts</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Industries</div>
-      <a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
+      <a href="industries.html" class="mob-link">Industries Overview</a>
+<a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
       <a href="industries.html" class="mob-link">Meat &amp; Seafood Processing</a>
       <a href="industries.html" class="mob-link">Baking &amp; Ovens</a>
       <a href="industries.html" class="mob-link">Snack &amp; Biscuit</a>
@@ -567,36 +584,43 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       <a href="replacement-review.html" class="mob-link">Replacement Projects</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
-      <a href="manufacturing.html" class="mob-link">Automated Welding</a>
+      <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
+<a href="manufacturing.html" class="mob-link">Automated Welding</a>
       <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
       <a href="quality-control.html" class="mob-link">Quality Control</a>
       <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">About YIYI</div>
-      <a href="about.html" class="mob-link">Company Profile</a>
-      <a href="about.html" class="mob-link">Certifications</a>
-      <a href="exhibition.html" class="mob-link">Exhibitions</a>
-      <a href="about.html" class="mob-link">Global Presence</a>
+      <a href="about.html" class="mob-link">Company Overview</a>
+      <a href="quality-control.html" class="mob-link">Certifications &amp; QA</a>
+      <a href="manufacturing.html" class="mob-link">Patents &amp; Manufacturing Strength</a>
+      <a href="exhibition.html" class="mob-link">Exhibitions &amp; Visits</a>
+      <a href="global-delivery.html" class="mob-link">Global Delivery</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Knowledge Center</div>
-      <a href="knowledge-center.html" class="mob-link">Technical Articles</a>
-      <a href="knowledge-center.html" class="mob-link">Spiral Engineering</a>
+      <a href="knowledge-center.html" class="mob-link">Knowledge Center Overview</a>
+      <a href="belt-selection-guide.html" class="mob-link">Selection Guide</a>
+      <a href="what-is-a-spiral-freezer-belt.html" class="mob-link">Spiral Engineering Basics</a>
       <a href="case-studies.html" class="mob-link">Case Studies</a>
-      <a href="resources.html" class="mob-link">Downloads</a>
+      <a href="resources.html" class="mob-link">Downloads &amp; Resources</a>
 
       <div style="border-top:1px solid rgba(255,255,255,.07);margin-top:10px;padding-top:10px"></div>
-      <a href="contact.html" class="mob-link">Contact</a>
-      <a href="contact.html" class="mob-cta">Get a Quote &#8594;</a>
+      <a href="contact.html" class="mob-link">Contact Overview</a>
+    <a href="contact.html?intent=quote" class="mob-link">Ask For A Quick Quote</a>
+    <a href="contact.html?intent=drawing" class="mob-link">Send Your Belt Drawing</a>
+    <a href="contact.html?intent=engineering" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit" class="mob-link">Factory Visit</a>
+  <a href="contact.html?intent=quote" class="mob-cta">Ask For A Quick Quote &#8594;</a>
     </div>
   </div>
 </nav>
 
 
-<!-- 鈺愨晲鈺?HERO 鈺愨晲鈺?-->
+  <!-- HERO -->
 <section class="hero">
   <div class="hero-grid" data-reveal>
     <div>
-      <div class="hero-badge">馃數 Plastic Modular Belt  - FG500P Food-Grade POM</div>
+      <div class="hero-badge">&#127981; Plastic Modular Belt  - FG500P Food-Grade POM</div>
       <h1>Plastic Belt for<br><em>Extreme Cold.</em><br>Designed for IQF.</h1>
       <p class="hero-sub">Food-grade POM plastic spiral freezer belt for IQF systems  - seafood, meat, bakery, and produce. Reliable from -35&#176;C to -40&#176;C. Lightweight, gentle on product, hygienic, energy-saving.</p>
       <div class="hero-chips">
@@ -607,21 +631,23 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
         <div class="hc"><span class="dot"></span>Blue  - visible contamination</div>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="#specifications" class="btn-blue">View Specifications &#8594;/a>
-        <a href="contact.html" class="btn-o-ink">Request Quote &#8594;/a>
+        <a href="#specifications" class="btn-blue">View Specifications &#8594;</a>
+        <a href="contact.html?intent=quote" class="btn-o-ink">Ask For A Quick Quote &#8594;</a>
       </div>
     </div>
 
     <!-- POM PRODUCT CARD -->
     <div class="pom-card">
       <div class="pom-card-banner">
-        <div class="pcb-icon">馃數</div>
+        <div class="pcb-icon">&#127981;</div>
         <div>
           <div class="pcb-label">POM Spiral Freezer Belt</div>
           <div class="pcb-title">FG500P Blue  - IQF Series</div>
         </div>
       </div>
-      <div class="pom-card-visual">
+      <div class="pom-card-visual" style="padding:0;display:block">
+        <img src="assets/product-media/plastic-modular-belt/plastic-modular-belt-hero.jpg" alt="FG500P blue POM plastic modular spiral freezer belt with stainless steel rods" class="pom-real-img" loading="eager" decoding="async" fetchpriority="high">
+        <div style="display:none">
         <!-- Simplified mesh diagram -->
         <div style="display:flex;flex-direction:column;gap:4px;opacity:.85">
           <div style="display:flex;gap:3px">
@@ -667,12 +693,13 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
             <div class="pb-unit">POM Grade</div>
           </div>
         </div>
+        </div>
       </div>
       <div class="pom-specs">
         <div class="ps-row"><span class="ps-key">Mesh Material</span><span class="ps-val blue">FG500P Blue POM</span></div>
         <div class="ps-row"><span class="ps-key">Rod Material</span><span class="ps-val">SUS304 Stainless</span></div>
         <div class="ps-row"><span class="ps-key">Rod Pitch</span><span class="ps-val">31.75mm / 34mm</span></div>
-        <div class="ps-row"><span class="ps-key">Rod Diameter</span><span class="ps-val">脴 6mm</span></div>
+        <div class="ps-row"><span class="ps-key">Rod Diameter</span><span class="ps-val">&#216; 6mm</span></div>
         <div class="ps-row"><span class="ps-key">Link Thickness</span><span class="ps-val">2.5mm</span></div>
         <div class="ps-row"><span class="ps-key">Link Height</span><span class="ps-val">26mm</span></div>
         <div class="ps-row"><span class="ps-key">Temperature Range</span><span class="ps-val blue">-35&#176;C to -40&#176;C</span></div>
@@ -680,14 +707,76 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
         <div class="ps-row"><span class="ps-key">Surface Finish</span><span class="ps-val">Electrolytic Polish (Rod)</span></div>
       </div>
       <div class="pom-cta">
-        <a href="contact.html" class="btn-blue" style="justify-content:center">Request POM Belt Quote &#8594;/a>
-        <a href="https://wa.me/8613451773742?text=Hi+YIYI Mesh Belt%2C+I%27m+interested+in+the+POM+plastic+spiral+freezer+belt.+FG500P+Blue.+Can+you+send+a+quotation%3F" target="_blank" rel="noopener" class="btn-green" style="justify-content:center">馃摫 WhatsApp Enquiry</a>
+        <a href="contact.html?intent=quote" class="btn-blue" style="justify-content:center">Ask For A Quick Quote &#8594;</a>
+        <a href="contact.html?intent=drawing" class="btn-green" style="justify-content:center">Send Your Belt Drawing &#8594;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺?APPLICATIONS 鈺愨晲鈺?-->
+<section class="sec sec-wh">
+  <div class="W">
+    <div class="hdr" data-reveal>
+      <div class="ey p">Product &amp; Production Proof</div>
+      <h2 class="h2">Real POM Belt Structure, Injection Capability, and Replacement Matching</h2>
+      <p class="bp">For IQF replacement projects, buyers need more than a material name. YIYI checks the plastic module structure, stainless rod connection, edge parts, and existing drum compatibility before quoting.</p>
+    </div>
+    <div class="media-proof" data-reveal>
+      <div class="media-panel">
+        <video class="media-video" src="assets/product-media/plastic-modular-belt/plastic-modular-belt-product-video.mp4" controls muted playsinline preload="metadata" poster="assets/product-media/plastic-modular-belt/plastic-modular-belt-full-view.jpg"></video>
+        <div class="media-caption">
+          <div class="media-label">Product Structure</div>
+          <div class="media-title">Blue POM modules with stainless steel rods and edge connection parts.</div>
+          <div class="media-copy">Useful for confirming whether the belt can replace an existing IQF spiral freezer belt or requires drum / sprocket matching review.</div>
+        </div>
+      </div>
+      <div class="media-stack">
+        <div class="media-panel dark">
+          <video class="media-video" src="assets/product-media/plastic-modular-belt/plastic-modular-belt-injection-machinery.mp4" controls muted playsinline preload="metadata"></video>
+          <div class="media-caption">
+            <div class="media-label">Manufacturing Capability</div>
+            <div class="media-title">Injection molding support for plastic modular belt components.</div>
+            <div class="media-copy">This supports repeat supply, component consistency, and faster response when replacement modules are required.</div>
+          </div>
+        </div>
+        <div class="media-panel">
+          <img src="assets/product-media/plastic-modular-belt/plastic-modular-belt-edge-detail.jpg" alt="Plastic modular belt edge detail with stainless spiral freezer belt side connection" class="media-img" loading="lazy" decoding="async">
+          <div class="media-caption">
+            <div class="media-label">Edge &amp; Rod Details</div>
+            <div class="media-title">Edge connection, rod position, and module fit are checked before production.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="media-proof" data-reveal style="margin-top:22px">
+      <div class="media-panel">
+        <img src="assets/product-media/plastic-modular-belt/plastic-modular-belt-product-angle-01.jpg" alt="Plastic modular conveyor belt product angle view" class="media-img" loading="lazy" decoding="async">
+        <div class="media-caption">
+          <div class="media-label">Product Angle</div>
+          <div class="media-title">Module surface, rod position, and edge layout shown from a buyer review angle.</div>
+        </div>
+      </div>
+      <div class="media-stack">
+        <div class="media-panel">
+          <img src="assets/product-media/plastic-modular-belt/plastic-modular-belt-product-angle-02.jpg" alt="Plastic modular belt close angle for structure confirmation" class="media-img" loading="lazy" decoding="async">
+          <div class="media-caption">
+            <div class="media-label">Structure Review</div>
+            <div class="media-title">Additional product angle for replacement and matching confirmation.</div>
+          </div>
+        </div>
+        <div class="media-panel dark">
+          <video class="media-video" src="assets/product-media/plastic-modular-belt/plastic-modular-belt-injection-workshop.mp4" controls muted playsinline preload="metadata"></video>
+          <div class="media-caption">
+            <div class="media-label">Workshop Proof</div>
+            <div class="media-title">Injection workshop visibility supports repeat supply and spare module readiness.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- APPLICATIONS -->
 <section class="sec sec-bg">
   <div class="W">
     <div class="hdr" data-reveal>
@@ -698,46 +787,46 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     <div class="app-grid" data-reveal>
       <div class="app-card">
         <div class="app-visual" style="background:linear-gradient(135deg,#E8F4F8,#D0E8F5)">
-          <div class="app-icon">馃</div>
+          <div class="app-icon">&#128031;</div>
           <div class="app-category">Seafood Processing</div>
         </div>
         <div class="app-body">
           <div class="app-title">IQF Seafood</div>
           <div class="app-desc">Shrimp, fish fillet, scallop, squid. Gentle POM surface minimises product deformation and ice crystal damage. Open mesh structure allows rapid freezing airflow around the product.</div>
-          <span class="app-temp">鉂勶笍 -35&#176;C to -40&#176;C</span>
+          <span class="app-temp">&#10052;&#65039; -35&#176;C to -40&#176;C</span>
         </div>
       </div>
       <div class="app-card">
         <div class="app-visual" style="background:linear-gradient(135deg,#F5EAE8,#F0D8D5)">
-          <div class="app-icon">馃ォ</div>
+          <div class="app-icon">&#127831;</div>
           <div class="app-category">Meat Processing</div>
         </div>
         <div class="app-body">
           <div class="app-title">IQF Meat & Poultry</div>
           <div class="app-desc">Chicken pieces, beef dice, pork portions. Food-grade POM complies with food contact regulations. Hygienic open structure  - no crevices for bacterial accumulation between links.</div>
-          <span class="app-temp">鉂勶笍 -35&#176;C to -40&#176;C</span>
+          <span class="app-temp">&#10052;&#65039; -35&#176;C to -40&#176;C</span>
         </div>
       </div>
       <div class="app-card">
         <div class="app-visual" style="background:linear-gradient(135deg,#F5F2E8,#EEE8D0)">
-          <div class="app-icon">馃崬</div>
+          <div class="app-icon">&#127838;</div>
           <div class="app-category">Bakery</div>
         </div>
         <div class="app-body">
           <div class="app-title">Bakery & Pastry Freezing</div>
           <div class="app-desc">Bread, pastry, pizza bases, croissants. Smooth POM mesh surface minimises product marking  - critical for visually sensitive bakery products that are displayed to consumers.</div>
-          <span class="app-temp">鉂勶笍 Crust freezing to -30&#176;C</span>
+          <span class="app-temp">&#10052;&#65039; Crust freezing to -30&#176;C</span>
         </div>
       </div>
       <div class="app-card">
         <div class="app-visual" style="background:linear-gradient(135deg,#E8F5EA,#D0F0D8)">
-          <div class="app-icon">馃珢</div>
+          <div class="app-icon">&#128230;</div>
           <div class="app-category">Fruits &amp; Vegetables</div>
         </div>
         <div class="app-body">
           <div class="app-title">IQF Produce</div>
           <div class="app-desc">Berries, peas, corn, diced vegetables. Lightweight POM belt reduces drive load  - energy savings on long spiral systems. Gentle handling prevents fruit skin damage and juice loss.</div>
-          <span class="app-temp">鉂勶笍 -35&#176;C to -40&#176;C</span>
+          <span class="app-temp">&#10052;&#65039; -35&#176;C to -40&#176;C</span>
         </div>
       </div>
     </div>
@@ -746,7 +835,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 
 <div class="rule-l"></div>
 
-<!-- 鈺愨晲鈺?FULL SPEC TABLE 鈺愨晲鈺?-->
+  <!-- FULL SPEC TABLE -->
 <section class="sec sec-wh" id="specifications">
   <div class="W">
     <div class="hdr" data-reveal>
@@ -780,7 +869,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
         </tr>
         <tr>
           <td>Rod Diameter</td>
-          <td>脴 6mm</td>
+          <td>&#216; 6mm</td>
           <td>Custom diameter available to match existing drum engagement spec</td>
         </tr>
         <tr>
@@ -830,7 +919,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 
 <div class="rule-l"></div>
 
-<!-- 鈺愨晲鈺?ADVANTAGES 鈺愨晲鈺?-->
+  <!-- ADVANTAGES -->
 <section class="sec sec-bg">
   <div class="W">
     <div class="hdr" data-reveal>
@@ -840,37 +929,37 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     </div>
     <div class="adv-grid" data-reveal>
       <div class="adv-card">
-        <div class="adv-icon">鈿?/div>
+        <div class="adv-icon">&#9889;</div>
         <div class="adv-title">Lower Drive Energy</div>
         <div class="adv-desc">POM belt systems weigh significantly less than equivalent metal spiral belts. Reduced belt weight means lower drive motor load  - measurable energy savings on long-run 24-hour spiral systems.</div>
         <span class="adv-metric">Lighter than metal equivalent</span>
       </div>
       <div class="adv-card">
-        <div class="adv-icon">馃珢</div>
+        <div class="adv-icon">&#128230;</div>
         <div class="adv-title">Gentle Product Contact</div>
         <div class="adv-desc">Smooth POM surface is less abrasive than stainless wire contact. Reduces skin breakage on delicate seafood, fruit damage from wire marking, and surface tearing on soft products at temperature.</div>
         <span class="adv-metric">Reduced product damage rate</span>
       </div>
       <div class="adv-card">
-        <div class="adv-icon">馃數</div>
+        <div class="adv-icon">&#127981;</div>
         <div class="adv-title">Contamination Visibility</div>
         <div class="adv-desc">The blue colour of FG500P POM is specifically chosen for food safety. A belt fragment in a light-coloured product  - shrimp, white fish, pastry  - is visible to automated optical inspection systems.</div>
         <span class="adv-metric">Blue = visible in product</span>
       </div>
       <div class="adv-card">
-        <div class="adv-icon">馃Ъ</div>
+        <div class="adv-icon">&#129522;</div>
         <div class="adv-title">Hygienic Open Structure</div>
         <div class="adv-desc">The open link structure provides no enclosed spaces for bacterial accumulation. POM does not absorb moisture or cleaning chemicals. Standard CIP procedures are fully effective  - no belt removal required.</div>
         <span class="adv-metric">CIP-compatible design</span>
       </div>
       <div class="adv-card">
-        <div class="adv-icon">馃攪</div>
+        <div class="adv-icon">&#128257;</div>
         <div class="adv-title">Quieter Operation</div>
         <div class="adv-desc">POM-on-POM or POM-on-steel contact generates significantly less noise than metal-on-metal. Relevant for facilities operating near occupied areas or where noise standards apply during shift operations.</div>
         <span class="adv-metric">Lower operating noise</span>
       </div>
       <div class="adv-card">
-        <div class="adv-icon">鉂勶笍</div>
+        <div class="adv-icon">&#10052;&#65039;</div>
         <div class="adv-title">Cold Temperature Stability</div>
         <div class="adv-desc">FG500P grade POM maintains consistent mechanical properties down to -40&#176;C  - no embrittlement, no dimensional change from thermal cycling. Designed to perform across repeated freezer start-stop cycles.</div>
         <span class="adv-metric">Stable to -40&#176;C</span>
@@ -881,7 +970,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 
 <div class="rule-l"></div>
 
-<!-- 鈺愨晲鈺?POM vs METAL COMPARISON 鈺愨晲鈺?-->
+  <!-- POM vs METAL COMPARISON -->
 <section class="sec sec-wh">
   <div class="W">
     <div class="hdr" data-reveal>
@@ -915,7 +1004,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
     </div>
     <div style="background:var(--bg);border:1px solid var(--rule);border-radius:3px;padding:20px 24px;margin-top:20px;display:flex;gap:14px;align-items:flex-start" data-reveal>
-      <div style="font-size:20px;flex-shrink:0">馃挰</div>
+      <div style="font-size:20px;flex-shrink:0">&#128200;</div>
       <div style="font-size:14px;color:var(--ink3);line-height:1.7"><strong style="color:var(--ink)">Not sure which is right for your system?</strong> Contact us with your product type, system drum diameter, belt load, and operating temperature. We will recommend the correct belt type and provide a comparative quote for both options where applicable.</div>
     </div>
   </div>
@@ -923,18 +1012,18 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 
 <div class="rule-l"></div>
 
-<!-- 鈺愨晲鈺?ALSO CONSIDER METAL 鈺愨晲鈺?-->
+  <!-- ALSO CONSIDER METAL -->
 <section class="sec sec-bg">
   <div class="W" data-reveal>
     <div class="also-metal">
       <div style="position:relative;z-index:1">
         <div class="ey g c" style="justify-content:flex-start">Also Available</div>
         <h2 class="h2 d" style="margin-bottom:10px">Need a Metal Spiral Belt Instead?</h2>
-        <p style="font-size:15px;color:var(--w38);line-height:1.7;max-width:520px">YIYI Mesh Belt's core product is the stainless steel metal spiral freezer belt  - the most widely used belt type for IQF systems globally. In-house wire drawing from 1.0mm to 12mm. Automated robotic welding. 100% drum diameter test. Free sample before production.</p>
+<p style="font-size:15px;color:var(--w38);line-height:1.7;max-width:520px">YIYI Mesh Belt's core product is the stainless steel metal spiral freezer belt  - the most widely used belt type for IQF systems globally. In-house wire drawing from 1.0mm to 12mm. Automated robotic welding. 100% drum diameter test. Sample review before production when required.</p>
       </div>
       <div class="am-btns">
-        <a href="spiral-freezer-belt.html" class="btn-p">鉂勶笍 View Metal Spiral Belt &#8594;/a>
-        <a href="belt-matching.html" class="btn-o">馃摳 Match Existing Belt &#8594;/a>
+        <a href="spiral-freezer-belt.html" class="btn-p">&#10052;&#65039; View Metal Spiral Belt &#8594;</a>
+        <a href="belt-matching.html" class="btn-o">&#128247; Match Existing Belt &#8594;</a>
       </div>
     </div>
   </div>
@@ -956,7 +1045,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Can this belt be used as a direct replacement for a metal spiral belt on an existing system?<span class="faq-t">+</span></div>
-        <div class="faq-a">In many cases, yes  - but verification is required. The drum diameter, rod pitch, and belt width must match your existing system. We will need your system drum diameter, the existing belt's rod pitch, and the belt width to confirm compatibility. Send us these parameters (or photos of the existing belt) and we will confirm whether the POM belt can run on your existing drums, or whether drum modifications would be needed. We always produce a free sample for test-fit before committing to production.</div>
+        <div class="faq-a">In many cases, yes  - but verification is required. The drum diameter, rod pitch, and belt width must match your existing system. We will need your system drum diameter, the existing belt's rod pitch, and the belt width to confirm compatibility. Send us these parameters (or photos of the existing belt) and we will confirm whether the POM belt can run on your existing drums, or whether drum modifications would be needed. Sample test-fit can be arranged before committing to production when needed.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">What is the operating temperature range?<span class="faq-t">+</span></div>
@@ -968,7 +1057,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Can custom widths and pitches be produced?<span class="faq-t">+</span></div>
-        <div class="faq-a">Yes. The standard rod pitches are 31.75mm and 34mm, covering the most common IQF drum configurations. Other rod pitches are available on request. Belt width is custom  - we manufacture to your specified dimension. If you are replacing an existing belt, send us a photo or sample and we will match the full specification including width, rod pitch, and rod diameter. Free sample produced before full production commitment.</div>
+<div class="faq-a">Yes. The standard rod pitches are 31.75mm and 34mm, covering the most common IQF drum configurations. Other rod pitches are available on request. Belt width is custom  - we manufacture to your specified dimension. If you are replacing an existing belt, send us a photo or sample and we will match the full specification including width, rod pitch, and rod diameter. Sample review can be prepared before full production commitment when needed.</div>
       </div>
     </div>
   </div>
@@ -1014,7 +1103,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div>
-        <div class="foot-col-head">Core Systems</div>
+        <div class="foot-col-head">Core Belt Systems</div>
         <div class="foot-links">
           <a href="spiral-freezer-belt.html" class="foot-link gold">Spiral Freezer Belt</a>
           <a href="self-stacking-belt.html" class="foot-link gold">Self-Stacker Belt</a>
@@ -1053,8 +1142,8 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
             WhatsApp: +86 186 5349 6136
           </a>
         </div>
-        <a href="contact.html" class="foot-btn-p">Request a Quote &#8594;</a>
-        <a href="contact.html" class="foot-btn-o">Send Drawing &#8594;</a>
+        <a href="contact.html?intent=quote" class="foot-btn-p">Ask For A Quick Quote &#8594;</a>
+        <a href="contact.html?intent=drawing" class="foot-btn-o">Send Your Belt Drawing &#8594;</a>
 
         <div style="margin-top:24px">
           <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8FA8C0;margin-bottom:12px;font-weight:600">CONNECT WITH US</div>
@@ -1099,15 +1188,18 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
           <div class="wa-status"><span class="wa-online-dot"></span>POM Belt Enquiry</div>
         </div>
       </div>
-      <button style="color:rgba(255,255,255,.8);font-size:20px;background:none;border:none;cursor:pointer" onclick="document.getElementById('wa-chat').style.display='none'">&#10003;/button>
+      <button style="color:rgba(255,255,255,.8);font-size:20px;background:none;border:none;cursor:pointer" onclick="document.getElementById('wa-chat').style.display='none'">&#10003;</button>
     </div>
     <div class="wa-body">
-      <div class="wa-bubble">馃憢 Interested in the POM plastic freezer belt? Tell me your system drum diameter, belt width needed, and application  - I'll confirm compatibility and quote immediately.</div>
+      <div class="wa-bubble">&#128075; Interested in the POM plastic freezer belt? Tell me your system drum diameter, belt width needed, and application  - I'll confirm compatibility and quote immediately.</div>
       <div style="margin-top:8px">
-        <button class="wa-qb" onclick="window.open('https://wa.me/8613451773742?text=Hi%2C+I+need+a+POM+spiral+belt+quote.+My+drum+diameter+is+...+belt+width+is+...','_blank')">Get POM Belt Quote</button>
-        <button class="wa-qb" onclick="window.open('https://wa.me/8613451773742?text=I+want+to+match+my+existing+POM+belt.+Sending+photos.','_blank')">Match Existing Belt</button>
-        <button class="wa-qb" onclick="window.open('https://wa.me/8613451773742?text=POM+vs+metal+belt+advice+for+my+IQF+system','_blank')">POM vs Metal Advice</button>
+        <button class="wa-qb" onclick="window.open('https://wa.me/8618653496136?text=Hi%2C+I+need+a+POM+spiral+belt+quote.+My+drum+diameter+is+...+belt+width+is+...','_blank')">Get POM Belt Quote</button>
+        <button class="wa-qb" onclick="window.open('https://wa.me/8618653496136?text=I+want+to+match+my+existing+POM+belt.+Sending+photos.','_blank')">Match Existing Belt</button>
+        <button class="wa-qb" onclick="window.open('https://wa.me/8618653496136?text=POM+vs+metal+belt+advice+for+my+IQF+system','_blank')">POM vs Metal Advice</button>
       
+
+
+
 
 
 

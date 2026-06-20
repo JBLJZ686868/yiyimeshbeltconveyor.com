@@ -150,13 +150,17 @@ button{font-family:var(--fs);cursor:pointer}
 @media(max-width:960px){.two{grid-template-columns:1fr;gap:32px}}
 .two.center{align-items:center}
 
-/* PHOTO PLACEHOLDERS */
+/* MEDIA BLOCKS */
 .ph{background:linear-gradient(135deg,#0a1f35,#112840);border-radius:var(--rad);border:2px dashed rgba(255,255,255,.13);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:32px 20px;text-align:center;position:relative}
 .ph-lt{background:var(--surf2);border:2px dashed rgba(31,92,158,.18)}
 .ph-ico{font-size:28px;opacity:.35}
 .ph-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:rgba(255,255,255,.20);line-height:1.6}
 .ph-lbl-lt{color:rgba(31,92,158,.40)}
-.ph-vid::after{content:'鈻?VIDEO';position:absolute;top:8px;right:10px;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:rgba(255,255,255,.30);background:rgba(0,0,0,.35);padding:2px 6px;border-radius:2px}
+.ph-vid::after{content:'VIDEO';position:absolute;top:8px;right:10px;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:rgba(255,255,255,.30);background:rgba(0,0,0,.35);padding:2px 6px;border-radius:2px}
+.media-wrap{padding:0!important;overflow:hidden;border-style:solid!important}
+.media-img,.media-video{width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit}
+.media-caption{position:absolute;left:14px;right:14px;bottom:14px;padding:10px 12px;border-radius:4px;background:rgba(10,22,40,.76);backdrop-filter:blur(8px);font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:rgba(255,255,255,.82);line-height:1.5}
+.ph-lt .media-caption{background:rgba(255,255,255,.86);color:rgba(31,92,158,.86);border:1px solid rgba(31,92,158,.14)}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media(max-width:520px){.g2,.g3{grid-template-columns:1fr}}
@@ -193,7 +197,7 @@ button{font-family:var(--fs);cursor:pointer}
 .proof-inner{max-width:var(--mw);margin:0 auto;padding:14px 2rem;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
 @media(min-width:1024px){.proof-inner{justify-content:space-between}}
 .proof-i{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.60)}
-.proof-i::before{content:'&#10003;';color:#4ADE80}
+.proof-i::before{content:'\\2713';color:#4ADE80}
 
 /* SPEC TABLE */
 .spec-tbl{width:100%;border-collapse:collapse;font-size:13px}
@@ -268,14 +272,14 @@ button{font-family:var(--fs);cursor:pointer}
 .cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px}
 .cta-trust{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 .ct{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.38);letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:5px}
-.ct::before{content:'&#10003;;color:#4ADE80}
+.ct::before{content:'\\2713';color:#4ADE80}
 
 /* TRUST STRIP */
 .trust-strip{background:var(--navy3);border-top:1px solid rgba(255,255,255,.07)}
 .ts-inner{max-width:var(--mw);margin:0 auto;padding:14px 2rem;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 @media(min-width:1024px){.ts-inner{justify-content:space-between}}
 .ts-i span{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.60)}
-.ts-i span::before{content:'&#10003;';color:#4ADE80}
+.ts-i span::before{content:'\\2713';color:#4ADE80}
 
 /* FOOTER */
 .yiyi-footer{background:#0D1B2E;padding:48px 0 0}
@@ -348,6 +352,7 @@ button{font-family:var(--fs);cursor:pointer}
 .hero-ph-ico{font-size:36px;opacity:.25}
 .hero-ph-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:rgba(255,255,255,.18);line-height:1.6}
 </style>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
 
@@ -382,117 +387,119 @@ button{font-family:var(--fs);cursor:pointer}
     <div class="nav-desktop">
       <a href="index.html" class="nav-link-simple">Home</a>
       <div class="nd">
-        <button class="nd-btn gold-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>Core Systems<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="products.html#strategic" class="nd-btn gold-btn nd-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>Core Belt Systems<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:320px"><div class="drop-box"><div class="drop-gold-bar"></div><div class="drop-body" style="padding:16px">
-          <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">鉂勶笍</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
-          <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">馃攧</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
-          <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">鉃★笍</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
-          <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">馃敆</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div></a>
-          <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">馃煪</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Belt</span></div></a>
-          <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">鈿欙笍</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span></div></a>
+          <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">&#10052;</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">&#8635;</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">&#10145;</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
+              <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">&#9646;</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Conveyor Belt</span></div></a>
+              <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">&#9881;</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span><span class="cdl-sub">(System Matched)</span></div></a>
         </div></div></div>
       </div>
       <div class="nd">
-        <button class="nd-btn">All Products<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="products.html" class="nd-btn nd-link">All Products<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="left:-180px"><div class="drop-box"><div class="mega-grid">
           <div class="mega-col"><div class="mega-head">IQF &amp; Freezing</div>
-            <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">鉂勶笍</span><span class="dl-label">Spiral Freezer Belt</span></a>
-            <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">馃攧</span><span class="dl-label">Self-Stacking Belt</span></a>
-            <a href="side-driven-belt.html" class="dl"><span class="dl-icon">鉃★笍</span><span class="dl-label">Side-Driven Belt</span></a>
-            <a href="eye-link-belt.html" class="dl"><span class="dl-icon">馃敆</span><span class="dl-label">Eye-Link Belt</span></a>
-            <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">馃煪</span><span class="dl-label">Flat Wire Honeycomb Belt</span></a>
+            <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;&#65039;</span><span class="dl-label">Spiral Freezer Belt</span></a>
+            <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Self-Stacking Belt</span></a>
+            <a href="side-driven-belt.html" class="dl"><span class="dl-icon">&#10145;</span><span class="dl-label">Side-Driven Belt</span></a>
+            <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye-Link Belt</span></a>
+            <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9638;</span><span class="dl-label">Flat Wire Honeycomb Belt</span></a>
           </div>
           <div class="mega-col"><div class="mega-head">Baking &amp; Processing</div>
-            <a href="biscuit-belt.html" class="dl"><span class="dl-icon">馃崻</span><span class="dl-label">Biscuit Belt</span></a>
-            <a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">鈿栵笍</span><span class="dl-label">Balanced Weave Belt</span></a>
-            <a href="compound-weave-belt.html" class="dl"><span class="dl-icon">銆帮笍</span><span class="dl-label">Compound Weave Belt</span></a>
+            <a href="biscuit-belt.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Biscuit Belt</span></a>
+            <a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">&#9878;</span><span class="dl-label">Balanced Weave Belt</span></a>
+            <a href="compound-weave-belt.html" class="dl"><span class="dl-icon">&#12336;</span><span class="dl-label">Compound Weave Belt</span></a>
             <a href="replacement-parts.html" class="dl"><span class="dl-icon">&#128297;</span><span class="dl-label">Replacement Parts</span></a>
             <div class="mega-head" style="margin-top:14px">Plate &amp; Chain</div>
-            <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">馃敆</span><span class="dl-label">Chain-Driven Belt</span></a>
-            <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">馃彈锔?/span><span class="dl-label">Hinged Plate Conveyor Belt</span></a>
+            <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Chain-Driven Belt</span></a>
+            <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">&#127959;&#65039;</span><span class="dl-label">Hinged Plate Conveyor Belt</span></a>
           </div>
           <div class="mega-col"><div class="mega-head">Accessories</div>
-            <a href="drive-sprockets.html" class="dl"><span class="dl-icon">鈿欙笍</span><span class="dl-label">Drive Sprockets</span></a>
-            <a href="connecting-accessories.html" class="dl"><span class="dl-icon">馃搶</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
+            <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
+            <a href="connecting-accessories.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
           </div>
           <div class="mega-col">
             <div style="font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Product Index</div>
             <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">13 belt types  - full technical specifications</p>
-            <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All &#8594;/a>
+            <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All &#8594;</a>
           </div>
         </div></div></div>
       </div>
       <div class="nd">
-        <button class="nd-btn">Industries<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="industries.html" class="nd-btn nd-link">Industries<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel"><div class="drop-box"><div class="two-col">
           <div class="two-col-main"><div class="mega-head">Application Sectors</div>
-            <a href="industries.html" class="dl"><span class="dl-icon">鉂勶笍</span><span class="dl-label">IQF &amp; Spiral Freezing</span></a>
-            <a href="industries.html" class="dl"><span class="dl-icon">馃ォ</span><span class="dl-label">Meat &amp; Seafood Processing</span></a>
-            <a href="industries.html" class="dl"><span class="dl-icon">馃</span><span class="dl-label">Baking &amp; Ovens</span></a>
-            <a href="industries.html" class="dl"><span class="dl-icon">馃カ</span><span class="dl-label">Canning &amp; Washing Lines</span></a>
-            <a href="industries.html" class="dl"><span class="dl-icon">馃殫</span><span class="dl-label">Automotive &amp; Industrial</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#10052;&#65039;</span><span class="dl-label">IQF &amp; Spiral Freezing</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#127831;</span><span class="dl-label">Meat &amp; Seafood Processing</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#127838;</span><span class="dl-label">Baking &amp; Ovens</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#128167;</span><span class="dl-label">Canning &amp; Washing Lines</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#128663;</span><span class="dl-label">Automotive &amp; Industrial</span></a>
           </div>
-          <div class="two-col-side"><div class="eeat-card"><div class="eeat-tag">EEAT  - Experience</div><p class="eeat-title">Drawing to delivery  - structured coordination every project.</p><a href="engineering-oem.html" class="eeat-link">Engineering &amp; OEM &#8594;/a></div></div>
+          <div class="two-col-side"><div class="eeat-card"><div class="eeat-tag">EEAT  - Experience</div><p class="eeat-title">Drawing to delivery  - structured coordination every project.</p><a href="engineering-oem.html?source=chain-plate-belt" class="eeat-link">Engineering &amp; OEM &#8594;</a></div></div>
         </div></div></div>
       </div>
       <div class="nd">
-        <button class="nd-btn">Engineering &amp; OEM<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="engineering-oem.html?source=chain-plate-belt" class="nd-btn nd-link">Engineering &amp; OEM<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel"><div class="drop-box"><div class="two-col">
           <div class="two-col-main"><div class="mega-head">Technical Support</div>
-            <a href="engineering-oem.html" class="dl"><span class="dl-icon">馃搻</span><span class="dl-label">Drawing Review Process</span></a>
-            <a href="engineering-oem.html" class="dl"><span class="dl-icon">馃摝</span><span class="dl-label">Sampling &amp; Fit Check</span></a>
-            <a href="engineering-oem.html" class="dl"><span class="dl-icon">馃攧</span><span class="dl-label">Replacement Matching</span></a>
-            <a href="engineering-oem.html" class="dl"><span class="dl-icon">馃彿锔?/span><span class="dl-label">OEM Private Label</span></a>
+            <a href="contact.html?intent=drawing&source=chain-plate-belt" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Drawing Review Process</span></a>
+            <a href="engineering-oem.html?source=chain-plate-belt#sampling" class="dl"><span class="dl-icon">&#128344;</span><span class="dl-label">Sampling &amp; Fit Check</span></a>
+            <a href="replacement-review.html?intent=replacement&source=chain-plate-belt" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Matching</span></a>
+            <a href="engineering-oem.html?source=chain-plate-belt#oem" class="dl"><span class="dl-icon">&#9679;</span><span class="dl-label">OEM Private Label</span></a>
           </div>
-          <div class="two-col-side"><div class="eeat-card"><div class="eeat-tag">EEAT  - Expertise</div><p class="eeat-title">Drum test every order. ISO 9001 certified.</p><a href="contact.html" class="eeat-link">Start Engineering Review &#8594;/a></div></div>
+          <div class="two-col-side"><div class="eeat-card"><div class="eeat-tag">EEAT  - Expertise</div><p class="eeat-title">Drum test every order. ISO 9001 certified.</p><a href="contact.html?intent=engineering&source=chain-plate-belt" class="eeat-link">Start Engineering Review &#8594;</a></div></div>
         </div></div></div>
       </div>
       <div class="nd">
         <button class="nd-btn">Manufacturing<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="drop-panel" style="min-width:240px"><div class="drop-box"><div class="drop-blue-bar"></div><div class="drop-body">
-          <a href="manufacturing.html" class="dl"><span class="dl-icon">馃</span><span class="dl-label">Automated Welding</span></a>
-          <a href="manufacturing.html" class="dl"><span class="dl-icon">馃У</span><span class="dl-label">In-House Wire Drawing</span></a>
-          <a href="quality-control.html" class="dl"><span class="dl-icon">&#10003;/span><span class="dl-label">Quality Control</span></a>
-          <a href="raw-material.html" class="dl"><span class="dl-icon">馃敩</span><span class="dl-label">Raw Material Control</span></a>
-          <a href="manufacturing.html" class="dl"><span class="dl-icon">鈽€锔?/span><span class="dl-label">Solar Factory (ESG)</span></a>
+          <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129302;</span><span class="dl-label">Automated Welding</span></a>
+          <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">In-House Wire Drawing</span></a>
+          <a href="quality-control.html" class="dl"><span class="dl-icon">&#10003;</span><span class="dl-label">Quality Control</span></a>
+          <a href="raw-material.html" class="dl"><span class="dl-icon">&#128300;</span><span class="dl-label">Raw Material Control</span></a>
+          <a href="manufacturing.html" class="dl"><span class="dl-icon">&#9728;</span><span class="dl-label">Solar Factory (ESG)</span></a>
         </div></div></div>
       </div>
       <div class="nd">
-        <button class="nd-btn">Contact<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="contact.html" class="nd-btn nd-link">Contact<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:220px"><div class="drop-box"><div class="drop-blue-bar"></div><div class="drop-body">
-          <a href="contact.html" class="dl"><span class="dl-icon">馃摑</span><span class="dl-label">Request a Quote</span></a>
-          <a href="contact.html" class="dl"><span class="dl-icon">馃搻</span><span class="dl-label">Send Drawing</span></a>
-          <a href="contact.html" class="dl"><span class="dl-icon">馃懛</span><span class="dl-label">Talk to Engineer</span></a>
+          <a href="contact.html?intent=quote&source=chain-plate-belt" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Ask For A Quick Quote</span></a>
+          <a href="contact.html?intent=drawing&source=chain-plate-belt" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Send Your Belt Drawing</span></a>
+          <a href="contact.html?intent=engineering&source=chain-plate-belt" class="dl"><span class="dl-icon">&#128101;</span><span class="dl-label">Get Engineering Support</span></a>
         </div></div></div>
       </div>
     </div>
     <div class="nav-right">
-      <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;/a>
+      <a href="contact.html?intent=quote&source=chain-plate-belt" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
       <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="mob-menu" id="mob-menu"><div class="mob-inner">
     <a href="index.html" class="mob-link">Home</a>
     <div style="font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Products</div>
-    <a href="spiral-freezer-belt.html" class="mob-link">猸?Spiral Freezer Belt</a>
-    <a href="self-stacking-belt.html" class="mob-link">猸?Self-Stacker Belt</a>
+    <a href="spiral-freezer-belt.html" class="mob-link">&#10052; Spiral Freezer Belt</a>
+    <a href="self-stacking-belt.html" class="mob-link">&#8635; Self-Stacker Belt</a>
     <a href="chain-driven-belt.html" class="mob-link">Chain-Driven Belt</a>
     <a href="chain-plate-belt.html" class="mob-link" style="color:var(--gold)">Hinged Plate Conveyor Belt</a>
     <a href="compound-weave-belt.html" class="mob-link">Compound Weave Belt</a>
     <a href="balanced-weave-belt.html" class="mob-link">Balanced Weave Belt</a>
-    <a href="products.html" class="mob-link" style="color:#4A8CC8">Browse All Products &#8594;/a>
+    <a href="products.html" class="mob-link" style="color:#4A8CC8">Browse All Products &#8594;</a>
     <div style="font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Engineering</div>
-    <a href="engineering-oem.html" class="mob-link">Engineering &amp; OEM</a>
+    <a href="engineering-oem.html?source=chain-plate-belt" class="mob-link">Engineering &amp; OEM</a>
     <a href="manufacturing.html" class="mob-link">Manufacturing Assurance</a>
     <a href="quality-control.html" class="mob-link">Quality Control</a>
     <div style="border-top:1px solid rgba(255,255,255,.07);margin-top:10px;padding-top:10px"></div>
-    <a href="contact.html" class="mob-link">Contact</a>
-    <a href="contact.html" class="mob-cta">Get a Quote &#8594;/a>
+    <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote&source=chain-plate-belt" class="mob-link">Ask For A Quick Quote</a>
+      <a href="contact.html?intent=drawing&source=chain-plate-belt" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering&source=chain-plate-belt" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit&source=chain-plate-belt" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote&source=chain-plate-belt" class="mob-cta">Ask For A Quick Quote &#8594;</a>
   </div></div>
 </nav>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S1  - HERO
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="hero-sec">
   <div class="W">
     <div class="hero-grid">
@@ -502,17 +509,15 @@ button{font-family:var(--fs);cursor:pointer}
         <p class="hero-sub">For Flat Carrying Surface, Stable Conveying, and Configurable Industrial Transport</p>
         <p class="hero-intro">Hinged plate conveyor belts are designed for conveyor systems that require a flat carrying surface, positive drive stability, and strong structural support. Compared with open mesh belts, a hinged plate structure provides a more continuous conveying surface and can be configured with perforated plates, solid plates, side guards, cross flights, or lifting details according to application requirements. YIYI Mesh Belt manufactures hinged plate conveyor belts for washing, drying, cooling, baking, packaging, canning, and other industrial transport systems where stable conveying and controlled structure matter.</p>
         <div class="hero-btns">
-          <a href="contact.html" class="btn-gold">Request a Quote &#8594;/a>
-          <a href="contact.html" class="btn-o">Send Your Drawing &#8594;/a>
-          <a href="contact.html" class="btn-o">Talk to Engineer &#8594;/a>
+          <a href="contact.html?intent=quote&source=chain-plate-belt" class="btn-gold">Ask For A Quick Quote &#8594;</a>
+          <a href="contact.html?intent=drawing&source=chain-plate-belt" class="btn-o">Send Your Belt Drawing &#8594;</a>
+          <a href="contact.html?intent=engineering&source=chain-plate-belt" class="btn-o">Get Engineering Support &#8594;</a>
         </div>
       </div>
       <div class="hero-visual">
-        <!-- PHOTO: Full belt structure showing flat plate surface and chain-driven sides clearly -->
-        <!-- VIDEO: Optional short product overview video  - flat surface and chain drive visible -->
-        <div class="hero-ph ph-vid">
-          <div class="hero-ph-ico">馃彈锔?/div>
-          <div class="hero-ph-lbl">Hero product photo<br>Full hinged plate belt  - flat carrying surface + side chain drive<br>Replace with: product overview photo or short muted video</div>
+        <div class="hero-ph media-wrap">
+          <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-product-overview.jpg" alt="Hinged plate conveyor belt with flat stainless steel carrying surface and side chain drive"/ decoding="async" loading="eager" fetchpriority="high">
+          <div class="media-caption">Flat stainless plate surface + side chain drive</div>
         </div>
       </div>
     </div>
@@ -531,8 +536,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </div>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S2  - WHY HINGED PLATE
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-wh" id="why">
   <div class="W">
     <div class="two center">
@@ -565,19 +568,18 @@ button{font-family:var(--fs);cursor:pointer}
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
-        <!-- PHOTO: Overall product image showing flat plate surface -->
-        <div class="ph ph-lt" style="aspect-ratio:4/3">
-          <div class="ph-ico ph-lbl-lt" style="font-size:28px;opacity:.22">馃彈锔?/div>
-          <div class="ph-lbl ph-lbl-lt">Overall hinged plate belt photo<br>Showing flat carrying surface and chain drive<br>Replace with: product overview photo</div>
+        <div class="ph ph-lt media-wrap" style="aspect-ratio:4/3">
+          <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-hole-detail.jpg" alt="Front detail of hinged plate belt showing flat plate surface and chain rollers"/ decoding="async" loading="lazy">
+          <div class="media-caption">Overall plate belt detail for flat carrying support</div>
         </div>
         <div class="ib-lt">
           <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--blue2);margin-bottom:10px">HINGED PLATE VS OPEN MESH  - WHEN TO CHOOSE</div>
           <div style="display:flex;flex-direction:column;gap:7px">
-            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">鈻?/span><span style="font-size:13px;color:var(--ink2)">Product needs flat, continuous surface support &#8594;Hinged plate</span></div>
-            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">鈻?/span><span style="font-size:13px;color:var(--ink2)">Positive drive required for heavy load or incline &#8594;Hinged plate</span></div>
-            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">鈻?/span><span style="font-size:13px;color:var(--ink2)">Drainage or airflow needed through surface &#8594;Perforated plate</span></div>
-            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">鈻?/span><span style="font-size:13px;color:var(--ink2)">Closed surface required &#8594;Solid plate</span></div>
-            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">鈻?/span><span style="font-size:13px;color:var(--ink2)">Inclined conveying with product retention &#8594;Cross flights</span></div>
+            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">&#9656;</span><span style="font-size:13px;color:var(--ink2)">Product needs flat, continuous surface support &#8594; Hinged plate</span></div>
+            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">&#9656;</span><span style="font-size:13px;color:var(--ink2)">Positive drive required for heavy load or incline &#8594; Hinged plate</span></div>
+            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">&#9656;</span><span style="font-size:13px;color:var(--ink2)">Drainage or airflow needed through surface &#8594; Perforated plate</span></div>
+            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">&#9656;</span><span style="font-size:13px;color:var(--ink2)">Closed surface required &#8594; Solid plate</span></div>
+            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">&#9656;</span><span style="font-size:13px;color:var(--ink2)">Inclined conveying with product retention &#8594; Cross flights</span></div>
           </div>
         </div>
       </div>
@@ -585,8 +587,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S3  - STRUCTURE OVERVIEW
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy2" id="structure">
   <div class="W">
     <div class="sec-hdr">
@@ -626,22 +626,19 @@ button{font-family:var(--fs);cursor:pointer}
         <div class="dc-desc">Flights are raised cross-members attached to the plate surface at defined intervals  - used to push, carry, or retain products during inclined conveying or controlled positioning. Flight height, interval, and attachment confirmed to application requirement.</div>
       </div>
     </div>
-    <!-- PHOTO: Close-up of hinge / rod / chain relation + plate linkage detail -->
     <div class="g2" style="margin-bottom:16px">
-      <div class="ph ph-vid" style="min-height:200px">
-        <div class="ph-ico">馃攳</div>
-        <div class="ph-lbl">Hinge / rod / chain connection close-up<br>Showing articulation point clearly<br>VIDEO: belt flexing around drive sprocket</div>
+      <div class="ph ph-vid media-wrap" style="min-height:200px">
+        <video class="media-video" src="assets/product-media/chain-plate-belt/chain-plate-belt-product-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="media-caption">Product video: plate articulation and side-chain movement</div>
       </div>
-      <div class="ph" style="min-height:200px">
-        <div class="ph-ico">馃敆</div>
-        <div class="ph-lbl">Plate linkage detail<br>Overlap geometry and rod position<br>Side chain engagement visible</div>
+      <div class="ph media-wrap" style="min-height:200px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-product-overview.jpg" alt="Solid hinged plate belt linkage and side chain engagement detail"/ decoding="async" loading="lazy">
+        <div class="media-caption">Solid plate linkage and roller-chain detail</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S4  - PERFORATED VS SOLID
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-wh" id="plate-options">
   <div class="W">
     <div class="sec-hdr">
@@ -707,26 +704,23 @@ button{font-family:var(--fs);cursor:pointer}
         </div>
       </div>
     </div>
-    <!-- PHOTO: Perforated plate / solid plate / hole pattern close-up / side-by-side comparison -->
     <div class="g3">
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.22">猬?/div>
-        <div class="ph-lbl ph-lbl-lt">Perforated plate belt<br>Hole pattern and drainage visible</div>
+      <div class="ph ph-lt media-wrap" style="min-height:180px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-hole-detail.jpg" alt="Perforated hinged plate belt surface with drainage holes"/ decoding="async" loading="lazy">
+        <div class="media-caption">Perforated plate surface for drainage and airflow</div>
       </div>
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.22">鈻笍</div>
-        <div class="ph-lbl ph-lbl-lt">Solid plate belt<br>Closed carrying surface detail</div>
+      <div class="ph ph-lt media-wrap" style="min-height:180px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-solid-surface.jpg" alt="Solid hinged plate belt closed carrying surface"/ decoding="async" loading="lazy">
+        <div class="media-caption">Solid plate belt for closed carrying support</div>
       </div>
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.22">馃敩</div>
-        <div class="ph-lbl ph-lbl-lt">Hole pattern close-up<br>Staggered pitch / square pitch example</div>
+      <div class="ph ph-lt media-wrap" style="min-height:180px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-dimension-check.jpg" alt="Hinged plate belt chain pitch measurement with caliper"/ decoding="async" loading="lazy">
+        <div class="media-caption">Pitch and roller dimension confirmation before shipment</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S5  - SIDE GUARDS / FLIGHTS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy3" id="guards-flights">
   <div class="W">
     <div class="sec-hdr">
@@ -766,22 +760,19 @@ button{font-family:var(--fs);cursor:pointer}
         <div class="dc-desc">Plate direction, overlap orientation, edge finish, and plate-to-chain attachment detail can be varied according to conveyor system design. Confirmed in writing before production  - not assumed from width or standard format alone.</div>
       </div>
     </div>
-    <!-- PHOTO: Side guard / cross flight / L-shaped plate / application close-up -->
     <div class="g2">
-      <div class="ph ph-vid" style="min-height:200px">
-        <div class="ph-ico">馃洝锔?/div>
-        <div class="ph-lbl">Side guard detail<br>Guard height and attachment method visible<br>VIDEO: inclined conveying with side guards in use</div>
+      <div class="ph media-wrap" style="min-height:200px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-close-up.jpg" alt="Hinged plate belt with perforated plate surface and raised side guards"/ decoding="async" loading="lazy">
+        <div class="media-caption">Side guard detail for inclined or retained conveying</div>
       </div>
-      <div class="ph" style="min-height:200px">
-        <div class="ph-ico">猬嗭笍</div>
-        <div class="ph-lbl">Cross flight detail<br>Flight height and interval  - plate-mounted<br>L-shaped or special plate form example</div>
+      <div class="ph media-wrap" style="min-height:200px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-edge-finish.jpg" alt="Chain plate belt edge finish with split cotter pin and washer"/ decoding="async" loading="lazy">
+        <div class="media-caption">Edge finish with split pin and washer for service access</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S6  - REAL PROJECT LOGIC
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-surf" id="project-logic">
   <div class="W">
     <div class="two center">
@@ -822,38 +813,35 @@ button{font-family:var(--fs);cursor:pointer}
         </div>
       </div>
       <div>
-        <!-- PHOTO: Work order checklist / spec confirmation record / CAD drawing with annotations -->
-        <div class="ph ph-lt" style="aspect-ratio:4/3;margin-bottom:14px">
-          <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.22">馃搵</div>
-          <div class="ph-lbl ph-lbl-lt">Specification review record<br>Drawing with parameter annotations<br>Work order confirmation document</div>
+        <div class="ph ph-lt media-wrap" style="aspect-ratio:4/3;margin-bottom:14px">
+          <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-dimension-check.jpg" alt="Hinged plate conveyor belt parameter review and dimension check" decoding="async" loading="lazy">
+          <div class="media-caption">Specification and dimension review before batch production</div>
         </div>
         <div style="background:#fff;border:1px solid var(--bl);border-radius:var(--rad);padding:20px">
           <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--blue2);margin-bottom:12px">FULL PARAMETER CHECKLIST</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Overall belt width</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Center distance</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Plate thickness</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Perforation pattern</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Rod diameter</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Rod spacing</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Chain pitch</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Chain model</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Roller diameter</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Side guard height</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Flight interval</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Material grade</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Drawing direction</span>
-            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;/span>Application type</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Overall belt width</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Center distance</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Plate thickness</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Perforation pattern</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Rod diameter</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Rod spacing</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Chain pitch</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Chain model</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Roller diameter</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Side guard height</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Flight interval</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Material grade</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Drawing direction</span>
+            <span style="font-size:12px;color:var(--ink2);display:flex;gap:5px"><span style="color:var(--blue2);flex-shrink:0">&#10003;</span>Application type</span>
           </div>
-          <a href="contact.html" class="btn-p" style="margin-top:16px;font-size:13px">Send Your Drawing &#8594;/a>
+          <a href="contact.html?intent=drawing&source=chain-plate-belt" class="btn-p" style="margin-top:16px;font-size:13px">Send Your Belt Drawing &#8594;</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S7  - SURFACE / BURR / CLEANLINESS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy" id="quality">
   <div class="W">
     <div class="sec-hdr">
@@ -893,43 +881,39 @@ button{font-family:var(--fs);cursor:pointer}
         <div class="dc-desc">Before packing, each belt section undergoes a final dimensional check, surface inspection, and rod/chain assembly verification. Photos of the inspected belt  - including edge condition, weld areas, and plate flatness  - are taken and made available to the customer before shipment release.</div>
       </div>
     </div>
-    <!-- PHOTO: Burr-free edge close-up / cleaned weld / flatness check / degreasing -->
     <div class="g3">
-      <div class="ph ph-vid" style="min-height:180px">
-        <div class="ph-ico">&#10003;/div>
-        <div class="ph-lbl">Burr-free edge close-up<br>Punched holes  - clean edge visible<br>VIDEO: deburring or edge inspection process</div>
+      <div class="ph media-wrap" style="min-height:180px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-perforated-surface.jpg" alt="Clean perforated hinged plate belt hole pattern and punched surface"/ decoding="async" loading="lazy">
+        <div class="media-caption">Perforation and punched edge review</div>
       </div>
-      <div class="ph" style="min-height:180px">
-        <div class="ph-ico">馃敩</div>
-        <div class="ph-lbl">Cleaned weld area<br>Post-weld scale removal visible<br>Food-grade weld surface condition</div>
+      <div class="ph media-wrap" style="min-height:180px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-edge-finish.jpg" alt="Chain plate belt edge assembly and fastener condition"/ decoding="async" loading="lazy">
+        <div class="media-caption">Fastener and edge assembly condition</div>
       </div>
-      <div class="ph" style="min-height:180px">
-        <div class="ph-ico">馃搻</div>
-        <div class="ph-lbl">Plate flatness check<br>Inspection surface or gauge measurement<br>Pre-assembly flatness verification</div>
+      <div class="ph media-wrap" style="min-height:180px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-dimension-check.jpg" alt="Chain plate conveyor belt dimension check with digital caliper"/ decoding="async" loading="lazy">
+        <div class="media-caption">Chain pitch and roller dimension check</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S8  - SAMPLE CONFIRMATION
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-wh" id="sample-confirmation">
   <div class="W">
     <div class="two center">
       <div style="display:flex;flex-direction:column;gap:14px">
-        <!-- PHOTO: Sample with drawing / first-piece confirmation photo / customer-ready photo set -->
-        <div class="ph ph-lt ph-vid" style="aspect-ratio:4/3">
-          <div class="ph-ico ph-lbl-lt" style="font-size:28px;opacity:.22">馃摝</div>
-          <div class="ph-lbl ph-lbl-lt">First-piece sample photo<br>Sample alongside drawing and dimensions<br>Customer-confirmation-ready photo set<br>VIDEO: 8 - 2s sample measurement and review</div>
+        <div class="ph ph-lt ph-vid media-wrap" style="aspect-ratio:4/3">
+          <video class="media-video" src="assets/product-media/chain-plate-belt/chain-plate-belt-product-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="media-caption">Sample movement review before batch release</div>
         </div>
         <div class="g2">
-          <div class="ph ph-lt" style="min-height:130px">
-            <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">馃搻</div>
-            <div class="ph-lbl ph-lbl-lt">Sample vs drawing<br>Dimension confirmation</div>
+          <div class="ph ph-lt media-wrap" style="min-height:130px">
+            <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-dimension-check.jpg" alt="Dimension confirmation for hinged plate belt chain pitch"/ decoding="async" loading="lazy">
+            <div class="media-caption">Dimension confirmation</div>
           </div>
-          <div class="ph ph-lt" style="min-height:130px">
-            <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">馃攳</div>
-            <div class="ph-lbl ph-lbl-lt">Plate detail close-up<br>Edge and perforation check</div>
+          <div class="ph ph-lt media-wrap" style="min-height:130px">
+            <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-perforated-surface.jpg" alt="Plate detail close-up with perforation and hinge geometry"/ decoding="async" loading="lazy">
+            <div class="media-caption">Plate detail check</div>
           </div>
         </div>
       </div>
@@ -958,14 +942,12 @@ button{font-family:var(--fs);cursor:pointer}
             <div class="cl-t"><strong>Sample retained as batch reference</strong>Approved samples are retained as the production reference for subsequent repeat orders  - maintaining consistency without requiring re-confirmation of the full specification on each order.</div>
           </div>
         </div>
-        <a href="contact.html" class="btn-p" style="font-size:14px">Request Sample Confirmation &#8594;/a>
+        <a href="contact.html?intent=sample&source=chain-plate-belt" class="btn-p" style="font-size:14px">Request Sample Confirmation &#8594;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S9  - MATCHING TEST AND FINAL RELEASE
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy2" id="matching-test">
   <div class="W">
     <div class="sec-hdr">
@@ -1014,28 +996,27 @@ button{font-family:var(--fs);cursor:pointer}
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
-        <!-- PHOTO: Rod matching test / final inspection photo / export packing / shipment-ready -->
-        <div class="ph ph-vid" style="aspect-ratio:4/3">
-          <div class="ph-ico">馃敥</div>
-          <div class="ph-lbl">Rod and assembly matching test<br>Hinge fit verification before packing<br>VIDEO: final inspection sequence</div>
+        <div class="ph ph-vid media-wrap" style="aspect-ratio:4/3">
+          <video class="media-video" src="assets/product-media/chain-plate-belt/chain-plate-belt-product-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="media-caption">Final movement and hinge-fit verification</div>
         </div>
         <div class="g2">
-          <div class="ph" style="min-height:140px">
-            <div class="ph-ico">馃摝</div>
-            <div class="ph-lbl">Export packing<br>Wooden crate  - shipment ready</div>
+          <div class="ph media-wrap" style="min-height:140px">
+            <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-export-packing.jpg" alt="Export packing for metal conveyor belt order"/ decoding="async" loading="lazy">
+            <div class="media-caption">Export packing proof</div>
           </div>
-          <div class="ph" style="min-height:140px">
-            <div class="ph-ico">&#10003;/div>
-            <div class="ph-lbl">Final inspection photo<br>Pre-shipment documentation</div>
+          <div class="ph media-wrap" style="min-height:140px">
+            <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-dimension-check.jpg" alt="Pre-shipment dimension inspection for chain plate belt"/ decoding="async" loading="lazy">
+            <div class="media-caption">Pre-shipment measurement record</div>
           </div>
         </div>
         <div class="ib-dk">
           <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--blue2);margin-bottom:10px">STANDARD DOCUMENTS WITH EVERY SHIPMENT</div>
           <div style="display:flex;flex-direction:column;gap:7px">
-            <div style="display:flex;gap:8px"><span style="color:#4ADE80;font-size:12px;flex-shrink:0">&#10003;/span><span style="font-size:13px;color:rgba(255,255,255,.55)">Material Test Report  - alloy, tensile, composition</span></div>
-            <div style="display:flex;gap:8px"><span style="color:#4ADE80;font-size:12px;flex-shrink:0">&#10003;/span><span style="font-size:13px;color:rgba(255,255,255,.55)">Final inspection record  - dimensions and surface</span></div>
-            <div style="display:flex;gap:8px"><span style="color:#4ADE80;font-size:12px;flex-shrink:0">&#10003;/span><span style="font-size:13px;color:rgba(255,255,255,.55)">Certificate of Origin  - export customs support</span></div>
-            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">&#8594;/span><span style="font-size:13px;color:rgba(255,255,255,.45)">First-piece inspection record  - on request for new OEM specs</span></div>
+            <div style="display:flex;gap:8px"><span style="color:#4ADE80;font-size:12px;flex-shrink:0">&#10003;</span><span style="font-size:13px;color:rgba(255,255,255,.55)">Material Test Report  - alloy, tensile, composition</span></div>
+            <div style="display:flex;gap:8px"><span style="color:#4ADE80;font-size:12px;flex-shrink:0">&#10003;</span><span style="font-size:13px;color:rgba(255,255,255,.55)">Final inspection record  - dimensions and surface</span></div>
+            <div style="display:flex;gap:8px"><span style="color:#4ADE80;font-size:12px;flex-shrink:0">&#10003;</span><span style="font-size:13px;color:rgba(255,255,255,.55)">Certificate of Origin  - export customs support</span></div>
+            <div style="display:flex;gap:8px"><span style="color:var(--blue2);font-size:12px;flex-shrink:0">&#8594;</span><span style="font-size:13px;color:rgba(255,255,255,.45)">First-piece inspection record  - on request for new OEM specs</span></div>
           </div>
         </div>
       </div>
@@ -1043,8 +1024,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S10  - TYPICAL APPLICATIONS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-surf" id="applications">
   <div class="W">
     <div class="sec-hdr">
@@ -1054,62 +1033,59 @@ button{font-family:var(--fs);cursor:pointer}
     </div>
     <div class="fc-grid" style="margin-bottom:32px">
       <div class="fc-card">
-        <div class="fc-icon">馃毧</div>
+        <div class="fc-icon">&#128736;&#65039;</div>
         <div class="fc-title">Washing and Rinsing Lines</div>
         <div class="fc-desc">Perforated hinged plate belts are used in can washing, bottle washing, and parts washing lines  - allowing spray and drainage through the plate while carrying containers stably through the washing zone. Plate and chain material selected for continuous wet operation.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃挩</div>
+        <div class="fc-icon">&#128268;</div>
         <div class="fc-title">Drying and Air-Cooling Conveyors</div>
         <div class="fc-desc">Perforated plates allow airflow through the belt surface  - used in tunnel dryers, cooling conveyors, and blow-off systems where air must reach the underside of the product. Plate open area matched to airflow requirement.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃尅锔?/div>
+        <div class="fc-icon">&#128293;</div>
         <div class="fc-title">Pasteurisers and Thermal Systems</div>
         <div class="fc-desc">Hinged plate belts in pasteuriser tunnels carry containers through hot and cold water zones. Plate and chain must withstand repeated thermal cycling  - material and chain specification confirmed to operating temperature range.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃敟</div>
+        <div class="fc-icon">&#128295;</div>
         <div class="fc-title">Baking and Oven Conveyors</div>
         <div class="fc-desc">Solid or perforated hinged plate belts in baking ovens carry product through controlled temperature zones. Plate structure provides even heat distribution and stable product support  - suitable for bread, biscuits, and formed food products.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃カ</div>
+        <div class="fc-icon">&#128167;</div>
         <div class="fc-title">Canning Lines</div>
         <div class="fc-desc">Hinged plate belts carry filled cans, jars, or containers through sealing, pasteurising, coding, and packaging stages. Flat plate surface supports containers without tipping or imbalance  - side guards added where lateral retention is required.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃摝</div>
+        <div class="fc-icon">&#128344;</div>
         <div class="fc-title">Packaging and Assembly Transport</div>
         <div class="fc-desc">Solid plate belts carry packaged products, cartons, or assembled parts through packaging lines, palletising systems, or assembly line conveyors  - where a flat, positive-drive surface is required for controlled product positioning.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">鈫楋笍</div>
+        <div class="fc-icon">&#8599;</div>
         <div class="fc-title">Inclined Conveying with Flights</div>
         <div class="fc-desc">Cross flights attached to hinged plate belts carry bulk or individual products up inclines where gravity would otherwise cause sliding or rollback. Flight height and interval matched to product dimensions and incline angle.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">鈿欙笍</div>
+        <div class="fc-icon">&#9881;</div>
         <div class="fc-title">Heavy-Duty Industrial Transport</div>
         <div class="fc-desc">Solid plate hinged belts in heavy industrial applications  - parts conveying, foundry lines, or large-component transport  - carry loads that exceed the capacity of wire mesh belts. Plate thickness, chain specification, and rod dimensions confirmed to load requirement.</div>
       </div>
     </div>
-    <!-- PHOTO: Application-oriented images  - washing / oven / canning / inclined with flights -->
     <div class="g2">
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.22">馃毧</div>
-        <div class="ph-lbl ph-lbl-lt">Washing line application<br>Hinged plate belt in can or bottle washing<br>Perforated plate drainage visible</div>
+      <div class="ph ph-lt media-wrap" style="min-height:180px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-perforated-surface.jpg" alt="Perforated chain plate belt suitable for washing and drainage applications"/ decoding="async" loading="lazy">
+        <div class="media-caption">Perforated chain plate for washing and drainage</div>
       </div>
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.22">鈫楋笍</div>
-        <div class="ph-lbl ph-lbl-lt">Inclined conveying with cross flights<br>Products retained by flights during elevation<br>Side guards and flight combination</div>
+      <div class="ph ph-lt media-wrap" style="min-height:180px">
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-side-guard.jpg" alt="Chain plate belt with side guard structure for retained conveying"/ decoding="async" loading="lazy">
+        <div class="media-caption">Side guard structure for retained conveying</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S11  - OEM & REPLACEMENT SUPPORT
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy" id="oem-replacement">
   <div class="W">
     <div class="two center">
@@ -1139,18 +1115,17 @@ button{font-family:var(--fs);cursor:pointer}
             <div class="cl-td"><strong>Extra connecting rods, pins, and spare parts</strong>Spare connecting rods, hinge pins, and matched spare parts are supplied with the main order  - same alloy, same specification  - to support on-site maintenance without requiring separate re-sourcing.</div>
           </div>
         </div>
-        <a href="engineering-oem.html" class="btn-o" style="font-size:14px">Engineering &amp; OEM Process &#8594;/a>
+        <a href="engineering-oem.html?source=chain-plate-belt" class="btn-o" style="font-size:14px">Engineering &amp; OEM Process &#8594;</a>
       </div>
       <div>
-        <!-- PHOTO: OEM documentation / replacement matching setup / spare parts supply -->
-        <div class="ph" style="aspect-ratio:4/3;margin-bottom:14px">
-          <div class="ph-ico">馃搻</div>
-          <div class="ph-lbl">OEM drawing review<br>Replacement matching documentation<br>Spare parts supply alongside main belt order</div>
+        <div class="ph media-wrap" style="aspect-ratio:4/3;margin-bottom:14px">
+          <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-solid-surface.jpg" alt="Replacement-matched hinged plate conveyor belt surface and side chain detail"/ decoding="async" loading="lazy">
+          <div class="media-caption">Replacement matching: plate surface and chain format</div>
         </div>
         <div class="ps-wrap">
           <div class="ps-row">
             <div class="ps-p">
-              <div class="ps-lbl ps-lbl-r">鈿?Common Replacement Risk</div>
+              <div class="ps-lbl ps-lbl-r">&#9888; Common Replacement Risk</div>
               <div class="ps-t">New Belt  - Chain Pitch Does Not Match Existing Sprocket</div>
               <div class="ps-d">A replacement belt ordered to plate width and length may have a different chain pitch from the original. Installation is delayed or requires sprocket replacement.</div>
             </div>
@@ -1162,7 +1137,7 @@ button{font-family:var(--fs);cursor:pointer}
           </div>
           <div class="ps-row">
             <div class="ps-p">
-              <div class="ps-lbl ps-lbl-r">鈿?Common Replacement Risk</div>
+              <div class="ps-lbl ps-lbl-r">&#9888; Common Replacement Risk</div>
               <div class="ps-t">Plate Thickness Changed  - Load Capacity Reduced</div>
               <div class="ps-d">A replacement belt with thinner plates than the original may not carry the operating load  - causing plate deflection or permanent deformation after installation.</div>
             </div>
@@ -1178,8 +1153,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S12  - TECHNICAL SPEC INTRO
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-surf" id="specifications">
   <div class="W">
     <div class="sec-hdr">
@@ -1207,25 +1180,23 @@ button{font-family:var(--fs);cursor:pointer}
         <tr><td>Material Grade</td><td>SUS304 (standard food-grade), SUS316/316L (elevated corrosion resistance), Carbon Steel (heavy industrial, non-food). Fastener and rod material confirmed separately.</td></tr>
         <tr><td>Application Type</td><td>Operating environment description  - wet/dry, temperature range, product type, hygiene classification, and any chemical exposure.</td></tr>
       </table>
-      <div style="padding:14px 20px;background:rgba(31,92,158,.04);border-top:1px solid rgba(31,92,158,.10);font-size:13px;color:var(--ink2)">Send a drawing, sample, or partial specification. Engineering response within 24 hours. <a href="contact.html" style="color:var(--blue);font-weight:600;margin-left:6px">Contact YIYI Mesh Belt &#8594;/a></div>
+      <div style="padding:14px 20px;background:rgba(31,92,158,.04);border-top:1px solid rgba(31,92,158,.10);font-size:13px;color:var(--ink2)">Send a drawing, sample, or partial specification. Engineering response within 24 hours. <a href="contact.html?intent=engineering&amp;source=chain-plate-belt" style="color:var(--blue);font-weight:600;margin-left:6px">Contact YIYI Mesh Belt &#8594;</a></div>
     </div>
     <!-- INTERNAL LINKS -->
     <div style="margin-top:8px">
       <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px">RELATED PAGES</div>
       <div class="il-row">
-        <a href="manufacturing.html" class="il-card"><div class="il-ico">馃彮</div><div><div class="il-lbl">Process</div><div class="il-t">Manufacturing Assurance</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="quality-control.html" class="il-card"><div class="il-ico">&#10003;/div><div><div class="il-lbl">Quality</div><div class="il-t">Quality Control</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="raw-material.html" class="il-card"><div class="il-ico">馃敩</div><div><div class="il-lbl">Material</div><div class="il-t">Raw Material Control</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="engineering-oem.html" class="il-card"><div class="il-ico">馃搻</div><div><div class="il-lbl">OEM</div><div class="il-t">Engineering &amp; OEM</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="chain-driven-belt.html" class="il-card"><div class="il-ico">馃敆</div><div><div class="il-lbl">Related</div><div class="il-t">Chain-Driven Belt</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="contact.html" class="il-card"><div class="il-ico">馃摑</div><div><div class="il-lbl">Start</div><div class="il-t">Request a Quote</div></div><span class="il-arr">&#8594;/span></a>
+        <a href="manufacturing.html" class="il-card"><div class="il-ico">&#127981;</div><div><div class="il-lbl">Process</div><div class="il-t">Manufacturing Assurance</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="quality-control.html" class="il-card"><div class="il-ico">&#10003;</div><div><div class="il-lbl">Quality</div><div class="il-t">Quality Control</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="raw-material.html" class="il-card"><div class="il-ico">&#128300;</div><div><div class="il-lbl">Material</div><div class="il-t">Raw Material Control</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="engineering-oem.html?source=chain-plate-belt" class="il-card"><div class="il-ico">&#128196;</div><div><div class="il-lbl">OEM</div><div class="il-t">Engineering &amp; OEM</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="chain-driven-belt.html" class="il-card"><div class="il-ico">&#128279;</div><div><div class="il-lbl">Related</div><div class="il-t">Chain-Driven Belt</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="contact.html?intent=quote&amp;source=chain-plate-belt" class="il-card"><div class="il-ico">&#128203;</div><div><div class="il-lbl">Start</div><div class="il-t">Ask For A Quick Quote</div></div><span class="il-arr">&#8594;</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S13  - FAQ
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy" id="faq">
   <div class="W">
     <div class="sec-hdr">
@@ -1265,17 +1236,15 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S14  - FINAL CTA
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="cta-sec">
   <div class="W">
     <span class="ey" style="color:var(--blue2);display:block;text-align:center;margin-bottom:14px;font-size:11px;letter-spacing:.18em">START YOUR PROJECT</span>
     <h2 class="cta-h2">Need a Hinged Plate Conveyor Belt for a <em>Washing, Baking, Canning,</em> or Replacement Project?</h2>
     <p class="cta-p">Send your drawing, sample, specifications, or application requirement to YIYI Mesh Belt. Our engineering team can help review plate structure, chain format, guard or flight details, and production feasibility for your conveyor system  - with a response within 24 hours.</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-gold">Request a Quote &#8594;/a>
-      <a href="contact.html" class="btn-p">Send Your Drawing &#8594;/a>
-      <a href="contact.html" class="btn-o">Talk to Engineer &#8594;/a>
+      <a href="contact.html?intent=quote&source=chain-plate-belt" class="btn-gold">Ask For A Quick Quote &#8594;</a>
+      <a href="contact.html?intent=drawing&source=chain-plate-belt" class="btn-p">Send Your Belt Drawing &#8594;</a>
+      <a href="contact.html?intent=engineering&source=chain-plate-belt" class="btn-o">Get Engineering Support &#8594;</a>
     </div>
     <div class="cta-trust">
       <span class="ct">Drawing Review  - 24 Hours</span>
@@ -1311,20 +1280,20 @@ button{font-family:var(--fs);cursor:pointer}
         </div>
         <div class="foot-info-list">
           <div class="foot-info-item"><svg class="fi-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ningjin, Shandong 253400, China</div>
-          <div class="foot-info-item"><span class="fi-icon" style="font-size:10px;font-weight:700">Est.</span>Est. 1998  &#183;  Corp. 2008  &#183;  27,000 sqmFacility</div>
+          <div class="foot-info-item"><span class="fi-icon" style="font-size:10px;font-weight:700">Est.</span>Est. 1998  &#183;  Corp. 2008  &#183;  27,000 sqm Facility</div>
         </div>
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;/span>ISO 9001 Certified</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;/span>SGS Audited</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;/span>Food Contact Safety Certified</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;/span>Third-Party Audit Welcome</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span>ISO 9001 Certified</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span>SGS Audited</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span>Food Contact Safety Certified</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span>Third-Party Audit Welcome</span>
         </div>
       </div>
       <div>
-        <div class="foot-col-head">Core Systems</div>
+        <div class="foot-col-head">Core Belt Systems</div>
         <div class="foot-links">
-          <a href="spiral-freezer-belt.html" class="foot-link gold">猸?Spiral Freezer Belt</a>
-          <a href="self-stacking-belt.html" class="foot-link gold">猸?Self-Stacker Belt</a>
+          <a href="spiral-freezer-belt.html" class="foot-link gold">&#10052; Spiral Freezer Belt</a>
+          <a href="self-stacking-belt.html" class="foot-link gold">&#8635; Self-Stacker Belt</a>
           <a href="chain-driven-belt.html" class="foot-link">Chain-Driven Belt</a>
           <a href="chain-plate-belt.html" class="foot-link" style="color:var(--gold)">Hinged Plate Conveyor Belt</a>
           <a href="compound-weave-belt.html" class="foot-link">Compound Weave Belt</a>
@@ -1335,7 +1304,7 @@ button{font-family:var(--fs);cursor:pointer}
         <div class="foot-col-head">Solutions &amp; Resources</div>
         <div class="foot-links">
           <a href="industries.html" class="foot-link">Industries</a>
-          <a href="engineering-oem.html" class="foot-link">Engineering &amp; OEM</a>
+          <a href="engineering-oem.html?source=chain-plate-belt" class="foot-link">Engineering &amp; OEM</a>
           <a href="manufacturing.html" class="foot-link">Manufacturing Assurance</a>
           <a href="quality-control.html" class="foot-link">Quality Control</a>
           <a href="raw-material.html" class="foot-link">Raw Material Control</a>
@@ -1353,13 +1322,13 @@ button{font-family:var(--fs);cursor:pointer}
             <svg class="fca-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             +86 134 5177 3742
           </a>
-          <a href="https://wa.me/8613451773742" target="_blank" rel="noopener" class="foot-contact-a">
+          <a href="https://wa.me/8618653496136" target="_blank" rel="noopener" class="foot-contact-a">
             <svg class="fca-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            WhatsApp: +86 134 5177 3742
+            WhatsApp: +86 186 5349 6136
           </a>
         </div>
-        <a href="contact.html" class="foot-btn-p">Request a Quote &#8594;/a>
-        <a href="contact.html" class="foot-btn-o">Send Drawing &#8594;/a>
+        <a href="contact.html?intent=quote&source=chain-plate-belt" class="foot-btn-p">Ask For A Quick Quote &#8594;</a>
+        <a href="contact.html?intent=drawing&source=chain-plate-belt" class="foot-btn-o">Send Your Belt Drawing &#8594;</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -1378,10 +1347,10 @@ button{font-family:var(--fs);cursor:pointer}
   <div class="wa-chat" id="wa-chat" style="display:none">
     <div class="wa-head">
       <div class="wa-hl"><div class="wa-av">YY</div><div><div class="wa-nm">YIYI Mesh Belt</div><div class="wa-st"><span class="wa-od"></span>Online  &#183;  24h Response</div></div></div>
-      <button class="wa-cl" onclick="closeWA()">&#10003;/button>
+      <button class="wa-cl" onclick="closeWA()">&times;</button>
     </div>
     <div class="wa-body">
-      <div class="wa-bub">馃憢 Engineering team ready. Send your drawing or describe your hinged plate belt requirement.</div>
+      <div class="wa-bub">&#128075; Engineering team ready. Send your drawing or describe your hinged plate belt requirement.</div>
       <div class="wa-ql">Quick Start:</div>
       <div class="wa-qbs">
         <button class="wa-qb" onclick="sendWA(this.textContent)">Send My Drawing</button>
@@ -1411,7 +1380,7 @@ let waOpen=false;
 function toggleWA(){waOpen?closeWA():openWA()}
 function openWA(){waOpen=true;document.getElementById('wa-chat').style.display='flex'}
 function closeWA(){waOpen=false;document.getElementById('wa-chat').style.display='none'}
-function sendWA(txt){window.open('https://wa.me/8613451773742?text='+encodeURIComponent(txt),'_blank')}
+function sendWA(txt){window.open('https://wa.me/8618653496136?text='+encodeURIComponent(txt),'_blank')}
 function sendWAInput(){const inp=document.getElementById('wa-msg');if(inp.value.trim())sendWA(inp.value.trim())}
 document.querySelectorAll('.nd').forEach(nd=>{
   const btn=nd.querySelector('.nd-btn');
@@ -1419,7 +1388,11 @@ document.querySelectorAll('.nd').forEach(nd=>{
 });
 document.addEventListener('click',()=>document.querySelectorAll('.nd').forEach(x=>x.classList.remove('open')));
 </script>
+<script src="assets/site-shell.js"></script>
 </body>
 </html>
+
+
+
 
 

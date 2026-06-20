@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Conveyor Belt Matching Service  - Send Photos, Get Specification in 6 Hours | YIYI Mesh Belt</title>
-<meta name="description" content="Send photos of your existing conveyor belt. YIYI Mesh Belt identifies the full specification within 6 hours  - spiral pitch, rod pitch, wire diameter, edge type. Free sample before production. No drawings needed.">
+<meta name="description" content="Send photos of your existing conveyor belt. YIYI Mesh Belt reviews the full specification - spiral pitch, rod pitch, wire diameter, edge type. Sample review available before production. No drawings needed.">
 <meta name="keywords" content="conveyor belt matching service, conveyor belt cross reference, identify conveyor belt specification, spiral freezer belt replacement match, worn belt replacement, belt specification identification">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.yiyimeshbelt.com/belt-matching.html">
 <meta property="og:title" content="Belt Matching Service  - Send Photos, Spec Confirmed in 6 Hours | YIYI Mesh Belt">
-<meta property="og:description" content="No drawings needed. Send photos of your existing belt via WhatsApp  - full specification identified in 6 hours. Free sample before production commitment.">
+<meta property="og:description" content="No drawings needed. Send photos of your existing belt via WhatsApp - specification review and sample review available before production commitment.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Conveyor Belt Matching & Cross-Reference Service","description":"Send photos or a sample of your existing conveyor belt. YIYI Mesh Belt engineering team identifies the full specification within 6 hours and produces a free sample before any production commitment.","provider":{"@type":"Organization","name":"YIYI Mesh Belt Co., Ltd.","url":"https://www.yiyimeshbelt.com","telephone":"+86-134-5177-3742"},"serviceType":"Belt Specification Matching","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free specification identification and free sample production"},"areaServed":"Worldwide"}
+{"@context":"https://schema.org","@type":"Service","name":"Conveyor Belt Matching & Cross-Reference Service","description":"Send photos or a sample of your existing conveyor belt. YIYI Mesh Belt engineering team identifies the full specification and can arrange sample confirmation before any production commitment.","provider":{"@type":"Organization","name":"YIYI Mesh Belt Co., Ltd.","url":"https://www.yiyimeshbelt.com","telephone":"+86-134-5177-3742"},"serviceType":"Belt Specification Matching","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Specification review and sample confirmation support"},"areaServed":"Worldwide"}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -127,7 +127,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .trust-strip-inner{max-width:var(--W);margin:0 auto;padding:14px var(--px);display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 @media(min-width:1024px){.trust-strip-inner{justify-content:space-between;gap:0}}
 .ts-item{display:flex;align-items:center;gap:8px;padding:0 12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.7)}
-.ts-item::before{content:'&#10003;;color:#4ADE80;font-size:12px}
+.ts-item::before{content:'\\2713';color:#4ADE80;font-size:12px}
 
 /* FOOTER */
 .yiyi-footer{background:#0D1B2E;padding:56px 0 0}
@@ -172,8 +172,6 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .wa-quick-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .wa-qb{background:white;border:1px solid rgba(37,211,102,.4);border-radius:16px;padding:5px 12px;font-size:12px;color:#128C7E;cursor:pointer;transition:all .18s;font-family:inherit}
 .wa-qb:hover{background:#25D366;color:white;border-color:#25D366}
-
-/* 鈺愨晲鈺?PAGE SPECIFIC 鈺愨晲鈺?*/
 
 /* HERO */
 .hero{background:var(--navy-dark);position:relative;overflow:hidden;padding:80px 0}
@@ -222,9 +220,11 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .photo-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
 @media(max-width:800px){.photo-guide{grid-template-columns:1fr}}
 .pg-card{background:#fff;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
-.pg-visual{aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid var(--rule)}
+.pg-visual{aspect-ratio:4/3;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid var(--rule);overflow:hidden;background:var(--bg2)}
+.pg-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,24,.02),rgba(8,15,24,.5));pointer-events:none}
+.pg-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .pg-icon{font-size:48px}
-.pg-shot-label{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink4)}
+.pg-shot-label{position:absolute;left:14px;bottom:14px;z-index:2;font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--w);background:rgba(13,27,42,.72);border:1px solid rgba(255,255,255,.18);border-radius:2px;padding:6px 10px}
 .pg-body{padding:18px}
 .pg-title{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:8px}
 .pg-desc{font-size:13px;color:var(--ink3);line-height:1.65}
@@ -300,6 +300,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     .foot-slogan { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #C8922A; margin-bottom: 8px; display: block; }
     .foot-identity { font-size: 12px; color: rgba(255,255,255,.40); line-height: 1.6; max-width: 240px; display: block; margin-bottom: 0; }
   </style>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
 
@@ -351,19 +352,19 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       <a href="index.html" class="nav-link-simple">Home</a>
 
       <div class="nd">
-        <button class="nd-btn gold-btn">
+        <a href="products.html#strategic" class="nd-btn gold-btn nd-link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          Core Systems
+          Core Belt Systems
           <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
+        </a>
         <div class="drop-panel" style="min-width:320px">
           <div class="drop-box">
             <div class="drop-gold-bar"></div>
             <div class="drop-body" style="padding:16px">
               <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">&#10052;</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
               <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">&#8635;</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
               <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">&#10145;</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
-              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div></a>
               <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">&#9646;</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Conveyor Belt</span></div></a>
               <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">&#9881;</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span><span class="cdl-sub">(System Matched)</span></div></a>
             </div>
@@ -372,42 +373,40 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="products.html" class="nd-btn nd-link">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="left:-180px">
           <div class="drop-box">
             <div class="mega-grid">
               <div class="mega-col">
-                <div class="mega-head">IQF &amp; Freezing</div>
+                <div class="mega-head">Core Pages</div>
                 <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Freezer Belt</span><span class="dl-badge">OEM</span></a>
-                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacking Belt</span></a>
+                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacker Belt</span><span class="dl-badge">OEM</span></a>
+                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye Link Belt</span><span class="dl-badge">Food</span></a>
                 <a href="side-driven-belt.html" class="dl"><span class="dl-icon">&#10145;</span><span class="dl-label">Side-Driven Belt</span></a>
-                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye-Link Belt</span></a>
-                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
+                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
               </div>
               <div class="mega-col">
-                <div class="mega-head">Baking &amp; Processing</div>
+                <div class="mega-head">Food Processing</div>
+                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
                 <a href="biscuit-belt.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Biscuit Belt</span></a>
                 <a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">&#9878;</span><span class="dl-label">Balanced Weave Belt</span></a>
                 <a href="plastic-modular-belt.html" class="dl"><span class="dl-icon">&#10035;</span><span class="dl-label">Plastic Modular Belt</span></a>
-                <div class="mega-head" style="margin-top:14px">Heavy Load</div>
+              </div>
+              <div class="mega-col">
+                <div class="mega-head">Heavy Duty &amp; Parts</div>
                 <a href="compound-weave-belt.html" class="dl"><span class="dl-icon">&#12336;</span><span class="dl-label">Compound Weave Belt</span></a>
                 <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Chain-Driven Belt</span></a>
                 <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">&#127959;</span><span class="dl-label">Chain Plate Belt</span></a>
                 <a href="trapezoidal-mesh-belt.html" class="dl"><span class="dl-icon">&#9650;</span><span class="dl-label">Trapezoidal Mesh Belt</span></a>
-              </div>
-              <div class="mega-col">
-                <div class="mega-head">Accessories &amp; Tools</div>
-                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
                 <a href="connecting-accessories.html" class="dl"><span class="dl-icon">&#128204;</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
                 <a href="replacement-parts.html" class="dl"><span class="dl-icon">&#128297;</span><span class="dl-label">Replacement Parts</span></a>
-                <div class="mega-head" style="margin-top:14px">Selection Tools</div>
-                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
-                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
               </div>
               <div class="mega-col">
-                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Product Index</div>
-                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Built around the belt systems that support OEM manufacturing and long-term replacement supply.</p>
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Need Help Choosing?</div>
+                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Start with the right path for your project: browse, send a drawing, or ask engineering to confirm the belt type.</p>
                 <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All Products &#8594;</a>
+                <a href="contact.html?intent=drawing" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Send Your Belt Drawing &#8594;</a>
+                <a href="engineering-oem.html?intent=engineering" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Get Engineering Support &#8594;</a>
               </div>
             </div>
           </div>
@@ -415,7 +414,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="industries.html" class="nd-btn nd-link">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel">
           <div class="drop-box">
             <div class="two-col">
@@ -441,16 +440,17 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="engineering-oem.html" class="nd-btn nd-link">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel">
           <div class="drop-box">
             <div class="two-col">
               <div class="two-col-main">
                 <div class="mega-head">Technical Resources</div>
-                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
-                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
-                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Engineering &amp; OEM Overview</span></a>
                 <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Drawing Review</span></a>
+                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
+                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
                 <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#127991;</span><span class="dl-label">OEM Private Label</span></a>
               </div>
               <div class="two-col-side">
@@ -466,7 +466,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="manufacturing.html" class="nd-btn nd-link">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:260px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
@@ -482,46 +482,47 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="about.html" class="nd-btn nd-link">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:260px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Profile</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Recognition</span></a>
-              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Presence</span></a>
+              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Overview</span></a>
+              <a href="quality-control.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications &amp; QA</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Manufacturing Strength</span></a>
+              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions &amp; Visits</span></a>
+              <a href="global-delivery.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Delivery</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="knowledge-center.html" class="nd-btn nd-link">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:240px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Technical Articles</span></a>
-              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Spiral Engineering</span></a>
+              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Knowledge Center Overview</span></a>
+              <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Selection Guide</span></a>
+              <a href="what-is-a-spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Engineering Basics</span></a>
               <a href="case-studies.html" class="dl"><span class="dl-icon">&#128202;</span><span class="dl-label">Case Studies</span></a>
-              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads</span></a>
+              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads &amp; Resources</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="contact.html" class="nd-btn nd-link">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:240px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Request a Quote</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Drawing</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Talk to Engineer</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
+              <a href="contact.html?intent=quote" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Ask For A Quick Quote</span></a>
+              <a href="contact.html?intent=drawing" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Your Belt Drawing</span></a>
+              <a href="contact.html?intent=engineering" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Get Engineering Support</span></a>
+              <a href="contact.html?intent=visit" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
             </div>
           </div>
         </div>
@@ -529,7 +530,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     </div>
 
     <div class="nav-right">
-      <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;</a>
+      <a href="contact.html?intent=quote" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
       <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()">
         <span></span><span></span><span></span>
       </button>
@@ -540,8 +541,9 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     <div class="mob-inner">
       <a href="index.html" class="mob-link">Home</a>
 
-      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Systems</div>
-      <a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Belt Systems</div>
+      <a href="products.html#strategic" class="mob-link">Core Belt Systems Overview</a>
+<a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
       <a href="self-stacking-belt.html" class="mob-link">Self-Stacker Belt</a>
       <a href="side-driven-belt.html" class="mob-link">Side Driven Belt</a>
       <a href="eye-link-belt.html" class="mob-link">Eye Link Belt</a>
@@ -557,7 +559,8 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       <a href="replacement-parts.html" class="mob-link">Replacement Parts</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Industries</div>
-      <a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
+      <a href="industries.html" class="mob-link">Industries Overview</a>
+<a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
       <a href="industries.html" class="mob-link">Meat &amp; Seafood Processing</a>
       <a href="industries.html" class="mob-link">Baking &amp; Ovens</a>
       <a href="industries.html" class="mob-link">Snack &amp; Biscuit</a>
@@ -571,56 +574,62 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       <a href="replacement-review.html" class="mob-link">Replacement Projects</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
-      <a href="manufacturing.html" class="mob-link">Automated Welding</a>
+      <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
+<a href="manufacturing.html" class="mob-link">Automated Welding</a>
       <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
       <a href="quality-control.html" class="mob-link">Quality Control</a>
       <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">About YIYI</div>
-      <a href="about.html" class="mob-link">Company Profile</a>
-      <a href="about.html" class="mob-link">Certifications</a>
-      <a href="exhibition.html" class="mob-link">Exhibitions</a>
-      <a href="about.html" class="mob-link">Global Presence</a>
+      <a href="about.html" class="mob-link">Company Overview</a>
+      <a href="quality-control.html" class="mob-link">Certifications &amp; QA</a>
+      <a href="manufacturing.html" class="mob-link">Patents &amp; Manufacturing Strength</a>
+      <a href="exhibition.html" class="mob-link">Exhibitions &amp; Visits</a>
+      <a href="global-delivery.html" class="mob-link">Global Delivery</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Knowledge Center</div>
-      <a href="knowledge-center.html" class="mob-link">Technical Articles</a>
-      <a href="knowledge-center.html" class="mob-link">Spiral Engineering</a>
+      <a href="knowledge-center.html" class="mob-link">Knowledge Center Overview</a>
+      <a href="belt-selection-guide.html" class="mob-link">Selection Guide</a>
+      <a href="what-is-a-spiral-freezer-belt.html" class="mob-link">Spiral Engineering Basics</a>
       <a href="case-studies.html" class="mob-link">Case Studies</a>
-      <a href="resources.html" class="mob-link">Downloads</a>
+      <a href="resources.html" class="mob-link">Downloads &amp; Resources</a>
 
       <div style="border-top:1px solid rgba(255,255,255,.07);margin-top:10px;padding-top:10px"></div>
-      <a href="contact.html" class="mob-link">Contact</a>
-      <a href="contact.html" class="mob-cta">Get a Quote &#8594;</a>
+      <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote" class="mob-link">Ask For A Quick Quote</a>
+      <a href="contact.html?intent=drawing" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote" class="mob-cta">Ask For A Quick Quote &#8594;</a>
     </div>
   </div>
 </nav>
 
 
-<!-- 鈺愨晲鈺?HERO 鈺愨晲鈺?-->
 <section class="hero">
   <div class="hero-grid" data-reveal>
     <div>
-      <div class="hero-eyebrow">馃摳 Belt Matching Service  - No Drawing Required</div>
+      <div class="hero-eyebrow">&#128247; Belt Matching Service  - No Drawing Required</div>
       <h1>Send a Photo.<br>We Identify <em>Everything.</em></h1>
-      <p class="hero-sub">No part numbers. No drawings. No original supplier contact. Send us three photos of your existing belt  - we identify the complete specification within 6 hours and produce a free sample before you commit to production.</p>
+      <p class="hero-sub">No part numbers. No drawings. No original supplier contact. Send us three photos of your existing belt  - we identify the complete specification and arrange sample confirmation when needed before you commit to production.</p>
       <div class="hero-proof">
         <div class="hp-chip"><span class="dot"></span>Spec confirmed in 6 hours</div>
-        <div class="hp-chip"><span class="dot"></span>Free sample  - no charge</div>
+<div class="hp-chip"><span class="dot"></span>Sample review available</div>
         <div class="hp-chip"><span class="dot"></span>All belt types covered</div>
         <div class="hp-chip"><span class="dot"></span>Drum diameter test included</div>
         <div class="hp-chip"><span class="dot"></span>Since 2008  &#183;  ISO 9001</div>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="https://wa.me/8613451773742?text=Hi+YIYI Mesh Belt%2C+I+want+to+use+your+Belt+Matching+Service.+Let+me+send+you+photos+of+my+existing+belt." target="_blank" rel="noopener" class="btn-green">馃摫 WhatsApp Belt Photos Now</a>
-        <a href="#photo-guide" class="btn-o">How to Photograph &#8594;/a>
+        <a href="https://wa.me/8618653496136?text=Hi+YIYI Mesh Belt%2C+I+want+to+use+your+Belt+Matching+Service.+Let+me+send+you+photos+of+my+existing+belt." target="_blank" rel="noopener" class="btn-green">&#128172; WhatsApp Belt Photos Now</a>
+        <a href="#photo-guide" class="btn-o">How to Photograph &#8594;</a>
       </div>
     </div>
     <div class="action-card">
       <div class="ac-head">
-        <div class="ac-head-icon">馃摳</div>
+        <div class="ac-head-icon">&#128247;</div>
         <div>
           <div class="ac-head-title">Belt Matching  - 4 Steps</div>
-          <div class="ac-head-sub">From photo to free sample. Zero charge.</div>
+          <div class="ac-head-sub">From photo to confirmed specification and sample review.</div>
         </div>
       </div>
       <div class="ac-body">
@@ -637,15 +646,15 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
           <div class="ac-step-body">
             <div class="ac-step-title">We Identify the Full Spec</div>
             <div class="ac-step-desc">Spiral pitch  &#183;  Rod pitch  &#183;  Wire diameter  &#183;  Belt width  &#183;  Edge type  &#183;  Material grade  - confirmed in writing.</div>
-            <div class="ac-step-time">鈿?Within 6 hours</div>
+<div class="ac-step-time">&#9889; Engineering review</div>
           </div>
         </div>
         <div class="ac-step">
           <div class="ac-num">3</div>
           <div class="ac-step-body">
-            <div class="ac-step-title">Free Sample Produced</div>
-            <div class="ac-step-desc">0.5 - m sample at no charge. Test-fit on your system before full production commitment.</div>
-            <div class="ac-step-time">馃摝 7 - 0 working days</div>
+            <div class="ac-step-title">Sample Review Prepared</div>
+            <div class="ac-step-desc">0.5-1m sample at no charge. Test-fit on your system before full production commitment.</div>
+            <div class="ac-step-time">&#128344; 7-10 working days</div>
           </div>
         </div>
         <div class="ac-step">
@@ -653,13 +662,13 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
           <div class="ac-step-body">
             <div class="ac-step-title">Production + Delivery</div>
             <div class="ac-step-desc">Full belt produced and delivered. Air freight available for urgent requirements.</div>
-            <div class="ac-step-time">馃彮 15 - 5 working days</div>
+            <div class="ac-step-time">&#127981; 15-25 working days</div>
           </div>
         </div>
         <div class="ac-divider"></div>
       </div>
       <div class="ac-cta">
-        <a href="https://wa.me/8613451773742?text=Hi+YIYI Mesh Belt%2C+I+want+to+match+my+belt.+Sending+photos+now." target="_blank" rel="noopener" class="btn-green-lg">馃摫 Start Now  - Send Photos</a>
+        <a href="https://wa.me/8618653496136?text=Hi+YIYI Mesh Belt%2C+I+want+to+match+my+belt.+Sending+photos+now." target="_blank" rel="noopener" class="btn-green-lg">&#128172; Start Now  - Send Photos</a>
         <div style="text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--w30);margin-top:12px">FREE  &#183;  No commitment  &#183;  6H response guarantee</div>
       </div>
     </div>
@@ -671,25 +680,25 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
   <div class="W">
     <div class="guar-row" data-reveal>
       <div class="gc">
-        <div class="gc-icon">鈿?/div>
+        <div class="gc-icon">&#9889;</div>
         <div class="gc-val">6<span class="gc-unit">H</span></div>
         <div class="gc-key">Specification Response</div>
         <div class="gc-desc">From photos received to written spec confirmation</div>
       </div>
       <div class="gc">
-        <div class="gc-icon">馃巵</div>
+        <div class="gc-icon">&#127942;</div>
         <div class="gc-val" style="font-size:20px;padding-top:3px">Free</div>
         <div class="gc-key">Sample Before Production</div>
         <div class="gc-desc">Test-fit on your machine. No charge. No commitment.</div>
       </div>
       <div class="gc">
-        <div class="gc-icon">馃敩</div>
+        <div class="gc-icon">&#128300;</div>
         <div class="gc-val">100<span class="gc-unit">%</span></div>
         <div class="gc-key">Drum Diameter Tested</div>
         <div class="gc-desc">Every replacement verified to run on your existing drum</div>
       </div>
       <div class="gc">
-        <div class="gc-icon">鉁堬笍</div>
+        <div class="gc-icon">&#9992;</div>
         <div class="gc-val">24<span class="gc-unit">H</span></div>
         <div class="gc-key">Emergency Despatch</div>
         <div class="gc-desc">Production stopped? Air freight available same day</div>
@@ -710,8 +719,8 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     </div>
     <div class="photo-guide" data-reveal>
       <div class="pg-card">
-        <div class="pg-visual" style="background:linear-gradient(135deg,#E8F0F8,#D0DCF0)">
-          <div class="pg-icon">馃敪</div>
+        <div class="pg-visual">
+          <img src="assets/product-media/eye-link-belt/elb-proof-surface.jpg" alt="Top view photo example showing metal conveyor belt surface pattern" decoding="async" loading="eager" fetchpriority="high">
           <div class="pg-shot-label">Shot 01  - Top View</div>
         </div>
         <div class="pg-body">
@@ -721,8 +730,8 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
         </div>
       </div>
       <div class="pg-card">
-        <div class="pg-visual" style="background:linear-gradient(135deg,#F0EAE0,#E4D8C8)">
-          <div class="pg-icon">馃搻</div>
+        <div class="pg-visual">
+          <img src="assets/product-media/eye-link-belt/elb-proof-welded-edge.jpg" alt="Side edge photo example showing belt edge construction and welded links" decoding="async" loading="lazy">
           <div class="pg-shot-label">Shot 02  - Side Edge</div>
         </div>
         <div class="pg-body">
@@ -732,8 +741,8 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
         </div>
       </div>
       <div class="pg-card">
-        <div class="pg-visual" style="background:linear-gradient(135deg,#E0F0E8,#C8E4D4)">
-          <div class="pg-icon">馃搹</div>
+        <div class="pg-visual">
+          <img src="assets/product-media/eye-link-belt/elb-proof-width.jpg" alt="Belt width photo example for replacement belt dimension confirmation" decoding="async" loading="lazy">
           <div class="pg-shot-label">Shot 03  - Width</div>
         </div>
         <div class="pg-body">
@@ -744,7 +753,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
     </div>
     <div style="background:var(--bg);border:1px solid var(--rule);border-radius:3px;padding:20px 24px;margin-top:20px;display:flex;gap:14px;align-items:flex-start" data-reveal>
-      <div style="font-size:20px;flex-shrink:0">馃挕</div>
+      <div style="font-size:20px;flex-shrink:0">&#128269;</div>
       <div style="font-size:14px;color:var(--ink3);line-height:1.7"><strong style="color:var(--ink)">Optional but fastest:</strong> Cut a 30cm section of your worn belt and courier it to our factory. We measure every dimension in our lab  - spiral pitch, rod pitch, wire diameter, link thickness, edge construction  - and confirm the spec the same day the sample arrives. Contact us for the shipping address.</div>
     </div>
   </div>
@@ -758,7 +767,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     <div class="hdr" data-reveal>
       <div class="ey">Specification Parameters</div>
       <h2 class="h2">Everything We Confirm From Your Photos</h2>
-      <p class="bp">Every parameter below is identified and confirmed in writing before the free sample is produced. Nothing assumed  - everything measured.</p>
+      <p class="bp">Every parameter below is identified and confirmed in writing before sample review or production. Nothing assumed  - everything measured.</p>
     </div>
     <div class="spec-grid" data-reveal>
       <div class="sg-card g">
@@ -816,56 +825,56 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
         <div class="bm-hcell" style="text-align:left">Belt Type</div>
         <div class="bm-hcell">Photo Match</div>
         <div class="bm-hcell">Sample Match</div>
-        <div class="bm-hcell">Free Sample</div>
+        <div class="bm-hcell">Sample Review</div>
         <div class="bm-hcell">Emergency OK</div>
       </div>
       <div class="bm-row">
-        <div class="bm-cell"><a href="spiral-freezer-belt.html" style="color:var(--blue)">鉂勶笍 Spiral Freezer Belt</a></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
+        <div class="bm-cell"><a href="spiral-freezer-belt.html" style="color:var(--blue)">&#10052;&#65039; Spiral Freezer Belt</a></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
       </div>
       <div class="bm-row">
-        <div class="bm-cell"><a href="self-stacking-belt.html" style="color:var(--blue)">馃攧 Self-Stacking Belt</a></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
+        <div class="bm-cell"><a href="self-stacking-belt.html" style="color:var(--blue)">&#128260; Self-Stacking Belt</a></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
       </div>
       <div class="bm-row">
-        <div class="bm-cell"><a href="eye-link-belt.html" style="color:var(--blue)">馃敆 Eye Link Belt</a></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
+        <div class="bm-cell"><a href="eye-link-belt.html" style="color:var(--blue)">&#128279; Eye Link Belt</a></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
       </div>
       <div class="bm-row">
-        <div class="bm-cell"><a href="flat-wire-belt.html" style="color:var(--blue)">馃煪 Flat Wire Belt</a></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
+        <div class="bm-cell"><a href="flat-wire-belt.html" style="color:var(--blue)">&#9638; Flat Wire Belt</a></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
         <div class="bm-cell"><span class="cn">Air Freight</span></div>
       </div>
       <div class="bm-row">
-        <div class="bm-cell"><a href="side-driven-belt.html" style="color:var(--blue)">鉃★笍 Side Driven Belt</a></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
+        <div class="bm-cell"><a href="side-driven-belt.html" style="color:var(--blue)">&#10145; Side Driven Belt</a></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
       </div>
       <div class="bm-row">
-        <div class="bm-cell"><a href="balanced-weave-belt.html" style="color:var(--blue)">鈿栵笍 Balanced Weave Belt</a></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
+        <div class="bm-cell"><a href="balanced-weave-belt.html" style="color:var(--blue)">&#9878; Balanced Weave Belt</a></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
         <div class="bm-cell"><span class="cn">Contact Us</span></div>
       </div>
       <div class="bm-row">
-        <div class="bm-cell"><a href="biscuit-belt.html" style="color:var(--blue)">馃崻 Biscuit / Baking Belt</a></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
-        <div class="bm-cell"><span class="cy">&#10003;/span></div>
+        <div class="bm-cell"><a href="biscuit-belt.html" style="color:var(--blue)">&#127850; Biscuit / Baking Belt</a></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
+        <div class="bm-cell"><span class="cy">&#10003;</span></div>
         <div class="bm-cell"><span class="cn">Contact Us</span></div>
       </div>
     </div>
@@ -888,23 +897,23 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">How accurate is photo-based identification?<span class="faq-t">+</span></div>
-        <div class="faq-a">For standard belt constructions  - spiral freezer, eye link, self-stacking, flat wire  - photo identification is accurate for belt type, approximate pitch, and edge treatment. Wire diameter is estimated from photos and confirmed by physical measurement of the free sample before full production. We never proceed to production without confirmed specifications.</div>
+        <div class="faq-a">For standard belt constructions  - spiral freezer, eye link, self-stacking, flat wire  - photo identification is accurate for belt type, approximate pitch, and edge treatment. Wire diameter is estimated from photos and confirmed by physical measurement or sample review before full production. We never proceed to production without confirmed specifications.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What if the free sample does not fit my system?<span class="faq-t">+</span></div>
-        <div class="faq-a">If the free sample does not fit correctly  - wrong pitch, width, or drum engagement  - we adjust the specification and produce a second sample at no charge. The matching service does not end until the sample runs correctly on your system.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">What if the sample does not fit my system?<span class="faq-t">+</span></div>
+        <div class="faq-a">If the sample does not fit correctly  - wrong pitch, width, or drum engagement  - we adjust the specification before production. The matching service does not end until the specification is confirmed for your system.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">My belt is heavily worn. Can you still identify the spec?<span class="faq-t">+</span></div>
         <div class="faq-a">Yes. Even heavily worn belts retain enough structural detail for identification. The spiral weave pattern, rod spacing, and wire diameter are visible even on belts at end-of-life. If the belt is too deformed for photo identification, a physical 30cm section sent to our factory allows direct measurement regardless of surface condition.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Is there any charge for the matching service or the free sample?<span class="faq-t">+</span></div>
-        <div class="faq-a">No. Specification identification is completely free. The free sample (0.5 - m of belt) is produced at no charge and included in the cost of the production order if you proceed. If you do not proceed to production after receiving the sample, there is no charge. No hidden fees at any stage.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Is there any charge for the matching service or sample review?<span class="faq-t">+</span></div>
+        <div class="faq-a">Specification identification is part of our engineering support. If sample review is required, we confirm the sample scope, cost, and lead time clearly before proceeding. No hidden fees at any stage.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">How long does the full process take from photo to belt delivered?<span class="faq-t">+</span></div>
-        <div class="faq-a">Specification confirmation: within 6 hours. Free sample production: 7 - 0 working days. Your test-fit: 1 -  working days. Full production: 15 - 5 working days. Air freight delivery: 3 -  days depending on destination. Total from first photo to belt installed: typically 5 -  weeks. Emergency compressed timelines available  - contact us directly.</div>
+<div class="faq-a">Specification review starts from your photos and measurements. Sample production, when required, usually takes 7-10 working days. Your test-fit may take 1-2 working days. Full production: 15-25 working days. Air freight delivery: 3-7 days depending on destination. Total from first photo to belt installed depends on confirmation speed and logistics. Emergency compressed timelines available - contact us directly.</div>
       </div>
     </div>
   </div>
@@ -950,7 +959,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       </div>
 
       <div>
-        <div class="foot-col-head">Core Systems</div>
+        <div class="foot-col-head">Core Belt Systems</div>
         <div class="foot-links">
           <a href="spiral-freezer-belt.html" class="foot-link gold">Spiral Freezer Belt</a>
           <a href="self-stacking-belt.html" class="foot-link gold">Self-Stacker Belt</a>
@@ -989,8 +998,8 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
             WhatsApp: +86 186 5349 6136
           </a>
         </div>
-        <a href="contact.html" class="foot-btn-p">Request a Quote &#8594;</a>
-        <a href="contact.html" class="foot-btn-o">Send Drawing &#8594;</a>
+        <a href="contact.html?intent=quote&source=belt-matching" class="foot-btn-p">Ask For A Quick Quote &#8594;</a>
+        <a href="contact.html?intent=drawing&source=belt-matching" class="foot-btn-o">Send Your Belt Drawing &#8594;</a>
 
         <div style="margin-top:24px">
           <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8FA8C0;margin-bottom:12px;font-weight:600">CONNECT WITH US</div>
@@ -1035,12 +1044,15 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
           <div class="wa-status"><span class="wa-online-dot"></span>Belt Matching  - Ready</div>
         </div>
       </div>
-      <button style="color:rgba(255,255,255,.8);font-size:20px;background:none;border:none;cursor:pointer" onclick="document.getElementById('wa-chat').style.display='none'">&#10003;/button>
+      <button style="color:rgba(255,255,255,.8);font-size:20px;background:none;border:none;cursor:pointer" onclick="document.getElementById('wa-chat').style.display='none'">&#10003;</button>
     </div>
     <div class="wa-body">
-      <div class="wa-bubble">馃憢 Send me 3 photos of your belt  - top view, side edge, and width. I'll identify the full specification within 6 hours. Free sample follows automatically.</div>
+<div class="wa-bubble">&#128075; Send me 3 photos of your belt - top view, side edge, and width. We will review the specification and confirm whether a sample is needed.</div>
       <div class="wa-quick-btns">
         <button class="wa-qb" oncl
+
+
+
 
 
 

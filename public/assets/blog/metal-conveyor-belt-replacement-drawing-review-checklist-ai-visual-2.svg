@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+  <title id="t">Metal Conveyor Belt Replacement: Drawing Review Checklist Before You Request a Quote visual 2</title>
+  <desc id="d">Checklist infographic for metal conveyor belt replacement: belt width, pitch, rod diameter, edge type, sprocket, operating temperature, no logo.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1F5C9E"/>
+      <stop offset="1" stop-color="#E8EEF6"/>
+    </linearGradient>
+    <pattern id="mesh" width="64" height="64" patternUnits="userSpaceOnUse" patternTransform="rotate(24)">
+      <path d="M0 32h64M32 0v64" stroke="rgba(255,255,255,.32)" stroke-width="3"/>
+      <path d="M0 0l64 64M64 0L0 64" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#g)"/>
+  <rect x="80" y="86" width="1040" height="588" rx="42" fill="rgba(13,27,42,.58)" stroke="rgba(255,255,255,.22)" stroke-width="2"/>
+  <rect x="120" y="136" width="960" height="350" rx="28" fill="url(#mesh)" opacity=".9"/>
+  <g fill="none" stroke="#fff" stroke-width="10" opacity=".72">
+    <path d="M150 545c160-100 260 100 420 0s260 100 480 0"/>
+    <path d="M150 592c160-100 260 100 420 0s260 100 480 0"/>
+  </g>
+  <text x="120" y="106" fill="#C8922A" font-family="IBM Plex Mono, Consolas, monospace" font-size="24" letter-spacing="7">REPLACEMENT BELT PROJECTS</text>
+  <text x="120" y="560" fill="#fff" font-family="DM Sans, Arial, sans-serif" font-size="50" font-weight="800">Metal Conveyor Belt Replacement: Drawing Review Checklist </text>
+  <text x="120" y="620" fill="#DCE9F6" font-family="DM Sans, Arial, sans-serif" font-size="25">AI visual placeholder - replace with generated image when API is connected</text>
+  </svg>

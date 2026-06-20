@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/site-foundation.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Replacement Conveyor Belt Review","url":"https://www.yiyimeshbelt.com/replacement-review/","publisher":{"@type":"Organization","name":"YIYI Mesh Belt","url":"https://www.yiyimeshbelt.com"}}</script>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
   <div class="page-shell">
@@ -56,7 +57,7 @@
           <a href="contact.html" class="nav-link-simple">Contact</a>
         </div>
         <div class="nav-right">
-          <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;</a>
+          <a href="contact.html?intent=quote" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
           <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()"><span></span><span></span><span></span></button>
         </div>
       </div>
@@ -67,8 +68,12 @@
           <a href="engineering-oem.html" class="mob-link">Engineering &amp; OEM</a>
           <a href="replacement-review.html" class="mob-link">Replacement Review</a>
           <a href="knowledge-center.html" class="mob-link">Knowledge Center</a>
-          <a href="contact.html" class="mob-link">Contact</a>
-          <a href="contact.html" class="mob-cta">Get a Quote &#8594;</a>
+          <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote" class="mob-link">Ask For A Quick Quote</a>
+      <a href="contact.html?intent=drawing" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote" class="mob-cta">Ask For A Quick Quote &#8594;</a>
         </div>
       </div>
     </nav>
@@ -81,8 +86,9 @@
             <h1>Need to Match an <span class="accent">Existing Conveyor Belt</span> Without Starting From Zero?</h1>
             <p>This page is for buyers who have an old belt, incomplete records, or an urgent replacement requirement. Send photos, dimensions, or the worn belt itself and move directly into review.</p>
             <div class="cta-row">
-              <a class="btn-primary" href="contact.html">Submit Old Belt Photo</a>
-              <a class="btn-secondary" href="contact.html">Urgent Inquiry</a>
+              <a class="btn-primary" href="contact.html?intent=replacement&source=replacement-review">Submit Old Belt Photo</a>
+              <a class="btn-secondary" href="contact.html?intent=urgent&source=replacement-review">Urgent Inquiry</a>
+              <a class="btn-secondary" href="contact.html?intent=drawing&source=replacement-review">Send Your Belt Drawing</a>
             </div>
           </div>
           <div class="hero-panel">
@@ -103,6 +109,44 @@
         </div>
       </div>
     </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow" style="color:#4a8cc8">Start With What You Have</div>
+            <h2>Choose the Fastest Replacement Entry Point</h2>
+            <p>Replacement projects rarely begin with perfect data. That is normal. The fastest path depends on whether you have only photos, partial dimensions, or a drawing that still needs confirmation against the running system.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="path-card">
+            <h3>I Only Have Old Belt Photos</h3>
+            <ul>
+              <li>Best for urgent plant-side replacement requests</li>
+              <li>Use when the original drawing is missing or incomplete</li>
+              <li><a href="contact.html?intent=replacement&source=replacement-review">Submit Old Belt Photo</a></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>I Have Dimensions or a Sample</h3>
+            <ul>
+              <li>Best for buyers who can provide pitch, width, rod size, or worn belt sections</li>
+              <li>Use when you want a more accurate reverse match from the start</li>
+              <li><a href="contact.html?intent=replacement&source=replacement-review">Request Replacement Review</a></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>I Have a Drawing but Need Confirmation</h3>
+            <ul>
+              <li>Best for OEM documentation, archived specs, or customer drawings that still need fit review</li>
+              <li>Use when you want engineering to confirm the replacement route before quoting</li>
+              <li><a href="contact.html?intent=drawing&source=replacement-review">Send Your Belt Drawing</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section alt">
       <div class="container">
@@ -136,8 +180,9 @@
         <h2>Ready to Start the Replacement Review?</h2>
         <p>Send the old belt photos or dimensions first. We will identify the likely belt type and explain the next step instead of pushing a generic product list.</p>
         <div class="cta-row" style="justify-content:center">
-          <a class="btn-primary" href="contact.html">Submit Old Belt Photo</a>
-          <a class="btn-secondary" href="engineering-oem.html">Talk to Engineer</a>
+          <a class="btn-primary" href="contact.html?intent=replacement&source=replacement-review">Submit Old Belt Photo</a>
+          <a class="btn-secondary" href="contact.html?intent=engineering&source=replacement-review">Get Engineering Support</a>
+          <a class="btn-secondary" href="contact.html?intent=urgent&source=replacement-review">Urgent Inquiry</a>
         </div>
       </div>
     </section>
@@ -179,9 +224,9 @@
           <div>
             <div class="foot-col-head">CTA</div>
             <div class="foot-links">
-              <a href="contact.html" class="foot-link">Submit Old Belt Photo</a>
-              <a href="contact.html" class="foot-link">Urgent Inquiry</a>
-              <a href="contact.html" class="foot-link">Request Replacement Review</a>
+              <a href="contact.html?intent=replacement&source=replacement-review" class="foot-link">Submit Old Belt Photo</a>
+              <a href="contact.html?intent=urgent&source=replacement-review" class="foot-link">Urgent Inquiry</a>
+              <a href="contact.html?intent=replacement&source=replacement-review" class="foot-link">Request Replacement Review</a>
             </div>
           </div>
         </div>
@@ -206,6 +251,7 @@
       if (button) button.classList.add('active');
     }
   </script>
+<script src="assets/site-shell.js"></script>
 </body>
 </html>
 

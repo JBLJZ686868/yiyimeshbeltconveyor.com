@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/site-foundation.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"OEM Conveyor Belt Manufacturing Partner","url":"https://www.yiyimeshbelt.com/oem-conveyor-belt-partner/","description":"OEM-focused landing page for drawing-based conveyor belt manufacturing support.","publisher":{"@type":"Organization","name":"YIYI Mesh Belt","url":"https://www.yiyimeshbelt.com"}}</script>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
   <div class="page-shell">
@@ -57,7 +58,7 @@
           <a href="contact.html" class="nav-link-simple">Contact</a>
         </div>
         <div class="nav-right">
-          <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;</a>
+          <a href="contact.html?intent=quote" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
           <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()"><span></span><span></span><span></span></button>
         </div>
       </div>
@@ -68,8 +69,12 @@
           <a href="engineering-oem.html" class="mob-link">Engineering &amp; OEM</a>
           <a href="manufacturing.html" class="mob-link">Manufacturing Assurance</a>
           <a href="resources.html" class="mob-link">Resources</a>
-          <a href="contact.html" class="mob-link">Contact</a>
-          <a href="contact.html" class="mob-cta">Get a Quote &#8594;</a>
+          <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote" class="mob-link">Ask For A Quick Quote</a>
+      <a href="contact.html?intent=drawing" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote" class="mob-cta">Ask For A Quick Quote &#8594;</a>
         </div>
       </div>
     </nav>
@@ -82,7 +87,7 @@
             <h1>Automated Metal Conveyor Belt Manufacturing Partner for <span class="accent">OEM Equipment Builders</span></h1>
             <p>Use this page for OEM-intent campaigns. It focuses on drawing confirmation, system matching, production control, and long-term supply rather than broad product browsing.</p>
             <div class="cta-row">
-              <a class="btn-primary" href="contact.html">Send Drawing</a>
+              <a class="btn-primary" href="contact.html">Send Your Belt Drawing</a>
               <a class="btn-secondary" href="contact.html">Request OEM Quote</a>
             </div>
           </div>
@@ -137,8 +142,8 @@
         <h2>Ready to Move from Drawing to Review?</h2>
         <p>This landing page is designed to route OEM traffic into a tighter engineering conversation. Send the project inputs and we will reply with the next practical step.</p>
         <div class="cta-row" style="justify-content:center">
-          <a class="btn-primary" href="contact.html">Send Drawing</a>
-          <a class="btn-secondary" href="engineering-oem.html">Talk to Engineer</a>
+          <a class="btn-primary" href="contact.html">Send Your Belt Drawing</a>
+          <a class="btn-secondary" href="engineering-oem.html">Get Engineering Support</a>
         </div>
       </div>
     </section>
@@ -180,9 +185,9 @@
           <div>
             <div class="foot-col-head">CTA</div>
             <div class="foot-links">
-              <a href="contact.html" class="foot-link">Send Drawing</a>
+              <a href="contact.html" class="foot-link">Send Your Belt Drawing</a>
               <a href="contact.html" class="foot-link">Request OEM Quote</a>
-              <a href="engineering-oem.html" class="foot-link">Talk to Engineer</a>
+              <a href="engineering-oem.html" class="foot-link">Get Engineering Support</a>
             </div>
           </div>
         </div>
@@ -207,6 +212,7 @@
       if (button) button.classList.add('active');
     }
   </script>
+<script src="assets/site-shell.js"></script>
 </body>
 </html>
 

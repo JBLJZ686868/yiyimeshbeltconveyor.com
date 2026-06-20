@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/site-foundation.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"YIYI Mesh Belt Knowledge Center","url":"https://www.yiyimeshbelt.com/knowledge-center.html","about":"Metal conveyor belt engineering knowledge","publisher":{"@type":"Organization","name":"YIYI Mesh Belt","url":"https://www.yiyimeshbelt.com"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.yiyimeshbelt.com/"},{"@type":"ListItem","position":2,"name":"Knowledge Center","item":"https://www.yiyimeshbelt.com/knowledge-center.html"}]}</script>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
   <div class="page-shell">
@@ -56,23 +57,27 @@
           <a href="manufacturing.html" class="nav-link-simple">Manufacturing Assurance</a>
           <a href="about.html" class="nav-link-simple">About YIYI</a>
           <div class="nd">
-            <button class="nd-btn">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
-            <div class="drop-panel" style="min-width:240px">
-              <div class="drop-box">
-                <div class="drop-blue-bar"></div>
-                <div class="drop-body">
-                  <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Technical Articles</span></a>
-                  <a href="what-is-a-spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Engineering</span></a>
-                  <a href="case-studies.html" class="dl"><span class="dl-icon">&#128202;</span><span class="dl-label">Case Studies</span></a>
-                  <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads</span></a>
-                </div>
-              </div>
+            <a href="knowledge-center.html" class="nd-btn nd-link">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="drop-panel" style="min-width:240px">
+          <div class="drop-box">
+            <div class="drop-blue-bar"></div>
+            <div class="drop-body">
+              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Knowledge Center Overview</span></a>
+              <a href="blog.html" class="dl"><span class="dl-icon">&#9997;</span><span class="dl-label">Daily Engineering Blog</span></a>
+              <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Selection Guide</span></a>
+              <a href="what-is-a-spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Engineering Basics</span></a>
+              <a href="case-studies.html" class="dl"><span class="dl-icon">&#128202;</span><span class="dl-label">Case Studies</span></a>
+              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads &amp; Resources</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
             </div>
           </div>
           <a href="contact.html" class="nav-link-simple">Contact</a>
         </div>
         <div class="nav-right">
-          <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;</a>
+          <a href="contact.html?intent=quote" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
           <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()"><span></span><span></span><span></span></button>
         </div>
       </div>
@@ -84,8 +89,12 @@
           <a href="engineering-oem.html" class="mob-link">Engineering &amp; OEM</a>
           <a href="knowledge-center.html" class="mob-link">Knowledge Center</a>
           <a href="resources.html" class="mob-link">Resources</a>
-          <a href="contact.html" class="mob-link">Contact</a>
-          <a href="contact.html" class="mob-cta">Get a Quote &#8594;</a>
+          <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote" class="mob-link">Ask For A Quick Quote</a>
+      <a href="contact.html?intent=drawing" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote" class="mob-cta">Ask For A Quick Quote &#8594;</a>
         </div>
       </div>
     </nav>
@@ -98,8 +107,8 @@
             <h1>Engineering Knowledge Written to <span class="accent">Help Procurement Move</span></h1>
             <p>Every article here is built to answer the questions that appear before real industrial inquiries: belt selection, sprocket matching, tracking problems, replacement confirmation, and why our material preparation matters.</p>
             <div class="cta-row">
-              <a class="btn-primary" href="contact.html">Send Drawing</a>
-              <a class="btn-ghost" href="engineering-oem.html">Talk to Engineer</a>
+              <a class="btn-primary" href="contact.html?intent=drawing&source=knowledge-center">Send Your Belt Drawing</a>
+              <a class="btn-ghost" href="contact.html?intent=engineering&source=knowledge-center">Get Engineering Support</a>
             </div>
           </div>
           <div class="hero-panel">
@@ -122,22 +131,84 @@
       </div>
     </header>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow" style="color:#4a8cc8">Start With Your Question</div>
+            <h2>Choose the Fastest Path Out of Research Mode</h2>
+            <p>This hub helps buyers learn, but the goal is not to leave you reading forever. If you already know your next question, choose the path that matches it.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="path-card">
+            <h3>I Need Belt Selection Help</h3>
+            <ul>
+              <li>Best for OEM builders and technical procurement</li>
+              <li>Use when you are still comparing belt types or system fit</li>
+              <li><a href="belt-selection-guide.html">Open Selection Guide</a></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>I Need Engineering Review</h3>
+            <ul>
+              <li>Best for drawings, OEM specs, and matched parts questions</li>
+              <li>Use when research is done and confirmation is needed</li>
+              <li><a href="contact.html?intent=engineering&source=knowledge-center">Get Engineering Support</a></li>
+            </ul>
+          </div>
+          <div class="path-card">
+            <h3>I Need a Replacement Answer</h3>
+            <ul>
+              <li>Best for old belt photos, worn samples, and shutdown timelines</li>
+              <li>Use when you want to move from article reading to real review</li>
+              <li><a href="contact.html?intent=replacement&source=knowledge-center">Start Replacement Review</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section alt">
       <div class="container">
         <div class="section-header">
           <div>
             <div class="eyebrow" style="color:#4a8cc8">Launch Cluster</div>
-            <h2>First-Batch Articles</h2>
-            <p>These are the pages that should absorb technical search intent and route users into product, OEM, and replacement conversations.</p>
+            <h2>First-Batch Articles and Daily Blog</h2>
+            <p>These pages absorb technical search intent and route users into product, OEM, replacement, and quote conversations.</p>
           </div>
         </div>
         <div class="grid-3">
-          <a class="content-card" href="what-is-a-spiral-freezer-belt.html"><div class="mini-label">Core Systems</div><h3>What Is a Spiral Freezer Belt?</h3><p>Defines the belt, how it works, and when OEM buyers should specify it.</p></a>
-          <a class="content-card" href="how-self-stacker-belt-works.html"><div class="mini-label">Core Systems</div><h3>How a Self-Stacker Belt Works</h3><p>Explains stacking geometry, positive drive logic, and replacement considerations.</p></a>
+          <a class="content-card" href="blog.html"><div class="mini-label">Daily SEO Publishing</div><h3>YIYI Mesh Belt Blog</h3><p>Automatically generated engineering articles for buyer questions, product selection, replacement review, and manufacturing proof.</p></a>
+          <a class="content-card" href="what-is-a-spiral-freezer-belt.html"><div class="mini-label">Core Belt Systems</div><h3>What Is a Spiral Freezer Belt?</h3><p>Defines the belt, how it works, and when OEM buyers should specify it.</p></a>
+          <a class="content-card" href="how-self-stacker-belt-works.html"><div class="mini-label">Core Belt Systems</div><h3>How a Self-Stacker Belt Works</h3><p>Explains stacking geometry, positive drive logic, and replacement considerations.</p></a>
           <a class="content-card" href="how-to-match-drum-diameter-for-spiral-conveyor-belt.html"><div class="mini-label">Engineering</div><h3>How to Match Drum Diameter</h3><p>Shows why drum fit affects spiral belt life, stability, and OEM validation.</p></a>
           <a class="content-card" href="what-causes-conveyor-belt-tracking-problems.html"><div class="mini-label">Troubleshooting</div><h3>What Causes Conveyor Belt Tracking Problems</h3><p>Identifies the major root causes behind drift, instability, and repeat failure.</p></a>
           <a class="content-card" href="how-to-match-sprockets-and-conveyor-belts.html"><div class="mini-label">Engineering</div><h3>How to Match Sprockets and Conveyor Belts</h3><p>Explains pitch, tooth profile, and why matched supply reduces replacement risk.</p></a>
           <a class="content-card" href="why-in-house-wire-drawing-matters.html"><div class="mini-label">Material Control</div><h3>Why In-House Wire Drawing Matters</h3><p>Connects raw material preparation to long-term belt consistency and QA control.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow" style="color:#4a8cc8">Troubleshooting / Failure Cluster</div>
+            <h2>Engineering Problem Articles Built for High-Intent Buyers</h2>
+            <p>These pages answer the failure questions buyers search when a belt is already causing downtime, replacement pressure, or engineering uncertainty.</p>
+          </div>
+        </div>
+        <div class="grid-3">
+          <a class="content-card" href="blog/why-does-a-spiral-freezer-belt-collapse.html"><div class="mini-label">Spiral Freezer Failure</div><h3>Why Does a Spiral Freezer Belt Collapse?</h3><p>Explains edge, pitch, support rail, load, and turning-radius causes behind collapse.</p></a>
+          <a class="content-card" href="blog/why-does-a-conveyor-belt-track-to-one-side.html"><div class="mini-label">Tracking Failure</div><h3>Why Does a Conveyor Belt Track to One Side?</h3><p>Checks alignment, tension, sprockets, loading, and edge wear before replacement.</p></a>
+          <a class="content-card" href="blog/why-does-a-chain-driven-belt-jump-on-sprockets.html"><div class="mini-label">Sprocket Engagement</div><h3>Why Does a Chain Driven Belt Jump on Sprockets?</h3><p>Shows how pitch mismatch, worn sprockets, shaft alignment, and debris cause jumping.</p></a>
+          <a class="content-card" href="blog/why-do-eye-link-belts-break-under-heavy-load.html"><div class="mini-label">Heavy Load Breakage</div><h3>Why Do Eye Link Belts Break Under Heavy Load?</h3><p>Reviews load, rod diameter, link wire, support spacing, and drive engagement.</p></a>
+          <a class="content-card" href="blog/why-does-a-flat-wire-belt-deform-during-operation.html"><div class="mini-label">Flat Wire Deformation</div><h3>Why Does a Flat Wire Belt Deform During Operation?</h3><p>Connects deformation patterns to load, heat, support spacing, edge pull, and tension.</p></a>
+          <a class="content-card" href="blog/what-causes-self-stacking-belt-failure-in-spiral-freezers.html"><div class="mini-label">Self-Stacker Failure</div><h3>What Causes Self-Stacking Belt Failure in Spiral Freezers?</h3><p>Focuses on side plate geometry, stacking height, tower path, and edge fatigue.</p></a>
+          <a class="content-card" href="blog/why-do-conveyor-belts-stretch-or-lose-tension.html"><div class="mini-label">Tension Loss</div><h3>Why Do Conveyor Belts Stretch or Lose Tension?</h3><p>Explains pitch elongation, take-up position, sprocket wear, overload, and fatigue.</p></a>
+          <a class="content-card" href="blog/why-does-a-spiral-freezer-belt-run-unstable.html"><div class="mini-label">Running Instability</div><h3>Why Does a Spiral Freezer Belt Run Unstable?</h3><p>Uses running video, edge wear, tension, drive matching, and tower alignment checks.</p></a>
+          <a class="content-card" href="contact.html?intent=troubleshooting&source=knowledge-center"><div class="mini-label">Fast Review Path</div><h3>Send Failure Photos for Engineering Review</h3><p>Move from article reading to a practical review with photos, video, dimensions, and operating conditions.</p></a>
         </div>
       </div>
     </section>
@@ -164,8 +235,9 @@
         <h2>Need a Technical Answer Tied to Your Conveyor?</h2>
         <p>Send your drawing, old belt photos, or operating conditions. We will connect the knowledge to an actual manufacturing recommendation.</p>
         <div class="cta-row" style="justify-content:center">
-          <a class="btn-primary" href="contact.html">Send Drawing</a>
+          <a class="btn-primary" href="contact.html?intent=drawing&source=knowledge-center">Send Your Belt Drawing</a>
           <a class="btn-secondary" href="replacement-review.html">Request Replacement Review</a>
+          <a class="btn-secondary" href="contact.html?intent=quote&source=knowledge-center">Ask For A Quick Quote</a>
         </div>
         <div class="trust-line">
           <span>Proven manufacturing proof</span>
@@ -212,8 +284,8 @@
           <div>
             <div class="foot-col-head">Contact</div>
             <div class="foot-contact-list">
-              <a href="contact.html" class="foot-contact-a">Get a Quote</a>
-              <a href="engineering-oem.html" class="foot-contact-a">Talk to Engineer</a>
+              <a href="contact.html?intent=quote&source=knowledge-center" class="foot-contact-a">Ask For A Quick Quote</a>
+              <a href="contact.html?intent=engineering&source=knowledge-center" class="foot-contact-a">Get Engineering Support</a>
               <a href="mailto:info@yiyimeshbelt.com" class="foot-contact-a">info@yiyimeshbelt.com</a>
             </div>
           </div>
@@ -238,8 +310,10 @@
       el.classList.add('active');
     }
   </script>
+<script src="assets/site-shell.js"></script>
 </body>
 </html>
+
 
 
 

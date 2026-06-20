@@ -5,3 +5,11 @@ npm-debug.log*
 .npm-cache
 
 .vercel
+.codex_github_ed25519
+.codex_github_ed25519.pub
+.codex-preview/
+_quarantine_removed_old_media/
+content_sources/excluded-jbl-assets/
+doc_paths.txt
+preview-server-*.js
+Homepage_Asset_Checklist_YIYI_Mesh_Belt.docx

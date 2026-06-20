@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "blog:auto": "node scripts/auto-blog-publisher.js",
+    "blog:draft": "node scripts/review-blog-workflow.js draft",
+    "blog:publish": "node scripts/review-blog-workflow.js publish",
     "build": "next build",
     "start": "next start"
   },

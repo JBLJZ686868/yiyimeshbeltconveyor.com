@@ -188,6 +188,18 @@ button{font-family:var(--fs);cursor:pointer}
 .ph-g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .ph-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media(max-width:520px){.ph-g2,.ph-g3{grid-template-columns:1fr}}
+.eng-photo{position:relative;overflow:hidden;border-radius:var(--rad);border:1px solid rgba(255,255,255,.12);background:#0a1f35;min-height:180px;box-shadow:var(--shadow)}
+.eng-photo img,.eng-photo video{width:100%;height:100%;min-height:inherit;object-fit:cover;display:block}
+.eng-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,42,.04) 15%,rgba(8,24,42,.72) 100%)}
+.eng-photo.light{border-color:var(--bl);background:var(--blg)}
+.eng-photo.caption-light::after{background:linear-gradient(180deg,rgba(255,255,255,.05) 20%,rgba(11,31,58,.62) 100%)}
+.eng-photo.hero{min-height:420px;border-radius:10px 10px 0 0}
+.eng-photo.large{min-height:320px}
+.eng-photo.medium{min-height:220px}
+.eng-photo.small{min-height:140px}
+.eng-photo-caption{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;color:white}
+.eng-photo-caption strong{display:block;font-size:14px;margin-bottom:4px;line-height:1.35}
+.eng-photo-caption span{font-size:12px;color:rgba(255,255,255,.78);line-height:1.5}
 
 /* TWO COL */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
@@ -357,6 +369,7 @@ button{font-family:var(--fs);cursor:pointer}
 .nd-btn{font-size:15px!important;font-weight:600!important}
 .nav-brand{font-size:16px!important;font-weight:700!important}
 </style>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
 
@@ -408,19 +421,19 @@ button{font-family:var(--fs);cursor:pointer}
       <a href="index.html" class="nav-link-simple">Home</a>
 
       <div class="nd">
-        <button class="nd-btn gold-btn">
+        <a href="products.html#strategic" class="nd-btn gold-btn nd-link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          Core Systems
+          Core Belt Systems
           <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
+        </a>
         <div class="drop-panel" style="min-width:320px">
           <div class="drop-box">
             <div class="drop-gold-bar"></div>
             <div class="drop-body" style="padding:16px">
               <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">&#10052;</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
               <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">&#8635;</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
               <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">&#10145;</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
-              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div></a>
               <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">&#9646;</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Conveyor Belt</span></div></a>
               <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">&#9881;</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span><span class="cdl-sub">(System Matched)</span></div></a>
             </div>
@@ -429,42 +442,40 @@ button{font-family:var(--fs);cursor:pointer}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="products.html" class="nd-btn nd-link">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="left:-180px">
           <div class="drop-box">
             <div class="mega-grid">
               <div class="mega-col">
-                <div class="mega-head">IQF &amp; Freezing</div>
+                <div class="mega-head">Core Pages</div>
                 <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Freezer Belt</span><span class="dl-badge">OEM</span></a>
-                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacking Belt</span></a>
+                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacker Belt</span><span class="dl-badge">OEM</span></a>
+                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye Link Belt</span><span class="dl-badge">Food</span></a>
                 <a href="side-driven-belt.html" class="dl"><span class="dl-icon">&#10145;</span><span class="dl-label">Side-Driven Belt</span></a>
-                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye-Link Belt</span></a>
-                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
+                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
               </div>
               <div class="mega-col">
-                <div class="mega-head">Baking &amp; Processing</div>
+                <div class="mega-head">Food Processing</div>
+                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
                 <a href="biscuit-belt.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Biscuit Belt</span></a>
                 <a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">&#9878;</span><span class="dl-label">Balanced Weave Belt</span></a>
                 <a href="plastic-modular-belt.html" class="dl"><span class="dl-icon">&#10035;</span><span class="dl-label">Plastic Modular Belt</span></a>
-                <div class="mega-head" style="margin-top:14px">Heavy Load</div>
+              </div>
+              <div class="mega-col">
+                <div class="mega-head">Heavy Duty &amp; Parts</div>
                 <a href="compound-weave-belt.html" class="dl"><span class="dl-icon">&#12336;</span><span class="dl-label">Compound Weave Belt</span></a>
                 <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Chain-Driven Belt</span></a>
                 <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">&#127959;</span><span class="dl-label">Chain Plate Belt</span></a>
                 <a href="trapezoidal-mesh-belt.html" class="dl"><span class="dl-icon">&#9650;</span><span class="dl-label">Trapezoidal Mesh Belt</span></a>
-              </div>
-              <div class="mega-col">
-                <div class="mega-head">Accessories &amp; Tools</div>
-                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
                 <a href="connecting-accessories.html" class="dl"><span class="dl-icon">&#128204;</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
                 <a href="replacement-parts.html" class="dl"><span class="dl-icon">&#128297;</span><span class="dl-label">Replacement Parts</span></a>
-                <div class="mega-head" style="margin-top:14px">Selection Tools</div>
-                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
-                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
               </div>
               <div class="mega-col">
-                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Product Index</div>
-                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Built around the belt systems that support OEM manufacturing and long-term replacement supply.</p>
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Need Help Choosing?</div>
+                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Start with the right path for your project: browse, send a drawing, or ask engineering to confirm the belt type.</p>
                 <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All Products &#8594;</a>
+                <a href="contact.html?intent=drawing" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Send Your Belt Drawing &#8594;</a>
+                <a href="engineering-oem.html?intent=engineering" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Get Engineering Support &#8594;</a>
               </div>
             </div>
           </div>
@@ -472,7 +483,7 @@ button{font-family:var(--fs);cursor:pointer}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="industries.html" class="nd-btn nd-link">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel">
           <div class="drop-box">
             <div class="two-col">
@@ -498,16 +509,17 @@ button{font-family:var(--fs);cursor:pointer}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="engineering-oem.html" class="nd-btn nd-link">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel">
           <div class="drop-box">
             <div class="two-col">
               <div class="two-col-main">
                 <div class="mega-head">Technical Resources</div>
-                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
-                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
-                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Engineering &amp; OEM Overview</span></a>
                 <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Drawing Review</span></a>
+                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
+                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
                 <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#127991;</span><span class="dl-label">OEM Private Label</span></a>
               </div>
               <div class="two-col-side">
@@ -523,7 +535,7 @@ button{font-family:var(--fs);cursor:pointer}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="manufacturing.html" class="nd-btn nd-link">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:260px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
@@ -539,46 +551,47 @@ button{font-family:var(--fs);cursor:pointer}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="about.html" class="nd-btn nd-link">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:260px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Profile</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Recognition</span></a>
-              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Presence</span></a>
+              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Overview</span></a>
+              <a href="quality-control.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications &amp; QA</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Manufacturing Strength</span></a>
+              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions &amp; Visits</span></a>
+              <a href="global-delivery.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Delivery</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="knowledge-center.html" class="nd-btn nd-link">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:240px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Technical Articles</span></a>
-              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Spiral Engineering</span></a>
+              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Knowledge Center Overview</span></a>
+              <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Selection Guide</span></a>
+              <a href="what-is-a-spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Engineering Basics</span></a>
               <a href="case-studies.html" class="dl"><span class="dl-icon">&#128202;</span><span class="dl-label">Case Studies</span></a>
-              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads</span></a>
+              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads &amp; Resources</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="contact.html" class="nd-btn nd-link">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:240px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Request a Quote</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Drawing</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Talk to Engineer</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
+              <a href="contact.html?intent=quote" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Ask For A Quick Quote</span></a>
+              <a href="contact.html?intent=drawing" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Your Belt Drawing</span></a>
+              <a href="contact.html?intent=engineering" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Get Engineering Support</span></a>
+              <a href="contact.html?intent=visit" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
             </div>
           </div>
         </div>
@@ -586,7 +599,7 @@ button{font-family:var(--fs);cursor:pointer}
     </div>
 
     <div class="nav-right">
-      <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;</a>
+      <a href="contact.html?intent=quote" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
       <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()">
         <span></span><span></span><span></span>
       </button>
@@ -597,8 +610,9 @@ button{font-family:var(--fs);cursor:pointer}
     <div class="mob-inner">
       <a href="index.html" class="mob-link">Home</a>
 
-      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Systems</div>
-      <a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Belt Systems</div>
+      <a href="products.html#strategic" class="mob-link">Core Belt Systems Overview</a>
+<a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
       <a href="self-stacking-belt.html" class="mob-link">Self-Stacker Belt</a>
       <a href="side-driven-belt.html" class="mob-link">Side Driven Belt</a>
       <a href="eye-link-belt.html" class="mob-link">Eye Link Belt</a>
@@ -614,7 +628,8 @@ button{font-family:var(--fs);cursor:pointer}
       <a href="replacement-parts.html" class="mob-link">Replacement Parts</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Industries</div>
-      <a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
+      <a href="industries.html" class="mob-link">Industries Overview</a>
+<a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
       <a href="industries.html" class="mob-link">Meat &amp; Seafood Processing</a>
       <a href="industries.html" class="mob-link">Baking &amp; Ovens</a>
       <a href="industries.html" class="mob-link">Snack &amp; Biscuit</a>
@@ -628,32 +643,37 @@ button{font-family:var(--fs);cursor:pointer}
       <a href="replacement-review.html" class="mob-link">Replacement Projects</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
-      <a href="manufacturing.html" class="mob-link">Automated Welding</a>
+      <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
+<a href="manufacturing.html" class="mob-link">Automated Welding</a>
       <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
       <a href="quality-control.html" class="mob-link">Quality Control</a>
       <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">About YIYI</div>
-      <a href="about.html" class="mob-link">Company Profile</a>
-      <a href="about.html" class="mob-link">Certifications</a>
-      <a href="exhibition.html" class="mob-link">Exhibitions</a>
-      <a href="about.html" class="mob-link">Global Presence</a>
+      <a href="about.html" class="mob-link">Company Overview</a>
+      <a href="quality-control.html" class="mob-link">Certifications &amp; QA</a>
+      <a href="manufacturing.html" class="mob-link">Patents &amp; Manufacturing Strength</a>
+      <a href="exhibition.html" class="mob-link">Exhibitions &amp; Visits</a>
+      <a href="global-delivery.html" class="mob-link">Global Delivery</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Knowledge Center</div>
-      <a href="knowledge-center.html" class="mob-link">Technical Articles</a>
-      <a href="knowledge-center.html" class="mob-link">Spiral Engineering</a>
+      <a href="knowledge-center.html" class="mob-link">Knowledge Center Overview</a>
+      <a href="belt-selection-guide.html" class="mob-link">Selection Guide</a>
+      <a href="what-is-a-spiral-freezer-belt.html" class="mob-link">Spiral Engineering Basics</a>
       <a href="case-studies.html" class="mob-link">Case Studies</a>
-      <a href="resources.html" class="mob-link">Downloads</a>
+      <a href="resources.html" class="mob-link">Downloads &amp; Resources</a>
 
       <div style="border-top:1px solid rgba(255,255,255,.07);margin-top:10px;padding-top:10px"></div>
-      <a href="contact.html" class="mob-link">Contact</a>
-      <a href="contact.html" class="mob-cta">Get a Quote &#8594;</a>
+      <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote" class="mob-link">Ask For A Quick Quote</a>
+      <a href="contact.html?intent=drawing" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote" class="mob-cta">Ask For A Quick Quote &#8594;</a>
     </div>
   </div>
 </nav>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S1  - HERO
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="hero-oem">
   <div class="con">
     <div class="hero-grid">
@@ -669,17 +689,20 @@ button{font-family:var(--fs);cursor:pointer}
           <span style="font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.72);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:5px 10px;border-radius:3px">Export Delivery Coordination</span>
         </div>
         <div class="hero-btns">
-          <a href="contact.html" class="btn-gold">Request a Quote &#8594;</a>
-          <a href="contact.html" class="btn-o">Send Your Drawing &#8594;</a>
-          <a href="contact.html" class="btn-o">Talk to Engineer &#8594;</a>
+          <a href="contact.html?intent=quote&source=engineering-oem" class="btn-gold">Ask For A Quick Quote &#8594;</a>
+          <a href="contact.html?intent=drawing&source=engineering-oem" class="btn-o">Send Your Drawing &#8594;</a>
+          <a href="contact.html?intent=engineering&source=engineering-oem" class="btn-o">Get Engineering Support &#8594;</a>
         </div>
       </div>
       <div class="hero-visual">
         <!-- MEDIA: Hero  - engineer reviewing drawing / belt + matched components on table / sample measurement -->
-        <!-- VIDEO: short muted looping 15 - 0s  - drawing review or project confirmation scene -->
-        <div class="hero-ph ph-vid">
-          <div class="hero-ph-ico">VIDEO</div>
-          <div class="hero-ph-lbl">Hero image  - engineer reviewing drawing<br>or belt + components on table<br>Replace with: project confirmation photo or short muted video</div>
+        <!-- VIDEO: short muted looping 15-30s  - drawing review or project confirmation scene -->
+        <div class="eng-photo hero">
+          <img src="assets/product-media/spiral-freezer-belt/sfb-s4-drawing-sample.png" alt="Engineering drawing review and belt sample confirmation for OEM conveyor belt project" decoding="async" loading="eager" fetchpriority="high">
+          <div class="eng-photo-caption">
+            <strong>Drawing Review + Sample Confirmation</strong>
+            <span>Project inputs are checked before production so OEM and replacement buyers can reduce mismatch risk.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -698,8 +721,36 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </div>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S2  - WHY ENGINEERING SUPPORT MATTERS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
+<section class="sw" style="padding:44px 0 24px">
+  <div class="con">
+    <div class="ch" style="margin-bottom:28px">
+      <span class="ew ewl" style="display:block;margin-bottom:10px">START WITH YOUR PROJECT TYPE</span>
+      <h2 class="h2" style="margin-bottom:10px">Choose the Fastest Path to Engineering Review</h2>
+      <p class="body-p" style="max-width:760px;margin:0 auto">Different buyers start with different information. If you already have a drawing, send it. If you are replacing an existing belt, send the old sample or machine photos. If you are building a repeat OEM supply line, start with engineering coordination.</p>
+    </div>
+    <div class="fc-grid">
+      <div class="fc-card">
+        <div class="fc-icon">&#128196;</div>
+        <div class="fc-title">I Have a Drawing</div>
+        <div class="fc-desc">Best for OEM builders and technical buyers with PDF, DWG, DXF, or a dimensioned sketch ready for review.</div>
+        <a href="contact.html?intent=drawing&source=engineering-oem" class="btn-ol" style="margin-top:16px">Send Your Belt Drawing &#8594;</a>
+      </div>
+      <div class="fc-card">
+        <div class="fc-icon">&#128260;</div>
+        <div class="fc-title">I Need a Replacement Match</div>
+        <div class="fc-desc">Best for existing conveyor lines where fit, sprocket matching, and running compatibility matter more than starting from zero.</div>
+        <a href="contact.html?intent=replacement&source=engineering-oem" class="btn-ol" style="margin-top:16px">Start Replacement Review &#8594;</a>
+      </div>
+      <div class="fc-card">
+        <div class="fc-icon">&#128172;</div>
+        <div class="fc-title">I Need Engineering Guidance</div>
+        <div class="fc-desc">Best for distributors, multi-SKU buyers, and early-stage OEM projects that still need belt type or component confirmation.</div>
+        <a href="contact.html?intent=engineering&source=engineering-oem" class="btn-ol" style="margin-top:16px">Get Engineering Support &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sl" id="project-intake">
   <div class="con">
     <div class="ch">
@@ -709,17 +760,17 @@ button{font-family:var(--fs);cursor:pointer}
     </div>
     <div class="fc-grid">
       <div class="fc-card">
-        <div class="fc-icon">馃搻</div>
+        <div class="fc-icon">&#128196;</div>
         <div class="fc-title">Drawing Package</div>
         <div class="fc-desc">Send PDF, DWG, DXF, or a dimensioned sketch showing width, pitch, rod size, edge format, running direction, and drive method. This is the best starting point for OEM projects and repeat supply.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃攧</div>
+        <div class="fc-icon">&#128260;</div>
         <div class="fc-title">Old Belt Sample or Photos</div>
         <div class="fc-desc">For replacement projects without formal drawings, send an old belt section, machine-side photos, sprocket photos, and measured dimensions. This helps confirm fit and reduce mismatch risk before production.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃摝</div>
+        <div class="fc-icon">&#128344;</div>
         <div class="fc-title">Project Timing and Quantity</div>
         <div class="fc-desc">Share target quantity, urgency, destination country, and whether matched parts are needed. This lets YIYI align engineering review with production scheduling and export delivery coordination from day one.</div>
       </div>
@@ -761,9 +812,12 @@ button{font-family:var(--fs);cursor:pointer}
       <div style="display:flex;flex-direction:column;gap:14px">
         <!-- MEDIA: Process flow graphic  - Drawing &#8594;Sample &#8594;Confirmation &#8594;Production &#8594;Delivery -->
         <!-- or: one logic overview illustration of the coordination chain -->
-        <div class="ph ph-lt" style="aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:28px">
-          <div class="ph-ico">MEDIA</div>
-          <div class="ph-lbl ph-lbl-lt">Process flow illustration<br>Drawing &#8594;Sample &#8594;Confirmation &#8594;Production &#8594;Delivery<br>Replace with: coordination chain graphic or logic overview</div>
+        <div class="eng-photo light caption-light large">
+          <img src="assets/homepage-media/home-quality-inspection.png" alt="YIYI Mesh Belt production verification process from drawing to quality inspection" decoding="async" loading="lazy">
+          <div class="eng-photo-caption">
+            <strong>Drawing to Delivery Coordination</strong>
+            <span>Engineering review connects sample confirmation, production verification, packing, and export delivery.</span>
+          </div>
         </div>
         <div class="ib-b">
           <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--ab);margin-bottom:10px">WHO THIS SUPPORTS</div>
@@ -779,8 +833,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S3  - DRAWING REVIEW BEFORE PRODUCTION
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sn" id="drawing-review">
   <div class="con">
     <div class="two center">
@@ -817,24 +869,33 @@ button{font-family:var(--fs);cursor:pointer}
             <div class="cl-text-dk"><strong>Production feasibility</strong>If any specification cannot be produced as drawn, this is identified and discussed before manufacturing starts  - not after a non-conforming batch is already completed.</div>
           </div>
         </div>
-        <a href="contact.html" class="btn-gold" style="font-size:14px">Send Your Drawing &#8594;</a>
+        <a href="contact.html?intent=drawing&source=engineering-oem" class="btn-gold" style="font-size:14px">Send Your Drawing &#8594;</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px">
         <!-- MEDIA: Drawing review photo  - engineer at desk with technical drawing -->
         <!-- CAD screen close-up / dimension-marking detail -->
         <!-- VIDEO: 8-10s  - drawing review scene, dimension annotation visible -->
-        <div class="ph ph-vid" style="aspect-ratio:4/3">
-          <div class="ph-ico">MEDIA</div>
-          <div class="ph-lbl">Drawing review photo<br>Engineer reviewing technical drawing at desk<br>CAD screen or dimension-annotated print<br>VIDEO: 8-10s drawing review scene</div>
+        <div class="eng-photo large">
+          <img src="assets/product-media/spiral-freezer-belt/sfb-s4-drawing-sample.png" alt="Technical drawing review before metal conveyor belt production" decoding="async" loading="lazy">
+          <div class="eng-photo-caption">
+            <strong>Drawing Review Before Production</strong>
+            <span>Structure, pitch, width, edge detail, drive method, and matched parts are clarified before manufacturing.</span>
+          </div>
         </div>
         <div class="ph-g2">
-          <div class="ph" style="min-height:140px">
-            <div class="ph-ico">MEDIA</div>
-            <div class="ph-lbl">Dimension marking<br>close-up on drawing</div>
+          <div class="eng-photo small">
+            <img src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Dimension check for metal conveyor belt production" decoding="async" loading="lazy">
+            <div class="eng-photo-caption">
+              <strong>Dimension Check</strong>
+              <span>Measurements are verified against project requirements.</span>
+            </div>
           </div>
-          <div class="ph" style="min-height:140px">
-            <div class="ph-ico">MEDIA</div>
-            <div class="ph-lbl">Written spec<br>confirmation record</div>
+          <div class="eng-photo small">
+            <img src="assets/product-media/spiral-freezer-belt/sfb-s7-final-qa.png" alt="Final QA record and production confirmation" decoding="async" loading="lazy">
+            <div class="eng-photo-caption">
+              <strong>Spec Confirmation</strong>
+              <span>Inspection records support repeat production.</span>
+            </div>
           </div>
         </div>
         <div class="ib-dk">
@@ -853,8 +914,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S4  - SAMPLE CONFIRMATION AND FIT CHECK
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sw" id="sample-confirmation">
   <div class="con">
     <div class="two center two.rev">
@@ -862,18 +921,27 @@ button{font-family:var(--fs);cursor:pointer}
         <!-- MEDIA: Sample photo alongside drawing -->
         <!-- Measuring sample with caliper -->
         <!-- VIDEO: 8-12s  - sample being measured and compared to drawing -->
-        <div class="ph ph-lt ph-vid" style="aspect-ratio:4/3">
-          <div class="ph-ico ph-lbl-lt" style="font-size:28px;opacity:.25">馃摝</div>
-          <div class="ph-lbl ph-lbl-lt">Sample with drawing alongside<br>Dimensional comparison setup<br>VIDEO: 8-12s sample measurement / fit check</div>
+        <div class="eng-photo light caption-light large">
+          <img src="assets/product-media/self-stacking-belt/ssb-s4-drawing-sample.jpg" alt="Sample confirmation for self-stacker belt engineering project" decoding="async" loading="lazy">
+          <div class="eng-photo-caption">
+            <strong>Sample Confirmation</strong>
+            <span>Old samples, drawings, and measured dimensions help confirm fit before batch production.</span>
+          </div>
         </div>
         <div class="ph-g2">
-          <div class="ph ph-lt" style="min-height:140px">
-            <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃敩</div>
-            <div class="ph-lbl ph-lbl-lt">Caliper measurement<br>close-up</div>
+          <div class="eng-photo light caption-light small">
+            <img src="assets/product-media/eye-link-belt/elb-proof-width.jpg" alt="Width measurement for eye link belt project confirmation" decoding="async" loading="lazy">
+            <div class="eng-photo-caption">
+              <strong>Width Measurement</strong>
+              <span>Fit-related dimensions are checked before release.</span>
+            </div>
           </div>
-          <div class="ph ph-lt" style="min-height:140px">
-            <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃搻</div>
-            <div class="ph-lbl ph-lbl-lt">Structure detail<br>confirmation</div>
+          <div class="eng-photo light caption-light small">
+            <img src="assets/product-media/self-stacking-belt/ssb-detail-03.jpg" alt="Self-stacker belt structure detail confirmation" decoding="async" loading="lazy">
+            <div class="eng-photo-caption">
+              <strong>Structure Detail</strong>
+              <span>Edge and rod details are reviewed for compatibility.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -912,8 +980,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S5  - REPLACEMENT MATCHING
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sl" id="replacement-matching">
   <div class="con">
     <div class="ch">
@@ -949,29 +1015,38 @@ button{font-family:var(--fs);cursor:pointer}
     </div>
     <!-- MEDIA: old belt sample photo / comparison of old and new parts / machine-side reference image -->
     <div class="ph-g3" style="margin-bottom:28px">
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃攧</div>
-        <div class="ph-lbl ph-lbl-lt">Old belt sample<br>Worn belt for matching reference</div>
+      <div class="eng-photo light caption-light medium">
+        <img src="assets/product-media/eye-link-belt/elb-proof-welded-edge.jpg" alt="Old belt edge and welded detail used for replacement matching reference" decoding="async" loading="lazy">
+        <div class="eng-photo-caption">
+          <strong>Old Belt Reference</strong>
+          <span>Edge format, rod position, and weld detail are reviewed.</span>
+        </div>
       </div>
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃攳</div>
-        <div class="ph-lbl ph-lbl-lt">Old vs new comparison<br>Dimensional alignment check</div>
+      <div class="eng-photo light caption-light medium">
+        <img src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Dimensional alignment check for replacement conveyor belt matching" decoding="async" loading="lazy">
+        <div class="eng-photo-caption">
+          <strong>Dimensional Alignment</strong>
+          <span>Measurements reduce replacement mismatch risk.</span>
+        </div>
       </div>
-      <div class="ph ph-lt ph-vid" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">鈻?/div>
-        <div class="ph-lbl ph-lbl-lt">Machine-side matching reference<br>VIDEO: replacement fit verification</div>
+      <div class="eng-photo light caption-light medium">
+        <img src="assets/product-media/drive-sprockets/drive-sprockets-belt-matching.jpg" alt="Belt and sprocket matching check for replacement conveyor system" decoding="async" loading="lazy">
+        <div class="eng-photo-caption">
+          <strong>Drive Matching</strong>
+          <span>Belt and sprocket engagement are checked together.</span>
+        </div>
       </div>
     </div>
     <div style="background:white;border:1px solid var(--bl);border-radius:var(--rad);padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center">
       <div>
         <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--ab);margin-bottom:12px">WHAT YIYI MESH BELT REVIEWS FOR REPLACEMENT MATCHING</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;/span>Existing belt dimensions</span>
-          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;/span>Sprocket position and pitch</span>
-          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;/span>Rod size and spacing</span>
-          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;/span>Edge format and guide clearance</span>
-          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;/span>Drive method and running direction</span>
-          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;/span>Material grade confirmation</span>
+          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;</span>Existing belt dimensions</span>
+          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;</span>Sprocket position and pitch</span>
+          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;</span>Rod size and spacing</span>
+          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;</span>Edge format and guide clearance</span>
+          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;</span>Drive method and running direction</span>
+          <span style="font-size:13px;color:var(--tb);display:flex;gap:6px;align-items:flex-start"><span style="color:var(--ab);flex-shrink:0">&#10003;</span>Material grade confirmation</span>
         </div>
       </div>
       <div>
@@ -982,8 +1057,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S6  - MATCHED COMPONENTS AND SYSTEM COORDINATION
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sn" id="matched-components">
   <div class="con">
     <div class="ch">
@@ -1011,13 +1084,19 @@ button{font-family:var(--fs);cursor:pointer}
     <!-- MEDIA: sprocket photo / rods + shafts + connecting parts layout / belt + components together -->
     <!-- VIDEO: short paired-components video if available -->
     <div class="ph-g2" style="margin-bottom:24px">
-      <div class="ph ph-vid" style="min-height:200px">
-        <div class="ph-ico">MEDIA</div>
-        <div class="ph-lbl">Belt + matched sprockets + components layout<br>All parts confirmed to same specification<br>VIDEO: paired components  - belt and sprocket engagement</div>
+      <div class="eng-photo medium">
+        <img src="assets/product-media/drive-sprockets/drive-sprockets-belt-matching.jpg" alt="Belt and matched sprockets confirmed to the same specification" decoding="async" loading="lazy">
+        <div class="eng-photo-caption">
+          <strong>Belt + Matched Sprockets</strong>
+          <span>Drive components are reviewed with the belt, not purchased as isolated parts.</span>
+        </div>
       </div>
-      <div class="ph" style="min-height:200px">
-        <div class="ph-ico">MEDIA</div>
-        <div class="ph-lbl">Rods / shafts / connecting parts<br>Matched component supply detail</div>
+      <div class="eng-photo medium">
+        <img src="assets/product-media/drive-sprockets/drive-sprockets-stainless-detail.jpg" alt="Stainless steel drive sprockets and matched replacement components" decoding="async" loading="lazy">
+        <div class="eng-photo-caption">
+          <strong>Matched Components</strong>
+          <span>Sprockets, rods, shafts, and connecting parts can be reviewed as one system.</span>
+        </div>
       </div>
     </div>
     <div class="ib-dk" style="max-width:800px">
@@ -1027,8 +1106,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S7  - PRODUCTION CONFIRMATION BEFORE BATCH RELEASE
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sw" id="production-confirmation">
   <div class="con">
     <div class="two center">
@@ -1065,16 +1142,19 @@ button{font-family:var(--fs);cursor:pointer}
       <div style="display:flex;flex-direction:column;gap:12px">
         <!-- MEDIA: work order confirmation photo / specification checklist / pre-production review sheet -->
         <!-- VIDEO: 8-10s confirmation workflow  - checklist being reviewed or work order signed off -->
-        <div class="ph ph-lt ph-vid" style="aspect-ratio:4/3">
-          <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃搵</div>
-          <div class="ph-lbl ph-lbl-lt">Work order confirmation photo<br>Specification checklist or pre-production review sheet<br>VIDEO: 8-10s confirmation workflow</div>
+        <div class="eng-photo light caption-light large">
+          <img src="assets/homepage-media/home-quality-inspection.png" alt="Work order confirmation and final inspection for metal conveyor belt project" decoding="async" loading="lazy">
+          <div class="eng-photo-caption">
+            <strong>Production Confirmation</strong>
+            <span>Specification, material, inspection, packing, and delivery details are aligned before release.</span>
+          </div>
         </div>
         <div style="background:white;border:1px solid var(--bl);border-radius:var(--rad);padding:20px 22px">
           <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--ab);margin-bottom:10px">STANDARD DOCUMENTATION  - EVERY ORDER</div>
           <div style="display:flex;flex-direction:column;gap:7px">
-            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:12px">&#10003;/span><span style="font-size:13px;color:var(--tb)">Material Test Report (MTR)  - alloy, tensile, hardness</span></div>
-            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:12px">&#10003;/span><span style="font-size:13px;color:var(--tb)">Final inspection record  - dimensions and surface</span></div>
-            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:12px">&#10003;/span><span style="font-size:13px;color:var(--tb)">Certificate of Origin  - customs support</span></div>
+            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:12px">&#10003;</span><span style="font-size:13px;color:var(--tb)">Material Test Report (MTR)  - alloy, tensile, hardness</span></div>
+            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:12px">&#10003;</span><span style="font-size:13px;color:var(--tb)">Final inspection record  - dimensions and surface</span></div>
+            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:12px">&#10003;</span><span style="font-size:13px;color:var(--tb)">Certificate of Origin  - customs support</span></div>
             <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--ab);font-size:12px">&#8226;</span></div>
             <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--ab);font-size:12px">&#8226;</span></div>
             <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--ab);font-size:12px">&#8226;</span></div>
@@ -1085,8 +1165,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S8  - OEM PRIVATE LABEL
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="ss" id="oem-private-label">
   <div class="con">
     <div class="two center">
@@ -1120,18 +1198,27 @@ button{font-family:var(--fs);cursor:pointer}
       <div style="display:flex;flex-direction:column;gap:12px">
         <!-- MEDIA: neutral packaging photo / OEM project documentation image / plain labelled packaging -->
         <!-- Static visuals preferred for this section  - no heavy factory media needed -->
-        <div class="ph" style="aspect-ratio:4/3">
-          <div class="ph-ico">MEDIA</div>
-          <div class="ph-lbl">Neutral packaging photo<br>OEM-ready export packaging without YIYI branding<br>Coordinated labelling example<br>Static image preferred  - no video required</div>
+        <div class="eng-photo large">
+          <img src="assets/product-media/eye-link-belt/elb-proof-package.jpg" alt="Export packing and OEM-ready packaging for conveyor belt project" decoding="async" loading="lazy">
+          <div class="eng-photo-caption">
+            <strong>OEM-Ready Export Packing</strong>
+            <span>Shipment presentation and product identification can be coordinated by project requirement.</span>
+          </div>
         </div>
         <div class="ph-g2">
-          <div class="ph" style="min-height:130px">
-            <div class="ph-ico">馃彿锔?/div>
-            <div class="ph-lbl">OEM packaging<br>label detail</div>
+          <div class="eng-photo small">
+            <img src="assets/product-media/eye-link-belt/elb-proof-shipping-mark.jpg" alt="Shipping mark and label detail for export conveyor belt packing" decoding="async" loading="lazy">
+            <div class="eng-photo-caption">
+              <strong>Shipping Mark</strong>
+              <span>Label and packing information reviewed before dispatch.</span>
+            </div>
           </div>
-          <div class="ph" style="min-height:130px">
-            <div class="ph-ico">MEDIA</div>
-            <div class="ph-lbl">Project documentation<br>image</div>
+          <div class="eng-photo small">
+            <img src="assets/product-media/eye-link-belt/elb-proof-package-02.jpg" alt="Packed conveyor belt order prepared for shipment" decoding="async" loading="lazy">
+            <div class="eng-photo-caption">
+              <strong>Packed Goods</strong>
+              <span>Pre-shipment photos support buyer confirmation.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1139,8 +1226,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S9  - EXPORT COORDINATION AND DELIVERY SUPPORT
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sl" id="export-delivery">
   <div class="con">
     <div class="ch">
@@ -1150,32 +1235,32 @@ button{font-family:var(--fs);cursor:pointer}
     </div>
     <div class="fc-grid" style="margin-bottom:32px">
       <div class="fc-card">
-        <div class="fc-icon">馃摝</div>
+        <div class="fc-icon">&#128344;</div>
         <div class="fc-title">Export Packing Coordination</div>
         <div class="fc-desc">Export-standard packing reviewed against product dimensions, transport mode, and destination. Plywood crate, moisture-sealed inner wrap, and belt coiled to minimum bend radius  - confirmed before packing begins, not improvised at the warehouse.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃搫</div>
+        <div class="fc-icon">&#128230;</div>
         <div class="fc-title">Shipment Document Preparation</div>
         <div class="fc-desc">Commercial invoice, packing list, certificate of origin, material test reports, and any project-specific documentation prepared and reviewed before the shipment is released  - reducing clearance delays at the destination.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃棑锔?/div>
+        <div class="fc-icon">&#9679;</div>
         <div class="fc-title">Delivery Scheduling Support</div>
         <div class="fc-desc">Production schedule, packing timeline, and shipment booking coordinated together  - so delivery date commitments are based on realistic production and logistics capacity, not optimistic estimates that create problems at the shipping stage.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃攳</div>
+        <div class="fc-icon">&#128203;</div>
         <div class="fc-title">Pre-Shipment Packing Review</div>
         <div class="fc-desc">Before a shipment is released, packing condition and document completeness are reviewed internally. Photos of packed goods are taken and shared with the customer before the container is sealed or the courier pickup is confirmed.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃挰</div>
+        <div class="fc-icon">&#128200;</div>
         <div class="fc-title">Pre-Shipment Communication</div>
         <div class="fc-desc">Customer notified before shipment release  - with packing photos, document copies, and tracking information. No shipments released without customer awareness of the dispatch status and expected arrival window.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃實</div>
+        <div class="fc-icon">&#128031;</div>
         <div class="fc-title">International Delivery Experience</div>
         <div class="fc-desc">YIYI Mesh Belt has shipped to 30+ countries via sea freight, air freight, and express courier. Export process, customs documentation, and destination-specific packing requirements are managed with experience  - not guessed.</div>
       </div>
@@ -1183,24 +1268,31 @@ button{font-family:var(--fs);cursor:pointer}
     <!-- MEDIA: plywood box packing photo / export document photo / shipment-ready goods -->
     <!-- VIDEO: 8-10s packing-to-shipment sequence -->
     <div class="ph-g3">
-      <div class="ph ph-lt ph-vid" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃摝</div>
-        <div class="ph-lbl ph-lbl-lt">Plywood box packing<br>Export-standard packaging<br>VIDEO: packing to shipment sequence</div>
+      <div class="eng-photo light caption-light medium">
+        <img src="assets/product-media/eye-link-belt/elb-proof-package.jpg" alt="Plywood packing for export conveyor belt shipment" decoding="async" loading="lazy">
+        <div class="eng-photo-caption">
+          <strong>Export Packing</strong>
+          <span>Packaging reviewed for international delivery conditions.</span>
+        </div>
       </div>
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃搫</div>
-        <div class="ph-lbl ph-lbl-lt">Export document set<br>MTR + COO + packing list</div>
+      <div class="eng-photo light caption-light medium">
+        <img src="assets/product-media/spiral-freezer-belt/sfb-s7-final-qa.png" alt="Inspection record and export document preparation for conveyor belt order" decoding="async" loading="lazy">
+        <div class="eng-photo-caption">
+          <strong>Document Review</strong>
+          <span>Inspection record and shipment details are checked before release.</span>
+        </div>
       </div>
-      <div class="ph ph-lt" style="min-height:180px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃殺</div>
-        <div class="ph-lbl ph-lbl-lt">Shipment-ready goods<br>Container or loading area</div>
+      <div class="eng-photo light caption-light medium">
+        <img src="assets/product-media/spiral-freezer-belt/sfb-s9-shipment.png" alt="Shipment-ready metal conveyor belt order prepared for export" decoding="async" loading="lazy">
+        <div class="eng-photo-caption">
+          <strong>Shipment Ready</strong>
+          <span>Goods are photographed and confirmed before dispatch.</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S10  - TECHNICAL FOLLOW-UP AFTER DELIVERY
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sn" id="technical-followup">
   <div class="con">
     <div class="two center">
@@ -1233,14 +1325,17 @@ button{font-family:var(--fs);cursor:pointer}
       <div>
         <!-- MEDIA: light icon-based support visuals / simple communication follow-up image -->
         <!-- Do not use heavy factory media here  - keep this section calm and relational -->
-        <div class="ph" style="aspect-ratio:4/3">
-          <div class="ph-ico">MEDIA</div>
-          <div class="ph-lbl">Technical follow-up visual<br>Light support illustration or communication image<br>No heavy factory media needed here<br>Keep calm and relational in tone</div>
+        <div class="eng-photo large">
+          <img src="assets/homepage-media/home-workshop.png" alt="YIYI Mesh Belt workshop supporting long-term OEM and replacement follow-up" decoding="async" loading="lazy">
+          <div class="eng-photo-caption">
+            <strong>Long-Term Technical Follow-Up</strong>
+            <span>Production records and project references support future replacement and repeat orders.</span>
+          </div>
         </div>
         <div class="ib-dk" style="margin-top:12px">
           <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--ab);margin-bottom:10px">FOLLOW-UP RESPONSE COMMITMENT</div>
           <div style="display:flex;flex-direction:column;gap:7px">
-            <div style="display:flex;gap:8px;align-items:flex-start"><span style="color:var(--ab);font-size:12px;flex-shrink:0">&#8226;</span><span style="font-size:13px;color:rgba(255,255,255,.55)">Active production orders: 12-hour response on technical queries</span></div>
+<div style="display:flex;gap:8px;align-items:flex-start"><span style="color:var(--ab);font-size:12px;flex-shrink:0">&#8226;</span><span style="font-size:13px;color:rgba(255,255,255,.55)">Active production orders: engineering response on technical queries</span></div>
             <div style="display:flex;gap:8px;align-items:flex-start"><span style="color:var(--ab);font-size:12px;flex-shrink:0">&#8226;</span><span style="font-size:13px;color:rgba(255,255,255,.55)">Established OEM partners: performance follow-up at 6 and 12 months on request</span></div>
             <div style="display:flex;gap:8px;align-items:flex-start"><span style="color:var(--ab);font-size:12px;flex-shrink:0">&#8226;</span><span style="font-size:13px;color:rgba(255,255,255,.55)">Post-installation technical questions: reviewed against production and inspection records</span></div>
           </div>
@@ -1250,8 +1345,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S11  - WHY THIS MATTERS FOR OEM BUYERS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sw" id="why-oem">
   <div class="con">
     <div class="ch">
@@ -1262,9 +1355,12 @@ button{font-family:var(--fs);cursor:pointer}
     <!-- MEDIA: one calm summary visual / project coordination photo -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px;align-items:start">
       <div>
-        <div class="ph ph-lt" style="aspect-ratio:4/3;margin-bottom:16px">
-          <div class="ph-ico ph-lbl-lt" style="font-size:24px;opacity:.25">馃搵</div>
-          <div class="ph-lbl ph-lbl-lt">Project coordination photo<br>Calm, professional summary visual<br>No need for many images here</div>
+        <div class="eng-photo light caption-light large" style="margin-bottom:16px">
+          <img src="assets/homepage-media/home-quality-inspection.png" alt="Project coordination and quality confirmation for YIYI Mesh Belt OEM support" decoding="async" loading="lazy">
+          <div class="eng-photo-caption">
+            <strong>Structured Project Coordination</strong>
+            <span>From specification review to delivery confirmation, the goal is fewer surprises for the buyer.</span>
+          </div>
         </div>
       </div>
       <div>
@@ -1294,18 +1390,16 @@ button{font-family:var(--fs);cursor:pointer}
     <div style="margin-top:8px">
       <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--tm);margin-bottom:12px">RELATED PAGES</div>
       <div class="il-row">
-        <a href="manufacturing.html" class="il-card"><div class="il-ico">Link</div><div><div class="il-lbl">Process</div><div class="il-t">Manufacturing Assurance</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="quality-control.html" class="il-card"><div class="il-ico">Link</div><div class="il-t">Quality Control</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="raw-material.html" class="il-card"><div class="il-ico">Link</div><div><div class="il-lbl">Material</div><div class="il-t">Raw Material Control</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="drive-sprockets.html" class="il-card"><div class="il-ico">Link</div><div><div class="il-lbl">System</div><div class="il-t">Drive Sprockets</div></div><span class="il-arr">&#8594;/span></a>
-        <a href="contact.html" class="il-card"><div class="il-ico">Link</div><div><div class="il-lbl">Start</div><div class="il-t">Request a Quote</div></div><span class="il-arr">&#8594;/span></a>
+        <a href="manufacturing.html" class="il-card"><div class="il-ico">Link</div><div><div class="il-lbl">Process</div><div class="il-t">Manufacturing Assurance</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="quality-control.html" class="il-card"><div class="il-ico">Link</div><div class="il-t">Quality Control</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="raw-material.html" class="il-card"><div class="il-ico">Link</div><div><div class="il-lbl">Material</div><div class="il-t">Raw Material Control</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="drive-sprockets.html" class="il-card"><div class="il-ico">Link</div><div><div class="il-lbl">System</div><div class="il-t">Drive Sprockets</div></div><span class="il-arr">&#8594;</span></a>
+        <a href="contact.html?intent=quote&source=engineering-oem" class="il-card"><div class="il-ico">Link</div><div><div class="il-lbl">Start</div><div class="il-t">Ask For A Quick Quote</div></div><span class="il-arr">&#8594;</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S12  - FAQ
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sd" id="faq">
   <div class="con">
     <div class="ch">
@@ -1341,21 +1435,19 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S13  - FINAL CTA
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="cta-sec">
   <div class="con">
     <span class="ew" style="color:var(--ab);display:block;text-align:center;margin-bottom:14px;font-size:11px;letter-spacing:.18em">START YOUR ENGINEERING REVIEW</span>
     <h2 class="cta-h2">Send Your Drawing.<br><em>Engineering Review Within 24 Hours.</em></h2>
     <p class="cta-p">Send your drawing, sample, specifications, or project requirement to YIYI Mesh Belt. Our team can review fit, structure, matched parts, and production feasibility before manufacturing begins  - and coordinate delivery requirements before the batch is released.</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-gold">Request a Quote &#8594;</a>
-      <a href="contact.html" class="btn-p">Send Your Drawing &#8594;</a>
-      <a href="contact.html" class="btn-o">Talk to Engineer &#8594;</a>
+      <a href="contact.html?intent=quote&source=engineering-oem" class="btn-gold">Ask For A Quick Quote &#8594;</a>
+      <a href="contact.html?intent=drawing&source=engineering-oem" class="btn-p">Send Your Drawing &#8594;</a>
+      <a href="contact.html?intent=engineering&source=engineering-oem" class="btn-o">Get Engineering Support &#8594;</a>
     </div>
     <div class="cta-trust">
       <span class="ct">Drawing Review - 24 Hours</span>
-      <span class="ct">Free Sample Before Mass Production</span>
+      <span class="ct">Sample Review Before Mass Production</span>
       <span class="ct">Matched Components Available</span>
       <span class="ct">Drum Test - Every Belt</span>
       <span class="ct">100+ OEM References On File</span>
@@ -1404,7 +1496,7 @@ button{font-family:var(--fs);cursor:pointer}
       </div>
 
       <div>
-        <div class="foot-col-head">Core Systems</div>
+        <div class="foot-col-head">Core Belt Systems</div>
         <div class="foot-links">
           <a href="spiral-freezer-belt.html" class="foot-link gold">Spiral Freezer Belt</a>
           <a href="self-stacking-belt.html" class="foot-link gold">Self-Stacker Belt</a>
@@ -1443,8 +1535,8 @@ button{font-family:var(--fs);cursor:pointer}
             WhatsApp: +86 186 5349 6136
           </a>
         </div>
-        <a href="contact.html" class="foot-btn-p">Request a Quote &#8594;</a>
-        <a href="contact.html" class="foot-btn-o">Send Drawing &#8594;</a>
+        <a href="contact.html?intent=quote&source=engineering-oem" class="foot-btn-p">Ask For A Quick Quote &#8594;</a>
+        <a href="contact.html?intent=drawing&source=engineering-oem" class="foot-btn-o">Send Your Belt Drawing &#8594;</a>
 
         <div style="margin-top:24px">
           <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8FA8C0;margin-bottom:12px;font-weight:600">CONNECT WITH US</div>
@@ -1482,14 +1574,14 @@ button{font-family:var(--fs);cursor:pointer}
   <div class="wa-chat" id="wa-chat" style="display:none">
     <div class="wa-head">
       <div class="wa-hl"><div class="wa-av">YY</div><div><div class="wa-nm">YIYI Mesh Belt</div><div class="wa-st"><span class="wa-od"></span>Online  &#183;  Engineering Response 24h</div></div></div>
-      <button class="wa-cl" onclick="closeWA()">&#10003;/button>
+      <button class="wa-cl" onclick="closeWA()">&times;</button>
     </div>
     <div class="wa-body">
-      <div class="wa-bub">馃憢 Engineering team ready. Send your drawing or describe your project.</div>
+      <div class="wa-bub">&#128075; Engineering team ready. Send your drawing or describe your project.</div>
       <div class="wa-ql">Quick Start:</div>
       <div class="wa-qbs">
         <button class="wa-qb" onclick="sendWA(this.textContent)">Send My Drawing</button>
-        <button class="wa-qb" onclick="sendWA(this.textContent)">Request Free Sample</button>
+        <button class="wa-qb" onclick="sendWA(this.textContent)">Ask For A Quick Quote</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">Belt Replacement Project</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">OEM Partnership</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">Matched Components</button>
@@ -1528,7 +1620,7 @@ let waOpen=false;
 function toggleWA(){waOpen?closeWA():openWA()}
 function openWA(){waOpen=true;document.getElementById('wa-chat').style.display='flex';document.getElementById('wa-wrap').classList.add('open')}
 function closeWA(){waOpen=false;document.getElementById('wa-chat').style.display='none';document.getElementById('wa-wrap').classList.remove('open')}
-function sendWA(txt){window.open('https://wa.me/8613451773742?text='+encodeURIComponent(txt),'_blank')}
+function sendWA(txt){window.open('https://wa.me/8618653496136?text='+encodeURIComponent(txt),'_blank')}
 function sendWAInput(){const inp=document.getElementById('wa-msg');if(inp.value.trim())sendWA(inp.value.trim())}
 document.querySelectorAll('.nd').forEach(nd=>{
   const btn=nd.querySelector('.nd-btn');
@@ -1541,8 +1633,12 @@ document.querySelectorAll('.nd').forEach(nd=>{
 });
 document.addEventListener('click',()=>document.querySelectorAll('.nd').forEach(x=>x.classList.remove('open')));
 </script>
+<script src="assets/site-shell.js"></script>
 </body>
 </html>
+
+
+
 
 
 

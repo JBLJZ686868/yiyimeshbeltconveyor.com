@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Chain Driven Belt vs Balanced Weave Belt Comparison visual 1</title>
+  <desc id="desc">Industrial conveyor belt engineering visual placeholder for Chain Driven Belt vs Balanced Weave Belt Comparison.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0c1b2a"/>
+      <stop offset="0.55" stop-color="#18395b"/>
+      <stop offset="1" stop-color="#e8eef5"/>
+    </linearGradient>
+    <pattern id="mesh" width="58" height="58" patternUnits="userSpaceOnUse">
+      <path d="M-10 30 H70 M30 -10 V70 M0 0 L58 58 M58 0 L0 58" fill="none" stroke="#dbe8f5" stroke-width="2" opacity=".32"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="720" rx="36" fill="url(#bg)"/>
+  <rect x="78" y="86" width="1044" height="548" rx="28" fill="url(#mesh)" opacity=".62"/>
+  <rect x="92" y="104" width="1016" height="510" rx="24" fill="#071523" opacity=".44"/>
+  <text x="120" y="156" fill="#68a8e8" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">COMPARISON / DRIVE SYSTEM</text>
+  <text x="120" y="252" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="800">Chain Driven Belt</text>
+  <text x="120" y="322" fill="#d9e7f5" font-family="Arial, sans-serif" font-size="34" font-weight="700">Chain Driven Belt vs Balanced Weave Belt Comparison</text>
+  <text x="120" y="382" fill="#b8cce2" font-family="Arial, sans-serif" font-size="26">Compare positive-drive chain belts with flexible woven belts for industrial and th</text>
+  <g transform="translate(120 446)">
+    <rect width="258" height="54" rx="27" fill="#2f67a8"/>
+    <text x="28" y="36" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="700">YIYI MESH BELT</text>
+    <rect x="290" width="228" height="54" rx="27" fill="#c99737"/>
+    <text x="318" y="36" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="700">ENGINEERING QA</text>
+  </g>
+</svg>

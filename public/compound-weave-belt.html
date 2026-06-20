@@ -155,7 +155,11 @@ button{font-family:var(--fs);cursor:pointer}
 .ph-ico{font-size:28px;opacity:.35}
 .ph-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:rgba(255,255,255,.20);line-height:1.6}
 .ph-lbl-lt{color:rgba(31,92,158,.40)}
-.ph-vid::after{content:'鈻?VIDEO';position:absolute;top:8px;right:10px;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:rgba(255,255,255,.30);background:rgba(0,0,0,.35);padding:2px 6px;border-radius:2px}
+.ph-vid::after{content:'VIDEO';position:absolute;top:8px;right:10px;font-family:var(--fm);font-size:8px;letter-spacing:.08em;color:rgba(255,255,255,.30);background:rgba(0,0,0,.35);padding:2px 6px;border-radius:2px}
+.media-img,.media-video{width:100%;height:100%;min-height:inherit;object-fit:cover;display:block;border-radius:inherit}
+.ph:has(.media-img),.ph:has(.media-video),.hero-ph:has(.media-img),.hero-ph:has(.media-video){padding:0;overflow:hidden;border-style:solid}
+.media-caption{position:absolute;left:14px;right:14px;bottom:14px;background:linear-gradient(135deg,rgba(6,22,38,.82),rgba(6,22,38,.42));border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:10px 12px;color:#fff;font-size:12px;font-weight:700;line-height:1.4;text-align:left}
+.ph-lt .media-caption{background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,255,255,.64));color:var(--ink)}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media(max-width:520px){.g2,.g3{grid-template-columns:1fr}}
@@ -192,7 +196,7 @@ button{font-family:var(--fs);cursor:pointer}
 .proof-inner{max-width:var(--mw);margin:0 auto;padding:14px 2rem;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
 @media(min-width:1024px){.proof-inner{justify-content:space-between}}
 .proof-i span{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.60)}
-.proof-i span::before{content:'&#10003;';color:#4ADE80}
+.proof-i span::before{content:'\\2713';color:#4ADE80}
 
 /* SPEC TABLE */
 .spec-tbl{width:100%;border-collapse:collapse;font-size:13px}
@@ -270,14 +274,14 @@ button{font-family:var(--fs);cursor:pointer}
 .cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px}
 .cta-trust{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 .ct{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.38);letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:5px}
-.ct::before{content:'&#10003;;color:#4ADE80}
+.ct::before{content:'\\2713';color:#4ADE80}
 
 /* TRUST STRIP */
 .trust-strip{background:var(--navy3);border-top:1px solid rgba(255,255,255,.07)}
 .ts-inner{max-width:var(--mw);margin:0 auto;padding:14px 2rem;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 @media(min-width:1024px){.ts-inner{justify-content:space-between}}
 .ts-i span{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.60)}
-.ts-i span::before{content:'&#10003;';color:#4ADE80}
+.ts-i span::before{content:'\\2713';color:#4ADE80}
 
 /* FOOTER */
 .yiyi-footer{background:#0D1B2E;padding:48px 0 0}
@@ -350,6 +354,7 @@ button{font-family:var(--fs);cursor:pointer}
 .hero-ph-ico{font-size:36px;opacity:.25}
 .hero-ph-lbl{font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:rgba(255,255,255,.18);line-height:1.6}
 </style>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
 
@@ -384,116 +389,118 @@ button{font-family:var(--fs);cursor:pointer}
     <div class="nav-desktop">
       <a href="index.html" class="nav-link-simple">Home</a>
       <div class="nd">
-        <button class="nd-btn gold-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>Core Systems<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="products.html#strategic" class="nd-btn gold-btn nd-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>Core Belt Systems<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:320px"><div class="drop-box"><div class="drop-gold-bar"></div><div class="drop-body" style="padding:16px">
-          <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">鉂勶笍</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
-          <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">馃攧</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
-          <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">鉃★笍</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
-          <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">馃敆</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div></a>
-          <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">馃煪</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Belt</span></div></a>
-          <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">鈿欙笍</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span></div></a>
+          <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">&#10052;</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">&#8635;</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">&#10145;</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
+              <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">&#9646;</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Conveyor Belt</span></div></a>
+              <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">&#9881;</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span><span class="cdl-sub">(System Matched)</span></div></a>
         </div></div></div>
       </div>
       <div class="nd">
-        <button class="nd-btn">All Products<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="products.html" class="nd-btn nd-link">All Products<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="left:-180px"><div class="drop-box"><div class="mega-grid">
           <div class="mega-col"><div class="mega-head">IQF &amp; Freezing</div>
-            <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">鉂勶笍</span><span class="dl-label">Spiral Freezer Belt</span></a>
-            <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">馃攧</span><span class="dl-label">Self-Stacking Belt</span></a>
-            <a href="side-driven-belt.html" class="dl"><span class="dl-icon">鉃★笍</span><span class="dl-label">Side-Driven Belt</span></a>
-            <a href="eye-link-belt.html" class="dl"><span class="dl-icon">馃敆</span><span class="dl-label">Eye-Link Belt</span></a>
-            <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">馃煪</span><span class="dl-label">Flat Wire Honeycomb Belt</span></a>
+            <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;&#65039;</span><span class="dl-label">Spiral Freezer Belt</span></a>
+            <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Self-Stacking Belt</span></a>
+            <a href="side-driven-belt.html" class="dl"><span class="dl-icon">&#10145;</span><span class="dl-label">Side-Driven Belt</span></a>
+            <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye-Link Belt</span></a>
+            <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9638;</span><span class="dl-label">Flat Wire Honeycomb Belt</span></a>
           </div>
           <div class="mega-col"><div class="mega-head">Baking &amp; Processing</div>
-            <a href="biscuit-belt.html" class="dl"><span class="dl-icon">馃崻</span><span class="dl-label">Biscuit Belt</span></a>
-            <a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">鈿栵笍</span><span class="dl-label">Balanced Weave Belt</span></a>
-            <a href="compound-weave-belt.html" class="dl"><span class="dl-icon">銆帮笍</span><span class="dl-label">Compound Weave Belt</span><span class="dl-badge">THIS PAGE</span></a>
+            <a href="biscuit-belt.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Biscuit Belt</span></a>
+<a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">&#9878;</span><span class="dl-label">Balanced Weave Belt</span></a>
+<a href="compound-weave-belt.html" class="dl"><span class="dl-icon">&#12336;</span><span class="dl-label">Compound Weave Belt</span><span class="dl-badge">THIS PAGE</span></a>
             <a href="replacement-parts.html" class="dl"><span class="dl-icon">&#128297;</span><span class="dl-label">Replacement Parts</span></a>
             <div class="mega-head" style="margin-top:14px">Plate &amp; Chain</div>
-            <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">馃敆</span><span class="dl-label">Chain-Driven Belt</span></a>
-            <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">馃彈锔?/span><span class="dl-label">Hinged Plate Belt</span></a>
+            <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Chain-Driven Belt</span></a>
+            <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">&#127959;&#65039;</span><span class="dl-label">Hinged Plate Belt</span></a>
           </div>
           <div class="mega-col"><div class="mega-head">Accessories</div>
-            <a href="drive-sprockets.html" class="dl"><span class="dl-icon">鈿欙笍</span><span class="dl-label">Drive Sprockets</span></a>
-            <a href="connecting-accessories.html" class="dl"><span class="dl-icon">馃搶</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
+            <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
+            <a href="connecting-accessories.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
           </div>
           <div class="mega-col">
             <div style="font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Product Index</div>
             <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">13 belt types  - full technical specs</p>
-            <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All &#8594;/a>
+            <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All &#8594;</a>
           </div>
         </div></div></div>
       </div>
       <div class="nd">
-        <button class="nd-btn">Industries<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="industries.html" class="nd-btn nd-link">Industries<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel"><div class="drop-box"><div class="two-col">
           <div class="two-col-main"><div class="mega-head">Application Sectors</div>
-            <a href="industries.html" class="dl"><span class="dl-icon">馃崻</span><span class="dl-label">Baking &amp; Biscuit</span></a>
-            <a href="industries.html" class="dl"><span class="dl-icon">馃ォ</span><span class="dl-label">Meat &amp; Seafood Processing</span></a>
-            <a href="industries.html" class="dl"><span class="dl-icon">鉂勶笍</span><span class="dl-label">IQF &amp; Cooling</span></a>
-            <a href="industries.html" class="dl"><span class="dl-icon">馃カ</span><span class="dl-label">Canning &amp; Washing Lines</span></a>
-            <a href="industries.html" class="dl"><span class="dl-icon">鈿欙笍</span><span class="dl-label">Industrial &amp; Heavy Duty</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Baking &amp; Biscuit</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#127831;</span><span class="dl-label">Meat &amp; Seafood Processing</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#10052;&#65039;</span><span class="dl-label">IQF &amp; Cooling</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#128167;</span><span class="dl-label">Canning &amp; Washing Lines</span></a>
+            <a href="industries.html" class="dl"><span class="dl-icon">&#128736;</span><span class="dl-label">Industrial &amp; Heavy Duty</span></a>
           </div>
-          <div class="two-col-side"><div class="eeat-card"><div class="eeat-tag">EEAT  - Experience</div><p class="eeat-title">Drawing to delivery  - structured coordination every project.</p><a href="engineering-oem.html" class="eeat-link">Engineering &amp; OEM &#8594;/a></div></div>
+          <div class="two-col-side"><div class="eeat-card"><div class="eeat-tag">EEAT  - Experience</div><p class="eeat-title">Drawing to delivery  - structured coordination every project.</p><a href="engineering-oem.html?source=compound-weave-belt" class="eeat-link">Engineering &amp; OEM &#8594;</a></div></div>
         </div></div></div>
       </div>
       <div class="nd">
-        <button class="nd-btn">Engineering &amp; OEM<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="engineering-oem.html?source=compound-weave-belt" class="nd-btn nd-link">Engineering &amp; OEM<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel"><div class="drop-box"><div class="two-col">
           <div class="two-col-main"><div class="mega-head">Technical Support</div>
-            <a href="engineering-oem.html" class="dl"><span class="dl-icon">馃搻</span><span class="dl-label">Drawing Review Process</span></a>
-            <a href="engineering-oem.html" class="dl"><span class="dl-icon">馃摝</span><span class="dl-label">Sampling &amp; Fit Check</span></a>
-            <a href="engineering-oem.html" class="dl"><span class="dl-icon">馃攧</span><span class="dl-label">Replacement Matching</span></a>
-            <a href="drive-sprockets.html" class="dl"><span class="dl-icon">鈿欙笍</span><span class="dl-label">Matched Drive Sprockets</span></a>
+            <a href="contact.html?intent=drawing&source=compound-weave-belt" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Drawing Review Process</span></a>
+            <a href="engineering-oem.html?source=compound-weave-belt#sampling" class="dl"><span class="dl-icon">&#128344;</span><span class="dl-label">Sampling &amp; Fit Check</span></a>
+            <a href="replacement-review.html?intent=replacement&source=compound-weave-belt" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Matching</span></a>
+            <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Matched Drive Sprockets</span></a>
           </div>
-          <div class="two-col-side"><div class="eeat-card"><div class="eeat-tag">EEAT  - Expertise</div><p class="eeat-title">ISO 9001 certified. In-house wire drawing. 30 spiral form machines.</p><a href="contact.html" class="eeat-link">Start Engineering Review &#8594;/a></div></div>
+          <div class="two-col-side"><div class="eeat-card"><div class="eeat-tag">EEAT  - Expertise</div><p class="eeat-title">ISO 9001 certified. In-house wire drawing. 30 spiral form machines.</p><a href="contact.html?intent=engineering&source=compound-weave-belt" class="eeat-link">Start Engineering Review &#8594;</a></div></div>
         </div></div></div>
       </div>
       <div class="nd">
         <button class="nd-btn">Manufacturing<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="drop-panel" style="min-width:240px"><div class="drop-box"><div class="drop-blue-bar"></div><div class="drop-body">
-          <a href="manufacturing.html" class="dl"><span class="dl-icon">馃</span><span class="dl-label">Automated Welding</span></a>
-          <a href="manufacturing.html" class="dl"><span class="dl-icon">馃У</span><span class="dl-label">In-House Wire Drawing</span></a>
-          <a href="quality-control.html" class="dl"><span class="dl-icon">&#10003;/span><span class="dl-label">Quality Control</span></a>
-          <a href="raw-material.html" class="dl"><span class="dl-icon">馃敩</span><span class="dl-label">Raw Material Control</span></a>
-          <a href="manufacturing.html" class="dl"><span class="dl-icon">鈽€锔?/span><span class="dl-label">Solar Factory (ESG)</span></a>
+          <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129302;</span><span class="dl-label">Automated Welding</span></a>
+          <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">In-House Wire Drawing</span></a>
+          <a href="quality-control.html" class="dl"><span class="dl-icon">&#10003;</span><span class="dl-label">Quality Control</span></a>
+          <a href="raw-material.html" class="dl"><span class="dl-icon">&#128300;</span><span class="dl-label">Raw Material Control</span></a>
+          <a href="manufacturing.html" class="dl"><span class="dl-icon">&#9728;</span><span class="dl-label">Solar Factory (ESG)</span></a>
         </div></div></div>
       </div>
       <div class="nd">
-        <button class="nd-btn">Contact<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="contact.html" class="nd-btn nd-link">Contact<svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:220px"><div class="drop-box"><div class="drop-blue-bar"></div><div class="drop-body">
-          <a href="contact.html" class="dl"><span class="dl-icon">馃摑</span><span class="dl-label">Request a Quote</span></a>
-          <a href="contact.html" class="dl"><span class="dl-icon">馃搻</span><span class="dl-label">Send Drawing</span></a>
-          <a href="contact.html" class="dl"><span class="dl-icon">馃懛</span><span class="dl-label">Talk to Engineer</span></a>
+          <a href="contact.html?intent=quote&source=compound-weave-belt" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Ask For A Quick Quote</span></a>
+          <a href="contact.html?intent=drawing&source=compound-weave-belt" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Send Your Belt Drawing</span></a>
+          <a href="contact.html?intent=engineering&source=compound-weave-belt" class="dl"><span class="dl-icon">&#128101;</span><span class="dl-label">Get Engineering Support</span></a>
         </div></div></div>
       </div>
     </div>
     <div class="nav-right">
-      <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;/a>
+      <a href="contact.html?intent=quote&source=compound-weave-belt" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
       <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="mob-menu" id="mob-menu"><div class="mob-inner">
     <a href="index.html" class="mob-link">Home</a>
     <div style="font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Products</div>
-    <a href="spiral-freezer-belt.html" class="mob-link">猸?Spiral Freezer Belt</a>
+    <a href="spiral-freezer-belt.html" class="mob-link">&#10052; Spiral Freezer Belt</a>
     <a href="compound-weave-belt.html" class="mob-link" style="color:var(--gold)">Compound Weave Belt</a>
     <a href="balanced-weave-belt.html" class="mob-link">Balanced Weave Belt</a>
     <a href="chain-driven-belt.html" class="mob-link">Chain-Driven Belt</a>
     <a href="chain-plate-belt.html" class="mob-link">Hinged Plate Belt</a>
-    <a href="products.html" class="mob-link" style="color:#4A8CC8">Browse All Products &#8594;/a>
+    <a href="products.html" class="mob-link" style="color:#4A8CC8">Browse All Products &#8594;</a>
     <div style="font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Engineering</div>
-    <a href="engineering-oem.html" class="mob-link">Engineering &amp; OEM</a>
+    <a href="engineering-oem.html?source=compound-weave-belt" class="mob-link">Engineering &amp; OEM</a>
     <a href="drive-sprockets.html" class="mob-link">Drive Sprockets</a>
     <a href="manufacturing.html" class="mob-link">Manufacturing Assurance</a>
     <div style="border-top:1px solid rgba(255,255,255,.07);margin-top:10px;padding-top:10px"></div>
-    <a href="contact.html" class="mob-link">Contact</a>
-    <a href="contact.html" class="mob-cta">Get a Quote &#8594;/a>
+    <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote&source=compound-weave-belt" class="mob-link">Ask For A Quick Quote</a>
+      <a href="contact.html?intent=drawing&source=compound-weave-belt" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering&source=compound-weave-belt" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit&source=compound-weave-belt" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote&source=compound-weave-belt" class="mob-cta">Ask For A Quick Quote &#8594;</a>
   </div></div>
 </nav>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S1  - HERO
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="hero-sec">
   <div class="W">
     <div class="hero-grid">
@@ -503,18 +510,18 @@ button{font-family:var(--fs);cursor:pointer}
         <p class="hero-sub">Double-Spiral Herringbone Structure  - Dense Mesh, Stable Load, Continuous Operation</p>
         <p class="hero-intro">The compound weave belt uses a double-spiral interlocked structure  - two spiral coils per pitch unit instead of one. This doubles mesh density compared to standard balanced weave belts, producing a denser, more closed carrying surface with smaller mesh openings. YIYI Mesh Belt manufactures compound weave belts for baking ovens, washing lines, cooling conveyors, oil filtration systems, and heavy-duty industrial conveying  - in friction-driven and gear-driven configurations, with soft wire, spring wire, and flat wire options.</p>
         <div class="hero-btns">
-          <a href="contact.html" class="btn-gold">Request a Quote &#8594;/a>
-          <a href="contact.html" class="btn-o">Send Your Drawing &#8594;/a>
-          <a href="contact.html" class="btn-o">Talk to Engineer &#8594;/a>
+          <a href="contact.html?intent=quote&source=compound-weave-belt" class="btn-gold">Ask For A Quick Quote &#8594;</a>
+          <a href="contact.html?intent=drawing&source=compound-weave-belt" class="btn-o">Send Your Drawing &#8594;</a>
+          <a href="contact.html?intent=engineering&source=compound-weave-belt" class="btn-o">Get Engineering Support &#8594;</a>
         </div>
       </div>
       <div class="hero-visual">
         <!-- PHOTO: Compound weave belt surface  - herringbone pattern visible clearly -->
         <!-- From PDF P9: actual production photo of belt on forming machine / large flat belt surface -->
         <!-- VIDEO: Short muted looping  - belt surface close-up or running on production line -->
-        <div class="hero-ph ph-vid">
-          <div class="hero-ph-ico">銆帮笍</div>
-          <div class="hero-ph-lbl">Compound weave belt surface  - herringbone pattern close-up<br>From PDF: production photo showing flat belt on forming machine<br>Replace with: product surface photo or short muted video</div>
+        <div class="hero-ph">
+          <img class="media-img" src="assets/product-media/compound-weave-belt/compound-weave-belt-product-overview.jpg" alt="Compound weave belt herringbone surface close-up manufactured by YIYI Mesh Belt" loading="eager" decoding="async" fetchpriority="high">
+          <div class="media-caption">Dense herringbone mesh surface for stable product support</div>
         </div>
       </div>
     </div>
@@ -533,8 +540,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </div>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S2  - STRUCTURE PRINCIPLE
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-wh" id="structure">
   <div class="W">
     <div class="two center">
@@ -546,7 +551,7 @@ button{font-family:var(--fs);cursor:pointer}
         <div class="cl" style="margin-bottom:24px">
           <div class="cl-item">
             <svg class="cl-ico cl-b" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <div class="cl-t"><strong>~2脳 mesh density vs standard balanced weave</strong>Two spiral coils per pitch unit  - doubled wire contacts per unit area. Smaller effective opening without increasing cross rod count.</div>
+            <div class="cl-t"><strong>~2x mesh density vs standard balanced weave</strong>Two spiral coils per pitch unit  - doubled wire contacts per unit area. Smaller effective opening without increasing cross rod count.</div>
           </div>
           <div class="cl-item">
             <svg class="cl-ico cl-b" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -570,17 +575,17 @@ button{font-family:var(--fs);cursor:pointer}
         <!-- PHOTO: Surface close-up showing herringbone pattern  - from PDF P13 macro shot -->
         <!-- PHOTO: Two-belt comparison: balanced weave vs compound weave mesh density -->
         <div class="ph ph-lt" style="aspect-ratio:4/3">
-          <div class="ph-ico ph-lbl-lt" style="font-size:28px;opacity:.22">銆帮笍</div>
-          <div class="ph-lbl ph-lbl-lt">Herringbone surface pattern close-up<br>From PDF P13: macro shot showing double-spiral interlocking<br>Replace with: high-res surface photo</div>
+          <img class="media-img" src="assets/product-media/compound-weave-belt/compound-weave-belt-close-up.jpg" alt="Compound weave belt double spiral interlocking surface detail" loading="lazy" decoding="async">
+          <div class="media-caption">Double-spiral interlocking surface detail</div>
         </div>
         <div class="g2">
           <div class="ph ph-lt" style="min-height:130px">
-            <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">鈿栵笍</div>
-            <div class="ph-lbl ph-lbl-lt">Standard balanced weave<br>Single spiral per pitch  - reference</div>
+            <img class="media-img" src="assets/product-media/balanced-weave-belt/balanced-weave-belt-hero.jpg" alt="Balanced weave belt single spiral reference surface" loading="lazy" decoding="async">
+            <div class="media-caption">Balanced weave reference</div>
           </div>
           <div class="ph ph-lt" style="min-height:130px">
-            <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">銆帮笍</div>
-            <div class="ph-lbl ph-lbl-lt">Compound weave<br>Double spiral  - 2脳 density visible</div>
+            <img class="media-img" src="assets/product-media/compound-weave-belt/compound-weave-belt-wide-detail.jpg" alt="Compound weave belt denser double spiral surface reference" loading="lazy" decoding="async">
+            <div class="media-caption">Compound weave: denser double spiral</div>
           </div>
         </div>
         <div class="ib-lt">
@@ -589,7 +594,7 @@ button{font-family:var(--fs);cursor:pointer}
             <span style="color:var(--ink3);font-family:var(--fm);font-size:9px;letter-spacing:.06em;text-transform:uppercase">Balanced Weave</span>
             <span style="color:var(--ink3);font-family:var(--fm);font-size:9px;letter-spacing:.06em;text-transform:uppercase">Compound Weave</span>
             <span style="color:var(--ink2)">1 spiral per pitch</span><span style="color:var(--ink)">2 spirals per pitch</span>
-            <span style="color:var(--ink2)">Standard mesh density</span><span style="color:var(--ink)">~2脳 mesh density</span>
+            <span style="color:var(--ink2)">Standard mesh density</span><span style="color:var(--ink)">~2x mesh density</span>
             <span style="color:var(--ink2)">Larger opening</span><span style="color:var(--ink)">Smaller effective opening</span>
             <span style="color:var(--ink2)">Lighter per metre</span><span style="color:var(--ink)">Heavier per metre</span>
           </div>
@@ -599,8 +604,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S3  - WIRE TYPES & CONFIGURATIONS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy2" id="wire-types">
   <div class="W">
     <div class="sec-hdr">
@@ -624,7 +627,7 @@ button{font-family:var(--fs);cursor:pointer}
       <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--rad);padding:22px">
         <div style="font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.40);margin-bottom:12px">WIRE TYPE 03</div>
         <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px">Flat Wire (Compressed Cross-Section)</div>
-        <p style="font-size:13px;color:rgba(255,255,255,.50);line-height:1.68;margin-bottom:12px">Round wire compressed to a flat cross-section (e.g. 1.5mm 脳 1.25mm from 1.0mm round). The flat face increases the wire-to-product contact area  - reducing contact pressure per unit area on soft product surfaces. Used where round wire contact marks are unacceptable. Confirmed from actual YIYI production orders.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,.50);line-height:1.68;margin-bottom:12px">Round wire compressed to a flat cross-section (e.g. 1.5mm x 1.25mm from 1.0mm round). The flat face increases the wire-to-product contact area  - reducing contact pressure per unit area on soft product surfaces. Used where round wire contact marks are unacceptable. Confirmed from actual YIYI production orders.</p>
         <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:4px;padding:8px 12px;font-size:11px;color:rgba(255,255,255,.40);font-family:var(--fm)">Applications: soft food products  &#183;  delicate surface contact  &#183;  marking-sensitive applications</div>
       </div>
     </div>
@@ -635,41 +638,39 @@ button{font-family:var(--fs);cursor:pointer}
     <div class="dc-grid" style="margin-bottom:32px">
       <div class="dc-card">
         <div class="dc-num">CONFIGURATION 01</div>
-        <div class="dc-title">Straight Shaft (鐩磋酱)</div>
-        <div class="dc-desc">Standard cross rod configuration  - straight rods pass through the spiral coils at 90掳 to the belt running direction. Used in the majority of friction-driven compound weave belt applications. Confirmed from production data: 304 stainless steel, widths 250mm - ,320mm, 3-rod to 6-rod configurations.</div>
+        <div class="dc-title">Straight Shaft</div>
+        <div class="dc-desc">Standard cross rod configuration - straight rods pass through the spiral coils at 90 degrees to the belt running direction. Used in most friction-driven compound weave belt applications. Confirmed from production data: 304 stainless steel, widths 250mm - 2,320mm, 3-rod to 6-rod configurations.</div>
       </div>
       <div class="dc-card">
         <div class="dc-num">CONFIGURATION 02</div>
-        <div class="dc-title">Curved Shaft / Crank Rod (鏇茶酱)</div>
-        <div class="dc-desc">Cross rods are formed with a curved or cranked profile rather than straight. The curved geometry provides an additional mechanical interlock between rod and spiral  - improving rod retention and reducing the risk of rod pull-out under high tension or lateral load. Confirmed from actual YIYI production orders: SUS304 curved shaft compound weave, widths 1,560mm - ,320mm.</div>
+        <div class="dc-title">Curved Shaft / Crank Rod</div>
+        <div class="dc-desc">Cross rods are formed with a curved or cranked profile rather than straight. The curved geometry provides an additional mechanical interlock between rod and spiral - improving rod retention and reducing the risk of rod pull-out under high tension or lateral load. Confirmed from actual YIYI production orders: SUS304 curved shaft compound weave, widths 1,560mm - 2,320mm.</div>
       </div>
       <div class="dc-card">
         <div class="dc-num">CONFIGURATION 03</div>
-        <div class="dc-title">Flat Wire Spiral (鎵佷笣/鍘嬫墎涓?</div>
-        <div class="dc-desc">Spiral coils formed from flat-section wire  - round wire compressed to a rectangular cross-section before spiral forming. The flat face of the wire increases the belt surface contact area. Confirmed from YIYI production data: width 1,264.6mm, flat wire 1.5mm脳1.25mm, spiral pitch 11.29mm, 6-rod configuration, carbon steel with 45-steel rods.</div>
+        <div class="dc-title">Flat Wire Spiral</div>
+        <div class="dc-desc">Spiral coils formed from flat-section wire - round wire compressed to a rectangular cross-section before spiral forming. The flat face of the wire increases the belt surface contact area. Confirmed from YIYI production data: width 1,264.6mm, flat wire 1.5mm x 1.25mm, spiral pitch 11.29mm, 6-rod configuration, carbon steel with 45-steel rods.</div>
       </div>
       <div class="dc-card">
         <div class="dc-num">CONFIGURATION 04</div>
-        <div class="dc-title">Chain-Net Integrated (浜哄瓧閾剧綉)</div>
-        <div class="dc-desc">Compound weave mesh surface mounted onto side chains  - combining the dense mesh surface of a compound weave belt with the chain-driven positive drive of a chain conveyor. Used where positive drive is required alongside a dense mesh carrying surface. Confirmed from YIYI production: center distance 1,330mm, mesh width 1,200mm, chain pitch 63.5mm, roller diameter 39.68mm, stainless steel grade 鈮?% Ni / 鈮?8% Cr confirmed.</div>
+        <div class="dc-title">Chain-Net Integrated</div>
+        <div class="dc-desc">Compound weave mesh surface mounted onto side chains - combining the dense mesh surface of a compound weave belt with the chain-driven positive drive of a chain conveyor. Used where positive drive is required alongside a dense mesh carrying surface. Confirmed from YIYI production: center distance 1,330mm, mesh width 1,200mm, chain pitch 63.5mm, roller diameter 39.68mm, stainless steel grade confirmed before production.</div>
       </div>
     </div>
     <!-- PHOTO: Straight shaft example / curved shaft close-up / flat wire cross-section / chain-net integrated -->
     <div class="g2">
       <div class="ph ph-vid" style="min-height:200px">
-        <div class="ph-ico">銆帮笍</div>
-        <div class="ph-lbl">Curved shaft (鏇茶酱) rod configuration close-up<br>Showing crank profile vs straight rod<br>VIDEO: production of curved-shaft compound weave belt</div>
+        <video class="media-video" src="assets/product-media/compound-weave-belt/compound-weave-belt-product-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="media-caption">Compound weave belt product video</div>
       </div>
       <div class="ph" style="min-height:200px">
-        <div class="ph-ico">馃敆</div>
-        <div class="ph-lbl">Chain-net integrated (浜哄瓧閾剧綉)<br>Compound weave mesh on side chains<br>Chain engagement and mesh surface visible</div>
+        <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-edge-detail.jpg" alt="Chain integrated conveyor belt edge detail reference" loading="lazy" decoding="async">
+        <div class="media-caption">Chain-integrated edge reference</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S4  - GEAR DRIVE SYSTEM
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-surf" id="gear-drive">
   <div class="W">
     <div class="two center">
@@ -702,23 +703,23 @@ button{font-family:var(--fs);cursor:pointer}
             <div class="cl-t"><strong>No drift, no jump  - delivery standard</strong>Gear-driven compound weave belts are inspected to the standard: no drift, no jump, both edges level, mesh surface clean and dry. Confirmed before packing and shipment release.</div>
           </div>
         </div>
-        <a href="drive-sprockets.html" class="btn-ol" style="font-size:13px">View Drive Sprockets &#8594;/a>
+        <a href="drive-sprockets.html" class="btn-ol" style="font-size:13px">View Drive Sprockets &#8594;</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px">
         <!-- PHOTO: Gear-belt running test  - sprocket engagement -->
         <!-- VIDEO: first-piece confirmation video before mass production -->
         <div class="ph ph-vid" style="aspect-ratio:4/3">
-          <div class="ph-ico">鈿欙笍</div>
-          <div class="ph-lbl">Gear-belt running test<br>Compound weave belt on matched sprockets<br>VIDEO: first-piece running test confirmation<br>Sprocket engagement and belt tracking visible</div>
+          <video class="media-video" src="assets/product-media/chain-driven-belt/chain-driven-belt-sprocket-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="media-caption">Matched sprocket engagement reference</div>
         </div>
         <div class="g2">
           <div class="ph" style="min-height:140px">
-            <div class="ph-ico">馃敥</div>
-            <div class="ph-lbl">Sprocket tooth profile<br>Node pitch matched to belt</div>
+            <img class="media-img" src="assets/product-media/drive-sprockets/drive-sprockets-belt-matching.jpg" alt="Matched sprocket tooth profile and belt pitch confirmation" decoding="async" loading="lazy">
+            <div class="media-caption">Sprocket tooth profile matched to belt pitch</div>
           </div>
           <div class="ph" style="min-height:140px">
-            <div class="ph-ico">馃搻</div>
-            <div class="ph-lbl">Diagonal measurement<br>During production QC</div>
+            <img class="media-img" src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Diagonal and dimensional measurement during conveyor belt production QC" decoding="async" loading="lazy">
+            <div class="media-caption">Diagonal measurement during production QC</div>
           </div>
         </div>
         <div class="ib-gold">
@@ -738,8 +739,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S5  - PTFE COATING
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy" id="ptfe">
   <div class="W">
     <div class="two center">
@@ -768,23 +767,23 @@ button{font-family:var(--fs);cursor:pointer}
             <div class="cl-td"><strong>Temperature limit  - confirm at enquiry stage</strong>PTFE coating has a different temperature limit from the base stainless steel mesh. Confirm operating temperature at enquiry stage  - the coating specification determines whether PTFE is suitable for the intended oven or process temperature.</div>
           </div>
         </div>
-        <a href="contact.html" class="btn-o" style="font-size:13px">Enquire About PTFE Coating &#8594;/a>
+        <a href="contact.html?intent=engineering&source=compound-weave-belt" class="btn-o" style="font-size:13px">Enquire About PTFE Coating &#8594;</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px">
         <!-- PHOTO: PTFE-coated compound weave belt  - matte white/grey surface visible -->
         <!-- From actual orders: dual-side PTFE on compound weave belt for food application -->
         <div class="ph" style="aspect-ratio:4/3">
-          <div class="ph-ico">&#10003;/div>
-          <div class="ph-lbl">PTFE-coated compound weave belt<br>Dual-side matte PTFE surface visible<br>Replace with: actual coated belt photo from production</div>
+          <img class="media-img" src="assets/product-media/compound-weave-belt/compound-weave-belt-rolled-edge.png" alt="Rolled compound weave belt edge and dense mesh surface" loading="lazy" decoding="async">
+          <div class="media-caption">Rolled compound weave belt edge and surface</div>
         </div>
         <div class="g2">
           <div class="ph" style="min-height:130px">
-            <div class="ph-ico">馃崻</div>
-            <div class="ph-lbl">PTFE surface in baking application<br>Non-stick contact demonstrated</div>
+            <img class="media-img" src="assets/product-media/compound-weave-belt/compound-weave-belt-wide-detail.jpg" alt="Compound weave belt dense surface for baking and food processing contact" decoding="async" loading="lazy">
+            <div class="media-caption">Dense surface for baking and food processing contact</div>
           </div>
           <div class="ph" style="min-height:130px">
-            <div class="ph-ico">馃敩</div>
-            <div class="ph-lbl">PTFE surface close-up<br>Wire mesh with coating visible</div>
+            <img class="media-img" src="assets/product-media/compound-weave-belt/compound-weave-belt-close-up.jpg" alt="Compound weave belt close-up showing dense wire mesh surface" decoding="async" loading="lazy">
+            <div class="media-caption">Close-up surface check for dense wire mesh</div>
           </div>
         </div>
         <div class="ib-dk">
@@ -802,8 +801,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S6  - REAL SPEC RANGE
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-surf" id="specifications">
   <div class="W">
     <div class="sec-hdr">
@@ -823,15 +820,15 @@ button{font-family:var(--fs);cursor:pointer}
         <tr><td>Spiral Pitch</td><td>3.7mm  - 12mm &nbsp;<small style="color:var(--ink3)">(tighter pitches for fine mesh / food applications, wider for heavy-duty)</small></td></tr>
         <tr><td>Rod Pitch (Node Pitch)</td><td>2.5mm  - 20mm &nbsp;<small style="color:var(--ink3)">(mesh opening and open area determined by pitch combination)</small></td></tr>
         <tr><td>Cross Rod Count</td><td>3-rod / 4-rod / 6-rod &nbsp;<small style="color:var(--ink3)">(confirmed to application  - 6-rod for flat wire and heavy-duty configurations)</small></td></tr>
-        <tr><td>Shaft Type</td><td>Straight shaft (鐩磋酱)  &#183;  Curved/crank shaft (鏇茶酱) &nbsp;<small style="color:var(--ink3)">(curved shaft for high-tension or lateral-load applications)</small></td></tr>
+        <tr><td>Shaft Type</td><td>Straight shaft  &#183;  Curved/crank shaft &nbsp;<small style="color:var(--ink3)">(curved shaft for high-tension or lateral-load applications)</small></td></tr>
         <tr><td>Wire Type</td><td>Soft wire (WEA/annealed)  &#183;  Spring wire (high-tensile)  &#183;  Flat wire (compressed) &nbsp;<small style="color:var(--ink3)">(spring wire mandatory for gear-driven belts)</small></td></tr>
         <tr><td>Material Grade</td><td>SUS304 &nbsp;/&nbsp; SUS316 / SUS316L &nbsp;/&nbsp; 430 stainless (magnetic) &nbsp;/&nbsp; Carbon steel &nbsp;/&nbsp; 45-steel rod</td></tr>
-        <tr><td>Surface Treatment</td><td>Natural  &#183;  Acid-washed welds  &#183;  Degreased/defatted (鑴辨补鑴辫剛)  &#183;  PTFE-coated (dual or single side)</td></tr>
+        <tr><td>Surface Treatment</td><td>Natural  &#183;  Acid-washed welds  &#183;  Degreased / defatted  &#183;  PTFE-coated (dual or single side)</td></tr>
         <tr><td>Drive Type</td><td>Friction (standard)  &#183;  Gear/sprocket positive drive (spring wire + matched sprocket)</td></tr>
-        <tr><td>Special Configurations</td><td>Flat wire spiral  &#183;  Curved shaft (鏇茶酱)  &#183;  Chain-net integrated (浜哄瓧閾剧綉)  &#183;  Welded top pins  &#183;  No loose ends (涓嶇暀娲绘潯)</td></tr>
+        <tr><td>Special Configurations</td><td>Flat wire spiral  &#183;  Curved shaft  &#183;  Chain-net integrated  &#183;  Welded top pins  &#183;  No loose ends</td></tr>
         <tr><td>Spare Parts Included</td><td>Extra spiral coils (left + right)  &#183;  Extra cross rods  &#183;  Connection pins &nbsp;<small style="color:var(--ink3)">(standard with every order  - quantity to belt size)</small></td></tr>
       </table>
-      <div style="padding:14px 20px;background:rgba(31,92,158,.04);border-top:1px solid rgba(31,92,158,.10);font-size:13px;color:var(--ink2)"><strong style="color:var(--blue)">All specifications custom.</strong> No standard stock. Send your drawing, sample, or dimensions  - confirmed before production. <a href="contact.html" style="color:var(--blue);font-weight:600;margin-left:6px">Contact &#8594;/a></div>
+      <div style="padding:14px 20px;background:rgba(31,92,158,.04);border-top:1px solid rgba(31,92,158,.10);font-size:13px;color:var(--ink2)"><strong style="color:var(--blue)">All specifications custom.</strong> No standard stock. Send your drawing, sample, or dimensions  - confirmed before production. <a href="contact.html?intent=drawing&source=compound-weave-belt" style="color:var(--blue);font-weight:600;margin-left:6px">Contact &#8594;</a></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
       <div style="background:#fff;border:1px solid var(--bl);border-radius:var(--rad);padding:16px;text-align:center">
@@ -854,8 +851,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S7  - MANUFACTURING PROCESS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy2" id="manufacturing">
   <div class="W">
     <div class="sec-hdr">
@@ -918,7 +913,7 @@ button{font-family:var(--fs);cursor:pointer}
             <div class="sf-num">07</div>
             <div class="sf-body">
               <div class="sf-title">Export Packing to International Standard</div>
-              <div class="sf-desc">Belt coiled around galvanised steel tube (闀€閿岀) to prevent permanent deformation during transit. Bubble wrap inner protection + waterproof outer wrap. Wooden crate for sea freight. From PDF P15: packing photos  - coiled on tube, wrapped in film, wooden box with steel corner reinforcement. Packing meets international transport standards.</div>
+              <div class="sf-desc">Belt coiled around a galvanised steel tube core to prevent permanent deformation during transit. Bubble wrap inner protection + waterproof outer wrap. Wooden crate for sea freight. From packing photos: coiled on tube, wrapped in film, wooden box with steel corner reinforcement. Packing meets international transport standards.</div>
               <div class="sf-tags"><span class="sf-tag">Galvanised tube core</span><span class="sf-tag">Waterproof wrap</span><span class="sf-tag">Wooden crate</span></div>
             </div>
           </div>
@@ -929,27 +924,27 @@ button{font-family:var(--fs);cursor:pointer}
         <!-- PHOTO: From PDF P10-11: production QA inspection photos -->
         <!-- PHOTO: From PDF P15: export packing photos -->
         <div class="ph ph-vid" style="aspect-ratio:4/3">
-          <div class="ph-ico">馃彮</div>
-          <div class="ph-lbl">Large compound weave belt forming machine<br>From PDF P8: actual production machine photo<br>Wide belt on forming machine  - surface visible<br>VIDEO: forming machine in operation</div>
+          <video class="media-video" src="assets/product-media/compound-weave-belt/compound-weave-belt-product-video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="media-caption">Compound weave belt forming and product movement</div>
         </div>
         <div class="g2">
           <div class="ph" style="min-height:140px">
-            <div class="ph-ico">馃敩</div>
-            <div class="ph-lbl">Production QA inspection<br>From PDF P10: 6-point caliper check<br>ISO 9001 in-process measurement</div>
+            <img class="media-img" src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Production QA inspection and dimensional check for compound weave belt order" decoding="async" loading="lazy">
+            <div class="media-caption">Production QA inspection and dimensional check</div>
           </div>
           <div class="ph" style="min-height:140px">
-            <div class="ph-ico">馃摝</div>
-            <div class="ph-lbl">Export packing<br>From PDF P15: coiled on tube<br>Waterproof wrap + wooden crate</div>
+            <img class="media-img" src="assets/product-media/spiral-freezer-belt/sfb-s9-shipment.png" alt="Export packing and shipment-ready conveyor belt order" decoding="async" loading="lazy">
+            <div class="media-caption">Export packing with shipment-ready confirmation</div>
           </div>
         </div>
         <div class="g2">
           <div class="ph" style="min-height:130px">
-            <div class="ph-ico">馃У</div>
-            <div class="ph-lbl">In-house wire drawing<br>USD 400K machine<br>3.2 - .0mm range</div>
+            <img class="media-img" src="assets/homepage-media/home-wire-drawing-equipment.jpg" alt="In-house wire drawing equipment for stainless steel conveyor belt production" decoding="async" loading="lazy">
+            <div class="media-caption">In-house wire drawing supports raw material control</div>
           </div>
           <div class="ph" style="min-height:130px">
-            <div class="ph-ico">&#10003;/div>
-            <div class="ph-lbl">Full inspection before shipment<br>Surface clean and dry<br>Weld edge burr-free</div>
+            <img class="media-img" src="assets/homepage-media/home-quality-inspection.png" alt="Final inspection before conveyor belt shipment" decoding="async" loading="lazy">
+            <div class="media-caption">Final inspection before shipment release</div>
           </div>
         </div>
       </div>
@@ -957,8 +952,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S8  - FAILURE ANALYSIS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-wh" id="failure-analysis">
   <div class="W">
     <div class="sec-hdr">
@@ -969,7 +962,7 @@ button{font-family:var(--fs);cursor:pointer}
     <div class="ps-wrap" style="margin-bottom:28px">
       <div class="ps-row">
         <div class="ps-p">
-          <div class="ps-lbl ps-lbl-r">鈿?Failure Mode 01</div>
+<div class="ps-lbl ps-lbl-r">&#9888; Failure Mode 01</div>
           <div class="ps-t">Belt Drifts or Runs Off Track After Installation</div>
           <div class="ps-d">Cause: diagonal asymmetry  - the belt was not produced with equal-length edges. The geometric imbalance creates a net lateral force under tension, pulling the belt to one side. Discovered after installation, not visible before.</div>
         </div>
@@ -981,7 +974,7 @@ button{font-family:var(--fs);cursor:pointer}
       </div>
       <div class="ps-row">
         <div class="ps-p">
-          <div class="ps-lbl ps-lbl-r">鈿?Failure Mode 02</div>
+<div class="ps-lbl ps-lbl-r">&#9888; Failure Mode 02</div>
           <div class="ps-t">Spiral Deformation at Gear Engagement Zone</div>
           <div class="ps-d">Cause: soft wire used for a gear-driven belt. Repeated engagement stress at the sprocket contact point progressively deforms the spiral coils  - causing pitch irregularity, engagement noise, and belt jump after sustained operation. Not visible immediately after installation.</div>
         </div>
@@ -993,37 +986,35 @@ button{font-family:var(--fs);cursor:pointer}
       </div>
       <div class="ps-row">
         <div class="ps-p">
-          <div class="ps-lbl ps-lbl-r">鈿?Failure Mode 03</div>
+<div class="ps-lbl ps-lbl-r">&#9888; Failure Mode 03</div>
           <div class="ps-t">Belt Surface Contaminated  - Cleaning Agent or Water Residue</div>
-          <div class="ps-d">Cause: insufficient cleaning after acid pickling (鐒婄偣閰告礂)  - residual acid or cleaning solution left on the mesh surface, or surface not fully dried before packing. Causes discolouration, corrosion, or contamination of food-contact product at the installation site.</div>
+          <div class="ps-d">Cause: insufficient cleaning after weld-area acid pickling  - residual acid or cleaning solution left on the mesh surface, or surface not fully dried before packing. Causes discolouration, corrosion, or contamination of food-contact product at the installation site.</div>
         </div>
         <div class="ps-s">
           <div class="ps-lbl ps-lbl-g">&#10003;YIYI Production Standard</div>
           <div class="ps-t">Surface Must Be Fully Cleaned and Sun-Dried Before Packing  - No Exceptions</div>
-          <div class="ps-d">YIYI Mesh Belt production records explicitly require: cleaning after acid pickling, no residual cleaning solution on mesh surface, no water marks, sun-dried before boxing (闃冲厜鏆存檼骞茬嚗). Surface condition inspection is part of the pre-shipment QA  - not checked only on request.</div>
+          <div class="ps-d">YIYI Mesh Belt production records explicitly require: cleaning after acid pickling, no residual cleaning solution on mesh surface, no water marks, and fully dried before boxing. Surface condition inspection is part of the pre-shipment QA  - not checked only on request.</div>
         </div>
       </div>
     </div>
     <!-- PHOTO: Good vs bad weld joint / diagonal measurement / clean surface -->
     <div class="g3">
       <div class="ph ph-lt" style="min-height:160px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">馃搻</div>
-        <div class="ph-lbl ph-lbl-lt">Diagonal measurement<br>Production-stage verification<br>Equal edges confirmed</div>
+        <img class="media-img" src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Diagonal measurement and production-stage verification for metal conveyor belt" decoding="async" loading="lazy">
+        <div class="media-caption">Diagonal measurement and production-stage verification</div>
       </div>
       <div class="ph ph-lt" style="min-height:160px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">鈿欙笍</div>
-        <div class="ph-lbl ph-lbl-lt">Spring wire engagement<br>Gear contact zone inspection<br>No deformation  - correct wire type</div>
+        <img class="media-img" src="assets/product-media/drive-sprockets/drive-sprockets-belt-matching.jpg" alt="Spring wire engagement and sprocket contact zone inspection" decoding="async" loading="lazy">
+        <div class="media-caption">Sprocket engagement and contact-zone review</div>
       </div>
       <div class="ph ph-lt" style="min-height:160px">
-        <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">&#10003;/div>
-        <div class="ph-lbl ph-lbl-lt">Clean dry surface<br>From PDF P12: clean &amp; dry standard<br>No residue  - inspection before packing</div>
+        <img class="media-img" src="assets/homepage-media/home-quality-inspection.png" alt="Clean and dry surface inspection before conveyor belt packing" decoding="async" loading="lazy">
+        <div class="media-caption">Clean, dry surface inspection before packing</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S9  - TYPICAL APPLICATIONS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy3" id="applications">
   <div class="W">
     <div class="sec-hdr">
@@ -1033,42 +1024,42 @@ button{font-family:var(--fs);cursor:pointer}
     </div>
     <div class="fc-grid" style="margin-bottom:32px">
       <div class="fc-card">
-        <div class="fc-icon">馃崻</div>
+        <div class="fc-icon">&#127850;</div>
         <div class="fc-title">Baking Ovens  - Biscuit and Bakery Lines</div>
         <div class="fc-desc">Dense mesh surface supports small biscuits, crackers, and formed dough pieces without product falling through or deforming on the belt surface. The denser wire contact pattern distributes baking heat more evenly across the product contact area. PTFE coating available for sticky or glazed products.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃毧</div>
+        <div class="fc-icon">&#128736;&#65039;</div>
         <div class="fc-title">Washing Lines  - Cans, Bottles, Parts</div>
         <div class="fc-desc">Compound weave structure provides uniform drainage through the mesh surface while maintaining secure product support. Smaller mesh openings prevent small parts or containers from falling or tipping  - important in bottle cap washing, parts cleaning, and can conveying applications.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃挩</div>
+        <div class="fc-icon">&#128268;</div>
         <div class="fc-title">Cooling Conveyors  - Air Cooling and Blast Freezing</div>
         <div class="fc-desc">Air passes through the compound weave mesh surface during cooling  - the denser mesh controls airflow distribution more uniformly than a coarser belt. Used in cooling tunnels after baking, pasteurising, or forming where controlled temperature reduction is required.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃洟锔?/div>
+        <div class="fc-icon">&#9679;</div>
         <div class="fc-title">Oil Filtration Conveyors</div>
-        <div class="fc-desc">Confirmed from actual YIYI production records  - compound weave belts for oil filtration (婊ゆ补鏈虹綉甯?鍠锋补鏈烘护娌圭綉甯?. The dense mesh provides filtration while allowing oil to pass through. Soft wire, cleanable surface, SUS304 stainless steel confirmed from production orders.</div>
+        <div class="fc-desc">Confirmed from actual YIYI production records - compound weave belts are used on oil filtration and spray-oil filtration conveyors. The dense mesh supports filtration while allowing oil to pass through. Soft wire, cleanable surface, and SUS304 stainless steel can be confirmed from project requirements.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃ォ</div>
+        <div class="fc-icon">&#127831;</div>
         <div class="fc-title">Meat and Seafood Processing</div>
         <div class="fc-desc">The smaller mesh opening of the compound weave belt prevents small product pieces  - fish sections, shellfish, formed meat portions  - from falling through the belt surface during conveying, washing, or freezing. SUS316L available for enhanced corrosion resistance in high-salt or acidic environments.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃敟</div>
+        <div class="fc-icon">&#128295;</div>
         <div class="fc-title">Drying and Heat Treatment</div>
         <div class="fc-desc">Balanced weave compound belts for heat treatment furnaces where the denser mesh structure provides better product support at elevated temperatures. 310SS and 314 grades available for high-temperature furnace applications. Confirmed temperature resistance up to 1,000&#176;C+ depending on alloy grade.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">鈿欙笍</div>
+        <div class="fc-icon">&#9881;</div>
         <div class="fc-title">Positive Gear Drive Systems</div>
         <div class="fc-desc">Gear-driven compound weave belts with matched sprockets  - suitable for industrial applications requiring positive drive control, high tension, or precise speed synchronisation. Spring wire standard. First-piece running test with matched sprockets before batch release.</div>
       </div>
       <div class="fc-card">
-        <div class="fc-icon">馃彮</div>
+        <div class="fc-icon">&#127981;</div>
         <div class="fc-title">Heavy-Duty Industrial Conveying</div>
         <div class="fc-desc">Heavier gauge compound weave belts  - spiral wire up to 2.5mm, rod wire up to 2.5mm  - for industrial applications carrying heavy, abrasive, or mechanically demanding loads. Carbon steel option for non-food heavy-duty applications. Anti-rust treatment applied before export packing.</div>
       </div>
@@ -1076,19 +1067,17 @@ button{font-family:var(--fs);cursor:pointer}
     <!-- PHOTO: Application-specific photos  - baking / washing / oil filtration / gear drive -->
     <div class="g2">
       <div class="ph" style="min-height:180px">
-        <div class="ph-ico">馃崻</div>
-        <div class="ph-lbl">Baking oven application<br>Compound weave belt in biscuit/bakery oven<br>Dense surface supporting small products</div>
+        <img class="media-img" src="assets/product-media/biscuit-belt/biscuit-belt-product-overview.jpg" alt="Biscuit and bakery belt application with dense metal conveyor surface" decoding="async" loading="lazy">
+        <div class="media-caption">Baking and biscuit application reference</div>
       </div>
       <div class="ph" style="min-height:180px">
-        <div class="ph-ico">馃毧</div>
-        <div class="ph-lbl">Washing line application<br>Compound weave belt in can/part washing<br>Drainage through mesh visible</div>
+        <img class="media-img" src="assets/product-media/chain-plate-belt/chain-plate-belt-perforated-surface.jpg" alt="Washing line conveyor belt surface with drainage through metal belt" decoding="async" loading="lazy">
+        <div class="media-caption">Washing and drainage application reference</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S10  - OEM & REPLACEMENT
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-surf" id="oem-replacement">
   <div class="W">
     <div class="two center">
@@ -1103,7 +1092,7 @@ button{font-family:var(--fs);cursor:pointer}
           </div>
           <div class="cl-item">
             <svg class="cl-ico cl-b" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            <div class="cl-t"><strong>Sample / trial piece before batch release</strong>For new specifications  - a trial piece is produced (鎺ㄥ箍鏍峰搧 / 0.3m section) and sent to customer for confirmation before mass production is released. Confirmed from actual YIYI production order process.</div>
+            <div class="cl-t"><strong>Sample / trial piece before batch release</strong>For new specifications  - a trial piece is produced and sent to customer for confirmation before mass production is released. Confirmed from actual YIYI production order process.</div>
           </div>
           <div class="cl-item">
             <svg class="cl-ico cl-b" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1118,33 +1107,33 @@ button{font-family:var(--fs);cursor:pointer}
             <div class="cl-t"><strong>Spare parts included with every order</strong>Extra spiral coils (left-hand + right-hand), extra cross rods, connecting pins  - supplied with every order for on-site repair and maintenance. Quantity matched to belt size.</div>
           </div>
         </div>
-        <a href="engineering-oem.html" class="btn-ol" style="font-size:14px">Engineering &amp; OEM Process &#8594;/a>
+<a href="engineering-oem.html?source=compound-weave-belt" class="btn-ol" style="font-size:14px">Engineering &amp; OEM Process &#8594;</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <!-- PHOTO: Trial piece alongside drawing / replacement matching setup -->
         <div class="ph ph-lt" style="aspect-ratio:4/3">
-          <div class="ph-ico ph-lbl-lt" style="font-size:28px;opacity:.22">馃搻</div>
-          <div class="ph-lbl ph-lbl-lt">Trial piece (鏍峰搧) alongside drawing<br>0.3m sample section for customer confirmation<br>Before mass production release</div>
+          <img class="media-img" src="assets/product-media/spiral-freezer-belt/sfb-s4-drawing-sample.png" alt="Trial piece and drawing confirmation before conveyor belt mass production" decoding="async" loading="lazy">
+          <div class="media-caption">Trial piece and drawing confirmation before mass production</div>
         </div>
         <div class="g2">
           <div class="ph ph-lt" style="min-height:130px">
-            <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">馃攧</div>
-            <div class="ph-lbl ph-lbl-lt">Old belt for matching<br>Replacement review reference</div>
+            <img class="media-img" src="assets/product-media/eye-link-belt/elb-proof-welded-edge.jpg" alt="Old belt edge detail used for replacement matching review" decoding="async" loading="lazy">
+            <div class="media-caption">Old belt reference for replacement matching</div>
           </div>
           <div class="ph ph-lt" style="min-height:130px">
-            <div class="ph-ico ph-lbl-lt" style="font-size:22px;opacity:.22">馃摝</div>
-            <div class="ph-lbl ph-lbl-lt">Spare parts supply<br>Rods + spiral coils included</div>
+            <img class="media-img" src="assets/product-media/drive-sprockets/drive-sprockets-stainless-detail.jpg" alt="Matched spare parts and stainless steel drive components for conveyor belt projects" decoding="async" loading="lazy">
+            <div class="media-caption">Matched spare parts and drive components</div>
           </div>
         </div>
         <!-- INTERNAL LINKS -->
         <div>
           <div style="font-family:var(--fm);font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px">RELATED PAGES</div>
           <div class="il-row">
-            <a href="balanced-weave-belt.html" class="il-card"><div class="il-ico">鈿栵笍</div><div><div class="il-lbl">Related</div><div class="il-t">Balanced Weave Belt</div></div><span class="il-arr">&#8594;/span></a>
-            <a href="drive-sprockets.html" class="il-card"><div class="il-ico">鈿欙笍</div><div><div class="il-lbl">System</div><div class="il-t">Drive Sprockets</div></div><span class="il-arr">&#8594;/span></a>
-            <a href="engineering-oem.html" class="il-card"><div class="il-ico">馃搻</div><div><div class="il-lbl">OEM</div><div class="il-t">Engineering &amp; OEM</div></div><span class="il-arr">&#8594;/span></a>
-            <a href="quality-control.html" class="il-card"><div class="il-ico">&#10003;/div><div><div class="il-lbl">Quality</div><div class="il-t">Quality Control</div></div><span class="il-arr">&#8594;/span></a>
-            <a href="raw-material.html" class="il-card"><div class="il-ico">馃敩</div><div><div class="il-lbl">Material</div><div class="il-t">Raw Material Control</div></div><span class="il-arr">&#8594;/span></a>
+<a href="balanced-weave-belt.html" class="il-card"><div class="il-ico">&#9878;</div><div><div class="il-lbl">Related</div><div class="il-t">Balanced Weave Belt</div></div><span class="il-arr">&#8594;</span></a>
+<a href="drive-sprockets.html" class="il-card"><div class="il-ico">&#9881;</div><div><div class="il-lbl">System</div><div class="il-t">Drive Sprockets</div></div><span class="il-arr">&#8594;</span></a>
+<a href="engineering-oem.html?source=compound-weave-belt" class="il-card"><div class="il-ico">&#128196;</div><div><div class="il-lbl">OEM</div><div class="il-t">Engineering &amp; OEM</div></div><span class="il-arr">&#8594;</span></a>
+            <a href="quality-control.html" class="il-card"><div class="il-ico">&#10003;</div><div><div class="il-lbl">Quality</div><div class="il-t">Quality Control</div></div><span class="il-arr">&#8594;</span></a>
+            <a href="raw-material.html" class="il-card"><div class="il-ico">&#128300;</div><div><div class="il-lbl">Material</div><div class="il-t">Raw Material Control</div></div><span class="il-arr">&#8594;</span></a>
           </div>
         </div>
       </div>
@@ -1152,8 +1141,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S11  - COMPARISON TABLE
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-navy" id="comparison">
   <div class="W">
     <div class="sec-hdr">
@@ -1181,8 +1168,6 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S12  - FAQ
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec-surf" id="faq">
   <div class="W">
     <div class="sec-hdr">
@@ -1226,17 +1211,15 @@ button{font-family:var(--fs);cursor:pointer}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S13  - FINAL CTA
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="cta-sec">
   <div class="W">
     <span class="ey" style="color:var(--blue2);display:block;text-align:center;margin-bottom:14px;font-size:11px;letter-spacing:.18em">START YOUR PROJECT</span>
     <h2 class="cta-h2">Send Your Drawing or Specification.<br><em>Engineering Response Within 24 Hours.</em></h2>
     <p class="cta-p">Send your drawing, sample, specifications, or project requirement to YIYI Mesh Belt. Our team can review spiral pitch, rod configuration, drive method, wire type, material grade, matched sprocket requirement, and PTFE coating suitability for your compound weave belt project  - before production begins.</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-gold">Request a Quote &#8594;/a>
-      <a href="contact.html" class="btn-p">Send Your Drawing &#8594;/a>
-      <a href="contact.html" class="btn-o">Talk to Engineer &#8594;/a>
+      <a href="contact.html?intent=quote&source=compound-weave-belt" class="btn-gold">Ask For A Quick Quote &#8594;</a>
+      <a href="contact.html?intent=drawing&source=compound-weave-belt" class="btn-p">Send Your Drawing &#8594;</a>
+      <a href="contact.html?intent=engineering&source=compound-weave-belt" class="btn-o">Get Engineering Support &#8594;</a>
     </div>
     <div class="cta-trust">
       <span class="ct">Width 200mm - ,320mm  &#183;  All Custom</span>
@@ -1244,7 +1227,7 @@ button{font-family:var(--fs);cursor:pointer}
       <span class="ct">PTFE Coating Dual-Side Available</span>
       <span class="ct">In-House Wire Drawing</span>
       <span class="ct">30 Sets Spiral Forming Machines</span>
-      <span class="ct">ISO 9001  &#183;  Free Sample</span>
+      <span class="ct">ISO 9001  &#183;  Sample Review</span>
     </div>
   </div>
 </section>
@@ -1272,20 +1255,20 @@ button{font-family:var(--fs);cursor:pointer}
         </div>
         <div class="foot-info-list">
           <div class="foot-info-item"><svg class="fi-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ningjin, Shandong 253400, China</div>
-          <div class="foot-info-item"><span class="fi-icon" style="font-size:10px;font-weight:700">Est.</span>Est. 1998  &#183;  Corp. 2008  &#183;  27,000 sqmFacility</div>
+          <div class="foot-info-item"><span class="fi-icon" style="font-size:10px;font-weight:700">Est.</span>Est. 1998  &#183;  Corp. 2008  &#183;  27,000 sqm Facility</div>
         </div>
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;/span>ISO 9001 Certified</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;/span>SGS Audited</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;/span>Food Contact Safety Certified</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;/span>Third-Party Audit Welcome</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span>ISO 9001 Certified</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span>SGS Audited</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span>Food Contact Safety Certified</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span>Third-Party Audit Welcome</span>
         </div>
       </div>
       <div>
-        <div class="foot-col-head">Core Systems</div>
+        <div class="foot-col-head">Core Belt Systems</div>
         <div class="foot-links">
-          <a href="spiral-freezer-belt.html" class="foot-link gold">猸?Spiral Freezer Belt</a>
-          <a href="self-stacking-belt.html" class="foot-link gold">猸?Self-Stacker Belt</a>
+<a href="spiral-freezer-belt.html" class="foot-link gold">&#10052; Spiral Freezer Belt</a>
+<a href="self-stacking-belt.html" class="foot-link gold">&#8635; Self-Stacker Belt</a>
           <a href="compound-weave-belt.html" class="foot-link" style="color:var(--gold)">Compound Weave Belt</a>
           <a href="balanced-weave-belt.html" class="foot-link">Balanced Weave Belt</a>
           <a href="chain-driven-belt.html" class="foot-link">Chain-Driven Belt</a>
@@ -1296,7 +1279,7 @@ button{font-family:var(--fs);cursor:pointer}
         <div class="foot-col-head">Solutions &amp; Resources</div>
         <div class="foot-links">
           <a href="industries.html" class="foot-link">Industries</a>
-          <a href="engineering-oem.html" class="foot-link">Engineering &amp; OEM</a>
+          <a href="engineering-oem.html?source=compound-weave-belt" class="foot-link">Engineering &amp; OEM</a>
           <a href="manufacturing.html" class="foot-link">Manufacturing Assurance</a>
           <a href="quality-control.html" class="foot-link">Quality Control</a>
           <a href="raw-material.html" class="foot-link">Raw Material Control</a>
@@ -1314,13 +1297,13 @@ button{font-family:var(--fs);cursor:pointer}
             <svg class="fca-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             +86 134 5177 3742
           </a>
-          <a href="https://wa.me/8613451773742" target="_blank" rel="noopener" class="foot-contact-a">
+          <a href="https://wa.me/8618653496136" target="_blank" rel="noopener" class="foot-contact-a">
             <svg class="fca-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            WhatsApp: +86 134 5177 3742
+            WhatsApp: +86 186 5349 6136
           </a>
         </div>
-        <a href="contact.html" class="foot-btn-p">Request a Quote &#8594;/a>
-        <a href="contact.html" class="foot-btn-o">Send Drawing &#8594;/a>
+        <a href="contact.html?intent=quote&source=compound-weave-belt" class="foot-btn-p">Ask For A Quick Quote &#8594;</a>
+        <a href="contact.html?intent=drawing&source=compound-weave-belt" class="foot-btn-o">Send Your Belt Drawing &#8594;</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -1339,17 +1322,17 @@ button{font-family:var(--fs);cursor:pointer}
   <div class="wa-chat" id="wa-chat" style="display:none">
     <div class="wa-head">
       <div class="wa-hl"><div class="wa-av">YY</div><div><div class="wa-nm">YIYI Mesh Belt</div><div class="wa-st"><span class="wa-od"></span>Online  &#183;  24h Response</div></div></div>
-      <button class="wa-cl" onclick="closeWA()">&#10003;/button>
+      <button class="wa-cl" onclick="closeWA()">&times;</button>
     </div>
     <div class="wa-body">
-      <div class="wa-bub">馃憢 Engineering team ready. Send your drawing or describe your compound weave belt requirement.</div>
+      <div class="wa-bub">&#128075; Engineering team ready. Send your drawing or describe your compound weave belt requirement.</div>
       <div class="wa-ql">Quick Start:</div>
       <div class="wa-qbs">
         <button class="wa-qb" onclick="sendWA(this.textContent)">Send My Drawing</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">Gear-Driven Belt</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">PTFE Coating</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">Replacement Project</button>
-        <button class="wa-qb" onclick="sendWA(this.textContent)">Free Sample Request</button>
+        <button class="wa-qb" onclick="sendWA(this.textContent)">Sample Review Request</button>
       </div>
     </div>
     <div class="wa-ir">
@@ -1373,7 +1356,7 @@ let waOpen=false;
 function toggleWA(){waOpen?closeWA():openWA()}
 function openWA(){waOpen=true;document.getElementById('wa-chat').style.display='flex'}
 function closeWA(){waOpen=false;document.getElementById('wa-chat').style.display='none'}
-function sendWA(txt){window.open('https://wa.me/8613451773742?text='+encodeURIComponent(txt),'_blank')}
+function sendWA(txt){window.open('https://wa.me/8618653496136?text='+encodeURIComponent(txt),'_blank')}
 function sendWAInput(){const inp=document.getElementById('wa-msg');if(inp.value.trim())sendWA(inp.value.trim())}
 document.querySelectorAll('.nd').forEach(nd=>{
   const btn=nd.querySelector('.nd-btn');
@@ -1381,7 +1364,10 @@ document.querySelectorAll('.nd').forEach(nd=>{
 });
 document.addEventListener('click',()=>document.querySelectorAll('.nd').forEach(x=>x.classList.remove('open')));
 </script>
+<script src="assets/site-shell.js"></script>
 </body>
 </html>
+
+
 
 

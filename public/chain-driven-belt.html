@@ -120,7 +120,12 @@ img{display:block;max-width:100%;height:auto}
 .pp-label{font-family:var(--fm);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);line-height:1.6}
 .pp-note{font-size:11px;color:rgba(255,255,255,.20);margin-top:4px}
 .pp-video{position:relative}
-.pp-video::after{content:"鈻?VIDEO";position:absolute;top:10px;right:12px;font-family:var(--fm);font-size:9px;letter-spacing:.1em;color:rgba(255,255,255,.35);background:rgba(0,0,0,.3);padding:3px 8px;border-radius:3px}
+.pp-video::after{content:"VIDEO";position:absolute;top:10px;right:12px;font-family:var(--fm);font-size:9px;letter-spacing:.1em;color:rgba(255,255,255,.35);background:rgba(0,0,0,.3);padding:3px 8px;border-radius:3px}
+.media-card{position:relative;overflow:hidden;border-radius:var(--rad);background:linear-gradient(135deg,#0a1f35,#112840);border:1px solid var(--w15)}
+.media-card.light{background:#fff;border-color:rgba(12,32,54,.12)}
+.media-img,.media-video{width:100%;height:100%;display:block;object-fit:cover}
+.media-video{background:#07182a}
+.media-caption{position:absolute;left:12px;right:12px;bottom:12px;background:linear-gradient(90deg,rgba(7,24,42,.84),rgba(7,24,42,.38));color:white;font-size:12px;font-weight:800;line-height:1.35;padding:9px 11px;border-radius:8px}
 .ph-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .ph-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 @media(max-width:520px){.ph-grid-2,.ph-grid-3{grid-template-columns:1fr}}
@@ -335,6 +340,7 @@ img{display:block;max-width:100%;height:auto}
 .nav-logo{display:flex;align-items:center;gap:0;text-decoration:none;flex-shrink:0}
 .nav-brand{font-size:16px;font-weight:700;letter-spacing:.06em;color:white;white-space:nowrap;padding-left:12px;border-left:2px solid #C8922A}
 </style>
+<link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
 
@@ -386,19 +392,19 @@ img{display:block;max-width:100%;height:auto}
       <a href="index.html" class="nav-link-simple">Home</a>
 
       <div class="nd">
-        <button class="nd-btn gold-btn">
+        <a href="products.html#strategic" class="nd-btn gold-btn nd-link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
-          Core Systems
+          Core Belt Systems
           <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
-        </button>
+        </a>
         <div class="drop-panel" style="min-width:320px">
           <div class="drop-box">
             <div class="drop-gold-bar"></div>
             <div class="drop-body" style="padding:16px">
               <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">&#10052;</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
               <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">&#8635;</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
               <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">&#10145;</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
-              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div></a>
               <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">&#9646;</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Conveyor Belt</span></div></a>
               <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">&#9881;</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span><span class="cdl-sub">(System Matched)</span></div></a>
             </div>
@@ -407,42 +413,40 @@ img{display:block;max-width:100%;height:auto}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="products.html" class="nd-btn nd-link">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="left:-180px">
           <div class="drop-box">
             <div class="mega-grid">
               <div class="mega-col">
-                <div class="mega-head">IQF &amp; Freezing</div>
+                <div class="mega-head">Core Pages</div>
                 <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Freezer Belt</span><span class="dl-badge">OEM</span></a>
-                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacking Belt</span></a>
+                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacker Belt</span><span class="dl-badge">OEM</span></a>
+                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye Link Belt</span><span class="dl-badge">Food</span></a>
                 <a href="side-driven-belt.html" class="dl"><span class="dl-icon">&#10145;</span><span class="dl-label">Side-Driven Belt</span></a>
-                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye-Link Belt</span></a>
-                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
+                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
               </div>
               <div class="mega-col">
-                <div class="mega-head">Baking &amp; Processing</div>
+                <div class="mega-head">Food Processing</div>
+                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
                 <a href="biscuit-belt.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Biscuit Belt</span></a>
                 <a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">&#9878;</span><span class="dl-label">Balanced Weave Belt</span></a>
                 <a href="plastic-modular-belt.html" class="dl"><span class="dl-icon">&#10035;</span><span class="dl-label">Plastic Modular Belt</span></a>
-                <div class="mega-head" style="margin-top:14px">Heavy Load</div>
+              </div>
+              <div class="mega-col">
+                <div class="mega-head">Heavy Duty &amp; Parts</div>
                 <a href="compound-weave-belt.html" class="dl"><span class="dl-icon">&#12336;</span><span class="dl-label">Compound Weave Belt</span></a>
                 <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Chain-Driven Belt</span></a>
                 <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">&#127959;</span><span class="dl-label">Chain Plate Belt</span></a>
                 <a href="trapezoidal-mesh-belt.html" class="dl"><span class="dl-icon">&#9650;</span><span class="dl-label">Trapezoidal Mesh Belt</span></a>
-              </div>
-              <div class="mega-col">
-                <div class="mega-head">Accessories &amp; Tools</div>
-                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
                 <a href="connecting-accessories.html" class="dl"><span class="dl-icon">&#128204;</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
                 <a href="replacement-parts.html" class="dl"><span class="dl-icon">&#128297;</span><span class="dl-label">Replacement Parts</span></a>
-                <div class="mega-head" style="margin-top:14px">Selection Tools</div>
-                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
-                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
               </div>
               <div class="mega-col">
-                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Product Index</div>
-                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Built around the belt systems that support OEM manufacturing and long-term replacement supply.</p>
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Need Help Choosing?</div>
+                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Start with the right path for your project: browse, send a drawing, or ask engineering to confirm the belt type.</p>
                 <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All Products &#8594;</a>
+                <a href="contact.html?intent=drawing" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Send Your Belt Drawing &#8594;</a>
+                <a href="engineering-oem.html?intent=engineering" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Get Engineering Support &#8594;</a>
               </div>
             </div>
           </div>
@@ -450,7 +454,7 @@ img{display:block;max-width:100%;height:auto}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="industries.html" class="nd-btn nd-link">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel">
           <div class="drop-box">
             <div class="two-col">
@@ -476,16 +480,17 @@ img{display:block;max-width:100%;height:auto}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="engineering-oem.html" class="nd-btn nd-link">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel">
           <div class="drop-box">
             <div class="two-col">
               <div class="two-col-main">
                 <div class="mega-head">Technical Resources</div>
-                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
-                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
-                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Engineering &amp; OEM Overview</span></a>
                 <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Drawing Review</span></a>
+                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
+                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
                 <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#127991;</span><span class="dl-label">OEM Private Label</span></a>
               </div>
               <div class="two-col-side">
@@ -501,7 +506,7 @@ img{display:block;max-width:100%;height:auto}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="manufacturing.html" class="nd-btn nd-link">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:260px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
@@ -517,46 +522,47 @@ img{display:block;max-width:100%;height:auto}
       </div>
 
       <div class="nd">
-        <button class="nd-btn">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="about.html" class="nd-btn nd-link">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:260px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Profile</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Recognition</span></a>
-              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions</span></a>
-              <a href="about.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Presence</span></a>
+              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Overview</span></a>
+              <a href="quality-control.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications &amp; QA</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Manufacturing Strength</span></a>
+              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions &amp; Visits</span></a>
+              <a href="global-delivery.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Delivery</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="knowledge-center.html" class="nd-btn nd-link">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:240px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Technical Articles</span></a>
-              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Spiral Engineering</span></a>
+              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Knowledge Center Overview</span></a>
+              <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Selection Guide</span></a>
+              <a href="what-is-a-spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Engineering Basics</span></a>
               <a href="case-studies.html" class="dl"><span class="dl-icon">&#128202;</span><span class="dl-label">Case Studies</span></a>
-              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads</span></a>
+              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads &amp; Resources</span></a>
             </div>
           </div>
         </div>
       </div>
 
       <div class="nd">
-        <button class="nd-btn">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></button>
+        <a href="contact.html" class="nd-btn nd-link">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="drop-panel" style="min-width:240px">
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Request a Quote</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Drawing</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Talk to Engineer</span></a>
-              <a href="contact.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
+              <a href="contact.html?intent=quote" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Ask For A Quick Quote</span></a>
+              <a href="contact.html?intent=drawing" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Your Belt Drawing</span></a>
+              <a href="contact.html?intent=engineering" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Get Engineering Support</span></a>
+              <a href="contact.html?intent=visit" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
             </div>
           </div>
         </div>
@@ -564,7 +570,7 @@ img{display:block;max-width:100%;height:auto}
     </div>
 
     <div class="nav-right">
-      <a href="contact.html" class="btn-nav-quote">Get a Quote &#8594;</a>
+      <a href="contact.html?intent=quote" class="btn-nav-quote">Ask For A Quick Quote &#8594;</a>
       <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()">
         <span></span><span></span><span></span>
       </button>
@@ -575,8 +581,9 @@ img{display:block;max-width:100%;height:auto}
     <div class="mob-inner">
       <a href="index.html" class="mob-link">Home</a>
 
-      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Systems</div>
-      <a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Belt Systems</div>
+      <a href="products.html#strategic" class="mob-link">Core Belt Systems Overview</a>
+<a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
       <a href="self-stacking-belt.html" class="mob-link">Self-Stacker Belt</a>
       <a href="side-driven-belt.html" class="mob-link">Side Driven Belt</a>
       <a href="eye-link-belt.html" class="mob-link">Eye Link Belt</a>
@@ -592,7 +599,8 @@ img{display:block;max-width:100%;height:auto}
       <a href="replacement-parts.html" class="mob-link">Replacement Parts</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Industries</div>
-      <a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
+      <a href="industries.html" class="mob-link">Industries Overview</a>
+<a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
       <a href="industries.html" class="mob-link">Meat &amp; Seafood Processing</a>
       <a href="industries.html" class="mob-link">Baking &amp; Ovens</a>
       <a href="industries.html" class="mob-link">Snack &amp; Biscuit</a>
@@ -606,26 +614,33 @@ img{display:block;max-width:100%;height:auto}
       <a href="replacement-review.html" class="mob-link">Replacement Projects</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
-      <a href="manufacturing.html" class="mob-link">Automated Welding</a>
+      <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
+<a href="manufacturing.html" class="mob-link">Automated Welding</a>
       <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
       <a href="quality-control.html" class="mob-link">Quality Control</a>
       <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">About YIYI</div>
-      <a href="about.html" class="mob-link">Company Profile</a>
-      <a href="about.html" class="mob-link">Certifications</a>
-      <a href="exhibition.html" class="mob-link">Exhibitions</a>
-      <a href="about.html" class="mob-link">Global Presence</a>
+      <a href="about.html" class="mob-link">Company Overview</a>
+      <a href="quality-control.html" class="mob-link">Certifications &amp; QA</a>
+      <a href="manufacturing.html" class="mob-link">Patents &amp; Manufacturing Strength</a>
+      <a href="exhibition.html" class="mob-link">Exhibitions &amp; Visits</a>
+      <a href="global-delivery.html" class="mob-link">Global Delivery</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Knowledge Center</div>
-      <a href="knowledge-center.html" class="mob-link">Technical Articles</a>
-      <a href="knowledge-center.html" class="mob-link">Spiral Engineering</a>
+      <a href="knowledge-center.html" class="mob-link">Knowledge Center Overview</a>
+      <a href="belt-selection-guide.html" class="mob-link">Selection Guide</a>
+      <a href="what-is-a-spiral-freezer-belt.html" class="mob-link">Spiral Engineering Basics</a>
       <a href="case-studies.html" class="mob-link">Case Studies</a>
-      <a href="resources.html" class="mob-link">Downloads</a>
+      <a href="resources.html" class="mob-link">Downloads &amp; Resources</a>
 
       <div style="border-top:1px solid rgba(255,255,255,.07);margin-top:10px;padding-top:10px"></div>
-      <a href="contact.html" class="mob-link">Contact</a>
-      <a href="contact.html" class="mob-cta">Get a Quote &#8594;</a>
+      <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote" class="mob-link">Ask For A Quick Quote</a>
+      <a href="contact.html?intent=drawing" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote" class="mob-cta">Ask For A Quick Quote &#8594;</a>
     </div>
   </div>
 </nav>
@@ -633,19 +648,17 @@ img{display:block;max-width:100%;height:auto}
 <!-- BREADCRUMB -->
 <div class="bc"><div class="W"><div class="bc-i">
   <a href="index.html" class="bc-a">Home</a>
-  <span class="bc-sep"> - /span>
+  <span class="bc-sep">&#8250;</span>
   <a href="products.html" class="bc-a">Products</a>
-  <span class="bc-sep"> - /span>
+  <span class="bc-sep">&#8250;</span>
   <span class="bc-cur">Chain Driven Conveyor Belt</span>
 </div></div></div>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S1  - HERO
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="hero">
   <div class="W">
     <div class="hero-grid">
       <div>
-        <div class="hero-tag"><span>猬?CHAIN DRIVEN CONVEYOR BELT &nbsp; &#183; &nbsp; POSITIVE DRIVE &nbsp; &#183; &nbsp; OEM &amp; REPLACEMENT</span></div>
+        <div class="hero-tag"><span>CHAIN DRIVEN CONVEYOR BELT &nbsp; &#183; &nbsp; POSITIVE DRIVE &nbsp; &#183; &nbsp; OEM &amp; REPLACEMENT</span></div>
         <h1>Chain Driven Conveyor Belt<br><em>Positive Drive. Stable Running.<br>System-Matched Production.</em></h1>
         <p class="hero-desc">Wire mesh belt with welded side chains, driven positively by sprockets. Manufactured with diagonal measurement during production, square-riveted large rollers, and matched sprocket supply. Used in washing, drying, cooling, and heavy-load industrial conveyor lines where friction drive is insufficient or unreliable.</p>
         <div class="hero-pills">
@@ -657,7 +670,7 @@ img{display:block;max-width:100%;height:auto}
           <span class="hp">ISO 9001</span>
         </div>
         <div class="hero-btns">
-          <a href="contact.html" class="btn-gold">Request Free Sample &#8594;/a>
+          <a href="contact.html" class="btn-gold">Ask For A Quick Quote &#8594;</a>
           <a href="#spec" class="btn-ghost">View Specifications</a>
         </div>
         <div class="hero-facts">
@@ -670,19 +683,18 @@ img{display:block;max-width:100%;height:auto}
       <div>
         <!-- PHOTO A: Hero visual -->
         <div style="background:rgba(255,255,255,.04);border:1px solid var(--w15);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px">
-          <div class="photo-placeholder pp-video" style="aspect-ratio:4/3">
-            <div class="pp-icon">馃摲</div>
-            <div class="pp-label">Chain Driven Belt  - Full Belt Overview<br>Chain edge  &#183;  mesh surface  &#183;  roller detail</div>
-            <div class="pp-note">Replace with: product overview photo</div>
+          <div class="media-card" style="aspect-ratio:4/3">
+            <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-product-overview.jpg" alt="Chain driven conveyor belt overview with side chain and wire mesh surface" decoding="async" loading="eager" fetchpriority="high">
+            <div class="media-caption">Full belt overview · side chain · mesh surface · roller detail</div>
           </div>
           <div class="ph-grid-2">
-            <div class="photo-placeholder" style="aspect-ratio:1/1">
-              <div class="pp-icon">馃敆</div>
-              <div class="pp-label">Chain edge<br>close-up</div>
+            <div class="media-card light" style="aspect-ratio:1/1">
+              <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-edge-detail.jpg" alt="Chain driven belt side chain close-up" decoding="async" loading="lazy">
+              <div class="media-caption">Chain edge close-up</div>
             </div>
-            <div class="photo-placeholder" style="aspect-ratio:1/1">
-              <div class="pp-icon">鈿欙笍</div>
-              <div class="pp-label">Roller & rod<br>assembly detail</div>
+            <div class="media-card light" style="aspect-ratio:1/1">
+              <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-close-up.jpg" alt="Chain driven belt roller and rod assembly detail" decoding="async" loading="lazy">
+              <div class="media-caption">Roller and rod assembly</div>
             </div>
           </div>
         </div>
@@ -697,13 +709,11 @@ img{display:block;max-width:100%;height:auto}
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Diagonal Measurement During Production</span></div>
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Square Riveting for Large Rollers</span></div>
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Matched Sprocket Supply</span></div>
-    <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Free Sample Before Mass Production</span></div>
+    <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Sample Review Before Mass Production</span></div>
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">ISO 9001  &#183;  24h Engineering Response</span></div>
   </div>
 </div>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S2  - WHY CHAIN DRIVEN BELT
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-white" id="why">
   <div class="W">
     <div class="center-head">
@@ -713,32 +723,32 @@ img{display:block;max-width:100%;height:auto}
     </div>
     <div class="feat-grid">
       <div class="feat-card-lt">
-        <div class="fc-icon">馃寠</div>
+        <div class="fc-icon">&#128230;</div>
         <div class="fc-title">Wet and Slippery Environments</div>
         <div class="fc-desc">Washing lines, draining tables, and wet processing conveyors reduce surface friction between belt and drive. Chain drive transmits force through mechanical engagement  - independent of surface condition. Belt speed and tracking remain consistent regardless of water, oil, or cleaning agent contact.</div>
       </div>
       <div class="feat-card-lt">
-        <div class="fc-icon">鈿栵笍</div>
+        <div class="fc-icon">&#9881;</div>
         <div class="fc-title">Heavy-Load Conveyor Sections</div>
         <div class="fc-desc">In heavy-load applications, tension-only friction drive concentrates stress on the belt mesh. Chain driven systems transfer drive force through the side chain, not through the mesh wire  - allowing the mesh to carry product weight without carrying drive tension simultaneously. This separation extends belt service life.</div>
       </div>
       <div class="feat-card-lt">
-        <div class="fc-icon">馃搹</div>
+        <div class="fc-icon">&#129514;</div>
         <div class="fc-title">Wide Belt Tracking Stability</div>
         <div class="fc-desc">Friction drive on wide belts creates uneven tension distribution across the belt width. Side chains maintain consistent lateral alignment regardless of belt width. This is particularly relevant for tunnel ovens, large washing systems, and multi-lane processing lines where wide belt tracking is critical.</div>
       </div>
       <div class="feat-card-lt">
-        <div class="fc-icon">馃攧</div>
+        <div class="fc-icon">&#128260;</div>
         <div class="fc-title">Drying and Cooling Lines</div>
         <div class="fc-desc">Temperature cycling and airflow management in drying and cooling conveyors can affect belt tension behaviour. Chain drive provides consistent advance speed independent of thermal expansion variation in the mesh structure  - important for controlled process timing in drying and cooling applications.</div>
       </div>
       <div class="feat-card-lt">
-        <div class="fc-icon">馃彈锔?/div>
+        <div class="fc-icon">&#127959;&#65039;</div>
         <div class="fc-title">Long Conveyor Runs</div>
         <div class="fc-desc">Over long conveyor distances, friction drive accumulates tension variation that can cause belt drift or uneven wear. Positive chain drive distributes force through engaged sprockets at defined pitch intervals  - maintaining consistent belt geometry and reducing the risk of lateral drift on long-run conveyor systems.</div>
       </div>
       <div class="feat-card-lt">
-        <div class="fc-icon">鈴憋笍</div>
+        <div class="fc-icon">&#128338;</div>
         <div class="fc-title">Process Timing Requirements</div>
         <div class="fc-desc">Where belt speed accuracy affects product handling  - pasteurisation timing, indexed loading, or controlled dwell time in heat treatment  - chain pitch provides a fixed advance-per-revolution relationship. This supports process control accuracy that friction drive cannot reliably deliver under variable load conditions.</div>
       </div>
@@ -746,8 +756,6 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S3  - STRUCTURE OVERVIEW
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-surf" id="structure">
   <div class="W">
     <div class="two center">
@@ -802,19 +810,18 @@ img{display:block;max-width:100%;height:auto}
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <!-- PHOTO B: Structure -->
-        <div class="photo-placeholder pp-video" style="aspect-ratio:4/3">
-          <div class="pp-icon">馃摲</div>
-          <div class="pp-label">Belt Structure  - Full Cross-Section<br>Chain  &#183;  mesh  &#183;  rod  &#183;  roller assembly</div>
-          <div class="pp-note">Replace with: annotated structure photo</div>
+        <div class="media-card light" style="aspect-ratio:4/3">
+          <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-product-overview.jpg" alt="Chain driven belt full structure overview" decoding="async" loading="lazy">
+          <div class="media-caption">Full structure · chain · mesh · rod · roller assembly</div>
         </div>
         <div class="ph-grid-2">
-          <div class="photo-placeholder" style="aspect-ratio:1/1">
-            <div class="pp-icon">馃敆</div>
-            <div class="pp-label">Chain-to-rod<br>connection detail</div>
+          <div class="media-card light" style="aspect-ratio:1/1">
+            <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-edge-detail.jpg" alt="Chain driven belt chain-to-rod connection detail" decoding="async" loading="lazy">
+            <div class="media-caption">Chain-to-rod connection</div>
           </div>
-          <div class="photo-placeholder" style="aspect-ratio:1/1">
-            <div class="pp-icon">馃敥</div>
-            <div class="pp-label">Mesh surface<br>close-up</div>
+          <div class="media-card light" style="aspect-ratio:1/1">
+            <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-roller-detail.jpg" alt="Chain driven belt mesh surface and roller detail" decoding="async" loading="lazy">
+            <div class="media-caption">Mesh surface detail</div>
           </div>
         </div>
         <div class="info-box">
@@ -826,8 +833,6 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S4  - DIAGONAL MEASUREMENT
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-navy" id="diagonal">
   <div class="W">
     <div class="two center">
@@ -856,23 +861,22 @@ img{display:block;max-width:100%;height:auto}
             <div class="cl-text-dk"><strong>What it affects</strong>Belts produced with diagonal measurement control show more consistent running behaviour  - particularly on longer conveyor runs, wider belt widths, and systems with tight lateral clearance between belt edge and conveyor frame.</div>
           </div>
         </div>
-        <a href="manufacturing.html" class="btn-gold">View Manufacturing Process &#8594;/a>
+        <a href="manufacturing.html" class="btn-gold">View Manufacturing Process &#8594;</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <!-- PHOTO C: Diagonal measurement -->
-        <div class="photo-placeholder pp-video" style="aspect-ratio:4/3">
-          <div class="pp-icon">馃搻</div>
-          <div class="pp-label">Diagonal Measurement  - Production Stage<br>Measuring tape across belt frame corners</div>
-          <div class="pp-note">Replace with: production measurement photo  - VIDEO preferred</div>
+        <div class="media-card light" style="aspect-ratio:4/3">
+          <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-product-overview.jpg" alt="Chain driven belt geometry and diagonal control reference" decoding="async" loading="lazy">
+          <div class="media-caption">Geometry reference · chain pitch and belt squareness review</div>
         </div>
         <div class="ph-grid-2">
-          <div class="photo-placeholder" style="aspect-ratio:1/1">
-            <div class="pp-icon">馃搹</div>
-            <div class="pp-label">Diagonal<br>measurement<br>close-up</div>
+          <div class="media-card light" style="aspect-ratio:1/1">
+            <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-edge-detail.jpg" alt="Chain pitch reference detail" decoding="async" loading="lazy">
+            <div class="media-caption">Chain pitch reference</div>
           </div>
-          <div class="photo-placeholder" style="aspect-ratio:1/1">
-            <div class="pp-icon">馃攳</div>
-            <div class="pp-label">Geometry<br>verification<br>record</div>
+          <div class="media-card light" style="aspect-ratio:1/1">
+            <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-roller-detail.jpg" alt="Chain driven belt production geometry detail" decoding="async" loading="lazy">
+            <div class="media-caption">Geometry verification detail</div>
           </div>
         </div>
         <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--rad);padding:20px 22px">
@@ -884,30 +888,27 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S5  - SQUARE RIVETING
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-surf" id="riveting">
   <div class="W">
     <div class="two center">
       <div style="display:flex;flex-direction:column;gap:14px">
         <!-- PHOTO D: Square riveting -->
-        <div class="photo-placeholder" style="aspect-ratio:4/3;background:linear-gradient(135deg,#0a1f35,#112840)">
-          <div class="pp-icon">馃摲</div>
-          <div class="pp-label">Large Roller  - Square Riveting Detail<br>Roller fixation method close-up</div>
-          <div class="pp-note">Replace with: square riveting close-up photo</div>
+        <div class="media-card light" style="aspect-ratio:4/3">
+          <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-large-roller-view.jpg" alt="Large roller detail on chain driven conveyor belt" decoding="async" loading="lazy">
+          <div class="media-caption">Large roller detail · stable support for heavier conveying loads</div>
         </div>
         <div class="ph-grid-3">
-          <div class="photo-placeholder" style="aspect-ratio:1/1;background:linear-gradient(135deg,#0a1f35,#112840)">
-            <div class="pp-icon">馃敥</div>
-            <div class="pp-label">Large roller<br>overview</div>
+          <div class="media-card light" style="aspect-ratio:1/1">
+            <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-roller-detail.jpg" alt="Chain driven belt large roller overview" decoding="async" loading="lazy">
+            <div class="media-caption">Large roller overview</div>
           </div>
-          <div class="photo-placeholder" style="aspect-ratio:1/1;background:linear-gradient(135deg,#0a1f35,#112840)">
-            <div class="pp-icon">馃敤</div>
-            <div class="pp-label">Riveting<br>close-up</div>
+          <div class="media-card light" style="aspect-ratio:1/1">
+            <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-edge-detail.jpg" alt="Chain driven belt edge and roller close-up" decoding="async" loading="lazy">
+            <div class="media-caption">Edge and roller close-up</div>
           </div>
-          <div class="photo-placeholder pp-video" style="aspect-ratio:1/1;background:linear-gradient(135deg,#0a1f35,#112840)">
-            <div class="pp-icon">鈻?/div>
-            <div class="pp-label">Riveting<br>process video</div>
+          <div class="media-card pp-video" style="aspect-ratio:1/1">
+            <video class="media-video" src="assets/product-media/chain-driven-belt/chain-driven-belt-product-video.mp4" muted autoplay loop playsinline preload="metadata"></video>
+            <div class="media-caption">Product video reference</div>
           </div>
         </div>
       </div>
@@ -920,7 +921,7 @@ img{display:block;max-width:100%;height:auto}
         <div class="ps-table" style="margin-bottom:24px">
           <div class="ps-row">
             <div class="ps-problem">
-              <div class="ps-label ps-label-r">鈿?The Challenge</div>
+              <div class="ps-label ps-label-r">The Challenge</div>
               <div class="ps-title">Roller Displacement Under Repeated Load</div>
               <div class="ps-text">Large rollers on chain driven belts are subject to repeated lateral and rotational force at every sprocket engagement point. Insufficient fixation allows rollers to shift position over time  - affecting chain engagement geometry, belt tracking, and drive efficiency.</div>
             </div>
@@ -945,14 +946,12 @@ img{display:block;max-width:100%;height:auto}
             <div class="cl-text"><strong>Relevant for replacement matching</strong>When replacing an existing belt, roller fixation method should be matched to the original specification. Downgrading fixation method in a replacement belt can introduce structural behaviour differences under load.</div>
           </div>
         </div>
-        <a href="quality-control.html" class="btn-blue">View Quality Control Process &#8594;/a>
+        <a href="quality-control.html" class="btn-blue">View Quality Control Process &#8594;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S6  - CHAIN AND MESH CONFIGURATION
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-white" id="config">
   <div class="W">
     <div class="center-head">
@@ -1009,8 +1008,8 @@ img{display:block;max-width:100%;height:auto}
             <tr><td>Belt Length</td><td>Custom per conveyor circumference</td></tr>
             <tr><td>Temperature Range</td><td>SUS304: up to 750&#176;C intermittent<br>SUS316L: food / CIP / marine environments<br>High-alloy grades: available for extreme temperature</td></tr>
             <tr><td>Sprocket Supply</td><td>Matched drive sprockets available<br><small style="color:var(--ink3)">Belt + sprocket ordered together recommended</small></td></tr>
-            <tr><td>Sample Lead Time</td><td>10 - 0 working days from drawing confirmation</td></tr>
-            <tr><td>Production Lead Time</td><td>20 - 5 working days from written approval</td></tr>
+            <tr><td>Sample Lead Time</td><td>Confirmed after drawing review<br><small style="color:var(--ink3)">Timing depends on chain pitch, roller specification, and belt width</small></td></tr>
+            <tr><td>Production Lead Time</td><td>Confirmed after drawing approval<br><small style="color:var(--ink3)">Batch timing depends on belt length, sprocket matching scope, and material grade</small></td></tr>
           </table>
         </div>
       </div>
@@ -1019,8 +1018,6 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S7  - TYPICAL APPLICATIONS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-surf" id="applications">
   <div class="W">
     <span class="tag tag-b">TYPICAL APPLICATIONS</span>
@@ -1028,42 +1025,42 @@ img{display:block;max-width:100%;height:auto}
     <p class="sub" style="margin-bottom:36px">Chain drive is the specified solution where positive drive stability, wet environment resistance, or heavy-load tracking is required. The following industries and processes represent typical specification contexts  - not an exhaustive list.</p>
     <div class="app-grid" style="margin-bottom:36px">
       <div class="app-card">
-        <div class="app-icon">馃毧</div>
+        <div class="app-icon">&#128736;&#65039;</div>
         <div class="app-name">Washing Lines</div>
         <div class="app-sub">Product washing under high-pressure water  - chain drive maintains consistent belt speed regardless of surface lubrication</div>
       </div>
       <div class="app-card">
-        <div class="app-icon">馃挩</div>
+        <div class="app-icon">&#128268;</div>
         <div class="app-name">Drying Conveyors</div>
         <div class="app-sub">Air-knife and thermal drying systems  - positive drive ensures consistent dwell time and uniform drying across belt width</div>
       </div>
       <div class="app-card">
-        <div class="app-icon">馃挧</div>
+        <div class="app-icon">&#128295;</div>
         <div class="app-name">Draining Tables</div>
         <div class="app-sub">Product draining after washing or blanching  - open mesh belt with chain drive for stable advance over drain tank</div>
       </div>
       <div class="app-card">
-        <div class="app-icon">鉂勶笍</div>
+        <div class="app-icon">&#10052;&#65039;</div>
         <div class="app-name">Cooling Conveyors</div>
         <div class="app-sub">Ambient and forced-air cooling after heat treatment  - chain drive for consistent belt speed during cooling cycle</div>
       </div>
       <div class="app-card">
-        <div class="app-icon">馃ォ</div>
+        <div class="app-icon">&#127831;</div>
         <div class="app-name">Meat &amp; Seafood Processing</div>
         <div class="app-sub">Wet, heavy-load meat and seafood lines  - SUS316L chain belt for CIP washdown resistance and positive drive stability</div>
       </div>
       <div class="app-card">
-        <div class="app-icon">馃崠</div>
+        <div class="app-icon">&#127981;</div>
         <div class="app-name">Pasteurisation Tunnels</div>
         <div class="app-sub">Timed hot-water pasteurisation  - chain pitch controls belt advance for accurate dwell time control</div>
       </div>
       <div class="app-card">
-        <div class="app-icon">馃敡</div>
+        <div class="app-icon">&#9881;&#65039;</div>
         <div class="app-name">Parts Washing Machines</div>
         <div class="app-sub">Industrial parts cleaning  - chemical-resistant alloy with chain drive for reliable operation in aggressive wash environments</div>
       </div>
       <div class="app-card">
-        <div class="app-icon">馃彮</div>
+        <div class="app-icon">&#127981;</div>
         <div class="app-name">General Heavy Industry</div>
         <div class="app-sub">Any heavy-load or wide-belt application where friction drive causes repeated belt slippage or tracking problems</div>
       </div>
@@ -1072,7 +1069,7 @@ img{display:block;max-width:100%;height:auto}
     <div class="ps-table">
       <div class="ps-row">
         <div class="ps-problem">
-          <div class="ps-label ps-label-r">鈿?Common Operational Problem</div>
+          <div class="ps-label ps-label-r">Common Operational Problem</div>
           <div class="ps-title">Belt Drift on Washing Line  - Tracking Problem</div>
           <div class="ps-text">Friction drive belt drifts laterally in wet washing line. Belt contacts side frame, causing edge wear and uneven product distribution. Problem becomes worse as surface lubrication increases during production.</div>
         </div>
@@ -1084,7 +1081,7 @@ img{display:block;max-width:100%;height:auto}
       </div>
       <div class="ps-row">
         <div class="ps-problem">
-          <div class="ps-label ps-label-r">鈿?Common Operational Problem</div>
+          <div class="ps-label ps-label-r">Common Operational Problem</div>
           <div class="ps-title">Inconsistent Dwell Time  - Pasteurisation Non-Compliance</div>
           <div class="ps-text">Friction drive belt slips under load during heavy product loading periods. Belt advance rate varies, causing some product to receive less than minimum required pasteurisation dwell time. Process non-compliance risk.</div>
         </div>
@@ -1098,8 +1095,6 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S8  - MATCHED SPROCKETS & DRIVE
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-dark" id="sprockets">
   <div class="W">
     <div class="center-head">
@@ -1110,17 +1105,17 @@ img{display:block;max-width:100%;height:auto}
     <div class="drive-grid">
       <div>
         <div class="feat-card-dk" style="margin-bottom:14px">
-          <div class="fc-icon">鈿欙笍</div>
+          <div class="fc-icon">&#9881;</div>
           <div class="fc-title-dk">Chain Pitch Must Match Sprocket Pitch Exactly</div>
           <div class="fc-desc-dk">Chain pitch tolerance affects how the chain sits in the sprocket tooth space. A pitch difference of even one or two millimetres causes chain to ride high on sprocket teeth  - creating engagement noise, accelerated tooth wear, and eventually chain jump. Both belt chain and sprockets must be reviewed together before production.</div>
         </div>
         <div class="feat-card-dk" style="margin-bottom:14px">
-          <div class="fc-icon">馃敥</div>
+          <div class="fc-icon">&#128207;</div>
           <div class="fc-title-dk">Sprocket Tooth Profile Affects Engagement Smoothness</div>
           <div class="fc-desc-dk">Tooth profile geometry determines how smoothly the chain engages and disengages at each sprocket position. Mismatched profiles cause impact loading at each engagement point  - increasing stress on the chain link and reducing belt service life. Profile matching is confirmed against your existing sprocket or equipment drawing.</div>
         </div>
         <div class="feat-card-dk">
-          <div class="fc-icon">馃搻</div>
+          <div class="fc-icon">&#128196;</div>
           <div class="fc-title-dk">Shaft Bore and Keyway Confirmed Before Machining</div>
           <div class="fc-desc-dk">Sprocket shaft bore and keyway dimensions are confirmed to your equipment shaft specification before machining begins. Incorrect bore diameter requires field modification  - which introduces tolerance accumulation and alignment uncertainty. Confirmation at drawing stage eliminates this risk.</div>
         </div>
@@ -1128,25 +1123,24 @@ img{display:block;max-width:100%;height:auto}
       <div>
         <div style="display:flex;flex-direction:column;gap:14px">
           <!-- PHOTO E: Drive integration -->
-          <div class="photo-placeholder pp-video" style="aspect-ratio:4/3;background:rgba(255,255,255,.04);border:1px solid var(--w15)">
-            <div class="pp-icon">鈿欙笍</div>
-            <div class="pp-label">Chain-Sprocket Engagement<br>Drive integration detail photo</div>
-            <div class="pp-note">Replace with: chain-sprocket engagement photo  - VIDEO preferred</div>
+          <div class="media-card pp-video" style="aspect-ratio:4/3">
+            <video class="media-video" src="assets/product-media/chain-driven-belt/chain-driven-belt-sprocket-video.mp4" muted autoplay loop playsinline preload="metadata"></video>
+            <div class="media-caption">Chain-sprocket engagement · drive matching reference</div>
           </div>
           <div class="ph-grid-2">
-            <div class="photo-placeholder" style="aspect-ratio:1/1;background:rgba(255,255,255,.04);border:1px solid var(--w15)">
-              <div class="pp-icon">馃敆</div>
-              <div class="pp-label">Sprocket<br>tooth profile</div>
+            <div class="media-card light" style="aspect-ratio:1/1">
+              <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-edge-detail.jpg" alt="Chain driven belt sprocket tooth profile reference" decoding="async" loading="lazy">
+              <div class="media-caption">Sprocket tooth profile reference</div>
             </div>
-            <div class="photo-placeholder" style="aspect-ratio:1/1;background:rgba(255,255,255,.04);border:1px solid var(--w15)">
-              <div class="pp-icon">鈻?/div>
-              <div class="pp-label">Running test<br>video</div>
+            <div class="media-card pp-video" style="aspect-ratio:1/1">
+              <video class="media-video" src="assets/product-media/chain-driven-belt/chain-driven-belt-product-video.mp4" muted autoplay loop playsinline preload="metadata"></video>
+              <div class="media-caption">Running reference video</div>
             </div>
           </div>
           <div style="background:rgba(200,146,42,.1);border:1px solid rgba(200,146,42,.25);border-radius:var(--rad);padding:18px 22px">
             <div style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">YIYI MESH BELT SPROCKET SUPPLY</div>
             <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:12px">YIYI Mesh Belt manufactures drive sprockets matched to chain driven belt production. Ordering belt and sprockets in the same production batch ensures pitch and profile are confirmed against the same specification  - eliminating the tolerance gap between separately sourced components.</p>
-            <a href="drive-sprockets.html" style="font-family:var(--fm);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)">View Drive Sprockets &#8594;/a>
+            <a href="drive-sprockets.html" style="font-family:var(--fm);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)">View Drive Sprockets &#8594;</a>
           </div>
         </div>
       </div>
@@ -1154,8 +1148,6 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S9  - MANUFACTURING & QC
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-white" id="manufacturing">
   <div class="W">
     <div class="center-head">
@@ -1208,42 +1200,44 @@ img{display:block;max-width:100%;height:auto}
 
     <!-- Photo grid F -->
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px">
-      <div class="photo-placeholder" style="aspect-ratio:1/1;background:linear-gradient(135deg,#0a1f35,#112840)">
-        <div class="pp-icon">馃敩</div><div class="pp-label">Rod preparation</div>
+      <div class="media-card light" style="aspect-ratio:1/1">
+            <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-close-up.jpg" alt="Chain driven belt rod and roller preparation reference" decoding="async" loading="lazy">
+        <div class="media-caption">Rod and roller detail</div>
       </div>
-      <div class="photo-placeholder" style="aspect-ratio:1/1;background:linear-gradient(135deg,#0a1f35,#112840)">
-        <div class="pp-icon">馃敡</div><div class="pp-label">Belt assembly<br>stage</div>
+      <div class="media-card light" style="aspect-ratio:1/1">
+        <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-product-overview.jpg" alt="Chain driven belt assembly reference" decoding="async" loading="lazy">
+        <div class="media-caption">Belt assembly reference</div>
       </div>
-      <div class="photo-placeholder" style="aspect-ratio:1/1;background:linear-gradient(135deg,#0a1f35,#112840)">
-        <div class="pp-icon">&#10003;/div><div class="pp-label">Cleaning &<br>drying</div>
+      <div class="media-card light" style="aspect-ratio:1/1">
+        <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-edge-detail.jpg" alt="Chain driven belt edge inspection reference" decoding="async" loading="lazy">
+        <div class="media-caption">Edge inspection reference</div>
       </div>
-      <div class="photo-placeholder" style="aspect-ratio:1/1;background:linear-gradient(135deg,#0a1f35,#112840)">
-        <div class="pp-icon">馃摝</div><div class="pp-label">Export packing<br>standard</div>
+      <div class="media-card pp-video" style="aspect-ratio:1/1">
+        <video class="media-video" src="assets/product-media/chain-driven-belt/chain-driven-belt-product-video.mp4" muted autoplay loop playsinline preload="metadata"></video>
+        <div class="media-caption">Finished belt video reference</div>
       </div>
     </div>
 
     <div class="il-row">
       <a href="manufacturing.html" class="il-card">
-        <div class="il-ico">馃彮</div>
+        <div class="il-ico">&#127981;</div>
         <div><div class="il-label">Internal Link</div><div class="il-title">Manufacturing Assurance</div></div>
-        <span class="il-arr">&#8594;/span>
+        <span class="il-arr">&#8594;</span>
       </a>
       <a href="quality-control.html" class="il-card">
-        <div class="il-ico">&#10003;/div>
+        <div class="il-ico">&#10003;</div>
         <div><div class="il-label">Internal Link</div><div class="il-title">Quality Control Process</div></div>
-        <span class="il-arr">&#8594;/span>
+        <span class="il-arr">&#8594;</span>
       </a>
       <a href="raw-material.html" class="il-card">
-        <div class="il-ico">馃敩</div>
+        <div class="il-ico">&#128300;</div>
         <div><div class="il-label">Internal Link</div><div class="il-title">Raw Material Control</div></div>
-        <span class="il-arr">&#8594;/span>
+        <span class="il-arr">&#8594;</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S10  - OEM & REPLACEMENT SUPPORT
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-navy" id="oem">
   <div class="W">
     <div class="two">
@@ -1271,9 +1265,9 @@ img{display:block;max-width:100%;height:auto}
           <div class="pf-item">
             <div class="pf-num">03</div>
             <div class="pf-body">
-              <div class="pf-title">Free Sample Production</div>
+              <div class="pf-title">Sample Review</div>
               <div class="pf-desc">Sample belt section produced at no charge  - using the same production process as mass production. Diagonal measurement performed during assembly. Large roller fixation verified. Sample inspected before dispatch with QC record and material test certificate included.</div>
-              <div class="pf-tags"><span class="pf-tag">Free sample</span><span class="pf-tag">Full QC process</span><span class="pf-tag">MTR included</span></div>
+<div class="pf-tags"><span class="pf-tag">Sample review</span><span class="pf-tag">Full QC process</span><span class="pf-tag">MTR included</span></div>
             </div>
           </div>
           <div class="pf-item">
@@ -1304,28 +1298,25 @@ img{display:block;max-width:100%;height:auto}
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <!-- PHOTO G: OEM support -->
-        <div class="photo-placeholder" style="aspect-ratio:4/3;background:rgba(255,255,255,.04);border:1px solid var(--w15)">
-          <div class="pp-icon">馃搻</div>
-          <div class="pp-label">Drawing Review  - Engineering Discussion<br>Configuration confirmation process</div>
-          <div class="pp-note">Replace with: drawing review / engineering consultation photo</div>
+        <div class="media-card light" style="aspect-ratio:4/3">
+          <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-product-overview.jpg" alt="Chain driven belt OEM drawing review reference" decoding="async" loading="lazy">
+          <div class="media-caption">OEM drawing review reference · chain pitch · width · rod layout</div>
         </div>
-        <div class="photo-placeholder" style="aspect-ratio:16/9;background:rgba(255,255,255,.04);border:1px solid var(--w15)">
-          <div class="pp-icon">馃攳</div>
-          <div class="pp-label">Retained Sample Comparison<br>First-piece vs reference check</div>
-          <div class="pp-note">Replace with: sample comparison photo</div>
+        <div class="media-card light" style="aspect-ratio:16/9">
+          <img class="media-img" src="assets/product-media/chain-driven-belt/chain-driven-belt-edge-detail.jpg" alt="Chain driven belt retained sample comparison reference" decoding="async" loading="lazy">
+          <div class="media-caption">Retained sample comparison · chain edge and roller reference</div>
         </div>
-        <div class="photo-placeholder" style="aspect-ratio:16/9;background:rgba(255,255,255,.04);border:1px solid var(--w15)">
-          <div class="pp-icon">馃敥</div>
-          <div class="pp-label">Accessories  - Pins, Shafts, Connection Rods<br>Matched accessory supply</div>
-          <div class="pp-note">Replace with: accessories photo</div>
+        <div class="media-card pp-video" style="aspect-ratio:16/9">
+          <video class="media-video" src="assets/product-media/chain-driven-belt/chain-driven-belt-sprocket-video.mp4" muted autoplay loop playsinline preload="metadata"></video>
+          <div class="media-caption">Matched sprocket and chain review</div>
         </div>
         <div style="background:rgba(200,146,42,.1);border:1px solid rgba(200,146,42,.25);border-radius:var(--rad);padding:18px 22px">
           <div style="font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">OEM SAMPLE POLICY</div>
           <div style="display:flex;flex-direction:column;gap:8px">
-            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:13px">&#10003;/span><span style="font-size:13px;color:rgba(255,255,255,.65)">Sample production cost: <strong style="color:white">Free</strong></span></div>
-            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:13px">&#10003;/span><span style="font-size:13px;color:rgba(255,255,255,.65)">QC report &amp; MTR: <strong style="color:white">Included</strong></span></div>
-            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:13px">&#10003;/span><span style="font-size:13px;color:rgba(255,255,255,.65)">Retained sample: <strong style="color:white">Included</strong></span></div>
-            <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--gold);font-size:13px">&#8594;/span><span style="font-size:13px;color:rgba(255,255,255,.65)">Shipping: <strong style="color:white">Customer bears (express)</strong></span></div>
+            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:13px">&#10003;</span><span style="font-size:13px;color:rgba(255,255,255,.65)">Sample production cost: <strong style="color:white">Free</strong></span></div>
+            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:13px">&#10003;</span><span style="font-size:13px;color:rgba(255,255,255,.65)">QC report &amp; MTR: <strong style="color:white">Included</strong></span></div>
+            <div style="display:flex;gap:8px;align-items:center"><span style="color:#4ADE80;font-size:13px">&#10003;</span><span style="font-size:13px;color:rgba(255,255,255,.65)">Retained sample: <strong style="color:white">Included</strong></span></div>
+            <div style="display:flex;gap:8px;align-items:center"><span style="color:var(--gold);font-size:13px">&#8594;</span><span style="font-size:13px;color:rgba(255,255,255,.65)">Shipping: <strong style="color:white">Customer bears (express)</strong></span></div>
           </div>
         </div>
       </div>
@@ -1333,8 +1324,6 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S11  - COMPARISON TABLE
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-surf" id="comparison">
   <div class="W">
     <span class="tag tag-b">DRIVE TYPE COMPARISON</span>
@@ -1353,27 +1342,27 @@ img{display:block;max-width:100%;height:auto}
           <tr>
             <td>Wet / slippery environment</td>
             <td class="hl-col"><span class="ico-yes">&#10003;Reliable</span>  - sprocket engagement independent of surface condition</td>
-            <td><span class="ico-no">鈿?Risk</span>  - friction reduces in wet, slippage likely</td>
+            <td><span class="ico-no">Risk</span>  - friction reduces in wet, slippage likely</td>
           </tr>
           <tr>
             <td>Heavy product load</td>
             <td class="hl-col"><span class="ico-yes">&#10003;Suited</span>  - drive force through chain, mesh carries load only</td>
-            <td><span class="ico-no">鈿?Risk</span>  - high tension in mesh, accelerated wear</td>
+            <td><span class="ico-no">Risk</span>  - high tension in mesh, accelerated wear</td>
           </tr>
           <tr>
             <td>Wide belt (&gt;1,200mm)</td>
             <td class="hl-col"><span class="ico-yes">&#10003;Consistent</span>  - lateral alignment maintained by chain</td>
-            <td><span class="ico-no">鈿?Variable</span>  - lateral drift increases with width</td>
+            <td><span class="ico-no">Variable</span>  - lateral drift increases with width</td>
           </tr>
           <tr>
             <td>Long conveyor run</td>
             <td class="hl-col"><span class="ico-yes">&#10003;Stable</span>  - chain pitch maintains geometry over length</td>
-            <td><span class="ico-no">鈿?Variable</span>  - tension accumulation causes drift</td>
+            <td><span class="ico-no">Variable</span>  - tension accumulation causes drift</td>
           </tr>
           <tr>
             <td>Process timing required</td>
             <td class="hl-col"><span class="ico-yes">&#10003;Accurate</span>  - fixed advance per sprocket revolution</td>
-            <td><span class="ico-no">鈿?Variable</span>  - speed varies with load and friction</td>
+            <td><span class="ico-no">Variable</span>  - speed varies with load and friction</td>
           </tr>
           <tr>
             <td>Dry, standard-load, narrow belt</td>
@@ -1387,8 +1376,6 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S12  - FAQ
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-white" id="faq">
   <div class="W">
     <span class="tag tag-b">FREQUENTLY ASKED QUESTIONS</span>
@@ -1427,58 +1414,54 @@ img{display:block;max-width:100%;height:auto}
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S13  - INTERNAL LINKS
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="sec sec-surf" style="padding:48px 0">
   <div class="W">
     <span class="tag tag-b" style="margin-bottom:16px">RELATED PAGES</span>
     <div class="il-row">
       <a href="manufacturing.html" class="il-card">
-        <div class="il-ico">馃彮</div>
+        <div class="il-ico">&#127981;</div>
         <div><div class="il-label">Process</div><div class="il-title">Manufacturing Assurance</div></div>
-        <span class="il-arr">&#8594;/span>
+        <span class="il-arr">&#8594;</span>
       </a>
       <a href="quality-control.html" class="il-card">
-        <div class="il-ico">&#10003;/div>
+        <div class="il-ico">&#10003;</div>
         <div><div class="il-label">Quality</div><div class="il-title">Quality Control</div></div>
-        <span class="il-arr">&#8594;/span>
+        <span class="il-arr">&#8594;</span>
       </a>
       <a href="raw-material.html" class="il-card">
-        <div class="il-ico">馃敩</div>
+        <div class="il-ico">&#128300;</div>
         <div><div class="il-label">Material</div><div class="il-title">Raw Material Control</div></div>
-        <span class="il-arr">&#8594;/span>
+        <span class="il-arr">&#8594;</span>
       </a>
       <a href="drive-sprockets.html" class="il-card">
-        <div class="il-ico">鈿欙笍</div>
+        <div class="il-ico">&#9881;</div>
         <div><div class="il-label">System</div><div class="il-title">Drive Sprockets</div></div>
-        <span class="il-arr">&#8594;/span>
+        <span class="il-arr">&#8594;</span>
       </a>
       <a href="contact.html" class="il-card">
-        <div class="il-ico">馃搵</div>
-        <div><div class="il-label">Enquiry</div><div class="il-title">Request a Quote</div></div>
-        <span class="il-arr">&#8594;/span>
+        <div class="il-ico">&#128194;</div>
+        <div><div class="il-label">Enquiry</div><div class="il-title">Ask For A Quick Quote</div></div>
+        <span class="il-arr">&#8594;</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- 鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?     S14  - CTA
-鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺愨晲鈺?-->
 <section class="cta-sec">
   <div class="W">
     <span class="tag" style="text-align:center;color:var(--blue2);margin-bottom:14px;font-size:11px">START YOUR CHAIN DRIVEN BELT PROJECT</span>
     <h2>Send Your Drawing or Chain Pitch.<br>Engineering Review Within 24 Hours.</h2>
-    <p>Submit your equipment drawing, existing belt measurement, or worn belt sample. Our engineering team confirms chain pitch, mesh specification, roller configuration, and sprocket interface  - then produces a free sample before any mass production commitment.</p>
+    <p>Submit your equipment drawing, existing belt measurement, or worn belt sample. Our engineering team confirms chain pitch, mesh specification, roller configuration, and sprocket interface  - then arranges sample review before any mass production commitment when needed.</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-gold">Request Free Sample &#8594;/a>
-      <a href="contact.html" class="btn-blue">Send Your Drawing &#8594;/a>
+      <a href="contact.html" class="btn-gold">Ask For A Quick Quote &#8594;</a>
+      <a href="contact.html" class="btn-blue">Send Your Drawing &#8594;</a>
       <a href="drive-sprockets.html" class="btn-ghost">View Sprockets</a>
     </div>
     <div class="cta-trust">
       <span class="ct">Diagonal Measurement During Production</span>
       <span class="ct">Square-Riveted Large Rollers</span>
       <span class="ct">Matched Sprocket Supply</span>
-      <span class="ct">Free Sample Before Mass Production</span>
+      <span class="ct">Sample Review Before Mass Production</span>
       <span class="ct">24-Hour Engineering Response</span>
       <span class="ct">ISO 9001 Certified</span>
     </div>
@@ -1525,7 +1508,7 @@ img{display:block;max-width:100%;height:auto}
       </div>
 
       <div>
-        <div class="foot-col-head">Core Systems</div>
+        <div class="foot-col-head">Core Belt Systems</div>
         <div class="foot-links">
           <a href="spiral-freezer-belt.html" class="foot-link gold">Spiral Freezer Belt</a>
           <a href="self-stacking-belt.html" class="foot-link gold">Self-Stacker Belt</a>
@@ -1564,8 +1547,8 @@ img{display:block;max-width:100%;height:auto}
             WhatsApp: +86 186 5349 6136
           </a>
         </div>
-        <a href="contact.html" class="foot-btn-p">Request a Quote &#8594;</a>
-        <a href="contact.html" class="foot-btn-o">Send Drawing &#8594;</a>
+        <a href="contact.html" class="foot-btn-p">Ask For A Quick Quote &#8594;</a>
+        <a href="contact.html" class="foot-btn-o">Send Your Belt Drawing &#8594;</a>
 
         <div style="margin-top:24px">
           <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8FA8C0;margin-bottom:12px;font-weight:600">CONNECT WITH US</div>
@@ -1600,7 +1583,7 @@ img{display:block;max-width:100%;height:auto}
 
 <!-- WHATSAPP -->
 <div class="wa-wrap">
-  <a href="https://wa.me/8613451773742?text=Hello%2C%20I%20need%20information%20about%20Chain%20Driven%20Conveyor%20Belt" target="_blank" rel="noopener">
+  <a href="https://wa.me/8618653496136?text=Hello%2C%20I%20need%20information%20about%20Chain%20Driven%20Conveyor%20Belt" target="_blank" rel="noopener">
     <button class="wa-btn" title="Chat on WhatsApp">
       <div class="wa-pulse"></div>
       <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
@@ -1630,8 +1613,12 @@ function toggleFaq(btn){
   if(!wasOpen) item.classList.add('open');
 }
 </script>
+<script src="assets/site-shell.js"></script>
 </body>
 </html>
+
+
+
 
 
 
