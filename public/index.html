@@ -402,30 +402,30 @@
     .foot-copy { font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; color: rgba(255,255,255,.35); }
 
     .wa-wrap { position: fixed; right: 24px; bottom: 24px; z-index: 900; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
-    .wa-btn { width: 60px; height: 60px; border-radius: 50%; background: #25D366; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,.4); transition: transform .2s, box-shadow .2s; position: relative; flex-shrink: 0; }
-    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.5); }
-    .wa-pulse { position: absolute; inset: 0; border-radius: 50%; background: #25D366; animation: waPulse 2.5s ease infinite; z-index: -1; }
+    .wa-btn { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg,#1F5C9E,#4A8CC8); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 26px rgba(31,92,158,.42); transition: transform .2s, box-shadow .2s; position: relative; flex-shrink: 0; }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(31,92,158,.52); }
+    .wa-pulse { position: absolute; inset: 0; border-radius: 50%; background: #4A8CC8; animation: waPulse 2.5s ease infinite; z-index: -1; }
     @keyframes waPulse{0%{transform:scale(1);opacity:.5}70%{transform:scale(1.5);opacity:0}100%{transform:scale(1.5);opacity:0}}
-    .wa-chat { width: 320px; background: white; border-radius: 12px; box-shadow: 0 8px 40px rgba(0,0,0,.25); overflow: hidden; animation: waSlide .2s ease; }
+    .wa-chat { width: 320px; background: white; border: 1px solid rgba(74,140,200,.28); border-radius: 12px; box-shadow: 0 18px 48px rgba(13,27,42,.28); overflow: hidden; animation: waSlide .2s ease; }
     @keyframes waSlide{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-    .wa-head { background: #25D366; padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; }
+    .wa-head { background: linear-gradient(135deg,#0D1B2A,#1F5C9E); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; }
     .wa-head-l { display: flex; align-items: center; gap: 12px; }
     .wa-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.25); color: white; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .wa-name { color: white; font-weight: 700; font-size: 15px; }
     .wa-status { color: rgba(255,255,255,.85); font-size: 12px; display: flex; align-items: center; gap: 5px; margin-top: 2px; }
     .wa-online-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.9); }
     .wa-close { color: rgba(255,255,255,.8); font-size: 20px; background: none; border: none; cursor: pointer; padding: 2px; line-height: 1; }
-    .wa-body { padding: 16px; background: #E5DDD5; min-height: 120px; }
+    .wa-body { padding: 16px; background: #EEF5FB; min-height: 120px; }
     .wa-bubble { background: white; padding: 10px 14px; border-radius: 8px 8px 8px 2px; font-size: 14px; color: #333; line-height: 1.55; max-width: 90%; box-shadow: 0 1px 2px rgba(0,0,0,.1); }
     .wa-quick-label { font-size: 10px; color: rgba(0,0,0,.45); margin: 12px 0 6px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
     .wa-quick-btns { display: flex; flex-wrap: wrap; gap: 6px; }
-    .wa-qb { background: white; border: 1px solid rgba(37,211,102,.4); border-radius: 16px; padding: 5px 12px; font-size: 12px; color: #128C7E; cursor: pointer; transition: all .18s; font-family: var(--font-sans); }
-    .wa-qb:hover { background: #25D366; color: white; border-color: #25D366; }
+    .wa-qb { background: white; border: 1px solid rgba(31,92,158,.28); border-radius: 16px; padding: 5px 12px; font-size: 12px; color: #1F5C9E; cursor: pointer; transition: all .18s; font-family: var(--font-sans); }
+    .wa-qb:hover { background: #1F5C9E; color: white; border-color: #1F5C9E; }
     .wa-input-row { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid #e0e0e0; background: white; }
     .wa-input { flex: 1; border: 1px solid #e0e0e0; border-radius: 20px; padding: 8px 14px; font-size: 13px; outline: none; font-family: var(--font-sans); }
-    .wa-input:focus { border-color: #25D366; }
-    .wa-send { width: 36px; height: 36px; border-radius: 50%; background: #25D366; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .18s; }
-    .wa-send:hover { background: #1DAA54; }
+    .wa-input:focus { border-color: #4A8CC8; }
+    .wa-send { width: 36px; height: 36px; border-radius: 50%; background: #1F5C9E; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .18s; }
+    .wa-send:hover { background: #0D1B2A; }
 
     /* 鈹€鈹€ Hero 鈹€鈹€ */
     .hero {
@@ -479,7 +479,8 @@
     .hero h1 .blue { color: #4A8CC8; font-size: .93em; display: inline-block; }
     .hero-subtitle { border-left: 2px solid #1F5C9E; padding-left: 16px; margin-bottom: 16px; }
     .hero-subtitle p { font-size: 17px; font-weight: 700; color: #F4F8FC; line-height: 1.4; }
-    .hero-body { font-size: 14px; color: #D5E2EF; line-height: 1.7; max-width: 520px; margin-bottom: 32px; }
+    .hero-body { font-size: 14px; color: #D5E2EF; line-height: 1.7; max-width: 560px; margin-bottom: 10px; }
+    .hero-trust-line { font-family: var(--font-mono); font-size: 12px; font-weight: 800; letter-spacing: .18em; color: #8DBCE8; margin: 18px 0 28px; }
     .hero-btns { display: flex; flex-wrap: wrap; gap: 16px; }
     @media(max-width:767px){
       .hero-inner { padding: 56px 0 80px; gap: 32px; }
@@ -613,6 +614,8 @@
       transition: all .2s;
     }
     .ind-card:hover { border-color: rgba(31,92,158,.4); box-shadow: 0 4px 20px rgba(31,92,158,.06); }
+    .ind-media { width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; margin-bottom: 18px; border: 1px solid rgba(31,92,158,.16); background: #F4F8FC; }
+    .ind-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .ind-icon { font-size: 32px; margin-bottom: 16px; }
     .ind-card h3 { font-size: 17px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
     .ind-card p { font-size: 13px; color: var(--text-body); line-height: 1.65; margin-bottom: 16px; }
@@ -1557,7 +1560,7 @@
                 <a href="industries.html" class="dl"><span class="dl-icon">&#127844;</span><span class="dl-label">Meat &amp; Seafood Processing</span></a>
                 <a href="industries.html" class="dl"><span class="dl-icon">&#127838;</span><span class="dl-label">Baking &amp; Ovens</span></a>
                 <a href="industries.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Snack &amp; Biscuit</span></a>
-                <a href="industries.html" class="dl"><span class="dl-icon">&#128663;</span><span class="dl-label">Automotive</span></a>
+                <a href="industries.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Industrial Conveying</span></a>
                 <a href="industries.html" class="dl"><span class="dl-icon">&#129519;</span><span class="dl-label">Can Washing</span></a>
               </div>
               <div class="two-col-side">
@@ -1703,7 +1706,7 @@
       <a href="industries.html" class="mob-link">Meat &amp; Seafood Processing</a>
       <a href="industries.html" class="mob-link">Baking &amp; Ovens</a>
       <a href="industries.html" class="mob-link">Snack &amp; Biscuit</a>
-      <a href="industries.html" class="mob-link">Automotive</a>
+      <a href="industries.html" class="mob-link">Industrial Conveying</a>
       <a href="industries.html" class="mob-link">Can Washing</a>
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Engineering &amp; OEM</div>
@@ -1767,13 +1770,15 @@
         </div>
         <h1>Automated Metal Conveyor Belt Manufacturer<br><span class="blue">for OEMs &amp; Distributors</span></h1>
         <div class="hero-subtitle">
-          <p>Built for OEM projects, replacement support, and long-term supply.</p>
+          <p>Reducing mismatch risk in OEM conveyor belt projects through verified manufacturing and engineering support.</p>
         </div>
-        <p class="hero-body">YIYI Mesh Belt manufactures engineered metal conveyor belts and matched drive components for OEM builders, distributors, and replacement projects.</p>
-        <p class="hero-body">From in-house wire drawing and robotic welding to final inspection and export-ready delivery, we help buyers reduce mismatch risk, improve running reliability, and move projects forward with fewer surprises.</p>
+        <p class="hero-body">YIYI Mesh Belt manufactures engineered metal conveyor belts and matched drive components for industrial applications.</p>
+        <p class="hero-body">We support OEM equipment builders, distributors, and replacement belt projects with drawing-based production, technical confirmation, and long-term supply reliability.</p>
+        <p class="hero-body">From in-house wire drawing to robotic welding and final inspection, every step is controlled to ensure consistency, stability, and export-ready quality.</p>
+        <p class="hero-trust-line">PROVEN · STABLE · VERIFIED</p>
         <div class="hero-btns">
-          <a href="contact.html?intent=drawing&source=home" class="btn-primary">Send Your Belt Drawing →</a>
-          <a href="contact.html?intent=quote&source=home" class="btn-outline-dark">Ask For A Quick Quote →</a>
+          <a href="contact.html?intent=drawing&source=home" class="btn-primary">Send Drawing →</a>
+          <a href="engineering-oem.html?intent=engineering&source=home" class="btn-outline-dark">Talk to Engineer →</a>
           <a href="contact.html?intent=visit&source=home" class="btn-outline-dark">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             Watch Factory Tour
@@ -1827,35 +1832,35 @@
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="m8.21 13.89-1.75 7.93L12 19l5.54 2.82-1.75-7.94"/></svg>
       </span>
-      <span class="tb-item2-label">27,000㎡ Facility</span>
+      <span class="tb-item2-label">Manufacturing Since 1998</span>
     </div>
     <div class="tb-item2">
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </span>
-      <span class="tb-item2-label">280+ Machines</span>
+      <span class="tb-item2-label">ISO 9001 Certified</span>
     </div>
     <div class="tb-item2">
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
       </span>
-      <span class="tb-item2-label">30+ Patents</span>
+      <span class="tb-item2-label">20+ Countries Served</span>
     </div>
     <div class="tb-item2">
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
       </span>
-      <span class="tb-item2-label">20+ Countries Served</span>
+      <span class="tb-item2-label">27,000㎡ Production Facility</span>
     </div>
     <div class="tb-item2">
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
       </span>
-      <span class="tb-item2-label">5 Robotic Welding Systems</span>
+      <span class="tb-item2-label">280+ Production Machines</span>
     </div>
 
   </div>
-  <div style="text-align:center;padding:6px 0 14px;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:.03em;color:#7FA8CC;opacity:1">Verified manufacturing proof for OEM supply, distributor sourcing, and replacement coordination.</div>
+  <div style="text-align:center;padding:6px 0 14px;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:.03em;color:#7FA8CC;opacity:1">200,000m annual output with verified manufacturing proof for OEM supply, distributor sourcing, and replacement coordination.</div>
 </div>
 
 <section style="background:linear-gradient(180deg,#0f1f35 0%,#132845 100%);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)">
@@ -1895,59 +1900,59 @@
 <section class="reasons">
   <div class="container">
     <div class="reasons-header">
-      <div class="eyebrow eyebrow-light">WHY OEM BUYERS CHOOSE YIYI Mesh Belt</div>
-      <h2>5 Reasons to Trust<br>Our Manufacturing</h2>
-      <p>Industrial buyers do not only need a belt supplier. They need a supplier that can confirm fit, control production, provide QA evidence, and support repeat supply without restarting the project from zero.</p>
+      <div class="eyebrow eyebrow-light">WHO WE ARE</div>
+      <h2>Built for Industrial<br>Conveyor Belt Projects</h2>
+      <p>YIYI Mesh Belt is a manufacturing partner for OEM equipment builders, distributors, and replacement belt buyers who need verified production, engineering confirmation, and repeatable supply.</p>
     </div>
     <div class="reasons-grid">
       <div class="reason-card">
-        <div class="reason-num">01 / Welding</div>
+        <div class="reason-num">01 / OEM</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
-        <div class="reason-title">Robotic Welding Consistency</div>
-        <p class="reason-desc">Uniform weld points for stable belt performance and reduced variation.</p>
-        <span class="reason-link">&#8594;Reliability built by automation</span>
+        <div class="reason-title">OEM Equipment Projects</div>
+        <p class="reason-desc">Drawing-based belt production for freezer, oven, washing, and industrial conveying systems.</p>
+        <span class="reason-link">&#8594;Built around equipment fit</span>
       </div>
       <div class="reason-card">
-        <div class="reason-num">02 / Material</div>
+        <div class="reason-num">02 / Replacement</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
         </div>
-        <div class="reason-title">In-House Wire Drawing</div>
-        <p class="reason-desc">Critical wire processing controlled internally for better consistency and lead-time control.</p>
-        <span class="reason-link">&#8594;Quality starts at the source</span>
+        <div class="reason-title">Replacement Belt Support</div>
+        <p class="reason-desc">Old belt photos, dimensions, pitch, and sprocket details are reviewed to reduce mismatch risk.</p>
+        <span class="reason-link">&#8594;Start from the existing system</span>
       </div>
       <div class="reason-card">
-        <div class="reason-num">03 / Quality</div>
+        <div class="reason-num">03 / Manufacturing</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
         </div>
-        <div class="reason-title">Verified Quality Control</div>
-        <p class="reason-desc">Inspection, drum verification, and final QA built into key production stages.</p>
-        <span class="reason-link">&#8594;Every stage checked and confirmed</span>
+        <div class="reason-title">Controlled Production</div>
+        <p class="reason-desc">In-house wire drawing, robotic welding, process control, and export packing support stable supply.</p>
+        <span class="reason-link">&#8594;Manufacturing proof matters</span>
       </div>
       <div class="reason-card">
-        <div class="reason-num">04 / OEM</div>
+        <div class="reason-num">04 / Components</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
         </div>
-        <div class="reason-title">OEM Coordination Discipline</div>
-        <p class="reason-desc">Drawing review, sampling, confirmation, and production follow-up for project-based cooperation.</p>
-        <span class="reason-link">&#8594;Engineered for long-term partnership</span>
+        <div class="reason-title">Belt &amp; Sprocket Matching</div>
+        <p class="reason-desc">Matched drive components can be reviewed together when pitch, engagement, and tracking are critical.</p>
+        <span class="reason-link">&#8594;Reduce system-level risk</span>
       </div>
       <div class="reason-card highlight">
         <div class="reason-num">05 / Export</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
         </div>
-        <div class="reason-title">Packaging &amp; Export Readiness</div>
-        <p class="reason-desc">Structured packing, export documentation, and global delivery support for long-term supply.</p>
-        <span class="reason-link">&#8594;Export-ready from day one</span>
+        <div class="reason-title">Long-Term Supply</div>
+        <p class="reason-desc">Repeat orders are supported with production memory, QA records, and international delivery coordination.</p>
+        <span class="reason-link">&#8594;Designed for repeat cooperation</span>
       </div>
     </div>
     <div style="text-align:center;margin-top:40px">
-      <a href="manufacturing.html" class="btn-primary">Explore Manufacturing Assurance →</a>
+      <a href="contact.html?intent=drawing&source=home-who" class="btn-primary">Send Drawing →</a>
     </div>
   </div>
 </section>
@@ -1959,8 +1964,8 @@
   <div class="container">
     <div class="products-header">
       <div class="eyebrow eyebrow-dark">CORE BELT SYSTEMS</div>
-      <h2>Built Around the Belt Systems<br>That Drive Real Projects</h2>
-      <p>From spiral freezing to industrial conveying, YIYI Mesh Belt focuses on belt systems that support OEM equipment manufacturing and long-term replacement supply.</p>
+      <h2>Product Systems for<br>OEM and Replacement Projects</h2>
+      <p>Real product photos are used here so buyers can quickly match the belt family, application environment, and drive component needs before sending a drawing.</p>
     </div>
 
     <!-- Flagship -->
@@ -1992,7 +1997,7 @@
           <!-- [IMAGE-06: Self-Stacker Belt Product] -->
         </div>
         <div class="pc-body">
-          <h3>Self-Stacker Belt</h3>
+          <h3>Self-Stacking Belt</h3>
           <p>Built for compact freezing systems where vertical stacking and airflow efficiency matter.</p>
           <div class="pc-tags"><span class="pc-tag">Spiral Systems</span><span class="pc-tag">OEM Matched</span></div>
           <span class="pf-link" style="font-size:13px;margin-top:12px;display:inline-block">View Product &#8594;</span>
@@ -2031,11 +2036,11 @@
       <a href="flat-wire-belt.html" class="product-card">
         <div class="pc-img-wrap">
           <span class="pc-badge"><span class="gold-badge" style="font-size:10px">HIGH VALUE</span></span>
-          <img src="assets/homepage-media/home-flat-wire.jpg" alt="Flat Wire Honeycomb Conveyor Belt" class="pc-sm-img" / decoding="async" loading="lazy">
+          <img src="assets/homepage-media/home-flat-wire.jpg" alt="Flat Wire / Honeycomb Conveyor Belt" class="pc-sm-img" / decoding="async" loading="lazy">
           <!-- [IMAGE-09: Flat Wire Honeycomb Conveyor Belts Product] -->
         </div>
         <div class="pc-sm-body">
-          <h3>Flat Wire Honeycomb Conveyor Belt</h3>
+          <h3>Flat Wire / Honeycomb Conveyor Belt</h3>
           <p style="font-size:12px;color:#8FA8C0;line-height:1.65;margin-bottom:12px">Open-area conveying for frying, coating, cooling, and washing applications.</p>
           <div class="pc-tags"><span class="pc-tag">Baking</span><span class="pc-tag">Industrial</span></div>
           <span class="pf-link" style="font-size:12px;margin-top:10px;display:inline-block">View Product &#8594;</span>
@@ -2052,17 +2057,6 @@
           <p style="font-size:12px;color:#8FA8C0;line-height:1.65;margin-bottom:12px">Matched drive components for stable engagement and longer system life.</p>
           <div class="pc-tags"><span class="pc-tag">System Matched</span><span class="pc-tag">Precision</span></div>
           <span class="pf-link" style="font-size:12px;margin-top:10px;display:inline-block">View Product &#8594;</span>
-        </div>
-      </a>
-      <a href="engineering-oem.html?source=home" class="product-card">
-        <div class="pc-img-wrap">
-          <span class="pc-badge"><span style="background:#1C3A5E;color:#4A8CC8;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:3px;display:inline-block">OEM</span></span>
-          <img src="assets/homepage-media/home-workshop.png" alt="YIYI Mesh Belt OEM engineering workshop" class="pc-sm-img" style="object-position:center 52%" / decoding="async" loading="lazy">
-        </div>
-        <div class="pc-sm-body">
-          <h3>Custom Engineering</h3>
-          <p style="font-size:12px;color:#8FA8C0;line-height:1.65;margin-bottom:12px">Tailored conveyor solutions designed to your exact specifications. Full OEM engineering support.</p>
-          <div class="pc-tags"><span class="pc-tag">OEM Custom</span><span class="pc-tag">Full Support</span></div>
         </div>
       </a>
     </div>
@@ -2128,14 +2122,17 @@
   <div class="container">
     <div class="industries-header">
       <div class="eyebrow eyebrow-light">APPLICATION SECTORS</div>
-      <h2>Proven Across Food Processing,<br>Thermal Systems, and Industrial Conveying</h2>
-      <p>These are the application environments where buyers most often need reliable matching, stable running, and a supplier that can support both first orders and repeat supply.</p>
+      <h2>Application Environments<br>Where Belt Matching Matters</h2>
+      <p>These application cards help buyers choose the likely belt family before technical review. They describe common use environments and belt suggestions, not claimed case results.</p>
     </div>
     <div class="industries-grid">
       <div class="ind-card ind-card-core">
         <div class="ind-topline">
           <span class="ind-label ind-label-core">Cold Chain</span>
           <span class="ind-core-mark">Core Sector</span>
+        </div>
+        <div class="ind-media">
+          <img src="assets/blog/conveyor-belts-for-iqf-freezing-systems-ai-visual-1.svg" alt="AI visual of IQF and spiral freezing conveyor belt application" decoding="async" loading="lazy">
         </div>
         <div class="ind-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2158,6 +2155,9 @@
           <span class="ind-label ind-label-core">Food Processing</span>
           <span class="ind-core-mark">Core Sector</span>
         </div>
+        <div class="ind-media">
+          <img src="assets/blog/conveyor-belt-applications-in-meat-processing-industry-ai-visual-1.svg" alt="AI visual of meat and seafood processing conveyor belt application" decoding="async" loading="lazy">
+        </div>
         <div class="ind-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M7 4c2 1 3 3.5 3 6.5S9 16 7 18"/>
@@ -2176,6 +2176,9 @@
           <span class="ind-label ind-label-core">Bakery</span>
           <span class="ind-core-mark">Core Sector</span>
         </div>
+        <div class="ind-media">
+          <img src="assets/blog/conveyor-belts-for-baking-and-oven-lines-ai-visual-1.svg" alt="AI visual of baking and oven conveyor belt application" decoding="async" loading="lazy">
+        </div>
         <div class="ind-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 15c0-5 3-8 7-8s7 3 7 8"/>
@@ -2192,6 +2195,9 @@
         <div class="ind-topline">
           <span class="ind-label">Snack Lines</span>
         </div>
+        <div class="ind-media">
+          <img src="assets/blog/conveyor-belts-for-food-processing-industry-ai-visual-1.svg" alt="AI visual of snack and biscuit conveyor belt application" decoding="async" loading="lazy">
+        </div>
         <div class="ind-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="8" cy="10" r="3"/>
@@ -2207,7 +2213,10 @@
       </div>
       <div class="ind-card">
         <div class="ind-topline">
-          <span class="ind-label">Industrial Parts</span>
+          <span class="ind-label">General Industry</span>
+        </div>
+        <div class="ind-media">
+          <img src="assets/blog/conveyor-belt-solutions-for-industrial-automation-systems-ai-visual-1.svg" alt="AI visual of industrial conveying belt application" decoding="async" loading="lazy">
         </div>
         <div class="ind-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2218,14 +2227,17 @@
             <path d="M7 9h10"/>
           </svg>
         </div>
-        <h3>Automotive</h3>
-        <p>Parts washing, surface treatment, and assembly conveying applications. Precision pitch, load stability, and clean manufacturing support.</p>
-        <div class="ind-keywords"><span class="ind-keyword">Precision Pitch</span><span class="ind-keyword">Load Stable</span><span class="ind-keyword">Assembly Support</span></div>
-        <div class="ind-tags"><span class="ind-tag ind-tag-primary">Eye Link Belt</span><span class="ind-tag">Flat Wire Honeycomb Conveyor Belts</span><span class="ind-tag">Custom Engineering</span></div>
+        <h3>Industrial Conveying</h3>
+        <p>Parts washing, surface treatment, drying, cooling, and general industrial transport applications where load stability and pitch control matter.</p>
+        <div class="ind-keywords"><span class="ind-keyword">Precision Pitch</span><span class="ind-keyword">Load Stable</span><span class="ind-keyword">Custom Fit</span></div>
+        <div class="ind-tags"><span class="ind-tag ind-tag-primary">Eye Link Belt</span><span class="ind-tag">Flat Wire / Honeycomb Belt</span><span class="ind-tag">Side-Driven Belt</span></div>
       </div>
       <div class="ind-card">
         <div class="ind-topline">
           <span class="ind-label">Washdown</span>
+        </div>
+        <div class="ind-media">
+          <img src="assets/blog/conveyor-belts-for-washing-and-cleaning-lines-ai-visual-1.svg" alt="AI visual of can washing conveyor belt application" decoding="async" loading="lazy">
         </div>
         <div class="ind-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2283,8 +2295,8 @@
       <!-- Right: Content -->
       <div class="mfg-content">
         <div class="eyebrow eyebrow-dark">MANUFACTURING PROOF</div>
-        <h2>Automated Manufacturing.<br>Verifiable Quality.</h2>
-        <p>From wire drawing to final inspection, YIYI Mesh Belt controls critical production stages in-house for consistency, scale, raw material response speed, and long-term OEM supply.</p>
+        <h2>Verified Manufacturing<br>Capability</h2>
+        <p>YIYI uses real factory-controlled production steps to support OEM projects and repeat replacement orders: in-house wire drawing, robotic welding, workshop assembly, inspection, and export packing.</p>
         <div class="mfg-features">
           <div class="mfg-feature">
             <div class="mfg-feature-icon">
@@ -2310,7 +2322,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4"/><path d="M20 12H4"/><path d="M20 17H4"/><path d="M7 4v16"/><path d="M17 4v16"/></svg>
             </div>
             <div>
-              <h4>Raw Material Stock Readiness  - <span>Regular 5.0mm and 12mm stainless stock helps shorten raw material lead times</span></h4>
+              <h4>Production Process Control  - <span>Workshop coordination for belt structure, edge details, pitch, and repeat order consistency</span></h4>
             </div>
           </div>
           <div class="mfg-feature">
@@ -2318,7 +2330,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
             </div>
             <div>
-              <h4>QC &amp; Inspection  - <span>Process checks, verification steps, and final QA before shipment</span></h4>
+              <h4>Quality Inspection  - <span>Process checks, verification steps, and final QA before shipment</span></h4>
               <!-- [IMAGE-14: QC / Inspection Close-Up] -->
             </div>
           </div>
@@ -2327,7 +2339,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="m8.21 13.89-1.75 7.93L12 19l5.54 2.82-1.75-7.94"/></svg>
             </div>
             <div>
-              <h4>Certifications &amp; Reports  - <span>Formal proof available for quality, food-contact safety, and audited compliance</span></h4>
+              <h4>Export Packing System  - <span>Project packing, labeling, and delivery coordination for overseas shipment</span></h4>
             </div>
           </div>
         </div>
@@ -2346,13 +2358,18 @@
       <div class="qa-content">
         <div class="eyebrow eyebrow-light">VERIFIED QUALITY SYSTEM</div>
         <h2>Inspection That Supports<br>Long-Term Belt Performance</h2>
-        <p>Material control, process inspection, weld verification, and final QA are built into every critical stage.</p>
+        <p>Material control, process inspection, drum test verification, and final QA are built into every critical stage to support long-term belt performance.</p>
         <div class="qa-steps">
           <div class="qa-step"><div class="qa-step-num">01</div><div><h4>Raw Material Control</h4><p>Core material quality starts before production begins.</p></div></div>
           <div class="qa-step"><div class="qa-step-num">02</div><div><h4>Process Inspection</h4><p>Key production stages are checked for consistency and dimensional control.</p></div></div>
           <div class="qa-step"><div class="qa-step-num">03</div><div><h4>Drum Test Verification</h4><p>Critical belt performance is reviewed through practical verification procedures.</p></div></div>
           <div class="qa-step"><div class="qa-step-num">04</div><div><h4>Final QA Before Shipment</h4><p>Every project goes through final inspection before packing and export.</p></div></div>
           <div class="qa-step"><div class="qa-step-num">05</div><div><h4>Food Contact Safety Compliance</h4><p>Applicable materials and processes supported by formal food-contact safety certification.</p></div></div>
+        </div>
+        <div class="mfg-proof-badges" style="margin-top:18px">
+          <span class="mfg-proof-badge">ISO 9001 Certified</span>
+          <span class="mfg-proof-badge">National High-Tech Enterprise</span>
+          <span class="mfg-proof-badge">Food Contact Safety Certified</span>
         </div>
         <a href="manufacturing.html" class="btn-primary" style="margin-top:28px;display:inline-flex">View Quality Control Process →</a>
       </div>
@@ -2395,8 +2412,8 @@
     <div class="process-actions">
       <p>Structured OEM coordination, from review to delivery.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:12px">
-        <a href="engineering-oem.html?intent=engineering&source=home" class="btn-primary">Get Engineering Support →</a>
-        <a href="contact.html?intent=drawing&source=home" class="btn-primary">Send Your Belt Drawing →</a>
+        <a href="contact.html?intent=drawing&source=home-oem" class="btn-primary">Send Drawing →</a>
+        <a href="engineering-oem.html?intent=engineering&source=home" class="btn-outline-dark">Talk to Engineer →</a>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
         <a href="contact.html?intent=quote&source=home" class="btn-outline-dark">Request OEM Quote →</a>
@@ -2411,14 +2428,14 @@
   <div class="container">
     <div class="global-grid">
       <div class="global-content">
-        <div class="eyebrow eyebrow-dark">GLOBAL CREDIBILITY</div>
-        <h2>International Exhibitions<br>and Export Experience</h2>
-        <p>YIYI Mesh Belt has joined major food, bakery, seafood, meat processing, and international trade exhibitions to meet OEM builders, distributors, and industrial buyers face to face.</p>
+        <div class="eyebrow eyebrow-dark">REAL EXHIBITION PHOTOS</div>
+        <h2>International Exhibitions<br>&amp; Customer Communication</h2>
+        <p>YIYI Mesh Belt uses real exhibition participation to communicate with OEM builders, distributors, and industrial buyers face to face through booth displays, product samples, and technical discussions.</p>
         <div class="global-showcase-card">
           <img src="assets/homepage-media/home-exhibition.png" alt="YIYI Mesh Belt exhibition presence and global trade-show participation" decoding="async" loading="lazy">
           <div class="global-showcase-copy">
             <span>Exhibition Presence</span>
-            <strong>Real trade-show participation helps buyers understand YIYI before factory review, drawing discussion, or quotation.</strong>
+            <strong>Only real exhibition photos belong in this section: booth views, product displays, and customer communication scenes.</strong>
           </div>
         </div>
         <div class="global-stats">
@@ -2487,15 +2504,15 @@
 <section class="process process-proof" style="background:#0F2438">
   <div class="container">
     <div class="process-header">
-      <div class="eyebrow eyebrow-light">FOUNDER STORY</div>
-      <h2>A Small Window Into<br>the People Behind YIYI</h2>
-      <p>For buyers evaluating a long-term supplier, the person behind the factory also matters. Learn how Aries Zhang built YIYI Mesh Belt from a machining background into a factory focused on practical manufacturing, quality control, and long-term customer support.</p>
+        <div class="eyebrow eyebrow-light">FOUNDER STORY</div>
+      <h2>Built from Real Manufacturing<br>Experience Since 1998</h2>
+      <p>A short homepage teaser only: the full founder story stays on the About page, where buyers can understand the machining background behind YIYI's manufacturing culture.</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr;gap:24px;align-items:center">
       <div class="process-step" style="max-width:860px;margin:0 auto;text-align:center">
         <div class="ps-num">YIYI</div>
         <h4>Aries Zhang, Founder of YIYI Mesh Belt</h4>
-        <p>Aries started from mechanical processing and built the company around one simple belief: a metal conveyor belt supplier should understand the machine, the material, and the responsibility behind every replacement order.</p>
+        <p>Aries Zhang came from mechanical processing, so YIYI's supplier culture is built around practical equipment fit, material control, and long-term responsibility rather than catalog-only selling.</p>
         <div style="margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
           <a href="about.html#founder-story" class="btn-primary">Read Founder Story →</a>
           <a href="about.html#company-introduction-video" class="btn-outline-dark">Watch Company Introduction →</a>
@@ -2715,6 +2732,7 @@
         <button class="wa-qb" onclick="sendWA(this.textContent)">Send Your Belt Drawing</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">Replacement Belt</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">Spiral Freezer Belt</button>
+        <button class="wa-qb" onclick="sendWA(this.textContent)">Self-Stacker Belt</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">Belt &amp; Sprocket Matching</button>
         <button class="wa-qb" onclick="sendWA(this.textContent)">Ask For A Quick Quote</button>
       </div>
