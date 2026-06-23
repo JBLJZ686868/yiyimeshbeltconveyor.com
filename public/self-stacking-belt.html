@@ -113,7 +113,7 @@ img{max-width:100%;height:auto;display:block}
 .mph-video{position:relative}
 .mph-video::after{content:'VIDEO';position:absolute;top:12px;right:12px;font-family:var(--font-mono);font-size:9px;letter-spacing:.10em;color:rgba(255,255,255,.40);background:rgba(0,0,0,.30);padding:3px 8px;border-radius:3px}
 .media-card{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--navy);border:1px solid var(--border);box-shadow:var(--shadow)}
-.media-card img{width:100%;height:100%;object-fit:cover;display:block}
+.media-card img,.media-card video{width:100%;height:100%;object-fit:cover;display:block}
 .media-card.hero-media{height:500px;border-radius:12px 12px 0 0;border-color:rgba(255,255,255,.12);box-shadow:none}
 .media-card.product-tile{height:220px}
 .media-card.detail-tile{height:220px}
@@ -248,6 +248,29 @@ img{max-width:100%;height:auto;display:block}
 .cta-p{font-size:16px;color:rgba(255,255,255,.55);line-height:1.70;margin-bottom:36px}
 .cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 .sec-divider{border:none;border-top:1px solid var(--border);margin:0}
+
+/* Layout breathing and clean product-photo system */
+html,body{max-width:100%;overflow-x:hidden}
+.prod-hero{padding:86px 0 92px}.ph-grid{gap:64px}.hero-desc{line-height:1.9;max-width:620px}.ph-img,.media-card.hero-media{background:#fff;border-color:rgba(255,255,255,.22);box-shadow:0 22px 54px rgba(0,0,0,.18)}.ph-img{padding:24px}.ph-img img,.media-card.hero-media img{object-fit:contain;object-position:center center;background:#fff}.sw,.sl,.sd,.sn{padding:92px 0}.sh{margin-bottom:48px}.sh p{line-height:1.9;max-width:760px}.photo-g{gap:28px}.media-card.product-tile,.media-card.detail-tile,.photo-box.has-img{background:#fff;border-radius:14px;box-shadow:0 16px 38px rgba(11,31,58,.08)}.media-card.product-tile img,.media-card.detail-tile img,.photo-box.has-img img{object-fit:contain;background:#fff;padding:12px}.media-caption{padding:20px 22px}.feat-g,.app-g,.mat-g,.qp-g,.rel-g{gap:22px}.feat-box,.app-card,.mat-card,.qp-card,.rel-card{padding:30px}.fb-desc,.ac-desc,.mc-desc,.qp-item,.rc-desc{line-height:1.78}@media(max-width:768px){.prod-hero{padding:68px 0 74px}.ph-grid{gap:38px}.ph-img{padding:16px}.sw,.sl,.sd,.sn{padding:68px 0}.sh{margin-bottom:34px}.photo-g{gap:20px}.feat-box,.app-card,.mat-card,.qp-card,.rel-card{padding:24px}.media-card.product-tile,.media-card.detail-tile{min-height:260px}}
+.ssb-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:34px 0 42px}
+.ssb-review-card{background:white;border:1px solid var(--border);border-radius:14px;padding:22px 22px 20px;box-shadow:0 16px 36px rgba(11,31,58,.06)}
+.ssb-review-card strong{display:block;font-size:15px;color:var(--ink);line-height:1.35;margin-bottom:8px}
+.ssb-review-card p{font-size:13px;color:var(--ink2);line-height:1.68;margin:0}
+.ssb-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:0 0 48px}
+.ssb-flow-step{background:#F8FAFC;border:1px solid var(--border);border-radius:12px;padding:18px 16px;min-height:132px}
+.ssb-flow-num{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:var(--gold);margin-bottom:14px}
+.ssb-flow-step strong{display:block;font-size:13px;color:var(--ink);line-height:1.35;margin-bottom:7px}
+.ssb-flow-step span{display:block;font-size:12px;color:var(--ink2);line-height:1.55}
+.ssb-measure-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.ssb-measure-card{background:white;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(11,31,58,.07)}
+.ssb-measure-card img{width:100%;height:190px;object-fit:cover;background:#fff;display:block}
+.ssb-measure-body{padding:16px 16px 18px}
+.ssb-measure-kicker{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.ssb-measure-title{font-size:14px;font-weight:800;color:var(--ink);line-height:1.35;margin-bottom:6px}
+.ssb-measure-note{font-size:12px;color:var(--ink2);line-height:1.6}
+@media(max-width:1020px){.ssb-review-grid{grid-template-columns:1fr 1fr}.ssb-flow{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1020px){.ssb-measure-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.ssb-review-grid{grid-template-columns:1fr;gap:14px;margin:26px 0 34px}.ssb-flow{grid-template-columns:1fr;gap:10px;margin-bottom:36px}.ssb-flow-step{min-height:auto}.ssb-measure-grid{grid-template-columns:1fr;gap:14px}.ssb-measure-card img{height:240px}}
 </style>
 <link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
@@ -274,7 +297,7 @@ img{max-width:100%;height:auto;display:block}
       <div class="tb-badges">
         <span class="tb-badge"><span class="tb-dot"></span>Manufacturing Since 1998</span>
         <span class="tb-badge"><span class="tb-dot"></span>ISO 9001 Certified</span>
-        <span class="tb-badge"><span class="tb-dot"></span>DUNS Registered</span>
+        <span class="tb-badge"><span class="tb-dot"></span>Food Contact Safety Certified</span>
       </div>
     </div>
     <div class="tb-langs">
@@ -299,7 +322,7 @@ img{max-width:100%;height:auto;display:block}
     <div class="nav-desktop">
       <a href="index.html" class="nav-link-simple">Home</a>
 
-      <!-- 鈽?Core Belt Systems -->
+      <!-- Core Belt Systems -->
       <div class="nd">
         <a href="products.html#strategic" class="nd-btn gold-btn nd-link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -436,7 +459,7 @@ img{max-width:100%;height:auto;display:block}
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129302;</span><span class="dl-label">Automated Welding</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129302;</span><span class="dl-label">Manufacturing Proof</span></a>
               <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">In-House Wire Drawing</span></a>
               <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128202;</span><span class="dl-label">Production Capacity</span></a>
               <a href="manufacturing.html" class="dl"><span class="dl-icon">&#10003;</span><span class="dl-label">Quality Control</span></a>
@@ -554,7 +577,7 @@ img{max-width:100%;height:auto;display:block}
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
       <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
-<a href="manufacturing.html" class="mob-link">Automated Welding</a>
+<a href="manufacturing.html" class="mob-link">Manufacturing Proof</a>
       <a href="manufacturing.html" class="mob-link">In-House Wire Drawing</a>
       <a href="manufacturing.html" class="mob-link">Quality Control</a>
       <a href="manufacturing.html" class="mob-link">Solar Factory (ESG)</a>
@@ -615,7 +638,7 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div class="hero-img-col">
         <figure id="ssb-hero-photo-slot" data-asset-slot="self-stacking-belt/hero-photo" class="media-card hero-media">
-          <img src="assets/product-media/self-stacking-belt/self-stacker-belt-product-overview.jpg" alt="Self-stacker belt complete assembly for spiral stacking systems"/ decoding="async" loading="eager" fetchpriority="high">
+          <img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-01.webp" alt="Self-stacker belt complete assembly for spiral stacking systems" decoding="async" loading="eager" fetchpriority="high">
           <figcaption class="media-caption"><div class="media-kicker">Self-Stacker Belt</div><div class="media-title">Complete belt assembly with stacking plate structure</div><div class="media-note">Visual starting point for OEM, replacement, and repeat-order review.</div></figcaption>
         </figure>
       </div>
@@ -652,7 +675,7 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div>
         <figure class="media-card proof-media">
-          <img src="assets/product-media/self-stacking-belt/self-stacker-belt-blue-support-detail.jpg" alt="Self-stacker belt detail showing stacking geometry and side structure"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-03.webp" alt="Self-stacker belt detail showing stacking geometry and side structure" decoding="async" loading="lazy">
           <figcaption class="media-caption"><div class="media-kicker">Structure Detail</div><div class="media-title">Stacking plate and engagement geometry</div><div class="media-note">Used by buyers to review fit, contraction behavior, and replacement matching risk.</div></figcaption>
         </figure>
       </div>
@@ -664,35 +687,61 @@ img{max-width:100%;height:auto;display:block}
 
 <section class="sec sec-alt">
   <div class="container">
-    <div style="margin-bottom:20px;max-width:760px">
-      <div class="eyebrow">PRODUCT PHOTO FRAMEWORK</div>
-      <h2 class="sec-h2">Visual Proof Buyers Expect Before Ordering</h2>
-      <p class="body-p">Self-stacker buyers usually need more than one hero image. They want to see the complete belt, the stacking-plate structure, the chain side, the slot geometry, the engagement detail, and at least one application or test context. This page reserves those positions now so the final media can be inserted without changing the sales structure later.</p>
-      <p class="body-p">The framework is split into product-view photos and edge or stacking-detail photos because both are important in real supplier evaluation. One set shows the overall product. The other shows the specific details that affect confidence in stacking performance and replacement matching.</p>
+    <div style="margin-bottom:34px;max-width:780px">
+      <div class="eyebrow">SELF-STACKING BELT ENGINEERING REVIEW</div>
+      <h2 class="sec-h2">Stacking Geometry, Engagement, and Release Test</h2>
+      <p class="body-p">A self-stacking belt is selected by the way it stacks under load, not by width alone. For spiral freezer, cooling, proofing, smoking, cooking, and compact vertical conveying systems, the belt must match tier height, stacking pitch, slot length, chain pitch, rod pitch, lateral contraction range, sprocket engagement, belt width, load, and running direction.</p>
+      <p class="body-p">The factory risk is clear: if the stacking plate position, slot geometry, or upper/lower engagement depth is wrong, the belt may bind in the stack, sit unevenly on the lower tier, create side pull, wear the edge chain, or fail as a drop-in replacement. YIYI checks these points before quotation and uses stack testing before release so the buyer can confirm real behavior, not only dimensions on paper.</p>
     </div>
+
+    <div class="ssb-review-grid" aria-label="Self-stacking belt factory engineering review points">
+      <div class="ssb-review-card"><strong>Tier Height and Stack Pitch</strong><p>Tier spacing, stacking pitch, and upper/lower contact depth determine whether the belt seats cleanly in the vertical stack.</p></div>
+      <div class="ssb-review-card"><strong>Slot Geometry and Contraction</strong><p>Long-slot or short-slot structure controls lateral contraction. The slot must match the machine path and replacement sample.</p></div>
+      <div class="ssb-review-card"><strong>Chain Pitch and Sprocket Fit</strong><p>Chain pitch, sprocket tooth profile, edge chain format, and running direction are checked before production to avoid drive mismatch.</p></div>
+      <div class="ssb-review-card"><strong>One-Side / Two-Side Shrinkable</strong><p>The shrinkable layout affects tier alignment, belt path, and whether the structure can replace the original without drive modification.</p></div>
+      <div class="ssb-review-card"><strong>Freezing and Cooking Applications</strong><p>Used in spiral freezing, chilling, cooling, proofing, steaming, smoking, cooking, bakery, meat, seafood, poultry, and prepared food systems.</p></div>
+      <div class="ssb-review-card"><strong>Factory Release Control</strong><p>Fixture-controlled welding, stack test confirmation, final inspection, and export packing keep OEM and repeat orders consistent.</p></div>
+    </div>
+
+    <div style="margin-bottom:22px;max-width:780px">
+      <div class="eyebrow">FACTORY REVIEW FLOW</div>
+      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">From Sample Geometry to Stack-Test Release</h3>
+      <p class="body-p">This is the engineering order used for self-stacker projects: application condition, existing sample or drawing, stacking geometry, drive compatibility, welding control, and release inspection.</p>
+    </div>
+    <div class="ssb-flow" aria-label="Self-stacking belt engineering and production review process">
+      <div class="ssb-flow-step"><div class="ssb-flow-num">01</div><strong>Application Condition</strong><span>Freezing, cooling, proofing, cooking, load, temperature, sanitation, airflow, and line speed.</span></div>
+      <div class="ssb-flow-step"><div class="ssb-flow-num">02</div><strong>Drawing / Sample Check</strong><span>Belt width, rod diameter, spiral pitch, chain pitch, slot length, stack plate profile, and wear points.</span></div>
+      <div class="ssb-flow-step"><div class="ssb-flow-num">03</div><strong>Stack Geometry Match</strong><span>Tier height, upper/lower engagement depth, lateral contraction range, and one-side or two-side shrinkable layout.</span></div>
+      <div class="ssb-flow-step"><div class="ssb-flow-num">04</div><strong>Drive Compatibility</strong><span>Sprocket engagement, edge chain format, shaft layout, running direction, and replacement fit.</span></div>
+      <div class="ssb-flow-step"><div class="ssb-flow-num">05</div><strong>Fixture Welding</strong><span>Stacking plate position, weld sequence, heat control, slot stability, and rod-end consistency.</span></div>
+      <div class="ssb-flow-step"><div class="ssb-flow-num">06</div><strong>Stack Test Release</strong><span>Stacking behavior, smooth contraction, engagement depth, final inspection, and export packing confirmation.</span></div>
+    </div>
+
     <div style="margin-bottom:18px">
-      <div class="eyebrow">PRODUCT PHOTOS</div>
-      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">Product Photo Gallery 01&#8211;06</h3>
+      <div class="eyebrow">CLEAN PRODUCT PHOTOS</div>
+      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">Self-Stacking Belt Product Views</h3>
+      <p class="body-p" style="max-width:740px">White-background product views are used as engineering evidence: full belt overview, stacking plate side, chain side, slot geometry, engagement detail, and shipment-ready condition.</p>
     </div>
     <div class="g3">
-      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/self-stacker-belt-product-overview.jpg" alt="Self-stacker belt full overview"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 01</div><div class="media-title">Full Belt Overview</div></figcaption></figure>
-      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/ssb-product-02.jpg" alt="Self-stacker belt stacking plate side view"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 02</div><div class="media-title">Stacking Plate Side View</div></figcaption></figure>
-      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/ssb-product-03.jpg" alt="Self-stacker belt chain side detail"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 03</div><div class="media-title">Chain Side Detail</div></figcaption></figure>
-      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/ssb-product-04.jpg" alt="Self-stacker belt slot and engagement detail"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 04</div><div class="media-title">Slot / Engagement Detail</div></figcaption></figure>
-      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/ssb-product-05.jpg" alt="Self-stacker belt stack test or running view"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 05</div><div class="media-title">Stack Test or Running View</div></figcaption></figure>
-      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/ssb-product-06.jpg" alt="Self-stacker belt shipment ready product view"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 06</div><div class="media-title">Shipment-Ready View</div></figcaption></figure>
+      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-01.webp" alt="Self-stacker belt full overview" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 01</div><div class="media-title">Full Belt Overview</div></figcaption></figure>
+      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-02.webp" alt="Self-stacker belt stacking plate side view" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 02</div><div class="media-title">Stacking Plate Side View</div></figcaption></figure>
+      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-03.webp" alt="Self-stacker belt chain side detail" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 03</div><div class="media-title">Chain Side Detail</div></figcaption></figure>
+      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-04.webp" alt="Self-stacker belt slot and engagement detail" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 04</div><div class="media-title">Slot / Engagement Detail</div></figcaption></figure>
+      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-01.webp" alt="Self-stacker belt stack test or running view" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 05</div><div class="media-title">Stack Test or Running View</div></figcaption></figure>
+      <figure class="media-card product-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-02.webp" alt="Self-stacker belt shipment ready product view" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 06</div><div class="media-title">Shipment-Ready View</div></figcaption></figure>
     </div>
-    <div style="margin:40px 0 18px">
-      <div class="eyebrow">STACKING / EDGE DETAILS</div>
-      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">Stacking / Edge Detail Gallery 01&#8211;06</h3>
+    <div style="margin:44px 0 18px;max-width:760px">
+      <div class="eyebrow">STACKING PLATE AND EDGE DETAILS</div>
+      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">Details That Control Stack Reliability</h3>
+      <p class="body-p" style="max-width:740px">For self-stacking belts, small differences in plate position, slot opening, rod-end finish, and chain connection can change the way the belt stacks. These details are reviewed as working geometry, not decoration.</p>
     </div>
     <div class="g3">
-      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/self-stacker-belt-blue-support-detail.jpg" alt="Self-stacker belt standard rod end detail"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 01</div><div class="media-title">Standard Rod End</div></figcaption></figure>
-      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-detail-02.jpg" alt="Self-stacker belt stacking plate weld area"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 02</div><div class="media-title">Stacking Plate Weld Area</div></figcaption></figure>
-      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-detail-03.jpg" alt="Self-stacker belt slot geometry close-up"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 03</div><div class="media-title">Slot Geometry Close-Up</div></figcaption></figure>
-      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-detail-04.jpg" alt="Self-stacker belt chain connection detail"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 04</div><div class="media-title">Chain Connection Detail</div></figcaption></figure>
-      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-detail-05.jpg" alt="Self-stacker belt upper and lower engagement point"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 05</div><div class="media-title">Upper / Lower Engagement Point</div></figcaption></figure>
-      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-detail-06.jpg" alt="Self-stacker belt custom finished edge"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 06</div><div class="media-title">Custom Finished Edge</div></figcaption></figure>
+      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-03.webp" alt="Self-stacker belt standard rod end detail" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 01</div><div class="media-title">Standard Rod End</div></figcaption></figure>
+      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-04.webp" alt="Self-stacker belt stacking plate weld area" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 02</div><div class="media-title">Stacking Plate Weld Area</div></figcaption></figure>
+      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-01.webp" alt="Self-stacker belt slot geometry close-up" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 03</div><div class="media-title">Slot Geometry Close-Up</div></figcaption></figure>
+      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-02.webp" alt="Self-stacker belt chain connection detail" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 04</div><div class="media-title">Chain Connection Detail</div></figcaption></figure>
+      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-03.webp" alt="Self-stacker belt upper and lower engagement point" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 05</div><div class="media-title">Finished Stacked Belt Point</div></figcaption></figure>
+      <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/self-stacking-belt-clean-white-04.webp" alt="Self-stacker belt custom finished edge" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Detail 06</div><div class="media-title">Custom Finished Edge</div></figcaption></figure>
     </div>
   </div>
 </section>
@@ -726,7 +775,7 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div>
         <figure class="media-card proof-media">
-          <img src="assets/product-media/self-stacking-belt/ssb-s4-drawing-sample.jpg" alt="Self-stacker belt engineering review and drawing-based production proof"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-s4-drawing-sample.jpg" alt="Self-stacker belt engineering review and drawing-based production proof" decoding="async" loading="lazy">
           <figcaption class="media-caption"><div class="media-kicker">Engineering Proof</div><div class="media-title">Drawing-based production review</div><div class="media-note">Used to confirm geometry, stacking behavior, and repeat-order references before production.</div></figcaption>
         </figure>
       </div>
@@ -806,6 +855,53 @@ img{max-width:100%;height:auto;display:block}
   </div>
 </section>
 
+<section class="sec">
+  <div class="container">
+    <div style="margin-bottom:24px;max-width:780px">
+      <div class="eyebrow">SPECIFICATION VERIFICATION BEFORE RELEASE</div>
+      <h2 class="sec-h2">Factory Measurement Points for Self-Stacking Belt Geometry</h2>
+      <p class="body-p">Self-stacking belt release depends on measured geometry, not only visual inspection. Before shipment, YIYI checks the dimensions that affect stacking behavior, drive fit, replacement matching, and repeat supply. These photos show typical measurement points used to confirm the production specification.</p>
+    </div>
+
+    <div class="ssb-measure-grid">
+      <figure class="ssb-measure-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-measure-overall-width-760mm.jpg" alt="Self-stacking belt overall width measurement before release" decoding="async" loading="lazy">
+        <figcaption class="ssb-measure-body"><div class="ssb-measure-kicker">Width Check</div><div class="ssb-measure-title">Overall Width Verification</div><div class="ssb-measure-note">Confirms total belt width against drawing, sample, or replacement requirement.</div></figcaption>
+      </figure>
+      <figure class="ssb-measure-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-measure-plate-height-80mm.jpg" alt="Self-stacking belt stacking plate height measurement" decoding="async" loading="lazy">
+        <figcaption class="ssb-measure-body"><div class="ssb-measure-kicker">Stack Height</div><div class="ssb-measure-title">Stacking Plate Height</div><div class="ssb-measure-note">Checks plate height because it affects tier clearance and upper/lower engagement.</div></figcaption>
+      </figure>
+      <figure class="ssb-measure-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-measure-plate-thickness-1-5mm.jpg" alt="Self-stacking belt stacking plate thickness measurement" decoding="async" loading="lazy">
+        <figcaption class="ssb-measure-body"><div class="ssb-measure-kicker">Plate Control</div><div class="ssb-measure-title">Stacking Plate Thickness</div><div class="ssb-measure-note">Verifies plate thickness for structural consistency and welding control.</div></figcaption>
+      </figure>
+      <figure class="ssb-measure-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-measure-rod-dia-5mm.jpg" alt="Self-stacking belt cross rod diameter measurement" decoding="async" loading="lazy">
+        <figcaption class="ssb-measure-body"><div class="ssb-measure-kicker">Rod Check</div><div class="ssb-measure-title">Cross Rod Diameter</div><div class="ssb-measure-note">Confirms rod diameter for load support, engagement stability, and repeat matching.</div></figcaption>
+      </figure>
+      <figure class="ssb-measure-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-measure-rod-pitch-30mm.jpg" alt="Self-stacking belt rod pitch measurement" decoding="async" loading="lazy">
+        <figcaption class="ssb-measure-body"><div class="ssb-measure-kicker">Pitch Check</div><div class="ssb-measure-title">Rod Pitch Measurement</div><div class="ssb-measure-note">Checks rod spacing because it affects belt geometry and sprocket-related fit.</div></figcaption>
+      </figure>
+      <figure class="ssb-measure-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-measure-spiral-pitch-9mm.jpg" alt="Self-stacking belt spiral pitch measurement" decoding="async" loading="lazy">
+        <figcaption class="ssb-measure-body"><div class="ssb-measure-kicker">Mesh Geometry</div><div class="ssb-measure-title">Spiral Pitch Measurement</div><div class="ssb-measure-note">Verifies mesh pitch for opening size, contraction behavior, and product support.</div></figcaption>
+      </figure>
+      <figure class="ssb-measure-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-measure-spiral-wire-dia-1-7mm.jpg" alt="Self-stacking belt spiral wire diameter measurement" decoding="async" loading="lazy">
+        <figcaption class="ssb-measure-body"><div class="ssb-measure-kicker">Wire Check</div><div class="ssb-measure-title">Spiral Wire Diameter</div><div class="ssb-measure-note">Confirms wire diameter for flexibility, belt weight, strength, and repeat production.</div></figcaption>
+      </figure>
+      <figure class="ssb-measure-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-material-test-real-01.jpg" alt="Self-stacking belt material composition verification by analyzer" decoding="async" loading="lazy">
+        <figcaption class="ssb-measure-body"><div class="ssb-measure-kicker">Material Check</div><div class="ssb-measure-title">Material Composition Verification</div><div class="ssb-measure-note">Material is checked as part of the quality-control record for food and industrial use.</div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="sec-divider"/>
+
 <section class="stack-module" aria-labelledby="stack-h2">
   <div class="container">
     <div class="stack-grid">
@@ -838,13 +934,15 @@ img{max-width:100%;height:auto;display:block}
       </div>
 
       <div style="display:flex;flex-direction:column;gap:14px">
-        <figure id="ssb-hero-video-slot" data-asset-slot="self-stacking-belt/hero-video" class="media-card proof-media" style="border-color:rgba(255,255,255,.10)">
-          <video src="assets/product-media/self-stacking-belt/ssb-s6-stack-test-video.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
-          <figcaption class="media-caption"><div class="media-kicker">Stack Test Video</div><div class="media-title">Stacking behavior checked before release</div><div class="media-note">Muted loop showing the production / verification context for self-stacker projects.</div></figcaption>
+        <figure id="ssb-stack-proof-slot" data-asset-slot="self-stacking-belt/stack-test-proof" class="media-card proof-media" style="border-color:rgba(255,255,255,.10)">
+          <video class="media-video" autoplay muted loop playsinline preload="metadata" poster="assets/product-media/self-stacking-belt/ssb-stack-test-real-01.jpg" aria-label="Self-stacking belt stack test video showing upper and lower engagement before release">
+            <source src="assets/product-media/self-stacking-belt/ssb-online-self-stacking-belt-source.mp4" type="video/mp4">
+          </video>
+          <figcaption class="media-caption"><div class="media-kicker">Stacking Geometry Video</div><div class="media-title">Stacking behavior checked before release</div><div class="media-note">Real factory video showing stacked self-stacking belt geometry before release.</div></figcaption>
         </figure>
         <div class="g2" style="gap:14px">
-          <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-s6-stack-test.jpg" alt="Self-stacker belt stack test proof photo"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Stack Test Photo</div></figcaption></figure>
-          <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-s6-engagement.jpg" alt="Upper and lower engagement close-up for self-stacker belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Upper / Lower Engagement</div></figcaption></figure>
+          <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-stack-test-real-01.jpg" alt="Self-stacker belt stack test proof photo" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Stacking Geometry Test</div></figcaption></figure>
+          <figure class="media-card detail-tile"><video class="media-video" autoplay muted loop playsinline preload="metadata" poster="assets/product-media/self-stacking-belt/ssb-finished-stacked-real-01.jpg" aria-label="Self-stacker belt stack test close-up video for engagement confirmation"><source src="assets/product-media/self-stacking-belt/ssb-s6-stack-test-video.mp4" type="video/mp4"></video><figcaption class="media-caption"><div class="media-title">Stack Test Video</div></figcaption></figure>
         </div>
       </div>
     </div>
@@ -922,12 +1020,12 @@ img{max-width:100%;height:auto;display:block}
 
       <div style="display:flex;flex-direction:column;gap:14px">
         <figure class="media-card proof-media" style="border-color:rgba(255,255,255,.10)">
-          <img src="assets/product-media/self-stacking-belt/ssb-s7-welder-fixture.jpg" alt="Self-stacker belt welding fixture and structural control proof"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-welding-fixture-real-01.jpg" alt="Self-stacker belt welding fixture and structural control proof" decoding="async" loading="lazy">
           <figcaption class="media-caption"><div class="media-kicker">Fixture Control</div><div class="media-title">Welding structure held for repeatable geometry</div><div class="media-note">Proof position for fixture-controlled welding and stacking plate consistency.</div></figcaption>
         </figure>
         <div class="g2" style="gap:14px">
-          <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-s7-fixture.jpg" alt="Custom fixture close-up for self-stacker belt production"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Custom Fixture Close-Up</div></figcaption></figure>
-          <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-s7-weld-detail.jpg" alt="Self-stacker belt weld detail close-up"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Weld Detail Close-Up</div></figcaption></figure>
+          <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-welding-fixture-real-01.jpg" alt="Custom fixture close-up for self-stacker belt production" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Welding Setup View</div></figcaption></figure>
+          <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-weld-detail-real-01.jpg" alt="Self-stacker belt weld detail close-up" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Weld Position Detail</div></figcaption></figure>
         </div>
       </div>
     </div>
@@ -962,7 +1060,7 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div>
         <figure class="media-card proof-media">
-          <img src="assets/product-media/self-stacking-belt/ssb-s8-weld-position.jpg" alt="Self-stacker belt stacking plate weld position inspection"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-weld-detail-real-01.jpg" alt="Self-stacker belt stacking plate weld position inspection" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Weld Position Inspection</div>
             <div class="media-title">Stacking Plate Position Check</div>
@@ -1089,14 +1187,14 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <figure class="media-card detail-tile">
-          <img src="assets/product-media/self-stacking-belt/ssb-s10-chain-pitch.jpg" alt="Self-stacker belt chain pitch verification"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-s10-chain-pitch.jpg" alt="Self-stacker belt chain pitch verification" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Drive Matching</div>
             <div class="media-title">Chain Pitch Measurement</div>
           </figcaption>
         </figure>
         <figure class="media-card detail-tile">
-          <img src="assets/product-media/self-stacking-belt/ssb-s10-sprocket.jpg" alt="Matched sprocket for self-stacker belt drive system"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-s10-sprocket.jpg" alt="Matched sprocket for self-stacker belt drive system" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Matched Parts</div>
             <div class="media-title">Sprocket Engagement Support</div>
@@ -1151,14 +1249,14 @@ img{max-width:100%;height:auto;display:block}
     <div style="margin-top:24px">
       <div class="g2" style="gap:14px">
         <figure class="media-card detail-tile">
-          <img src="assets/product-media/self-stacking-belt/ssb-s11-replacement-match.jpg" alt="Self-stacker belt replacement matching reference"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-finished-stacked-real-01.jpg" alt="Self-stacking belt finished stacked structure for replacement matching review" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Replacement Matching</div>
             <div class="media-title">Old Sample to New Belt Review</div>
           </figcaption>
         </figure>
         <figure class="media-card detail-tile">
-          <img src="assets/product-media/self-stacking-belt/ssb-s11-spare-parts.jpg" alt="Matched spare parts for self-stacker belt replacement projects"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-s11-spare-parts.jpg" alt="Matched spare parts for self-stacker belt replacement projects" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Spare Parts</div>
             <div class="media-title">Matched Components Support</div>
@@ -1197,14 +1295,14 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <figure class="media-card detail-tile">
-          <img src="assets/product-media/self-stacking-belt/ssb-s12-electropolish.jpg" alt="Self-stacker belt bright surface finish after treatment"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-material-test-real-01.jpg" alt="Self-stacker belt bright surface finish after treatment" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Surface Finish</div>
             <div class="media-title">Clean Belt Surface</div>
           </figcaption>
         </figure>
         <figure class="media-card detail-tile">
-          <img src="assets/product-media/self-stacking-belt/ssb-s12-packing.png" alt="Export packing proof for self-stacker belt shipment"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-s12-packing.png" alt="Export packing proof for self-stacker belt shipment" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Export Packing</div>
             <div class="media-title">Shipment-Ready Protection</div>
@@ -1354,7 +1452,7 @@ img{max-width:100%;height:auto;display:block}
       <!-- Col 1: Brand & Proof -->
       <div>
         <div class="foot-logo-row">
-          <img src="assets/yiyi-logo-source.jpg" alt="YIYI Mesh Belt" class="foot-logo-img" / decoding="async" loading="lazy">
+          <img src="assets/yiyi-logo-source.jpg" alt="YIYI Mesh Belt" class="foot-logo-img" decoding="async" loading="lazy">
           <span class="foot-brand">YIYI MESH BELT</span>
           <span class="foot-slogan">PROVEN &#183; STABLE &#183; VERIFIED</span>
           <span class="foot-identity">Metal Conveyor Belt Manufacturer<br>for OEMs &amp; Distributors</span>
@@ -1372,7 +1470,7 @@ img{max-width:100%;height:auto;display:block}
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> ISO 9001 Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> SGS Audited</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Third-Party Audit Welcome</span>
         </div>
@@ -1486,7 +1584,7 @@ img{max-width:100%;height:auto;display:block}
       <span class="foot-copy" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
         <a href="privacy-policy.html" style="color:#8FA8C0;text-decoration:none;font-size:12px">Privacy Policy</a>
         <span style="color:#4A6080">&#183;</span>
-        <span>ISO 9001 Certified &#183; DUNS Registered &#183; SGS Audited</span>
+        <span>ISO 9001 Certified &#183; Food Contact Safety Certified &#183; National High-Tech Enterprise</span>
       </span>
     </div>
   </div>
@@ -1577,6 +1675,15 @@ document.addEventListener('click', () => document.querySelectorAll('.nd').forEac
 <script src="assets/site-shell.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 

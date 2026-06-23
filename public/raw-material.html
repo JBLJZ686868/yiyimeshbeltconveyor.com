@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -59,7 +59,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
-/* 鈹€鈹€ Design System 鈹€鈹€ */
+/* ── Design System ── */
 :root{
   --navy:#0B1F3A;--navy-hero:#071629;--navy-mid:#0e2544;
   --steel:#1C3A5E;--blue:#1F5C9E;--sky:#4A8CC8;
@@ -76,7 +76,7 @@ body{font-family:var(--font-sans);color:var(--ink);background:var(--white);-webk
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto;display:block}
 
-/* 鈹€鈹€ Layout 鈹€鈹€ */
+/* ── Layout ── */
 .container{max-width:1100px;margin:0 auto;padding:0 24px}
 @media(max-width:600px){.container{padding:0 16px}}
 .sec{padding:80px 0}
@@ -86,7 +86,7 @@ img{max-width:100%;height:auto;display:block}
 .sec-steel{background:var(--steel)}
 @media(max-width:768px){.sec{padding:56px 0}}
 
-/* 鈹€鈹€ Breadcrumb 鈹€鈹€ */
+/* ── Breadcrumb ── */
 .breadcrumb{background:var(--bg);border-bottom:1px solid var(--border);padding:12px 0}
 .bc-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .bc-a{font-size:13px;color:var(--ink3);transition:color .18s}
@@ -94,7 +94,7 @@ img{max-width:100%;height:auto;display:block}
 .bc-sep{font-size:13px;color:var(--ink3)}
 .bc-cur{font-size:13px;color:var(--ink2);font-weight:500}
 
-/* 鈹€鈹€ Typography 鈹€鈹€ */
+/* ── Typography ── */
 .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
 .eyebrow-lt{color:rgba(200,146,42,.85)}
 .sec-h2{font-size:clamp(20px,3vw,30px);font-weight:800;color:var(--ink);line-height:1.2;letter-spacing:-.02em;margin-bottom:16px}
@@ -103,7 +103,7 @@ img{max-width:100%;height:auto;display:block}
 .body-p:last-child{margin-bottom:0}
 .body-p-lt{color:rgba(255,255,255,.62)}
 
-/* 鈹€鈹€ Buttons 鈹€鈹€ */
+/* ── Buttons ── */
 .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:white;padding:13px 28px;border-radius:7px;font-size:15px;font-weight:600;text-decoration:none;transition:all .2s;font-family:var(--font-sans)}
 .btn-primary:hover{background:#b07820;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,146,42,.30)}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--sky);color:var(--sky);padding:11px 24px;border-radius:7px;font-size:15px;font-weight:500;text-decoration:none;transition:all .2s;background:transparent;font-family:var(--font-sans)}
@@ -113,13 +113,13 @@ img{max-width:100%;height:auto;display:block}
 .btn-ghost{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);color:var(--ink2);padding:10px 20px;border-radius:7px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;background:white;font-family:var(--font-sans)}
 .btn-ghost:hover{border-color:var(--sky);color:var(--sky)}
 
-/* 鈹€鈹€ Two-col 鈹€鈹€ */
+/* ── Two-col ── */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .two-col.center{align-items:center}
 .two-col.rev{direction:rtl}.two-col.rev>*{direction:ltr}
 @media(max-width:768px){.two-col{grid-template-columns:1fr;gap:36px}}
 
-/* 鈹€鈹€ Grids 鈹€鈹€ */
+/* ── Grids ── */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .g2-img{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -139,7 +139,7 @@ img{max-width:100%;height:auto;display:block}
 .rm-photo-xl{min-height:460px}
 .rm-photo.dark{border-color:rgba(255,255,255,.10);box-shadow:none}
 
-/* 鈹€鈹€ Proof strip 鈹€鈹€ */
+/* ── Proof strip ── */
 .proof-strip{background:var(--navy);padding:0}
 .ps-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap}
 .ps-item{display:flex;align-items:center;gap:10px;padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);flex:1;min-width:180px}
@@ -149,14 +149,14 @@ img{max-width:100%;height:auto;display:block}
 @media(max-width:768px){.ps-item{min-width:50%;border-bottom:1px solid rgba(255,255,255,.06)}}
 @media(max-width:420px){.ps-item{min-width:100%}}
 
-/* 鈹€鈹€ Tags 鈹€鈹€ */
+/* ── Tags ── */
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .tag{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:4px;display:inline-flex;align-items:center;gap:5px}
 .tag-blue{color:var(--sky);background:rgba(74,140,200,.10);border:1px solid rgba(74,140,200,.22)}
 .tag-gold{color:var(--gold);background:rgba(200,146,42,.10);border:1px solid rgba(200,146,42,.22)}
 .tag-green{color:var(--success);background:rgba(26,107,58,.10);border:1px solid rgba(26,107,58,.22)}
 
-/* 鈹€鈹€ Check list 鈹€鈹€ */
+/* ── Check list ── */
 .check-list{display:flex;flex-direction:column;gap:10px;margin-top:20px}
 .cl-item{display:flex;align-items:flex-start;gap:11px}
 .cl-ico{width:18px;height:18px;color:var(--sky);flex-shrink:0;margin-top:2px}
@@ -165,7 +165,7 @@ img{max-width:100%;height:auto;display:block}
 .cl-text{font-size:14px;color:var(--ink2);line-height:1.60}
 .cl-text strong{color:var(--ink);font-weight:600;display:block;margin-bottom:1px}
 
-/* 鈹€鈹€ Equipment card 鈹€鈹€ */
+/* ── Equipment card ── */
 .eq-card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;position:relative;overflow:hidden;transition:box-shadow .2s,border-color .2s}
 .eq-card:hover{box-shadow:var(--shadow);border-color:#C8D8E8}
 .eq-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold)}
@@ -180,25 +180,25 @@ img{max-width:100%;height:auto;display:block}
 .eq-spec-val{font-family:var(--font-mono);font-weight:600;color:var(--ink)}
 .eq-desc{font-size:13px;color:var(--ink2);line-height:1.65;margin-top:8px}
 
-/* 鈹€鈹€ Stat cards 鈹€鈹€ */
+/* ── Stat cards ── */
 .stat-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
 .stat-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;flex:1;min-width:160px}
 .stat-num{font-family:var(--font-mono);font-size:28px;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
 .stat-num span{color:var(--gold)}
 .stat-label{font-size:12px;color:var(--ink3);text-transform:uppercase;letter-spacing:.06em}
 
-/* 鈹€鈹€ Link label box 鈹€鈹€ */
+/* ── Link label box ── */
 .label-box{display:inline-flex;align-items:center;gap:8px;background:rgba(74,140,200,.08);border:1px solid rgba(74,140,200,.20);border-radius:6px;padding:8px 16px;margin-top:20px}
 .label-box span{font-family:var(--font-mono);font-size:11px;letter-spacing:.10em;text-transform:uppercase;color:var(--sky)}
 
-/* 鈹€鈹€ Value cards 鈹€鈹€ */
+/* ── Value cards ── */
 .val-card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;transition:box-shadow .2s}
 .val-card:hover{box-shadow:var(--shadow)}
 .val-ico{width:28px;height:28px;color:var(--gold);margin-bottom:12px}
 .val-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px}
 .val-desc{font-size:13px;color:var(--ink2);line-height:1.65}
 
-/* 鈹€鈹€ Chain graphic (S10 link visual) 鈹€鈹€ */
+/* ── Chain graphic (S10 link visual) ── */
 .chain-block{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin-top:32px}
 .chain-node{background:white;border:2px solid var(--sky);border-radius:8px;padding:14px 20px;text-align:center;min-width:140px}
 .chain-node.gold{border-color:var(--gold)}
@@ -207,7 +207,7 @@ img{max-width:100%;height:auto;display:block}
 .chain-arrow{font-size:22px;color:var(--ink3);padding:0 12px;align-self:center}
 @media(max-width:600px){.chain-block{flex-direction:column;gap:8px}.chain-arrow{transform:rotate(90deg)}}
 
-/* 鈹€鈹€ Internal links 鈹€鈹€ */
+/* ── Internal links ── */
 .il-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .il-card{display:flex;align-items:center;gap:12px;padding:16px 18px;background:white;border:1px solid var(--border);border-radius:var(--radius);transition:all .2s;text-decoration:none;flex:1;min-width:180px}
 .il-card:hover{border-color:var(--sky);box-shadow:var(--shadow);transform:translateY(-2px)}
@@ -217,7 +217,7 @@ img{max-width:100%;height:auto;display:block}
 .il-arrow{margin-left:auto;color:var(--ink3);flex-shrink:0;transition:color .18s}
 .il-card:hover .il-arrow{color:var(--sky)}
 
-/* 鈹€鈹€ FAQ 鈹€鈹€ */
+/* ── FAQ ── */
 .faq-list{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
 .faq-item{border-bottom:1px solid var(--border)}
 .faq-item:last-child{border-bottom:none}
@@ -230,7 +230,7 @@ img{max-width:100%;height:auto;display:block}
 .faq-item.open .faq-a{display:block}
 .faq-a p{font-size:14px;color:var(--ink2);line-height:1.75}
 
-/* 鈹€鈹€ Dark strip 鈹€鈹€ */
+/* ── Dark strip ── */
 .dark-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:var(--radius);overflow:hidden;margin-top:40px}
 @media(max-width:768px){.dark-strip{grid-template-columns:1fr 1fr}}
 .ds-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);padding:24px 18px;text-align:center;transition:background .18s}
@@ -239,7 +239,7 @@ img{max-width:100%;height:auto;display:block}
 .ds-title{font-size:13px;font-weight:700;color:white;margin-bottom:5px}
 .ds-desc{font-size:12px;color:rgba(255,255,255,.42);line-height:1.55}
 
-/* 鈹€鈹€ Hero 鈹€鈹€ */
+/* ── Hero ── */
 .rm-hero{background:var(--navy-hero);padding:88px 0 0;position:relative;overflow:hidden}
 .rm-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 62% 45%,rgba(31,92,158,.22) 0%,transparent 60%);pointer-events:none}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
@@ -252,14 +252,14 @@ img{max-width:100%;height:auto;display:block}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px;padding-bottom:72px}
 .hero-img-col{align-self:end}
 
-/* 鈹€鈹€ Hero key stats 鈹€鈹€ */
+/* ── Hero key stats ── */
 .hero-stats{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:24px;padding:18px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
 .hs-item{display:flex;flex-direction:column;gap:3px}
 .hs-val{font-family:var(--font-mono);font-size:20px;font-weight:700;color:white;letter-spacing:-.02em}
 .hs-val span{color:var(--gold)}
 .hs-label{font-size:11px;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.06em}
 
-/* 鈹€鈹€ CTA 鈹€鈹€ */
+/* ── CTA ── */
 .cta-sec{background:var(--navy-hero);padding:88px 0}
 .cta-inner{text-align:center;max-width:680px;margin:0 auto}
 .cta-h2{font-size:clamp(20px,3vw,32px);font-weight:800;color:white;margin-bottom:12px;letter-spacing:-.02em;line-height:1.25}
@@ -267,7 +267,7 @@ img{max-width:100%;height:auto;display:block}
 .cta-p{font-size:16px;color:rgba(255,255,255,.55);line-height:1.70;margin-bottom:36px}
 .cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 
-/* 鈹€鈹€ Divider 鈹€鈹€ */
+/* ── Divider ── */
 .sec-divider{border:none;border-top:1px solid var(--border);margin:0}
 </style>
 <link rel="stylesheet" href="assets/site-refinement.css"/>
@@ -295,7 +295,7 @@ img{max-width:100%;height:auto;display:block}
       <div class="tb-badges">
         <span class="tb-badge"><span class="tb-dot"></span>Manufacturing Since 1998</span>
         <span class="tb-badge"><span class="tb-dot"></span>ISO 9001 Certified</span>
-        <span class="tb-badge"><span class="tb-dot"></span>DUNS Registered</span>
+        <span class="tb-badge"><span class="tb-dot"></span>Food Contact Safety Certified</span>
       </div>
     </div>
     <div class="tb-langs">
@@ -440,7 +440,7 @@ img{max-width:100%;height:auto;display:block}
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Automated Welding</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Manufacturing Proof</span></a>
               <a href="raw-material.html" class="dl"><span class="dl-icon">&#129523;</span><span class="dl-label">In-House Wire Drawing</span></a>
               <a href="quality-control.html" class="dl"><span class="dl-icon">&#9989;</span><span class="dl-label">Quality Control</span></a>
               <a href="global-delivery.html" class="dl"><span class="dl-icon">&#128230;</span><span class="dl-label">Packaging &amp; Export</span></a>
@@ -544,7 +544,7 @@ img{max-width:100%;height:auto;display:block}
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
       <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
-<a href="manufacturing.html" class="mob-link">Automated Welding</a>
+<a href="manufacturing.html" class="mob-link">Manufacturing Proof</a>
       <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
       <a href="quality-control.html" class="mob-link">Quality Control</a>
       <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
@@ -1185,6 +1185,31 @@ img{max-width:100%;height:auto;display:block}
   </div>
 </section>
 
+<section class="asset-proof-section dark" id="raw-material-testing-library">
+  <div class="asset-proof-inner">
+    <div class="asset-proof-head">
+      <div class="asset-proof-kicker">Raw Material Testing Library</div>
+      <h2>Raw material proof is separated from customer project files.</h2>
+      <p>Material testing evidence is treated as a quality asset, not as a customer case asset. This keeps raw material control, mill certification, magnetic discussion, wire drawing, alloy verification, and food-contact testing easy to use on quality pages while protecting order details.</p>
+    </div>
+    <div class="asset-proof-grid">
+      <div class="asset-proof-card"><span class="asset-proof-number">307</span><strong>Testing visuals for review</strong><p>Raw material photos and testing images can support this page after face, background, and document checks.</p></div>
+      <div class="asset-proof-card"><span class="asset-proof-number">35</span><strong>Testing video candidates</strong><p>Material preparation, wire control, testing process, and related proof clips are grouped as raw-material-testing-video.</p></div>
+      <div class="asset-proof-card"><span class="asset-proof-number">459</span><strong>Internal references</strong><p>Reports, standards, and source documents stay internal unless converted into a safe public summary.</p></div>
+      <div class="asset-proof-card"><span class="asset-proof-number">1,504</span><strong>Internal-only records</strong><p>Customer-linked material files, certificates with sensitive references, or document screenshots remain internal.</p></div>
+    </div>
+    <div class="asset-proof-rules">
+      <div class="asset-proof-rule"><b>Public naming</b><code>yiyi-raw-material-testing-0001.jpg</code> for clean visual proof.</div>
+      <div class="asset-proof-rule"><b>Video naming</b><code>yiyi-raw-material-testing-video-0001.mp4</code> for testing and material preparation clips.</div>
+      <div class="asset-proof-rule"><b>Document handling</b>Reports are summarized for buyers; raw customer-linked files stay internal.</div>
+    </div>
+    <div class="asset-proof-actions">
+      <a class="asset-proof-link" href="quality-control.html">Connect to Quality Control</a>
+      <a class="asset-proof-link secondary" href="contact.html?intent=quality&source=raw-material-testing">Request Material Proof</a>
+    </div>
+  </div>
+</section>
+
 <section class="cta-sec">
   <div class="cta-inner">
     <div class="eyebrow eyebrow-lt" style="text-align:center">GET IN TOUCH</div>
@@ -1230,9 +1255,9 @@ img{max-width:100%;height:auto;display:block}
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> ISO 9001 Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> SGS Audited</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> DUNS Registered</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
         </div>
       </div>
 
@@ -1304,7 +1329,7 @@ img{max-width:100%;height:auto;display:block}
       <span class="foot-copy" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
         <a href="privacy-policy.html" style="color:#8FA8C0;text-decoration:none;font-size:12px">Privacy Policy</a>
         <span style="color:#4A6080">&#183;</span>
-        <span>ISO 9001 Certified &#183; DUNS Registered &#183; SGS Audited</span>
+        <span>ISO 9001 Certified &#183; Food Contact Safety Certified &#183; National High-Tech Enterprise</span>
       </span>
     </div>
   </div>
@@ -1396,6 +1421,7 @@ document.addEventListener('click', () => document.querySelectorAll('.nd').forEac
 <script src="assets/site-shell.js"></script>
 </body>
 </html>
+
 
 
 

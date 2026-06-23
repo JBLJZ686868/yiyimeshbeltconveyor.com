@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"Flat Wire Conveyor Belt","description":"Stainless steel flat wire honeycomb mesh belt for baking oven and food processing applications. Pressed flat surface for uniform product contact. Robotic welded. Drum diameter verified.","brand":{"@type":"Brand","name":"YIYI Mesh Belt"},"manufacturer":{"@type":"Organization","name":"YIYI Mesh Belt","address":{"@type":"PostalAddress","streetAddress": "Huaihe East Road", "addressLocality": "Ningjin", "addressRegion": "Shandong", "postalCode": "253400", "addressCountry": "CN"}},"url":"https://www.yiyimeshbelt.com/flat-wire-belt.html"}
+{"@context":"https://schema.org","@type":"Product","name":"Flat Wire Conveyor Belt","description":"Stainless steel flat wire honeycomb mesh belt for baking oven and food processing applications. Pressed flat surface for uniform product contact. Production controlled. system fit verified.","brand":{"@type":"Brand","name":"YIYI Mesh Belt"},"manufacturer":{"@type":"Organization","name":"YIYI Mesh Belt","address":{"@type":"PostalAddress","streetAddress": "Huaihe East Road", "addressLocality": "Ningjin", "addressRegion": "Shandong", "postalCode": "253400", "addressCountry": "CN"}},"url":"https://www.yiyimeshbelt.com/flat-wire-belt.html"}
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -156,7 +156,7 @@ a{text-decoration:none;color:inherit}
 .rs-num{width:52px;height:52px;border-radius:50%;background:rgba(31,92,158,.3);border:2px solid rgba(31,92,158,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-family:var(--fm);font-size:13px;font-weight:700;color:#4A8CC8}
 .rs-title{font-size:13px;font-weight:700;color:white;margin-bottom:5px}
 .rs-desc{font-size:11px;color:rgba(255,255,255,.4);line-height:1.6}
-/* DRUM TEST */
+/* Final Inspection */
 .drum-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
 @media(min-width:768px){.drum-grid{grid-template-columns:1fr 1fr}}
 .drum-steps{display:flex;flex-direction:column;gap:16px}
@@ -180,7 +180,7 @@ a{text-decoration:none;color:inherit}
 .qp-title{font-size:14px;font-weight:700;color:var(--tp);margin-bottom:6px}
 .qp-items{display:flex;flex-direction:column;gap:4px}
 .qp-item{font-size:12px;color:var(--tb);display:flex;gap:6px;align-items:flex-start}
-.qp-item::before{content:'\\2713';color:#22C55E;font-weight:700;flex-shrink:0;margin-top:1px}
+.qp-item::before{content:'?';color:#22C55E;font-weight:700;flex-shrink:0;margin-top:1px}
 /* FAQ */
 .faq-list{max-width:860px}
 .faq-item{background:white;border:1px solid var(--bl);border-radius:8px;margin-bottom:10px;overflow:hidden;transition:border-color .2s}
@@ -209,7 +209,7 @@ a{text-decoration:none;color:inherit}
 .tsi{max-width:1280px;margin:0 auto;padding:14px 2rem;display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
 @media(min-width:1024px){.tsi{justify-content:space-between}}
 .tsc{font-family:var(--fm);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.7)}
-.tsc::before{content:'\\2713';color:#4ADE80}
+.tsc::before{content:'?';color:#4ADE80}
 /* CTA */
 .cta-sec{background:linear-gradient(135deg,#0A1929,#0F2438);padding:80px 0;text-align:center}
 .cta-sec h2{font-size:clamp(24px,3.5vw,40px);color:white;margin-bottom:12px}
@@ -217,7 +217,7 @@ a{text-decoration:none;color:inherit}
 .cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 .cta-tr{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:24px}
 .cta-ti{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:5px}
-.cta-ti::before{content:'\\2713';color:#4ADE80}
+.cta-ti::before{content:'?';color:#4ADE80}
 /* RELATED PRODUCTS */
 .rel-g{display:grid;grid-template-columns:1fr;gap:14px}
 @media(min-width:640px){.rel-g{grid-template-columns:1fr 1fr}}
@@ -276,7 +276,11 @@ a{text-decoration:none;color:inherit}
     .foot-brand { font-size: 16px; font-weight: 700; letter-spacing: .08em; color: white; margin-bottom: 5px; display: block; }
     .foot-slogan { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #C8922A; margin-bottom: 8px; display: block; }
     .foot-identity { font-size: 12px; color: rgba(255,255,255,.40); line-height: 1.6; max-width: 240px; display: block; margin-bottom: 0; }
-  </style>
+  
+/* Layout breathing and clean product-photo system */
+html,body{max-width:100%;overflow-x:hidden}
+.prod-hero{padding:86px 0 92px}.ph-grid{gap:64px}.hero-desc{line-height:1.9;max-width:620px}.ph-img,.media-card.hero-media{background:#fff;border-color:rgba(255,255,255,.22);box-shadow:0 22px 54px rgba(0,0,0,.18)}.ph-img{padding:24px}.ph-img img,.media-card.hero-media img{object-fit:contain;object-position:center center;background:#fff}.sw,.sl,.sd,.sn{padding:92px 0}.sh{margin-bottom:48px}.sh p{line-height:1.9;max-width:760px}.photo-g{gap:28px}.media-card.product-tile,.media-card.detail-tile,.photo-box.has-img{background:#fff;border-radius:14px;box-shadow:0 16px 38px rgba(11,31,58,.08)}.media-card.product-tile img,.media-card.detail-tile img,.photo-box.has-img img{object-fit:contain;background:#fff;padding:12px}.media-caption{padding:20px 22px}.feat-g,.app-g,.mat-g,.qp-g,.rel-g{gap:22px}.feat-box,.app-card,.mat-card,.qp-card,.rel-card{padding:30px}.fb-desc,.ac-desc,.mc-desc,.qp-item,.rc-desc{line-height:1.78}@media(max-width:768px){.prod-hero{padding:68px 0 74px}.ph-grid{gap:38px}.ph-img{padding:16px}.sw,.sl,.sd,.sn{padding:68px 0}.sh{margin-bottom:34px}.photo-g{gap:20px}.feat-box,.app-card,.mat-card,.qp-card,.rel-card{padding:24px}.media-card.product-tile,.media-card.detail-tile{min-height:260px}}
+</style>
 <link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
 <body>
@@ -301,7 +305,7 @@ a{text-decoration:none;color:inherit}
       <div class="tb-badges">
         <span class="tb-badge"><span class="tb-dot"></span>Manufacturing Since 1998</span>
         <span class="tb-badge"><span class="tb-dot"></span>ISO 9001 Certified</span>
-        <span class="tb-badge"><span class="tb-dot"></span>DUNS Registered</span>
+        <span class="tb-badge"><span class="tb-dot"></span>Food Contact Safety Certified</span>
       </div>
     </div>
     <div class="tb-langs">
@@ -431,7 +435,7 @@ a{text-decoration:none;color:inherit}
               <div class="two-col-side">
                 <div class="eeat-card">
                   <div class="eeat-tag">Expertise</div>
-                  <p class="eeat-title">Drawing to drum test - every order verified.</p>
+                  <p class="eeat-title">Drawing to final inspection - every order verified.</p>
                   <a href="engineering-oem.html" class="eeat-link">Start Engineering Review &#8594;</a>
                 </div>
               </div>
@@ -446,7 +450,7 @@ a{text-decoration:none;color:inherit}
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Automated Welding</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Manufacturing Proof</span></a>
               <a href="raw-material.html" class="dl"><span class="dl-icon">&#129523;</span><span class="dl-label">In-House Wire Drawing</span></a>
               <a href="quality-control.html" class="dl"><span class="dl-icon">&#9989;</span><span class="dl-label">Quality Control</span></a>
               <a href="global-delivery.html" class="dl"><span class="dl-icon">&#128230;</span><span class="dl-label">Packaging &amp; Export</span></a>
@@ -550,7 +554,7 @@ a{text-decoration:none;color:inherit}
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
       <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
-<a href="manufacturing.html" class="mob-link">Automated Welding</a>
+<a href="manufacturing.html" class="mob-link">Manufacturing Proof</a>
       <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
       <a href="quality-control.html" class="mob-link">Quality Control</a>
       <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
@@ -595,7 +599,7 @@ a{text-decoration:none;color:inherit}
 </div>
 <div class="ph-facts"><div class="ph-fact"><div class="ph-fn">Flat</div><div class="ph-fl">Pressed Surface</div></div><div class="ph-fact"><div class="ph-fn">SUS304</div><div class="ph-fl">Baking Standard</div></div><div class="ph-fact"><div class="ph-fn">Custom</div><div class="ph-fl">All Widths</div></div><div class="ph-fact"><div class="ph-fn">Sample</div><div class="ph-fl">Review Path</div></div></div>
 </div>
-<div class="ph-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-conveyor-belt-product-overview.jpg" alt="Flat wire honeycomb conveyor belt product overview for baking oven and food processing"/ decoding="async" loading="eager" fetchpriority="high"></div>
+<div class="ph-img"><img src="assets/product-media/flat-wire-belt/flat-wire-belt-clean-white-01.webp" alt="Flat wire honeycomb conveyor belt product overview for baking oven and food processing" decoding="async" loading="eager" fetchpriority="high"></div>
 </div></div>
 </section>
 
@@ -604,7 +608,7 @@ a{text-decoration:none;color:inherit}
 <div class="sh"><div class="ew">TECHNICAL SPECIFICATIONS</div><h2>Full Parameter Reference</h2><p>All dimensions custom per OEM drawing. Confirmed with engineering team before production begins. No standard fixed sizes.</p></div>
 <div class="spec-wrap"><table class="spec-table">
 <thead><tr><th>Parameter</th><th>Specification</th><th>Notes</th></tr></thead>
-<tbody><tr><td>Wire Diameter</td><td>1.2mm-4.0mm  &#183;  Custom</td><td>In-house drawn, all diameters tested</td></tr><tr><td>Spiral Pitch</td><td>Custom per OEM drawing</td><td>Determines surface flatness and open area balance</td></tr><tr><td>Rod Pitch</td><td>Custom per OEM drawing</td><td>Structural calculation per load and oven length</td></tr><tr><td>Belt Width</td><td>Custom - 200mm to 3,500mm+</td><td>Confirmed to oven manufacturer drawing</td></tr><tr><td>Surface Profile</td><td>Flat pressed - both faces</td><td>Minimises product marking on direct-contact surface</td></tr><tr><td>Open Area</td><td>20%-55% (pitch dependent)</td><td>Balance between airflow and flat surface requirement</td></tr><tr><td>Material Grades</td><td>SUS304 / SUS316L / Carbon Steel</td><td>SUS304 standard for baking; SUS316L for washdown</td></tr><tr><td>Temperature Range</td><td>Ambient to 800&#176;C (SUS304)</td><td>Baking oven rated; furnace grades available</td></tr><tr><td>Surface Finish</td><td>Natural / Electro-polished</td><td>Electro-polished for premium food contact hygiene</td></tr><tr><td>Edge Construction</td><td>Welded or formed - per spec</td><td>Flat wire compatible edge variants available</td></tr><tr><td>Drum Test</td><td>100% - every belt before shipment</td><td>Engagement at target drum diameter verified</td></tr><tr><td>Weld Method</td><td>Robotic automated welding</td><td>5-robot system, consistent weld geometry</td></tr><tr><td>Lead Time</td><td>15-25 working days from drawing</td><td>Standard production batch</td></tr></tbody>
+<tbody><tr><td>Wire Diameter</td><td>1.2mm-4.0mm  &#183;  Custom</td><td>In-house drawn, all diameters tested</td></tr><tr><td>Spiral Pitch</td><td>Custom per OEM drawing</td><td>Determines surface flatness and open area balance</td></tr><tr><td>Rod Pitch</td><td>Custom per OEM drawing</td><td>Structural calculation per load and oven length</td></tr><tr><td>Belt Width</td><td>Custom - 200mm to 3,500mm+</td><td>Confirmed to oven manufacturer drawing</td></tr><tr><td>Surface Profile</td><td>Flat pressed - both faces</td><td>Minimises product marking on direct-contact surface</td></tr><tr><td>Open Area</td><td>20%-55% (pitch dependent)</td><td>Balance between airflow and flat surface requirement</td></tr><tr><td>Material Grades</td><td>SUS304 / SUS316L / Carbon Steel</td><td>SUS304 standard for baking; SUS316L for washdown</td></tr><tr><td>Temperature Range</td><td>Ambient to 800&#176;C (SUS304)</td><td>Baking oven rated; furnace grades available</td></tr><tr><td>Surface Finish</td><td>Natural / Electro-polished</td><td>Electro-polished for premium food contact hygiene</td></tr><tr><td>Edge Construction</td><td>Welded or formed - per spec</td><td>Flat wire compatible edge variants available</td></tr><tr><td>Final Inspection</td><td>100% - every belt before shipment</td><td>Engagement at target system fit verified</td></tr><tr><td>Weld Method</td><td>Drawing-based production</td><td>documented forming, welding, and inspection workflow</td></tr><tr><td>Lead Time</td><td>15-25 working days from drawing</td><td>Standard production batch</td></tr></tbody>
 </table></div>
 <div style="margin-top:16px" class="info-box"><span class="ib-icon">&#9881;</span><p><strong>All parameters are custom per OEM drawing.</strong> Send your drawing or existing belt dimensions  - we confirm the specification and quotation path after engineering review.</p></div>
 </div></section>
@@ -613,47 +617,47 @@ a{text-decoration:none;color:inherit}
 <section class="sw"><div class="con">
 <div class="sh"><div class="ew">PRODUCTION DOCUMENTATION</div><h2>Manufacturing Evidence  - Every Stage</h2><p>Real production photos from material intake through final QA. Provided to OEM customers on request.</p></div>
 <div class="photo-g">
-<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-conveyor-belt-product-overview.jpg" alt="Flat wire honeycomb conveyor belt product overview"/ decoding="async" loading="lazy"><div class="photo-caption">Product overview</div></div>
-<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-production-equipment.jpg" alt="Automatic flat wire honeycomb conveyor belt production equipment"/ decoding="async" loading="lazy"><div class="photo-caption">Automatic production equipment</div></div>
-<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-workshop-equipment.jpg" alt="Flat wire honeycomb conveyor belt production workshop"/ decoding="async" loading="lazy"><div class="photo-caption">Production workshop</div></div>
-<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-conveyor-belt-edge-structure.jpg" alt="Flat wire honeycomb conveyor belt edge structure"/ decoding="async" loading="lazy"><div class="photo-caption">Edge structure detail</div></div>
-<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-sprocket-test.png" alt="Sprocket matching test for flat wire honeycomb conveyor belt"/ decoding="async" loading="lazy"><div class="photo-caption">Sprocket matching test</div></div>
-<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-factory-stock.jpg" alt="Flat wire honeycomb conveyor belts in factory stock and batch production"/ decoding="async" loading="lazy"><div class="photo-caption">Factory stock and batch production</div></div>
-<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-conveyor-belt-rod-edge-detail.jpg" alt="Flat wire honeycomb conveyor belt rod and edge detail"/ decoding="async" loading="lazy"><div class="photo-caption">Rod and edge detail</div></div>
-<div class="photo-box"><div class="pb-icon">&#128196;</div><div class="pb-lbl">Drawing, sample, and reorder record retained for OEM supply</div></div>
+<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-conveyor-belt-product-overview.jpg" alt="Flat wire honeycomb conveyor belt product overview" decoding="async" loading="lazy"><div class="photo-caption">Product overview</div></div>
+<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-production-equipment.jpg" alt="Automatic flat wire honeycomb conveyor belt production equipment" decoding="async" loading="lazy"><div class="photo-caption">Automatic production equipment</div></div>
+<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-workshop-equipment.jpg" alt="Flat wire honeycomb conveyor belt production workshop" decoding="async" loading="lazy"><div class="photo-caption">Production workshop</div></div>
+<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-conveyor-belt-edge-structure.jpg" alt="Flat wire honeycomb conveyor belt edge structure" decoding="async" loading="lazy"><div class="photo-caption">Edge structure detail</div></div>
+<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-sprocket-test.png" alt="Sprocket matching test for flat wire honeycomb conveyor belt" decoding="async" loading="lazy"><div class="photo-caption">Sprocket matching test</div></div>
+<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-factory-stock.jpg" alt="Flat wire honeycomb conveyor belts in factory stock and batch production" decoding="async" loading="lazy"><div class="photo-caption">Factory stock and batch production</div></div>
+<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-conveyor-belt-rod-edge-detail.jpg" alt="Flat wire honeycomb conveyor belt rod and edge detail" decoding="async" loading="lazy"><div class="photo-caption">Rod and edge detail</div></div>
+<div class="photo-box has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-shipping-proof.png" alt="Flat wire honeycomb conveyor belt export packing proof with customer details removed" decoding="async" loading="lazy"><div class="photo-caption">Export packing proof</div></div>
 </div>
 </div></section>
 
 <!-- KEY FEATURES -->
 <section class="sl"><div class="con">
 <div class="sh"><div class="ew">KEY FEATURES</div><h2>Engineering Advantages  - Verified by Production</h2><p>Every claim is backed by a verifiable manufacturing process or documented test result.</p></div>
-<div class="feat-g"><div class="feat-box"><div class="fb-icon">&#127838;</div><div class="fb-title">Pressed Flat Surface</div><div class="fb-desc">Both faces of the flat wire belt are pressed smooth during forming. This creates a consistent conveying surface that minimises product marking from wire imprint and ensures uniform contact with oven floor or product. Critical for delicate baked goods and thin products.</div></div><div class="feat-box"><div class="fb-icon">&#128293;</div><div class="fb-title">Baking Temperature Rated</div><div class="fb-desc">SUS304 standard specification for continuous baking oven use. Temperature rated to 300&#176;C continuous, 450&#176;C peak. For high-temperature baking and roasting applications, SUS316L provides enhanced oxidation resistance.</div></div><div class="feat-box"><div class="fb-icon">&#129302;</div><div class="fb-title">Robotic Welding Consistency</div><div class="fb-desc">Every spiral-to-rod weld joint produced by automated robot. Consistent flat surface geometry across the full belt width  - no high or low points from hand-welding variation. Critical for uniform product heat exposure in baking ovens.</div></div><div class="feat-box"><div class="fb-icon">&#128295;</div><div class="fb-title">Washdown Compatible</div><div class="fb-desc">SUS316L option for meat processing lines with regular CIP washdown. Flat surface construction allows rapid cleaning without product residue accumulation in deep wire recesses.</div></div><div class="feat-box"><div class="fb-icon">&#9878;</div><div class="fb-title">Load Capacity</div><div class="fb-desc">Flat wire construction provides structural depth for high-load baking applications. Rod pitch and wire diameter selected to conveyor length and product weight. Suitable for full tunnel bakery loads.</div></div><div class="feat-box"><div class="fb-icon">&#128196;</div><div class="fb-title">Oven Manufacturer Drawing Service</div><div class="fb-desc">We accept oven manufacturer drawings directly and produce to specification. Belt width, spiral pitch, rod pitch, edge detail, and surface finish all confirmed before production. Compatible with all major baking oven brands.</div></div><div class="feat-box"><div class="fb-icon">&#128300;</div><div class="fb-title">In-House Wire Drawing</div><div class="fb-desc">Wire diameter controlled from rod to finished wire in our own facility. No external supply variation. Every batch tested by alloy spectrometer and tensile tester before production.</div></div><div class="feat-box"><div class="fb-icon">&#128260;</div><div class="fb-title">Replacement Without Modification</div><div class="fb-desc">Send photos or dimensions of your existing flat wire belt. We produce a matched replacement that fits your existing sprockets and drive system without modification. Sample review is available for test-fit confirmation.</div></div><div class="feat-box"><div class="fb-icon">&#128031;</div><div class="fb-title">Bakery OEM Supply Network</div><div class="fb-desc">Active supply to tunnel oven manufacturers and bakery equipment OEMs in Germany, the UK, Australia, the USA, Spain, and Southeast Asia. Compatible with all major oven platform designs.</div></div></div>
+<div class="feat-g"><div class="feat-box"><div class="fb-icon">&#127838;</div><div class="fb-title">Pressed Flat Surface</div><div class="fb-desc">Both faces of the flat wire belt are pressed smooth during forming. This creates a consistent conveying surface that minimises product marking from wire imprint and ensures uniform contact with oven floor or product. Critical for delicate baked goods and thin products.</div></div><div class="feat-box"><div class="fb-icon">&#128293;</div><div class="fb-title">Baking Temperature Rated</div><div class="fb-desc">SUS304 standard specification for continuous baking oven use. Temperature rated to 300&#176;C continuous, 450&#176;C peak. For high-temperature baking and roasting applications, SUS316L provides enhanced oxidation resistance.</div></div><div class="feat-box"><div class="fb-icon">&#129302;</div><div class="fb-title">Production Consistency</div><div class="fb-desc">Weld points and formed joints are checked against the drawing during production. Consistent flat surface geometry across the full belt width  - no high or low points from hand-welding variation. Critical for uniform product heat exposure in baking ovens.</div></div><div class="feat-box"><div class="fb-icon">&#128295;</div><div class="fb-title">Washdown Compatible</div><div class="fb-desc">SUS316L option for meat processing lines with regular CIP washdown. Flat surface construction allows rapid cleaning without product residue accumulation in deep wire recesses.</div></div><div class="feat-box"><div class="fb-icon">&#9878;</div><div class="fb-title">Load Capacity</div><div class="fb-desc">Flat wire construction provides structural depth for high-load baking applications. Rod pitch and wire diameter selected to conveyor length and product weight. Suitable for full tunnel bakery loads.</div></div><div class="feat-box"><div class="fb-icon">&#128196;</div><div class="fb-title">Oven Manufacturer Drawing Service</div><div class="fb-desc">We accept oven manufacturer drawings directly and produce to specification. Belt width, spiral pitch, rod pitch, edge detail, and surface finish all confirmed before production. Compatible with all major baking oven brands.</div></div><div class="feat-box"><div class="fb-icon">&#128300;</div><div class="fb-title">In-House Wire Drawing</div><div class="fb-desc">Wire diameter controlled from rod to finished wire in our own facility. No external supply variation. Every batch tested by alloy spectrometer and tensile tester before production.</div></div><div class="feat-box"><div class="fb-icon">&#128260;</div><div class="fb-title">Replacement Without Modification</div><div class="fb-desc">Send photos or dimensions of your existing flat wire belt. We produce a matched replacement that fits your existing sprockets and drive system without modification. Sample review is available for test-fit confirmation.</div></div><div class="feat-box"><div class="fb-icon">&#128031;</div><div class="fb-title">Bakery OEM Supply Network</div><div class="fb-desc">Active supply to tunnel oven manufacturers and bakery equipment OEMs in Germany, the UK, Australia, the USA, Spain, and Southeast Asia. Compatible with all major oven platform designs.</div></div></div>
 </div></section>
 
-<!-- DRUM TEST -->
+<!-- Final Inspection -->
 <section class="sn"><div class="con">
-<div class="sh wh"><div class="ew">DRUM DIAMETER TEST</div><h2>No Belt Ships Without Drum Verification</h2><p>Every belt runs on its target drum diameter before shipment. This single test eliminates the most common cause of conveyor system failure on first installation.</p></div>
+<div class="sh wh"><div class="ew">FINAL FIT VERIFICATION</div><h2>No Belt Ships Without Final Fit Verification</h2><p>Every belt is checked against the approved drawing before shipment. This single test eliminates the most common cause of conveyor system failure on first installation.</p></div>
 <div class="drum-grid">
 <div class="drum-steps">
-<div class="ds-item"><div class="ds-num">01</div><div><div class="ds-title">OEM Drawing Received</div><div class="ds-desc">Drum diameter, cage bar pitch, and belt width confirmed with your engineering team before production begins.</div></div></div>
+<div class="ds-item"><div class="ds-num">01</div><div><div class="ds-title">OEM Drawing Received</div><div class="ds-desc">system geometry, cage bar pitch, and belt width confirmed with your engineering team before production begins.</div></div></div>
 <div class="ds-item"><div class="ds-num">02</div><div><div class="ds-title">Production to Drawing</div><div class="ds-desc">Belt produced to confirmed specification. Spiral pitch, rod diameter, and edge construction all per drawing.</div></div></div>
 <div class="ds-item"><div class="ds-num">03</div><div><div class="ds-title">Drum Engagement Test</div><div class="ds-desc">Completed belt runs on drum at target diameter. Tooth engagement, tracking, and tension confirmed  - zero pitch error accepted.</div></div></div>
-<div class="ds-item"><div class="ds-num">04</div><div><div class="ds-title">Pass = Shipment Approved</div><div class="ds-desc">Only belts that pass drum test proceed to final QA and export packaging. Failed belts are rebuilt  - not shipped.</div></div></div>
+<div class="ds-item"><div class="ds-num">04</div><div><div class="ds-title">Pass = Shipment Approved</div><div class="ds-desc">Only belts that pass Final Inspection proceed to final QA and export packaging. Failed belts are rebuilt  - not shipped.</div></div></div>
 </div>
-<div class="drum-visual has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-sprocket-test.png" alt="Flat wire honeycomb conveyor belt sprocket matching and belt running verification"/ decoding="async" loading="lazy"><div class="dv-lbl">Sprocket matching and belt running verification<br>Drive compatibility checked before shipment</div></div>
+<div class="drum-visual has-img"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-sprocket-test.png" alt="Flat wire honeycomb conveyor belt sprocket matching and belt running verification" decoding="async" loading="lazy"><div class="dv-lbl">Sprocket matching and belt running verification<br>Drive compatibility checked before shipment</div></div>
 </div>
 </div></section>
 
 <!-- PRODUCTION PROOF -->
 <section class="sd"><div class="con">
 <div class="sh wh"><div class="ew">PRODUCTION PROOF</div><h2>Flatness, Sprocket Matching, and Shipment Readiness</h2><p>Flat wire honeycomb belts are checked for surface levelness, rod pitch, sprocket engagement, and drawing consistency before shipment.</p></div>
-<div class="video-box has-video"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-factory-stock.jpg" alt="Flat wire honeycomb conveyor belt factory production stock and finished belts" style="width:100%;height:100%;object-fit:cover;display:block" decoding="async" loading="lazy"><div class="vb-lbl">Flat wire honeycomb belt production proof<br>Batch production, forming, matching, inspection, and shipment readiness</div></div>
+<div class="video-box has-video"><img src="assets/product-media/flat-wire-belt/flat-wire-honeycomb-belt-semi-finished.png" alt="Flat wire honeycomb conveyor belt semi-finished production proof" style="width:100%;height:100%;object-fit:cover;display:block" decoding="async" loading="lazy"><div class="vb-lbl">Flat wire honeycomb belt production proof<br>Semi-finished structure, forming, matching, inspection, and shipment readiness</div></div>
 </div></section>
 
 <!-- QUALITY PROCESS -->
 <section class="sw"><div class="con">
-<div class="sh"><div class="ew">ISO 9001 QUALITY PROCESS</div><h2>4-Stage Quality Control  - Every Belt</h2><p>IQC &#8594;In-Process &#8594;Drum Test &#8594;Final QA. No belt leaves the factory without passing all four stages.</p></div>
-<div class="qp-g"><div class="qp-card"><div class="qp-stage">IQC  - INCOMING</div><div class="qp-icon">&#128300;</div><div class="qp-title">Wire Verification</div><div class="qp-items"><div class="qp-item">Alloy gun  - SUS304/316L composition verified</div><div class="qp-item">Tensile test per batch</div><div class="qp-item">Wire diameter tolerance check</div><div class="qp-item">Batch MTR filed</div></div></div><div class="qp-card"><div class="qp-stage">IN-PROCESS</div><div class="qp-icon">&#9881;&#65039;</div><div class="qp-title">Flat Surface Formation</div><div class="qp-items"><div class="qp-item">Spiral flatness measurement after pressing</div><div class="qp-item">Rod pitch dimensional check</div><div class="qp-item">Surface level inspection  - no high/low points</div><div class="qp-item">Edge construction verification</div></div></div><div class="qp-card"><div class="qp-stage">DRUM TEST</div><div class="qp-icon">&#128295;</div><div class="qp-title">Engagement & Flatness</div><div class="qp-items"><div class="qp-item">Full belt run on drum at target diameter</div><div class="qp-item">Surface flatness confirmed on drum</div><div class="qp-item">Sprocket engagement geometry verified</div><div class="qp-item">Tension distribution measured</div></div></div><div class="qp-card"><div class="qp-stage">FINAL QA</div><div class="qp-icon">&#10003;</div><div class="qp-title">Pre-Shipment Check</div><div class="qp-items"><div class="qp-item">Both surface visual inspection</div><div class="qp-item">Width, length, pitch vs drawing</div><div class="qp-item">Surface finish grade confirmation</div><div class="qp-item">Export packing and documentation</div></div></div></div>
+<div class="sh"><div class="ew">ISO 9001 QUALITY PROCESS</div><h2>4-Stage Quality Control  - Every Belt</h2><p>IQC &#8594;In-Process &#8594;Final Inspection &#8594;Final QA. No belt leaves the factory without passing all four stages.</p></div>
+<div class="qp-g"><div class="qp-card"><div class="qp-stage">IQC  - INCOMING</div><div class="qp-icon">&#128300;</div><div class="qp-title">Wire Verification</div><div class="qp-items"><div class="qp-item">Alloy gun  - SUS304/316L composition verified</div><div class="qp-item">Tensile test per batch</div><div class="qp-item">Wire diameter tolerance check</div><div class="qp-item">Batch MTR filed</div></div></div><div class="qp-card"><div class="qp-stage">IN-PROCESS</div><div class="qp-icon">&#9881;&#65039;</div><div class="qp-title">Flat Surface Formation</div><div class="qp-items"><div class="qp-item">Spiral flatness measurement after pressing</div><div class="qp-item">Rod pitch dimensional check</div><div class="qp-item">Surface level inspection  - no high/low points</div><div class="qp-item">Edge construction verification</div></div></div><div class="qp-card"><div class="qp-stage">Final Inspection</div><div class="qp-icon">&#128295;</div><div class="qp-title">Engagement & Flatness</div><div class="qp-items"><div class="qp-item">Full belt checked against approved drawing</div><div class="qp-item">Surface flatness confirmed after forming</div><div class="qp-item">Sprocket engagement geometry verified</div><div class="qp-item">Tension distribution measured</div></div></div><div class="qp-card"><div class="qp-stage">FINAL QA</div><div class="qp-icon">&#10003;</div><div class="qp-title">Pre-Shipment Check</div><div class="qp-items"><div class="qp-item">Both surface visual inspection</div><div class="qp-item">Width, length, pitch vs drawing</div><div class="qp-item">Surface finish grade confirmation</div><div class="qp-item">Export packing and documentation</div></div></div></div>
 </div></section>
 
 <!-- APPLICATIONS -->
@@ -701,15 +705,15 @@ a{text-decoration:none;color:inherit}
 <div style="padding:20px 24px">
 <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:16px">
 <div style="background:white;border:1px solid var(--bl);border-radius:8px;padding:14px;text-align:center"><div style="font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:6px">Trigger</div><div style="font-size:12px;color:var(--tp);font-weight:600">New machine build  - belt specification from system design drawing</div></div>
-<div style="background:white;border:1px solid var(--bl);border-radius:8px;padding:14px;text-align:center"><div style="font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:6px">Process</div><div style="font-size:12px;color:var(--tp);font-weight:600">Drawing review &#8594;sample &#8594;drum test confirmation &#8594;production</div></div>
+<div style="background:white;border:1px solid var(--bl);border-radius:8px;padding:14px;text-align:center"><div style="font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:6px">Process</div><div style="font-size:12px;color:var(--tp);font-weight:600">Drawing review &#8594;sample &#8594;final inspection confirmation &#8594;production</div></div>
 <div style="background:white;border:1px solid var(--bl);border-radius:8px;padding:14px;text-align:center"><div style="font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);margin-bottom:6px">Timeline</div><div style="font-size:12px;color:var(--tp);font-weight:600">Sample: 7-10 days  &#183;  Production: 15-25 days from approval</div></div>
 </div>
-<p style="font-size:13px;color:var(--tb);line-height:1.75">A baking oven manufacturer shares their system drawing - drum diameter, sprocket pitch, belt width, and required SUS316L specification. YIYI Mesh Belt engineering team reviews the drawing and confirms belt parameters. When needed, a sample is produced and shipped for test-fitting. After sample approval, production begins for the full project quantity. Drawing is retained in our engineering library for reorder reference.</p>
+<p style="font-size:13px;color:var(--tb);line-height:1.75">A baking oven manufacturer shares their system drawing - system geometry, sprocket pitch, belt width, and required SUS316L specification. YIYI Mesh Belt engineering team reviews the drawing and confirms belt parameters. When needed, a sample is produced and shipped for test-fitting. After sample approval, production begins for the full project quantity. Drawing is retained in our engineering library for reorder reference.</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
 <span style="font-family:var(--fm);font-size:10px;background:rgba(31,92,158,.1);color:var(--bb);padding:4px 10px;border-radius:3px">Sample Review</span>
 <span style="font-family:var(--fm);font-size:10px;background:rgba(31,92,158,.1);color:var(--bb);padding:4px 10px;border-radius:3px">Drawing Retained</span>
 <span style="font-family:var(--fm);font-size:10px;background:rgba(31,92,158,.1);color:var(--bb);padding:4px 10px;border-radius:3px">SUS316L</span>
-<span style="font-family:var(--fm);font-size:10px;background:rgba(31,92,158,.1);color:var(--bb);padding:4px 10px;border-radius:3px">Drum Test Certified</span>
+<span style="font-family:var(--fm);font-size:10px;background:rgba(31,92,158,.1);color:var(--bb);padding:4px 10px;border-radius:3px">Final Inspection Confirmed</span>
 </div>
 </div></div>
 
@@ -861,7 +865,7 @@ a{text-decoration:none;color:inherit}
 <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--ow);border:1px solid var(--bl);border-radius:8px"><span style="font-size:20px;flex-shrink:0">&#128674;</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Sea Freight</div><div style="font-size:11px;color:var(--tm)">FCL/LCL  &#183;  Qingdao  &#183;  20-35 days</div></div></div>
 <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--ow);border:1px solid var(--bl);border-radius:8px"><span style="font-size:20px;flex-shrink:0">&#9992;</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Air Freight</div><div style="font-size:11px;color:var(--tm)">Emergency  &#183;  3-7 days worldwide</div></div></div>
 <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--ow);border:1px solid var(--bl);border-radius:8px"><span style="font-size:20px;flex-shrink:0">&#128646;</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">China-Europe Railway</div><div style="font-size:11px;color:var(--tm)">12-18 days  &#183;  Cost-effective for EU</div></div></div>
-<div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--ow);border:1px solid var(--bl);border-radius:8px"><span style="font-size:20px;flex-shrink:0">&#128194;</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Full Documentation</div><div style="font-size:11px;color:var(--tm)">COO  &#183;  MTR  &#183;  ISO cert  &#183;  Invoice</div></div></div>
+<div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:var(--ow);border:1px solid var(--bl);border-radius:8px"><span style="font-size:20px;flex-shrink:0">&#128194;</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Full Documentation</div><div style="font-size:11px;color:var(--tm)">COO  &#183;  MTR  &#183;  ISO cert  &#183;  Material certificate</div></div></div>
 </div></div>
 </div>
 </div></section>
@@ -889,7 +893,7 @@ a{text-decoration:none;color:inherit}
 <div style="background:var(--ow);border:1px solid var(--bl);border-radius:10px;padding:20px">
 <div style="font-size:26px;margin-bottom:10px">&#128194;</div>
 <div style="font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--bb);margin-bottom:8px">DOCUMENTATION PACKAGE</div>
-<p style="font-size:13px;color:var(--tb);line-height:1.7">Each shipment includes: commercial invoice, packing list, certificate of origin (CCPIT or Form A on request), material test report (on request), ISO 9001 certification copy, and drum test record. Additional customs documentation on request for EU, USA, and Australian market requirements.</p>
+<p style="font-size:13px;color:var(--tb);line-height:1.7">Each shipment includes: commercial invoice, packing list, certificate of origin (CCPIT or Form A on request), material test report (on request), ISO 9001 certification copy, and final inspection record. Additional customs documentation on request for EU, USA, and Australian market requirements.</p>
 </div>
 </div>
 <div style="margin-top:20px;padding:16px 20px;background:rgba(200,146,42,.05);border:1px solid rgba(200,146,42,.2);border-radius:8px;max-width:860px">
@@ -926,8 +930,8 @@ a{text-decoration:none;color:inherit}
 <div style="width:2px;flex:1;background:var(--bl);margin:4px 0"></div>
 </div>
 <div style="background:white;border:1px solid var(--bl);border-radius:10px;padding:20px;margin-bottom:10px;flex:1">
-<div style="font-size:14px;font-weight:700;color:var(--tp);margin-bottom:5px">&#129302; Production  - Robotic Welding Record</div>
-<p style="font-size:13px;color:var(--tb);line-height:1.7;margin:0">Production batch number assigned at start of forming. Robotic welding parameters (current, time, pressure) logged per shift. Production record links batch number to wire batch, production date, machine ID, and operator record. Retained for minimum 5 years.</p>
+<div style="font-size:14px;font-weight:700;color:var(--tp);margin-bottom:5px">&#129302; Production  - Production Process Record</div>
+<p style="font-size:13px;color:var(--tb);line-height:1.7;margin:0">Production batch number assigned at start of forming. Production parameters and inspection results logged per shift. Production record links batch number to wire batch, production date, machine ID, and operator record. Retained for minimum 5 years.</p>
 </div></div>
 <div style="display:flex;gap:0;align-items:stretch">
 <div style="display:flex;flex-direction:column;align-items:center;margin-right:16px;flex-shrink:0">
@@ -935,8 +939,8 @@ a{text-decoration:none;color:inherit}
 <div style="width:2px;flex:1;background:var(--bl);margin:4px 0"></div>
 </div>
 <div style="background:white;border:1px solid var(--bl);border-radius:10px;padding:20px;margin-bottom:10px;flex:1">
-<div style="font-size:14px;font-weight:700;color:var(--tp);margin-bottom:5px">&#128295; Drum Test  - Signed Test Record</div>
-<p style="font-size:13px;color:var(--tb);line-height:1.7;margin:0">Drum test result recorded on signed QA form. Records: drum diameter tested, engagement pitch confirmed, test date, inspector ID, pass/fail result. Drum test certificate available as part of shipment documentation package on request.</p>
+<div style="font-size:14px;font-weight:700;color:var(--tp);margin-bottom:5px">&#128295; Final Inspection  - Signed Test Record</div>
+<p style="font-size:13px;color:var(--tb);line-height:1.7;margin:0">Final Inspection result recorded on signed QA form. Records: system fit verified, engagement pitch confirmed, test date, inspector ID, pass/fail result. final inspection record available as part of shipment documentation package on request.</p>
 </div></div>
 <div style="display:flex;gap:0;align-items:stretch">
 <div style="display:flex;flex-direction:column;align-items:center;margin-right:16px;flex-shrink:0">
@@ -985,7 +989,7 @@ a{text-decoration:none;color:inherit}
 <div class="sh"><div class="ew">COMPETITIVE COMPARISON</div><h2>Why OEM Manufacturers Choose YIYI Mesh Belt</h2><p>Comparing key manufacturing differentiators. Based on verifiable production facts  - not marketing claims.</p></div>
 <div style="overflow-x:auto"><table class="comp-table">
 <thead><tr><th>Capability</th><th>YIYI Mesh Belt</th><th>Typical China Manufacturer</th><th>European Supplier</th><th>Trading Company</th></tr></thead>
-<tbody><tr><td>In-house wire drawing</td><td class="c-yiyi">&#10003;YIYI Mesh Belt - own equipment</td><td>&#10007; External</td><td>&#10007; External</td><td>&#10007; No manufacturing</td></tr><tr><td>Flat surface pressing</td><td class="c-yiyi">&#10003;Standard process</td><td>&#10003;Standard</td><td>&#10003;Standard</td><td>Depends on source</td></tr><tr><td>Robotic welding</td><td class="c-yiyi">&#10003;5 robots</td><td>Manual standard</td><td>Partial</td><td>&#10007; Manual</td></tr><tr><td>Baking oven OEM supply</td><td class="c-yiyi">&#10003;All major platforms</td><td>Limited</td><td>&#10003;Some platforms</td><td>&#10007; Catalogue only</td></tr><tr><td>Sample review</td><td class="c-yiyi">&#10003;New OEM projects</td><td>Paid</td><td>Paid</td><td>&#10007; None</td></tr><tr><td>Engineering response</td><td class="c-yiyi">&#10003;Direct technical review</td><td>24-72 hours</td><td>48-72 hours</td><td>Variable</td></tr><tr><td>Drum test 100%</td><td class="c-yiyi">&#10003;Every belt</td><td>Selective</td><td>Selective</td><td>&#10007; None</td></tr></tbody>
+<tbody><tr><td>In-house wire drawing</td><td class="c-yiyi">&#10003;YIYI Mesh Belt - own equipment</td><td>&#10007; External</td><td>&#10007; External</td><td>&#10007; No manufacturing</td></tr><tr><td>Flat surface pressing</td><td class="c-yiyi">&#10003;Standard process</td><td>&#10003;Standard</td><td>&#10003;Standard</td><td>Depends on source</td></tr><tr><td>Controlled Production</td><td class="c-yiyi">&#10003;documented process control</td><td>Manual standard</td><td>Partial</td><td>&#10007; Manual</td></tr><tr><td>Baking oven OEM supply</td><td class="c-yiyi">&#10003;All major platforms</td><td>Limited</td><td>&#10003;Some platforms</td><td>&#10007; Catalogue only</td></tr><tr><td>Sample review</td><td class="c-yiyi">&#10003;New OEM projects</td><td>Paid</td><td>Paid</td><td>&#10007; None</td></tr><tr><td>Engineering response</td><td class="c-yiyi">&#10003;Direct technical review</td><td>24-72 hours</td><td>48-72 hours</td><td>Variable</td></tr><tr><td>Final Inspection 100%</td><td class="c-yiyi">&#10003;Every belt</td><td>Selective</td><td>Selective</td><td>&#10007; None</td></tr></tbody>
 </table></div>
 <p style="font-size:12px;color:var(--tm);margin-top:12px;font-family:var(--fm)">* Comparison based on publicly available information and direct customer feedback. Contact us to verify any specific claim.</p>
 </div></section>
@@ -1011,10 +1015,10 @@ a{text-decoration:none;color:inherit}
 <div style="display:flex;flex-direction:column;gap:10px">
 <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">A</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Wire / Rod Diameter (mm)</div><div style="font-size:12px;color:var(--tm)">Measure with digital calliper on existing belt</div></div></div>
 <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">B</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Spiral Pitch  - Rod Spacing (mm)</div><div style="font-size:12px;color:var(--tm)">Centre-to-centre distance between rods</div></div></div>
-<div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">C</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Belt Loop Length (metres)</div><div style="font-size:12px;color:var(--tm)">Total belt circumference. For spiral: tier count 脳 tier pitch.</div></div></div>
-<div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">D</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Drum Diameter (mm)</div><div style="font-size:12px;color:var(--tm)">Drive drum outer diameter  - for drum test configuration</div></div></div>
+<div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">C</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Belt Loop Length (metres)</div><div style="font-size:12px;color:var(--tm)">Total belt circumference. For spiral systems: tier count x tier pitch.</div></div></div>
+<div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">D</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">system geometry (mm)</div><div style="font-size:12px;color:var(--tm)">drive geometry reference  - for Final Inspection configuration</div></div></div>
 <div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">E</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Edge Construction + Surface Finish</div><div style="font-size:12px;color:var(--tm)">Photos of edge detail if replacing. Electro-polish if required.</div></div></div>
-<div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">F</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Required Documentation</div><div style="font-size:12px;color:var(--tm)">MTR / COO / ISO / drum test record / EU food declaration</div></div></div>
+<div style="display:flex;gap:10px;align-items:flex-start"><span style="min-width:22px;height:22px;border-radius:50%;background:rgba(200,146,42,.2);color:var(--gold);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">F</span><div><div style="font-size:13px;font-weight:700;color:var(--tp)">Required Documentation</div><div style="font-size:12px;color:var(--tm)">MTR / COO / ISO / final inspection record / EU food declaration</div></div></div>
 </div>
 <div style="margin-top:14px;padding:10px 14px;background:rgba(200,146,42,.06);border-left:3px solid var(--gold);border-radius:0 6px 6px 0"><p style="font-size:12px;color:var(--tb);margin:0"><strong style="color:var(--gold)">With A-F:</strong> confirmed production quote + drawing confirmation after specification review.</p></div>
 </div>
@@ -1042,7 +1046,7 @@ a{text-decoration:none;color:inherit}
 </div>
 <div style="display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--bl)">
 <div style="padding:24px 26px;background:#fff7f7;border-right:1px solid var(--bl)"><div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#B03A2E;margin-bottom:10px;font-weight:600">&#9888; Industry Problem</div><div style="font-size:14px;font-weight:700;color:var(--tp);margin-bottom:8px">Belt Wander and Tracking Drift in Long Tunnel Ovens</div><div style="font-size:13px;color:var(--tb);line-height:1.7">Uneven weld strength across belt width causes asymmetric tension distribution, pulling the belt off-centre in long tunnel ovens. Tracking drift causes edge wear, product loss at oven walls, and eventual drive system damage.</div></div>
-<div style="padding:24px 26px;background:#f0faf4"><div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#1A6B3A;margin-bottom:10px;font-weight:600">&#10003;YIYI Mesh Belt Engineering Response</div><div style="font-size:14px;font-weight:700;color:var(--tp);margin-bottom:8px">5-Station Robotic Welding  - Symmetrical Tension Across Full Width</div><div style="font-size:13px;color:var(--tb);line-height:1.7">Robotic welding delivers identical weld parameters at every joint across the full belt width. Symmetrical weld strength = symmetrical tension distribution = straight tracking in the oven. Our drum test verifies tracking before shipment  - no straight-running issues are accepted.</div></div>
+<div style="padding:24px 26px;background:#f0faf4"><div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#1A6B3A;margin-bottom:10px;font-weight:600">&#10003;YIYI Mesh Belt Engineering Response</div><div style="font-size:14px;font-weight:700;color:var(--tp);margin-bottom:8px">controlled production workflow  - Symmetrical Tension Across Full Width</div><div style="font-size:13px;color:var(--tb);line-height:1.7">Production control keeps belt width, pitch, edge detail, and surface flatness aligned with the approved drawing. Final inspection verifies tracking and geometry before shipment.</div></div>
 </div>
 <div style="display:grid;grid-template-columns:1fr 1fr">
 <div style="padding:24px 26px;background:#fff7f7;border-right:1px solid var(--bl)"><div style="font-family:var(--fm);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#B03A2E;margin-bottom:10px;font-weight:600">&#9888; Industry Problem</div><div style="font-size:14px;font-weight:700;color:var(--tp);margin-bottom:8px">Replacement Belt Has Wrong Spiral Pitch  - Product Falls Through or Oven Throughput Drops</div><div style="font-size:13px;color:var(--tb);line-height:1.7">Replacement ordered with incorrect spiral pitch  - either too open (small products fall through) or too tight (reduced airflow and longer baking time). Either mismatch disrupts production quality and may require equipment modification to accommodate.</div></div>
@@ -1063,14 +1067,14 @@ a{text-decoration:none;color:inherit}
 <div class="faq-item" id="faq5"><div class="faq-q" onclick="toggleFaq(5)"><span>Do you supply flat wire belts for all major baking oven brands?</span><span class="faq-arr">&#9662;</span></div><div class="faq-a"><p>Yes. We supply OEM and replacement belts compatible with all major baking oven platforms. For Tunnel Ovens, Rotary Rack configurations, and custom oven designs, provide the oven manufacturer's name, model reference, and the belt dimensions - we confirm compatibility. For ongoing OEM supply, we maintain a production file for your belt specification so repeat orders are produced to the same confirmed benchmark without requiring a new drawing review.</p></div></div>
 <div class="faq-item" id="faq6"><div class="faq-q" onclick="toggleFaq(6)"><span>What edge construction is right for my drive system?</span><span class="faq-arr">&#9662;</span></div><div class="faq-a"><p>Edge construction depends entirely on your drive system. Standard options: welded rod end (most common for side-drive systems), formed wire edge (lighter weight, good for top/bottom sprocket), reinforced edge bar (heavy load, chain drive), and fabric edge (for nose bar and transfer point applications). We confirm edge construction from your drive system drawing or existing belt photos before production. Wrong edge construction is a fit issue that cannot be corrected after manufacturing.</p></div></div>
 <div class="faq-item" id="faq7"><div class="faq-q" onclick="toggleFaq(7)"><span>How do I measure my existing baking belt for a replacement order?</span><span class="faq-arr">&#9662;</span></div><div class="faq-a"><p>Measure: overall belt width (outside edge to outside edge), spiral pitch (centre-to-centre distance between rods, measured longitudinally), wire diameter (use a calliper or send a small offcut), and belt length (total loop length or circumference). Photographs of both faces of the belt alongside a ruler are usually sufficient. The most important dimensions to get right are pitch and width - even rough measurements allow us to identify the specification. Send photos to <a href="mailto:info@yiyimeshbelt.com">info@yiyimeshbelt.com</a> or WhatsApp +86 134 5177 3742 for engineering review.</p></div></div>
-<div class="faq-item" id="faq8"><div class="faq-q" onclick="toggleFaq(8)"><span>What is the expected service life of a YIYI Mesh Belt flat wire baking belt?</span><span class="faq-arr">&#9662;</span></div><div class="faq-a"><p>Under standard tunnel bakery conditions at 180-280&#176;C, YIYI Mesh Belt flat wire belts are designed for 3-5 years of service. Robotic welding ensures consistent weld strength across the full belt - the primary failure mode of manual-welded belts is early weld fatigue at the spiral-to-rod junction under sustained tension. In-house wire drawing ensures consistent tensile strength that resists the elongation under thermal cycling that causes pitch drift over time. Actual service life depends on peak baking temperature, daily operating hours, cleaning frequency, and belt tension setting.</p></div></div>
+<div class="faq-item" id="faq8"><div class="faq-q" onclick="toggleFaq(8)"><span>What is the expected service life of a YIYI Mesh Belt flat wire baking belt?</span><span class="faq-arr">&#9662;</span></div><div class="faq-a"><p>Under standard tunnel bakery conditions at 180-280&#176;C, YIYI Mesh Belt flat wire belts are designed for 3-5 years of service. Controlled Production ensures consistent weld strength across the full belt - the primary failure mode of manual-welded belts is early weld fatigue at the spiral-to-rod junction under sustained tension. In-house wire drawing ensures consistent tensile strength that resists the elongation under thermal cycling that causes pitch drift over time. Actual service life depends on peak baking temperature, daily operating hours, cleaning frequency, and belt tension setting.</p></div></div>
 <div class="faq-item" id="faq9"><div class="faq-q" onclick="toggleFaq(9)"><span>Do you offer sample review and what is the process?</span><span class="faq-arr">&#9662;</span></div><div class="faq-a"><p>Yes. For new OEM and bakery relationships, we can produce a sample to your confirmed specification for test-fitting before full production. Typical sample lead time is 7-10 working days depending on specification. We strongly recommend test-fitting on your oven before confirming full production - this verifies that pitch, width, and edge engagement are correct before investment. We retain a reference sample from your production record for quality comparison on future orders, ensuring repeat orders match the original benchmark.</p></div></div>
 </div>
 </div></section>
 <script>function toggleFaq(i){const el=document.getElementById('faq'+i);if(!el)return;el.classList.toggle('open');}</script>
 
 <!-- TRUST STRIP -->
-<div class="trust-strip"><div class="tsi"><span class="tsc">ISO 9001 Certified</span><span class="tsc">Flat Pressed Surface</span><span class="tsc">Robotic Welding</span><span class="tsc">Baking Oven OEM Supply</span><span class="tsc">Sample Review</span><span class="tsc">Engineering Response</span><span class="tsc">30+ Countries</span></div></div>
+<div class="trust-strip"><div class="tsi"><span class="tsc">ISO 9001 Certified</span><span class="tsc">Flat Pressed Surface</span><span class="tsc">Controlled Production</span><span class="tsc">Baking Oven OEM Supply</span><span class="tsc">Sample Review</span><span class="tsc">Engineering Response</span><span class="tsc">30+ Countries</span></div></div>
 
 <!-- CTA -->
 <section class="cta-sec"><div class="con">
@@ -1103,8 +1107,8 @@ a{text-decoration:none;color:inherit}
       <!-- Col 1: Brand & Proof -->
       <div>
         <div class="foot-logo-row">
-          <img src="assets/yiyi-logo-source.jpg" alt="YIYI Mesh Belt" class="foot-logo-img" / decoding="async" loading="lazy">
-          <span class="foot-brand">YIYI Mesh Belt MESH BELT</span>
+          <img src="assets/yiyi-logo-source.jpg" alt="YIYI Mesh Belt" class="foot-logo-img" decoding="async" loading="lazy">
+          <span class="foot-brand">YIYI MESH BELT</span>
         </div>
         <p class="foot-about" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:#C8922A;margin-bottom:6px">PROVEN  &#183;  STABLE  &#183;  VERIFIED</p>
         <p class="foot-about">Metal Conveyor Belt Manufacturer for OEMs &amp; Distributors</p>
@@ -1121,7 +1125,7 @@ a{text-decoration:none;color:inherit}
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> ISO 9001 Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> SGS Audited</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Third-Party Audit Welcome</span>
         </div>
@@ -1206,6 +1210,13 @@ a{text-decoration:none;color:inherit}
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="1.8">
                 <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
                 <polygon points="9.75 15.
+
+
+
+
+
+
+
 
 
 

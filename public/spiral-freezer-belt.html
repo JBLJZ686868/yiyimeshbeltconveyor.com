@@ -40,7 +40,7 @@
     {"@type":"Question","name":"Can YIYI Mesh Belt produce spiral freezer belts based on drawings?","acceptedAnswer":{"@type":"Answer","text":"Yes. YIYI Mesh Belt supports drawing-based production. Technical drawings, dimensional specifications, and application requirements can all be used as the basis for production planning and sample confirmation."}},
     {"@type":"Question","name":"Does YIYI Mesh Belt support replacement matching for existing spiral freezer systems?","acceptedAnswer":{"@type":"Answer","text":"Yes. YIYI Mesh Belt supports replacement projects through sample review, dimensional matching, and compatibility analysis with existing drum geometry and drive systems."}},
     {"@type":"Question","name":"Why is robotic welding important for spiral freezer belts?","acceptedAnswer":{"@type":"Answer","text":"Robotic welding improves weld consistency, controls weld position and weld size across every joint, and supports stable repeat production. For spiral freezer belts, weld quality directly affects running stability, structural consistency, and long-term service reliability."}},
-    {"@type":"Question","name":"What technical parameters does YIYI Mesh Belt need to configure a spiral freezer belt?","acceptedAnswer":{"@type":"Answer","text":"Key parameters include overall width, effective width, wire diameter, spiral pitch, cross rod diameter, rod and chain pitch, chain structure, drum diameter or turning requirement, running direction, divider or flight requirements, and edge finish style."}},
+    {"@type":"Question","name":"What technical parameters does YIYI Mesh Belt need to configure a spiral freezer belt?","acceptedAnswer":{"@type":"Answer","text":"Key parameters include overall width, effective width, wire diameter, spiral pitch, cross rod diameter, rod and chain pitch, chain structure, chain row count such as single-row, double-row, or three-row chain, drum diameter or turning requirement, running direction, divider or flight requirements, and edge finish style."}},
     {"@type":"Question","name":"Can YIYI Mesh Belt supply matched spare parts for spiral freezer belts?","acceptedAnswer":{"@type":"Answer","text":"Yes. YIYI Mesh Belt can supply matched spare components including rods, chain pieces, and connection parts matched to the original belt specification."}},
     {"@type":"Question","name":"Does YIYI Mesh Belt perform 100% final inspection before shipment?","acceptedAnswer":{"@type":"Answer","text":"Yes. All spiral freezer belts go through 100% final inspection before shipment release, covering dimensional verification, surface condition, edge finish, and structural consistency."}},
     {"@type":"Question","name":"Can YIYI Mesh Belt support urgent replacement orders?","acceptedAnswer":{"@type":"Answer","text":"Yes. YIYI Mesh Belt maintains reserve raw material stock to support faster response on urgent replacement and maintenance orders where production lead time is critical."}},
@@ -162,11 +162,21 @@ img{max-width:100%;height:auto;display:block}
 /* Proof strip */
 .proof-strip{background:var(--navy);padding:0}
 .ps-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap}
-.ps-item{display:flex;align-items:center;gap:10px;padding:18px 20px;border-right:1px solid rgba(255,255,255,.06);flex:1;min-width:160px}
+.ps-item{display:flex;align-items:center;gap:12px;padding:18px 20px;border-right:1px solid rgba(255,255,255,.08);flex:1;min-width:160px}
 .ps-item:last-child{border-right:none}
 .ps-dot{width:7px;height:7px;border-radius:50%;background:var(--sky);flex-shrink:0}
 .ps-text{font-family:var(--font-mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.65)}
-@media(max-width:768px){.ps-item{min-width:50%;border-bottom:1px solid rgba(255,255,255,.06)}}
+.ps-label{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.52);margin-bottom:5px;line-height:1.25}
+.ps-value{font-size:17px;font-weight:800;line-height:1.28;color:#F4F8FC;letter-spacing:0}
+@media(max-width:768px){
+  .proof-strip{padding:18px 0}
+  .ps-inner{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+  .ps-item{min-width:0;border:1px solid rgba(255,255,255,.10);border-radius:8px;background:rgba(255,255,255,.045);padding:16px 14px}
+  .ps-item:last-child{border-right:1px solid rgba(255,255,255,.10)}
+  .ps-label{font-size:9px;color:rgba(255,255,255,.58)}
+  .ps-value{font-size:15px}
+}
+@media(max-width:420px){.ps-inner{grid-template-columns:1fr}}
 
 /* Spec table */
 .spec-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:18px}
@@ -276,8 +286,47 @@ img{max-width:100%;height:auto;display:block}
 .sec-divider{border:none;border-top:1px solid var(--border);margin:0}
 .label-box{display:inline-flex;align-items:center;gap:8px;background:rgba(74,140,200,.08);border:1px solid rgba(74,140,200,.20);border-radius:6px;padding:8px 16px;margin-bottom:20px}
 .label-box span{font-family:var(--font-mono);font-size:11px;letter-spacing:.10em;text-transform:uppercase;color:var(--sky)}
+
+.sfb-photo-section{padding-top:96px;padding-bottom:104px}
+.sfb-photo-section .container>div:first-child{margin-bottom:54px!important;max-width:760px!important}
+.sfb-photo-section .container>div:nth-of-type(2),
+.sfb-photo-section .container>div:nth-of-type(4){margin-bottom:28px!important;max-width:760px}
+.sfb-photo-grid{gap:30px}
+.sfb-photo-grid .media-card{border-radius:14px;box-shadow:0 18px 42px rgba(11,31,58,.08)}
+.sfb-photo-grid .photo-tile{height:280px}
+.sfb-photo-grid .edge-tile{height:260px}
+.sfb-photo-grid .media-caption{padding:22px 22px 20px}
+.sfb-engineering-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:34px 0 42px}
+.sfb-engineering-card{background:white;border:1px solid var(--border);border-radius:14px;padding:22px 22px 20px;box-shadow:0 16px 36px rgba(11,31,58,.06)}
+.sfb-engineering-card strong{display:block;font-size:15px;color:var(--ink);line-height:1.35;margin-bottom:8px}
+.sfb-engineering-card p{font-size:13px;color:var(--ink2);line-height:1.68;margin:0}
+.sfb-flow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:0 0 48px}
+.sfb-flow-step{background:#F8FAFC;border:1px solid var(--border);border-radius:12px;padding:18px 16px;min-height:126px}
+.sfb-flow-num{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:var(--gold);margin-bottom:14px}
+.sfb-flow-step strong{display:block;font-size:13px;color:var(--ink);line-height:1.35;margin-bottom:7px}
+.sfb-flow-step span{display:block;font-size:12px;color:var(--ink2);line-height:1.55}
+.tb-langs{max-width:100%;flex-wrap:wrap;justify-content:flex-end}
+#sfb-hero-photo-slot{background:#fff;border-color:rgba(255,255,255,.28)}
+#sfb-hero-photo-slot img{object-fit:cover;object-position:center center}
+@media(max-width:1020px){
+  .sfb-engineering-grid{grid-template-columns:1fr 1fr}
+  .sfb-flow{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:768px){
+  .sfb-photo-section{padding-top:72px;padding-bottom:78px}
+  .sfb-photo-section .container>div:first-child{margin-bottom:38px!important}
+  .sfb-photo-section .container>div:nth-of-type(2),
+  .sfb-photo-section .container>div:nth-of-type(4){margin-bottom:22px!important}
+  .sfb-photo-grid{gap:22px}
+  .sfb-photo-grid .photo-tile,
+  .sfb-photo-grid .edge-tile{height:300px}
+  .sfb-engineering-grid{grid-template-columns:1fr;gap:14px;margin:26px 0 34px}
+  .sfb-flow{grid-template-columns:1fr;gap:10px;margin-bottom:36px}
+  .sfb-flow-step{min-height:auto}
+}
 </style>
 <link rel="stylesheet" href="assets/site-refinement.css"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"Robotic Welding for Spiral Freezer Belt Production","description":"Production video showing robotic welding for spiral freezer belt manufacturing and repeatable weld consistency.","thumbnailUrl":"https://www.yiyimeshbelt.com/assets/product-media/spiral-freezer-belt/sfb-s6-robot-machine.jpg","uploadDate":"2026-06-22","contentUrl":"https://www.yiyimeshbelt.com/assets/product-media/spiral-freezer-belt/sfb-s6-robot-weld-video.mp4","publisher":{"@id":"https://www.yiyimeshbelt.com/#organization"}}</script>
 </head>
 <body>
 
@@ -302,7 +351,7 @@ img{max-width:100%;height:auto;display:block}
       <div class="tb-badges">
         <span class="tb-badge"><span class="tb-dot"></span>Manufacturing Since 1998</span>
         <span class="tb-badge"><span class="tb-dot"></span>ISO 9001 Certified</span>
-        <span class="tb-badge"><span class="tb-dot"></span>DUNS Registered</span>
+        <span class="tb-badge"><span class="tb-dot"></span>Food Contact Safety Certified</span>
       </div>
     </div>
     <div class="tb-langs">
@@ -445,7 +494,7 @@ img{max-width:100%;height:auto;display:block}
               <div class="two-col-side">
                 <div class="eeat-card">
                   <div class="eeat-tag">Expertise</div>
-                  <p class="eeat-title">Drawing to drum test - every order verified.</p>
+                  <p class="eeat-title">Drawing to final inspection - every order verified.</p>
                   <a href="contact.html?intent=engineering&source=spiral-freezer-belt" class="eeat-link">Start Engineering Review &#8594;</a>
                 </div>
               </div>
@@ -460,7 +509,7 @@ img{max-width:100%;height:auto;display:block}
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Automated Welding</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Manufacturing Proof</span></a>
               <a href="raw-material.html" class="dl"><span class="dl-icon">&#129523;</span><span class="dl-label">In-House Wire Drawing</span></a>
               <a href="quality-control.html" class="dl"><span class="dl-icon">&#9989;</span><span class="dl-label">Quality Control</span></a>
               <a href="global-delivery.html" class="dl"><span class="dl-icon">&#128230;</span><span class="dl-label">Packaging &amp; Export</span></a>
@@ -573,7 +622,7 @@ img{max-width:100%;height:auto;display:block}
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
       <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
-<a href="manufacturing.html" class="mob-link">Automated Welding</a>
+<a href="manufacturing.html" class="mob-link">Manufacturing Proof</a>
       <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
       <a href="quality-control.html" class="mob-link">Quality Control</a>
       <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
@@ -624,6 +673,7 @@ img{max-width:100%;height:auto;display:block}
           <span class="tag tag-navy">Robotic Welding</span>
           <span class="tag tag-navy">Drawing-Based Production</span>
           <span class="tag tag-navy">Drum-Matched Configuration</span>
+          <span class="tag tag-navy">Single / Double / Three-Row Chain</span>
           <span class="tag tag-navy">100% Final Inspection</span>
           <span class="tag tag-navy">Replacement Support</span>
         </div>
@@ -634,7 +684,7 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div class="hero-img-col">
         <figure id="sfb-hero-photo-slot" data-asset-slot="spiral-freezer-belt/hero-photo" class="media-card hero-media">
-          <img src="assets/product-media/spiral-freezer-belt/sfb-hero-full-belt.jpg" alt="Spiral freezer belt close-up with chain edge and stainless mesh surface"/ decoding="async" loading="eager" fetchpriority="high">
+          <img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-01.webp" alt="Spiral freezer belt close-up with chain edge and stainless mesh surface on white background" decoding="async" loading="eager" fetchpriority="high">
           <figcaption class="media-caption">
             <div class="media-kicker">Spiral Freezer Belt</div>
             <div class="media-title">Chain edge, mesh surface, and formed structure shown clearly for buyer review.</div>
@@ -652,6 +702,7 @@ img{max-width:100%;height:auto;display:block}
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Replacement Matching</span></div>
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Robotic Welding</span></div>
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Drum-Matched</span></div>
+    <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">Three-Row Chain Option</span></div>
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">100% Final Inspection</span></div>
   </div>
 </div>
@@ -663,7 +714,7 @@ img{max-width:100%;height:auto;display:block}
         <div class="eyebrow">APPLICATION &amp; FIT</div>
         <h2 class="sec-h2">Built for Spiral Freezer Systems Where Matching Risk Is Expensive</h2>
         <p class="body-p">Spiral freezer buyers usually come to this page with one of three pressures: a new OEM project that must be configured correctly, a replacement belt that must match an existing drum and drive system, or a repeat order that must stay consistent with prior supply. In all three cases, the cost of getting the structure wrong is high.</p>
-        <p class="body-p">YIYI Mesh Belt produces spiral freezer belts for IQF freezers, spiral cooling systems, and other demanding conveying lines where stable turning, reliable edge structure, and repeatable production matter more than catalog language.</p>
+        <p class="body-p">YIYI Mesh Belt produces spiral freezer belts for IQF freezers, spiral cooling systems, and other demanding conveying lines where stable turning, reliable edge structure, and repeatable production matter more than catalog language. Chain layouts can be configured according to the equipment design, including single-row, double-row, and three-row chain structures.</p>
         <div class="tags">
           <span class="tag tag-blue">IQF Spiral Freezer</span>
           <span class="tag tag-blue">Blast Freezer</span>
@@ -675,7 +726,7 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div>
         <figure class="media-card app-media">
-          <img src="assets/product-media/spiral-freezer-belt/sfb-product-05.jpg" alt="Spiral freezer belt product view for IQF and spiral cooling systems"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-01.webp" alt="Spiral freezer belt product view for IQF and spiral cooling systems" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Application Fit</div>
             <div class="media-title">Designed for stable running in spiral freezing and cooling systems.</div>
@@ -688,39 +739,93 @@ img{max-width:100%;height:auto;display:block}
 
 <hr class="sec-divider"/>
 
-<section class="sec sec-alt">
+<section class="proof-strip" aria-label="Verified production data">
+  <div class="ps-inner">
+    <div class="ps-item"><span class="ps-dot"></span><div><div class="ps-label">Established</div><div class="ps-value">Since 1998</div></div></div>
+    <div class="ps-item"><span class="ps-dot"></span><div><div class="ps-label">Factory Area</div><div class="ps-value">27,000 sqm</div></div></div>
+    <div class="ps-item"><span class="ps-dot"></span><div><div class="ps-label">Production Equipment</div><div class="ps-value">280+ Machines</div></div></div>
+    <div class="ps-item"><span class="ps-dot"></span><div><div class="ps-label">Annual Output</div><div class="ps-value">200,000m Belt Capacity</div></div></div>
+    <div class="ps-item"><span class="ps-dot"></span><div><div class="ps-label">Energy System</div><div class="ps-value">6,000 sqm Solar PV</div></div></div>
+  </div>
+</section>
+
+<hr class="sec-divider"/>
+
+<section class="sec sec-alt sfb-photo-section">
   <div class="container">
     <div style="margin-bottom:44px;max-width:740px">
-      <div class="eyebrow">PRODUCTION CAPABILITY</div>
-        <h2 class="sec-h2">Product Photo Framework for Buyer Review</h2>
-        <p class="body-p">Buyers should be able to review a spiral freezer belt from the same angles they use when comparing suppliers internally: full assembly, chain side, mesh surface, weld detail, installation context, and shipping readiness. This page reserves those positions now so your final media can be dropped into a consistent sales structure later.</p>
-        <p class="body-p">The photo framework is separated into product-view photos and edge-finish photos because both are important in real buying decisions. The overall belt shows structure and application fit. The edge section shows whether finishing quality matches hygiene, handling, and long-term running expectations.</p>
+      <div class="eyebrow">SPIRAL FREEZER BELT ENGINEERING REVIEW</div>
+        <h2 class="sec-h2">Structure, Drive Matching, and Spiral Tower Fit</h2>
+        <p class="body-p">A spiral freezer belt is not selected by appearance alone. For IQF freezing, spiral cooling, proofing, cooking, steaming, and low-temperature food processing lines, the belt must match the spiral tower geometry, drum diameter, inside turn radius, sprocket engagement, chain pitch, rod pitch, belt width, product load, and running direction.</p>
+        <p class="body-p">The main buying risk is mismatch. If the chain row layout, turn radius, or drive engagement is wrong, the belt may track poorly, lift in the curve, create excessive tension, or fail to repeat smoothly in later replacement orders. YIYI reviews these points before quotation so OEM builders and replacement teams can confirm the belt as an engineered component, not just a metal mesh product.</p>
       </div>
-    <div style="margin-bottom:20px">
-      <div class="eyebrow">PRODUCT PHOTOS</div>
-      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">Product Photo Gallery 01&#8211;06</h3>
-      <p class="body-p" style="max-width:740px">These six product positions are meant to answer the buyer's first visual questions: what the belt looks like as a complete assembly, how the chain side is finished, what the mesh surface looks like, whether the weld quality appears controlled, whether the belt is shown in system context, and whether shipment readiness looks professional.</p>
+
+    <div class="sfb-engineering-grid" aria-label="Spiral freezer belt engineering keywords and review points">
+      <div class="sfb-engineering-card">
+        <strong>Spiral Tower Geometry</strong>
+        <p>Drum diameter, inside radius, tower direction, belt path, and available tension determine whether the spiral freezer belt can contract and return smoothly.</p>
+      </div>
+      <div class="sfb-engineering-card">
+        <strong>Chain Edge and Row Count</strong>
+        <p>Single-row, double-row, or three-row chain structures are reviewed together with chain pitch, rod pitch, and side clearance for replacement matching.</p>
+      </div>
+      <div class="sfb-engineering-card">
+        <strong>Positive Drive Engagement</strong>
+        <p>Sprocket tooth profile, chain engagement, shaft position, and running direction are checked to reduce jumping, side pull, and unstable tracking.</p>
+      </div>
+      <div class="sfb-engineering-card">
+        <strong>Food Processing Applications</strong>
+        <p>Used for spiral freezing, IQF tunnels, cooling, proofing, cooking, steaming, pasteurizing, bakery, meat, seafood, poultry, and prepared food lines.</p>
+      </div>
+      <div class="sfb-engineering-card">
+        <strong>Low-Temperature Performance</strong>
+        <p>Material grade, weld consistency, mesh opening, air circulation, drainage, and cleanability are reviewed for cold rooms and hygienic production.</p>
+      </div>
+      <div class="sfb-engineering-card">
+        <strong>Repeat Supply Control</strong>
+        <p>Drawings, samples, and production records keep the replacement conveyor belt specification repeatable across future OEM and distributor orders.</p>
+      </div>
     </div>
-    <div class="g3">
-      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-product-01.jpg" alt="Full spiral freezer belt overview"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 01</div><div class="media-title">Full Belt Overview</div><div class="media-note">Complete stainless belt structure for first visual review.</div></figcaption></figure>
-      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-product-02.jpg" alt="Spiral freezer belt chain side view"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 02</div><div class="media-title">Chain Side View</div><div class="media-note">Drive chain and side structure visible for matching checks.</div></figcaption></figure>
-      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-product-03.jpg" alt="Spiral freezer belt mesh surface detail"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 03</div><div class="media-title">Mesh Surface Detail</div><div class="media-note">Opening, pitch, and formed wire pattern shown clearly.</div></figcaption></figure>
-      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-product-04.jpg" alt="Spiral freezer belt weld and joint close-up"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 04</div><div class="media-title">Weld / Joint Close-Up</div><div class="media-note">Connection points and weld consistency for QA review.</div></figcaption></figure>
-      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-product-05.jpg" alt="Spiral freezer belt system-ready product angle"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 05</div><div class="media-title">System-Ready Angle</div><div class="media-note">Product angle for spiral freezer project evaluation.</div></figcaption></figure>
-      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-product-06.jpg" alt="Spiral freezer belt finished product presentation"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 06</div><div class="media-title">Finished Product Presentation</div><div class="media-note">Clean product condition before packing and shipment.</div></figcaption></figure>
+
+    <div style="margin-bottom:22px;max-width:760px">
+      <div class="eyebrow">SPIRAL BELT REVIEW FLOW</div>
+      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">From Application Conditions to Final Inspection</h3>
+      <p class="body-p">The review flow below places the most important spiral freezer belt keywords into the same order an engineer normally uses: application, geometry, drive, production, running check, and packing.</p>
+    </div>
+    <div class="sfb-flow" aria-label="Spiral freezer belt engineering review process">
+      <div class="sfb-flow-step"><div class="sfb-flow-num">01</div><strong>Application Review</strong><span>Freezing, cooling, proofing, cooking, product load, temperature, sanitation, and air-flow needs.</span></div>
+      <div class="sfb-flow-step"><div class="sfb-flow-num">02</div><strong>Drawing / Sample Check</strong><span>Belt width, mesh opening, spiral pitch, rod diameter, chain pitch, and replacement sample condition.</span></div>
+      <div class="sfb-flow-step"><div class="sfb-flow-num">03</div><strong>Drum and Radius Match</strong><span>Spiral drum diameter, inside turn radius, contraction behavior, and left-hand or right-hand running.</span></div>
+      <div class="sfb-flow-step"><div class="sfb-flow-num">04</div><strong>Drive Compatibility</strong><span>Sprocket engagement, chain row count, side drive clearance, shaft position, and positive drive stability.</span></div>
+      <div class="sfb-flow-step"><div class="sfb-flow-num">05</div><strong>Robotic Welding</strong><span>Controlled weld position, weld size, edge finish, joint profile, and repeatable production record.</span></div>
+      <div class="sfb-flow-step"><div class="sfb-flow-num">06</div><strong>Inspection and Packing</strong><span>Running check, surface inspection, drum test where required, export packing, and repeat-order specification.</span></div>
+    </div>
+
+    <div style="margin-bottom:20px">
+      <div class="eyebrow">CLEAN PRODUCT PHOTOS</div>
+      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">Spiral Freezer Belt Product Views</h3>
+      <p class="body-p" style="max-width:740px">These white-background product views support engineering confirmation: full belt overview, chain edge, mesh surface, rod connection, weld detail, and finished condition before quotation or replacement review.</p>
+    </div>
+    <div class="g3 sfb-photo-grid">
+      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-01.webp" alt="Full spiral freezer belt overview" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 01</div><div class="media-title">Full Belt Overview</div><div class="media-note">Complete stainless belt structure for first visual review.</div></figcaption></figure>
+      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-02.webp" alt="Spiral freezer belt chain side view" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 02</div><div class="media-title">Chain Side View</div><div class="media-note">Drive chain and side structure visible for matching checks.</div></figcaption></figure>
+      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-03.webp" alt="Spiral freezer belt mesh surface detail" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 03</div><div class="media-title">Mesh Surface Detail</div><div class="media-note">Opening, pitch, and formed wire pattern shown clearly.</div></figcaption></figure>
+      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-04.webp" alt="Spiral freezer belt weld and joint close-up" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 04</div><div class="media-title">Weld / Joint Close-Up</div><div class="media-note">Connection points and weld consistency for QA review.</div></figcaption></figure>
+      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-01.webp" alt="Spiral freezer belt system-ready product angle" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 05</div><div class="media-title">System-Ready Angle</div><div class="media-note">Product angle for spiral freezer project evaluation.</div></figcaption></figure>
+      <figure class="media-card photo-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-02.webp" alt="Spiral freezer belt finished product presentation" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Product Photo 06</div><div class="media-title">Finished Product Presentation</div><div class="media-note">Clean product condition before packing and shipment.</div></figcaption></figure>
     </div>
     <div style="margin:40px 0 20px">
-      <div class="eyebrow">EDGE FINISH OPTIONS</div>
-      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">Edge Finish Photo Gallery 01&#8211;06</h3>
-      <p class="body-p" style="max-width:740px">Edge finishing is a buying decision, not a decorative detail. These six views show rod-end and edge-finish details that help customers judge hygiene suitability, handling safety, and structural neatness.</p>
+      <div class="eyebrow">CHAIN EDGE AND ROD-END DETAILS</div>
+      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:10px">Edge Finish and Chain Connection Views</h3>
+      <p class="body-p" style="max-width:740px">For spiral freezer belts, the edge is part of the drive and hygiene system. Rod-end finish, weld profile, chain connection, and side structure help determine cleanability, handling safety, sprocket fit, and long-term running stability.</p>
     </div>
-    <div class="g3">
-      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-edge-01.jpg" alt="Burr-free welded edge finish on spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 01</div><div class="media-title">Burr-Free Welded Edge</div></figcaption></figure>
-      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-edge-02.jpg" alt="Button welded edge finish for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 02</div><div class="media-title">Button Welded Finish</div></figcaption></figure>
-      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-edge-03.jpg" alt="Rod-end and welded connection detail for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 03</div><div class="media-title">Rod-End Connection Detail</div></figcaption></figure>
-      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-edge-04.jpg" alt="Chain side detail for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 04</div><div class="media-title">Chain Connection Detail</div></figcaption></figure>
-      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-edge-05.jpg" alt="Custom side structure and edge finish for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 05</div><div class="media-title">Custom Side Structure</div></figcaption></figure>
-      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-edge-06.jpg" alt="Finished chain edge and mesh detail for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 06</div><div class="media-title">Finished Chain Edge</div></figcaption></figure>
+    <div class="g3 sfb-photo-grid">
+      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-03.webp" alt="Burr-free welded edge finish on spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 01</div><div class="media-title">Burr-Free Welded Edge</div></figcaption></figure>
+      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-04.webp" alt="Button welded edge finish for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 02</div><div class="media-title">Button Welded Finish</div></figcaption></figure>
+      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-01.webp" alt="Rod-end and welded connection detail for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 03</div><div class="media-title">Rod-End Connection Detail</div></figcaption></figure>
+      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-02.webp" alt="Chain side detail for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 04</div><div class="media-title">Chain Connection Detail</div></figcaption></figure>
+      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-edge-05.jpg" alt="Custom side structure and edge finish for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 05</div><div class="media-title">Custom Side Structure</div></figcaption></figure>
+      <figure class="media-card edge-tile"><img src="assets/product-media/spiral-freezer-belt/sfb-clean-white-04.webp" alt="Finished chain edge and mesh detail for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Edge Finish 06</div><div class="media-title">Finished Chain Edge</div></figcaption></figure>
     </div>
   </div>
 </section>
@@ -740,7 +845,7 @@ img{max-width:100%;height:auto;display:block}
           </div>
           <div class="cl-item">
             <svg class="cl-ico sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div class="cl-text"><strong>Real production conditions considered</strong>Drum geometry, running direction, chain structure, and edge requirements are addressed before manufacturing begins.</div>
+          <div class="cl-text"><strong>Real production conditions considered</strong>Drum geometry, running direction, chain row count, chain structure, and edge requirements are addressed before manufacturing begins.</div>
           </div>
           <div class="cl-item">
             <svg class="cl-ico sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -754,7 +859,7 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div>
         <figure class="media-card proof-media">
-          <img src="assets/product-media/spiral-freezer-belt/sfb-s4-drawing-sample.png" alt="YIYI production and engineering review context for spiral freezer belt projects"/ decoding="async" loading="lazy">
+          <img src="assets/product-media/spiral-freezer-belt/sfb-s4-drawing-sample.png" alt="YIYI production and engineering review context for spiral freezer belt projects" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Engineering Review</div>
             <div class="media-title">Project matching starts from real production capability, not catalog selection.</div>
@@ -803,8 +908,8 @@ img{max-width:100%;height:auto;display:block}
       </div>
       <div class="param-card">
         <div class="param-num">06</div>
-        <div class="param-title">Chain Structure</div>
-        <div class="param-desc">The type, link format, and connection method of the edge chain. Chain structure affects drive compatibility, load capacity, and replacement matching accuracy.</div>
+        <div class="param-title">Chain Structure and Row Count</div>
+        <div class="param-desc">The type, link format, connection method, and chain row count. Spiral freezer belts may use single-row, double-row, or three-row chain structures depending on drum layout, load, drive engagement, and replacement matching requirements.</div>
       </div>
       <div class="param-card">
         <div class="param-num">07</div>
@@ -872,16 +977,16 @@ img{max-width:100%;height:auto;display:block}
       </div>
 
       <div style="display:flex;flex-direction:column;gap:14px">
-        <figure id="sfb-hero-video-slot" data-asset-slot="spiral-freezer-belt/hero-video" class="media-card proof-media">
-          <video src="assets/product-media/spiral-freezer-belt/sfb-s6-robot-weld-video.mp4" autoplay muted loop playsinline></video>
+        <figure id="sfb-hero-video-slot" data-asset-slot="spiral-freezer-belt/robotic-welding-video" class="media-card proof-media">
+          <video src="assets/product-media/spiral-freezer-belt/sfb-s6-robot-weld-video-web.mp4" poster="assets/product-media/spiral-freezer-belt/sfb-s6-robot-machine.webp" autoplay muted loop playsinline preload="auto" aria-label="Automatic robotic welding machine video for spiral freezer belt production"></video>
           <figcaption class="media-caption">
             <div class="media-kicker">Robotic Welding Video</div>
-            <div class="media-title">Automated welding process for repeatable spiral belt production.</div>
+            <div class="media-title">Automatic welding robot process used to support repeatable spiral belt production.</div>
           </figcaption>
         </figure>
         <div class="g2" style="gap:14px">
-          <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s6-robot-machine.jpg" alt="Robotic welding machine for spiral freezer belt production"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Robotic Welding Machine</div></figcaption></figure>
-          <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s6-weld-closeup.png" alt="Weld joint close-up for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Weld Joint Close-Up</div></figcaption></figure>
+          <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s6-robot-machine.webp" alt="Robotic welding machine for spiral freezer belt production" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Robotic Welding Machine</div></figcaption></figure>
+          <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s6-weld-closeup.png" alt="Weld joint close-up for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Weld Joint Close-Up</div></figcaption></figure>
         </div>
       </div>
     </div>
@@ -985,9 +1090,9 @@ img{max-width:100%;height:auto;display:block}
     </div>
 
     <div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:14px">
-      <figure class="media-card proof-md" style="flex:1;min-width:220px;border-color:rgba(255,255,255,.10)"><img src="assets/product-media/spiral-freezer-belt/sfb-s7-final-qa.png" alt="Final QA inspection for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">QA Proof</div><div class="media-title">Final QA Inspection Scene</div></figcaption></figure>
-      <figure class="media-card proof-md" style="flex:1;min-width:220px;border-color:rgba(255,255,255,.10)"><img src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Dimensional re-check for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Verification</div><div class="media-title">Dimensional Re-Check</div></figcaption></figure>
-      <figure class="media-card proof-md" style="flex:1;min-width:220px;border-color:rgba(255,255,255,.10)"><img src="assets/product-media/spiral-freezer-belt/sfb-s9-shipment.png" alt="Export packing and shipment readiness for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Shipment</div><div class="media-title">Export Packing Confirmation</div></figcaption></figure>
+      <figure class="media-card proof-md" style="flex:1;min-width:220px;border-color:rgba(255,255,255,.10)"><img src="assets/product-media/spiral-freezer-belt/sfb-s7-final-qa.png" alt="Final QA inspection for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">QA Proof</div><div class="media-title">Final QA Inspection Scene</div></figcaption></figure>
+      <figure class="media-card proof-md" style="flex:1;min-width:220px;border-color:rgba(255,255,255,.10)"><img src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Dimensional re-check for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Verification</div><div class="media-title">Dimensional Re-Check</div></figcaption></figure>
+      <figure class="media-card proof-md" style="flex:1;min-width:220px;border-color:rgba(255,255,255,.10)"><img src="assets/product-media/spiral-freezer-belt/sfb-s9-shipment.png" alt="Export packing and shipment readiness for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Shipment</div><div class="media-title">Export Packing Confirmation</div></figcaption></figure>
     </div>
 
     <div class="il-row" style="margin-top:32px">
@@ -1029,13 +1134,13 @@ img{max-width:100%;height:auto;display:block}
           </div>
           <div class="cl-item">
             <svg class="cl-ico gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div class="cl-text">Chain pitch and sprocket engagement verified against customer drive system specifications</div>
+            <div class="cl-text">Chain pitch, chain row count, and sprocket engagement verified against customer drive system specifications</div>
           </div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
-        <figure class="media-card proof-md"><img src="assets/product-media/spiral-freezer-belt/sfb-s8-drum-test.jpg" alt="Spiral freezer belt contraction and drum matching review"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Drum Matching</div><div class="media-title">Drum Fit or Contraction Review</div></figcaption></figure>
-        <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s8-sprocket.jpg" alt="Sprocket engagement and matched drive component for conveyor belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Matched Drive</div><div class="media-title">Sprocket Engagement Close-Up</div></figcaption></figure>
+        <figure class="media-card proof-md"><img src="assets/product-media/spiral-freezer-belt/sfb-s8-drum-test.jpg" alt="Spiral freezer belt contraction and drum matching review" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Drum Matching</div><div class="media-title">Drum Fit or Contraction Review</div></figcaption></figure>
+        <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s8-sprocket.jpg" alt="Sprocket engagement and matched drive component for conveyor belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Matched Drive</div><div class="media-title">Sprocket Engagement Close-Up</div></figcaption></figure>
       </div>
     </div>
   </div>
@@ -1086,8 +1191,8 @@ img{max-width:100%;height:auto;display:block}
 
     <div style="margin-top:28px">
       <div class="g2" style="gap:14px">
-        <figure class="media-card proof-md"><img src="assets/product-media/spiral-freezer-belt/sfb-s9-spare-parts.jpg" alt="Matched spare parts and drive sprockets for belt systems"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Spare Parts</div><div class="media-title">Matched Rods, Chains, and Drive Components</div></figcaption></figure>
-        <figure class="media-card proof-md"><img src="assets/product-media/spiral-freezer-belt/sfb-s9-shipment.png" alt="Export-ready packing for conveyor belt shipment"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Export Ready</div><div class="media-title">Shipment and Packing Support</div></figcaption></figure>
+        <figure class="media-card proof-md"><img src="assets/product-media/spiral-freezer-belt/sfb-s9-spare-parts.jpg" alt="Matched spare parts and drive sprockets for belt systems" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Spare Parts</div><div class="media-title">Matched Rods, Chains, and Drive Components</div></figcaption></figure>
+        <figure class="media-card proof-md"><img src="assets/product-media/spiral-freezer-belt/sfb-s9-shipment.png" alt="Export-ready packing for conveyor belt shipment" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Export Ready</div><div class="media-title">Shipment and Packing Support</div></figcaption></figure>
       </div>
     </div>
   </div>
@@ -1121,10 +1226,10 @@ img{max-width:100%;height:auto;display:block}
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
-        <figure class="media-card proof-md"><img src="assets/product-media/spiral-freezer-belt/sfb-s10-electropolish.jpg" alt="Electropolished spiral freezer belt surface"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Surface Finish</div><div class="media-title">Electropolished Belt Surface</div><div class="media-note">Clean, bright surface after treatment - no residue or water marks.</div></figcaption></figure>
+        <figure class="media-card proof-md"><img src="assets/product-media/spiral-freezer-belt/sfb-s10-electropolish.jpg" alt="Electropolished spiral freezer belt surface" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Surface Finish</div><div class="media-title">Electropolished Belt Surface</div><div class="media-note">Clean, bright surface after treatment - no residue or water marks.</div></figcaption></figure>
         <div class="g2" style="gap:14px">
-          <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s10-cleaning.jpg" alt="Post-treatment cleaning view for spiral freezer belt"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Post-Treatment Cleaning</div></figcaption></figure>
-          <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s10-drying.jpg" alt="Dry spiral freezer belt before packing"/ decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Drying Before Packing</div></figcaption></figure>
+          <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s10-cleaning.jpg" alt="Post-treatment cleaning view for spiral freezer belt" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Post-Treatment Cleaning</div></figcaption></figure>
+          <figure class="media-card proof-sm"><img src="assets/product-media/spiral-freezer-belt/sfb-s10-drying.jpg" alt="Dry spiral freezer belt before packing" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Drying Before Packing</div></figcaption></figure>
         </div>
       </div>
     </div>
@@ -1220,7 +1325,7 @@ img{max-width:100%;height:auto;display:block}
             <span class="faq-q-text">What technical parameters does YIYI Mesh Belt need to configure a spiral freezer belt?</span>
             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
-          <div class="faq-a"><p>Key parameters include overall width, effective width, wire diameter, spiral pitch, cross rod diameter, rod and chain pitch, chain structure, drum diameter or turning requirement, running direction, divider or flight requirements, and edge finish style.</p></div>
+          <div class="faq-a"><p>Key parameters include overall width, effective width, wire diameter, spiral pitch, cross rod diameter, rod and chain pitch, chain structure, chain row count such as single-row, double-row, or three-row chain, drum diameter or turning requirement, running direction, divider or flight requirements, and edge finish style.</p></div>
         </div>
 
         <div class="faq-item">
@@ -1264,7 +1369,7 @@ img{max-width:100%;height:auto;display:block}
   <div class="cta-inner">
     <div class="eyebrow eyebrow-lt" style="text-align:center">START YOUR PROJECT</div>
     <h2 class="cta-h2">Ready to Review Your<br><em>Spiral Freezer Belt Project?</em></h2>
-    <p class="cta-p">Send the drawing if you have one. Send the sample dimensions if you are matching an existing belt. Or send the application details if you are still confirming structure. We will respond around fit, risk, and supply practicality, not just price.</p>
+    <p class="cta-p">Send the drawing if you have one. Send the sample dimensions if you are matching an existing belt. If your spiral belt uses a three-row chain structure, include chain row count, chain pitch, sprocket details, and drum diameter so we can review fit and drive engagement before quoting.</p>
     <div class="cta-btns">
       <a href="contact.html?intent=quote&product=spiral-freezer-belt&source=spiral-freezer-belt" class="btn-primary">Ask For A Quick Quote &#8594;</a>
       <a href="contact.html?intent=drawing&product=spiral-freezer-belt&source=spiral-freezer-belt" class="btn-outline btn-outline-lt">Send Your Drawing</a>
@@ -1279,7 +1384,7 @@ img{max-width:100%;height:auto;display:block}
       <!-- Col 1: Brand & Proof -->
       <div>
         <div class="foot-logo-row">
-          <img src="assets/yiyi-logo-source.jpg" alt="YIYI Mesh Belt" class="foot-logo-img" / decoding="async" loading="lazy">
+          <img src="assets/yiyi-logo-source.jpg" alt="YIYI Mesh Belt" class="foot-logo-img" decoding="async" loading="lazy">
           <span class="foot-brand">YIYI MESH BELT</span>
           <span class="foot-slogan">PROVEN &#183; STABLE &#183; VERIFIED</span>
           <span class="foot-identity">Metal Conveyor Belt Manufacturer<br>for OEMs &amp; Distributors</span>
@@ -1297,7 +1402,7 @@ img{max-width:100%;height:auto;display:block}
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> ISO 9001 Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> SGS Audited</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> 6,000 sqm Solar Photovoltaic System</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Third-Party Audit Welcome</span>
         </div>
@@ -1411,7 +1516,7 @@ img{max-width:100%;height:auto;display:block}
       <span class="foot-copy" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
         <a href="privacy-policy.html" style="color:#8FA8C0;text-decoration:none;font-size:12px">Privacy Policy</a>
         <span style="color:#4A6080">&#183;</span>
-        <span>ISO 9001 Certified &#183; DUNS Registered &#183; SGS Audited</span>
+        <span>27,000 sqm Facility &#183; 280+ Machines &#183; 200,000m Annual Output</span>
       </span>
     </div>
   </div>
@@ -1503,6 +1608,9 @@ document.addEventListener('click', () => document.querySelectorAll('.nd').forEac
 <script src="assets/site-shell.js"></script>
 </body>
 </html>
+
+
+
 
 
 

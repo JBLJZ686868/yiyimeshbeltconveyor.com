@@ -166,6 +166,127 @@
     }
   }
 
+  function relativeContactPath() {
+    return window.location.pathname.includes("/blog/") ? "../contact.html" : "contact.html";
+  }
+
+  function pageSource() {
+    const current = window.location.pathname.split("/").pop() || "index.html";
+    return current.replace(/\.html$/i, "") || "index";
+  }
+
+  function pageProductContext() {
+    const source = pageSource();
+    const productMap = {
+      "spiral-freezer-belt": "Spiral Freezer Belt",
+      "self-stacking-belt": "Self-Stacking Belt",
+      "eye-link-belt": "Eye Link Belt",
+      "flat-wire-belt": "Flat Wire / Honeycomb Conveyor Belt",
+      "side-driven-belt": "Side-Driven Belt",
+      "drive-sprockets": "Drive Sprockets",
+      "chain-driven-belt": "Chain-Driven Belt",
+      "balanced-weave-belt": "Balanced Weave Belt",
+      "compound-weave-belt": "Compound Weave Belt",
+      "chain-plate-belt": "Chain Plate Belt",
+      "open-link-belt": "Open Link Belt",
+      "trapezoidal-mesh-belt": "Trapezoidal Mesh Belt",
+      "belt-matching": "Replacement Belt Matching",
+      "replacement-review": "Replacement Belt Review",
+      "engineering-oem": "Engineering / OEM Project"
+    };
+    if (productMap[source]) return productMap[source];
+    const title = (document.title || "").split("|")[0].trim();
+    if (!title || /home|contact|thank|privacy|404/i.test(pageSource())) return "";
+    return title.replace(/\s+(Manufacturer|Supplier|Factory|for|Support).*$/i, "").trim();
+  }
+
+  function contactHref(intent) {
+    const params = new URLSearchParams();
+    params.set("intent", intent);
+    params.set("source", pageSource());
+    const product = pageProductContext();
+    if (product) params.set("product", product);
+    return `${relativeContactPath()}?${params.toString()}`;
+  }
+
+  function injectFooterInquiryStyles() {
+    if (document.getElementById("footer-inquiry-enhancer-style")) return;
+    const style = document.createElement("style");
+    style.id = "footer-inquiry-enhancer-style";
+    style.textContent = `
+      .footer-inquiry-panel{margin:34px 0 0;padding:24px;border:1px solid rgba(255,255,255,.10);border-radius:8px;background:rgba(255,255,255,.035)}
+      .footer-inquiry-head{display:flex;gap:18px;align-items:flex-end;justify-content:space-between;margin-bottom:18px}
+      .footer-inquiry-kicker{font-family:var(--font-mono,ui-monospace,monospace);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:6px}
+      .footer-inquiry-title{font-size:18px;line-height:1.25;font-weight:800;color:#fff;letter-spacing:0;margin:0}
+      .footer-inquiry-copy{font-size:13px;line-height:1.75;color:#8FA8C0;max-width:560px;margin:0}
+      .footer-inquiry-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+      .footer-inquiry-card{display:flex;flex-direction:column;gap:7px;min-height:118px;padding:16px;border-radius:7px;border:1px solid rgba(255,255,255,.10);background:rgba(13,27,46,.74);text-decoration:none;transition:border-color .18s,transform .18s,background .18s}
+      .footer-inquiry-card:hover{transform:translateY(-2px);border-color:rgba(74,140,200,.55);background:rgba(17,40,66,.88)}
+      .footer-inquiry-card.primary{background:#1F5C9E;border-color:#2A6DB5}
+      .footer-inquiry-card.primary:hover{background:#2A6DB5}
+      .footer-inquiry-label{font-size:14px;font-weight:800;color:#fff;line-height:1.25}
+      .footer-inquiry-note{font-size:12px;line-height:1.55;color:rgba(255,255,255,.62)}
+      .footer-inquiry-meta{margin-top:auto;font-family:var(--font-mono,ui-monospace,monospace);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.44)}
+      .foot-btn-p,.foot-qbtn{font-size:13px!important;line-height:1.25!important}
+      .foot-btn-o{font-size:13px!important;line-height:1.25!important}
+      @media(max-width:820px){.footer-inquiry-head{display:block}.footer-inquiry-copy{margin-top:8px}.footer-inquiry-actions{grid-template-columns:1fr}.footer-inquiry-panel{padding:20px}}
+    `;
+    document.head.appendChild(style);
+  }
+
+  function enhanceFooterInquiry() {
+    const footer = first([".yiyi-footer", ".footer", "footer"]);
+    if (!footer || footer.querySelector(".footer-inquiry-panel")) return;
+    injectFooterInquiryStyles();
+
+    const source = pageSource();
+    const product = pageProductContext();
+    const productShort = product ? product.replace(/\s*\|.*$/g, "") : "your belt project";
+    const panel = document.createElement("div");
+    panel.className = "footer-inquiry-panel";
+    panel.innerHTML = `
+      <div class="footer-inquiry-head">
+        <div>
+          <div class="footer-inquiry-kicker">Engineering Inquiry Paths</div>
+          <h2 class="footer-inquiry-title">Not ready to quote yet? Send the proof we need first.</h2>
+        </div>
+        <p class="footer-inquiry-copy">For ${productShort}, buyers can start with a drawing, an old belt photo, a sample detail, or a replacement problem. YIYI will route it to product matching, engineering review, or quotation.</p>
+      </div>
+      <div class="footer-inquiry-actions">
+        <a class="footer-inquiry-card primary" href="${contactHref("drawing")}">
+          <span class="footer-inquiry-label">Send Drawing</span>
+          <span class="footer-inquiry-note">Upload drawing, dimensions, pitch, chain row count, material, and drive details for review.</span>
+          <span class="footer-inquiry-meta">Best for OEM projects</span>
+        </a>
+        <a class="footer-inquiry-card" href="${contactHref("replacement")}">
+          <span class="footer-inquiry-label">Replacement Review</span>
+          <span class="footer-inquiry-note">Send old belt photos, sprocket details, drum diameter, wear points, or sample measurements.</span>
+          <span class="footer-inquiry-meta">Reduce mismatch risk</span>
+        </a>
+        <a class="footer-inquiry-card" href="${contactHref("engineering")}">
+          <span class="footer-inquiry-label">Talk to Engineer</span>
+          <span class="footer-inquiry-note">Use this path if belt type, structure, material, or application risk is still uncertain.</span>
+          <span class="footer-inquiry-meta">Low-pressure review</span>
+        </a>
+      </div>
+    `;
+
+    const bottom = footer.querySelector(".foot-bottom, .footer-bottom, .fbot");
+    if (bottom && bottom.parentNode) bottom.parentNode.insertBefore(panel, bottom);
+    else footer.appendChild(panel);
+
+    all(".foot-btn-p, .foot-qbtn", footer).forEach((link) => {
+      if (link.tagName !== "A") return;
+      link.textContent = "Send Project Details \u2192";
+      link.setAttribute("href", contactHref("quote"));
+    });
+    all(".foot-btn-o", footer).forEach((link) => {
+      if (link.tagName !== "A") return;
+      link.textContent = "Send Drawing / Old Belt Photo \u2192";
+      link.setAttribute("href", contactHref("drawing"));
+    });
+  }
+
   window.toggleMob = toggleMob;
   window.toggleMobile = toggleMob;
   window.closeWA = closeWA;
@@ -195,6 +316,7 @@
 
   updateIntentLinks();
   hydrateContactForm();
+  enhanceFooterInquiry();
   setNavScrolled();
   window.addEventListener("scroll", setNavScrolled, { passive: true });
   window.addEventListener("resize", () => {

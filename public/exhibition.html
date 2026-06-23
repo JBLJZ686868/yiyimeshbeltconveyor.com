@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
 <meta charset="UTF-8">
@@ -101,7 +101,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--w70);padding:12px 22px;border-radius:3px;border:1px solid var(--w30);font-size:13px;font-weight:500;transition:border-color .18s,color .18s}
 .btn-o:hover{border-color:var(--w70);color:var(--w)}
 
-/* 鈹€鈹€ TOPBAR 鈹€鈹€ */
+/* ── TOPBAR ── */
 .yiyi-topbar{background:#0a1628;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px;color:rgba(255,255,255,.5)}
 .tb-inner{max-width:var(--W);margin:0 auto;padding:0 var(--px);display:flex;justify-content:space-between;align-items:center;height:36px}
 .tb-left{display:flex;align-items:center;gap:18px;overflow:hidden}
@@ -116,7 +116,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .tb-lang:hover{color:rgba(255,255,255,.7);background:rgba(255,255,255,.05)}
 .tb-lang.active{background:rgba(255,255,255,.15);color:white}
 
-/* 鈹€鈹€ NAV 鈹€鈹€ */
+/* ── NAV ── */
 .yiyi-nav{background:#0D1B2A;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:500;transition:box-shadow .3s,background .3s}
 .yiyi-nav.scrolled{background:rgba(13,27,42,.98);backdrop-filter:blur(12px);box-shadow:0 4px 32px rgba(0,0,0,.5)}
 .nav-inner{max-width:var(--W);margin:0 auto;padding:0 var(--px);display:flex;align-items:center;height:72px;gap:16px}
@@ -179,18 +179,18 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .mob-link:hover{color:white;background:rgba(255,255,255,.05)}
 .mob-cta{display:block;margin:12px 16px 0;text-align:center;background:#2E5B9A;color:white;font-size:15px;font-weight:700;padding:13px;border-radius:3px;text-decoration:none;letter-spacing:.03em}
 
-/* 鈹€鈹€ STICKY CTA 鈹€鈹€ */
+/* ── STICKY CTA ── */
 .sticky-cta{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:300;background:var(--gold);color:var(--w);writing-mode:vertical-rl;padding:18px 11px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:3px 0 0 3px;box-shadow:-4px 4px 20px rgba(0,0,0,.3);transition:background .18s}
 .sticky-cta:hover{background:var(--gold-d)}
 
-/* 鈹€鈹€ TRUST STRIP 鈹€鈹€ */
+/* ── TRUST STRIP ── */
 .trust-strip{background:#1C3A5E;border-top:1px solid #2A4F78;border-bottom:1px solid #2A4F78}
 .trust-strip-inner{max-width:var(--W);margin:0 auto;padding:14px var(--px);display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 @media(min-width:1024px){.trust-strip-inner{justify-content:space-between;gap:0}}
 .ts-item{display:flex;align-items:center;gap:8px;padding:0 12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.7)}
-.ts-item::before{content:'\\2713';color:#4ADE80;font-size:12px}
+.ts-item::before{content:'?';color:#4ADE80;font-size:12px}
 
-/* 鈹€鈹€ FOOTER 鈹€鈹€ */
+/* ── FOOTER ── */
 .yiyi-footer{background:#0D1B2E;padding:56px 0 0}
 .foot-grid{max-width:var(--W);margin:0 auto;padding:0 var(--px) 40px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;border-bottom:1px solid rgba(255,255,255,.07)}
 @media(max-width:1023px){.foot-grid{grid-template-columns:1fr 1fr;padding-left:24px;padding-right:24px}}
@@ -219,7 +219,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 .foot-bottom{max-width:var(--W);margin:0 auto;padding:18px var(--px);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .foot-copy{font-size:11px;letter-spacing:.04em;color:rgba(255,255,255,.35)}
 
-/* 鈹€鈹€ WA 鈹€鈹€ */
+/* ── WA ── */
 .wa-wrap{position:fixed;right:24px;bottom:24px;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
 .wa-btn{width:60px;height:60px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s;position:relative;flex-shrink:0}
 .wa-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.5)}
@@ -369,7 +369,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:640px){.W{padding:0 20px}.hero-l{padding:48px 20px}.tb-badges{display:none}.yiyi-topbar{display:none}.foot-bottom{padding-left:20px;padding-right:20px}}
 
-    /* 鈹€鈹€ Logo system override (locked: index-20260312) 鈹€鈹€ */
+    /* ── Logo system override (locked: index-20260312) ── */
     .nav-logo { display: flex; align-items: center; gap: 0; text-decoration: none; flex-shrink: 0; }
     .nav-brand { font-size: 16px; font-weight: 700; letter-spacing: .06em; color: white; white-space: nowrap; padding-left: 12px; border-left: 2px solid #C8922A; }
     .foot-logo-row { display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 18px; }
@@ -404,7 +404,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       <div class="tb-badges">
         <span class="tb-badge"><span class="tb-dot"></span>Manufacturing Since 1998</span>
         <span class="tb-badge"><span class="tb-dot"></span>ISO 9001 Certified</span>
-        <span class="tb-badge"><span class="tb-dot"></span>DUNS Registered</span>
+        <span class="tb-badge"><span class="tb-dot"></span>Food Contact Safety Certified</span>
       </div>
     </div>
     <div class="tb-langs">
@@ -549,7 +549,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
           <div class="drop-box">
             <div class="drop-blue-bar"></div>
             <div class="drop-body">
-              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Automated Welding</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Manufacturing Proof</span></a>
               <a href="raw-material.html" class="dl"><span class="dl-icon">&#129523;</span><span class="dl-label">In-House Wire Drawing</span></a>
               <a href="quality-control.html" class="dl"><span class="dl-icon">&#9989;</span><span class="dl-label">Quality Control</span></a>
               <a href="global-delivery.html" class="dl"><span class="dl-icon">&#128230;</span><span class="dl-label">Packaging &amp; Export</span></a>
@@ -653,7 +653,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
 
       <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
       <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
-<a href="manufacturing.html" class="mob-link">Automated Welding</a>
+<a href="manufacturing.html" class="mob-link">Manufacturing Proof</a>
       <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
       <a href="quality-control.html" class="mob-link">Quality Control</a>
       <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
@@ -729,7 +729,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
           <div class="yi-dot active"></div>
           <div class="yi-body">
             <div class="yi-title">IBA Munich  - Fourth Year</div>
-            <div class="yi-desc">Drum diameter test demonstration introduced at booth. ISO 9001 and DUNS credentials displayed.</div>
+            <div class="yi-desc">Drum diameter test demonstration introduced at booth. ISO 9001 and certification records displayed.</div>
           </div>
         </div>
         <div class="year-item featured">
@@ -1129,9 +1129,9 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> ISO 9001 Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> SGS Audited</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> DUNS Registered</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
         </div>
       </div>
 
@@ -1203,7 +1203,7 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
       <span class="foot-copy" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
         <a href="privacy-policy.html" style="color:#8FA8C0;text-decoration:none;font-size:12px">Privacy Policy</a>
         <span style="color:#4A6080">&#183;</span>
-        <span>ISO 9001 Certified &#183; DUNS Registered &#183; SGS Audited</span>
+        <span>ISO 9001 Certified &#183; Food Contact Safety Certified &#183; National High-Tech Enterprise</span>
       </span>
     </div>
   </div>
@@ -1244,6 +1244,8 @@ button{font-family:inherit;cursor:pointer;background:none;border:none}
     <div class="wa-pulse"></div>
     <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.
+
+
 
 
 

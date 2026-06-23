@@ -13,3 +13,10 @@ content_sources/excluded-jbl-assets/
 doc_paths.txt
 preview-server-*.js
 Homepage_Asset_Checklist_YIYI_Mesh_Belt.docx
+
+# Local QA / preview artifacts
+tmp/
+preview-screenshots/
+product-page-audit.csv
+site-audit-*.csv
+Ask
