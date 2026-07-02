@@ -16,7 +16,6 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="assets/homepage-hero-banner.mp4" as="video" type="video/mp4">
   <link rel="stylesheet" href="assets/site-shell.css">
   <link rel="stylesheet" href="assets/site-refinement.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -425,6 +424,43 @@
     .wa-input:focus { border-color: #4A8CC8; }
     .wa-send { width: 36px; height: 36px; border-radius: 50%; background: #1F5C9E; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .18s; }
     .wa-send:hover { background: #0D1B2A; }
+    .ai-advisor-wrap { position: fixed; right: 24px; bottom: 96px; z-index: 901; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+    .ai-advisor-card { width: min(380px, calc(100vw - 32px)); background: #071827; border: 1px solid rgba(106,159,204,.36); border-radius: 14px; box-shadow: 0 22px 60px rgba(4,12,22,.46); overflow: hidden; animation: waSlide .2s ease; color: white; }
+    .ai-advisor-head { padding: 15px 16px; background: linear-gradient(135deg,#0D1B2A,#1F5C9E); display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+    .ai-advisor-profile { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .ai-advisor-photo { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,.72); box-shadow: 0 6px 18px rgba(0,0,0,.22); flex: 0 0 auto; }
+    .ai-advisor-kicker { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: #9FD1FF; margin-bottom: 5px; }
+    .ai-advisor-title { font-size: 16px; line-height: 1.25; font-weight: 800; color: #fff; }
+    .ai-advisor-sub { margin-top: 4px; font-size: 12px; line-height: 1.45; color: rgba(255,255,255,.78); }
+    .ai-advisor-close { color: rgba(255,255,255,.82); font-size: 22px; background: none; border: none; cursor: pointer; padding: 0; line-height: 1; }
+    .ai-advisor-body { padding: 16px; background: linear-gradient(180deg,#0B2034,#071827); }
+    .ai-advisor-note { border-left: 3px solid #C8922A; padding: 9px 11px; background: rgba(200,146,42,.10); color: #DDEBFA; font-size: 13px; line-height: 1.55; margin-bottom: 12px; }
+    .ai-advisor-trust { display: grid; gap: 7px; margin-bottom: 12px; }
+    .ai-advisor-trust span { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; line-height: 1.45; color: rgba(221,235,250,.82); }
+    .ai-advisor-trust span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #6A9FCC; flex: 0 0 auto; margin-top: 6px; }
+    .ai-advisor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+    .ai-advisor-chip { border: 1px solid rgba(106,159,204,.28); background: rgba(31,92,158,.22); color: #BBD9F4; border-radius: 8px; padding: 9px 10px; font-size: 12px; font-weight: 700; line-height: 1.25; cursor: pointer; text-align: left; transition: all .18s ease; font-family: var(--font-sans); }
+    .ai-advisor-chip:hover { background: rgba(74,140,200,.30); border-color: rgba(106,159,204,.52); color: #fff; }
+    .ai-advisor-input { width: 100%; min-height: 76px; resize: vertical; border: 1px solid rgba(143,168,192,.35); border-radius: 10px; background: rgba(255,255,255,.06); color: #fff; padding: 10px 12px; font-size: 13px; line-height: 1.5; font-family: var(--font-sans); outline: none; }
+    .ai-advisor-input::placeholder { color: rgba(221,235,250,.58); }
+    .ai-advisor-input:focus { border-color: #6A9FCC; box-shadow: 0 0 0 3px rgba(74,140,200,.16); }
+    .ai-advisor-actions { display: flex; gap: 8px; margin-top: 10px; }
+    .ai-advisor-primary, .ai-advisor-secondary { flex: 1; border-radius: 9px; padding: 10px 12px; font-size: 13px; font-weight: 800; cursor: pointer; font-family: var(--font-sans); }
+    .ai-advisor-primary { border: 1px solid #C8922A; background: #C8922A; color: #071827; }
+    .ai-advisor-secondary { border: 1px solid rgba(106,159,204,.36); background: transparent; color: #BBD9F4; }
+    .ai-advisor-guard { margin-top: 10px; font-size: 11px; line-height: 1.45; color: rgba(221,235,250,.56); }
+    .ai-advisor-btn { min-width: 244px; height: 50px; border-radius: 999px; border: 1px solid rgba(159,209,255,.28); background: linear-gradient(135deg,#10263D,#1F5C9E); color: #fff; box-shadow: 0 10px 30px rgba(13,27,42,.38); cursor: pointer; display: flex; align-items: center; gap: 10px; justify-content: center; padding: 0 18px; font-size: 13px; font-weight: 800; letter-spacing: .01em; font-family: var(--font-sans); transition: transform .2s, box-shadow .2s; }
+    .ai-advisor-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(31,92,158,.42); }
+    .ai-advisor-btn-photo { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(255,255,255,.72); flex: 0 0 auto; }
+    .ai-advisor-dot { width: 8px; height: 8px; border-radius: 50%; background: #46D77A; box-shadow: 0 0 0 4px rgba(70,215,122,.13); flex-shrink: 0; }
+    @media(max-width:640px){
+      .wa-wrap { right: 16px; bottom: 16px; }
+      .ai-advisor-wrap { right: 16px; bottom: 88px; }
+      .ai-advisor-btn { min-width: 56px; width: 56px; height: 56px; padding: 0; border-radius: 50%; }
+      .ai-advisor-btn-photo { width: 36px; height: 36px; }
+      .ai-advisor-label { display: none; }
+      .ai-advisor-grid { grid-template-columns: 1fr; }
+    }
 
     /* Hero */
     .hero {
@@ -456,7 +492,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: .28;
+      opacity: .36;
       filter: saturate(.92) contrast(1.06) brightness(.84);
       transform: scale(1.02);
     }
@@ -612,11 +648,27 @@
     .product-flagship, .product-card { border-radius: 10px; }
     .products-row2 { gap: 28px; margin-bottom: 28px; }
     .products-row3 { gap: 28px; }
-    .pf-img-wrap, .pc-img-wrap { background: #fff; padding: 12px; }
-    .pf-img, .pc-img, .pc-sm-img { background:#fff; border-radius: 8px; object-fit: contain; object-position: center center; }
-    .pf-img { height: 380px; }
-    .pc-img { height: 310px; }
-    .pc-sm-img { height: 250px; }
+    .pf-img-wrap, .pc-img-wrap {
+      background:
+        radial-gradient(circle at 50% 48%, rgba(74,140,200,.22), rgba(13,34,54,.10) 42%, rgba(6,18,32,.92) 100%),
+        #0d2236;
+      padding: 22px;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .pf-img, .pc-img, .pc-sm-img {
+      background: transparent;
+      border-radius: 0;
+      object-fit: contain;
+      object-position: center center;
+      display:block;
+      transform: scale(1.04);
+      transform-origin: center center;
+      filter: saturate(1.05) contrast(1.08) brightness(1.07) drop-shadow(0 22px 34px rgba(0,0,0,.28));
+    }
+    .pf-img { height: 480px; object-position: center 50%; }
+    .pc-img { height: 380px; object-position: center 50%; }
+    .pc-sm-img { height: 310px; object-position: center 50%; }
     .pf-body { padding: 44px 48px; }
     .pc-body { padding: 30px 30px 32px; }
     .pc-sm-body { padding: 24px 24px 26px; }
@@ -624,10 +676,10 @@
     @media(max-width:768px){
       .products { padding: 72px 0 88px; }
       .products-header { margin-bottom: 42px; }
-      .pf-img-wrap, .pc-img-wrap { padding: 8px; }
-      .pf-img { height: 340px; }
-      .pc-img { height: 300px; }
-      .pc-sm-img { height: 260px; }
+      .pf-img-wrap, .pc-img-wrap { padding: 16px; }
+      .pf-img { height: 360px; }
+      .pc-img { height: 330px; }
+      .pc-sm-img { height: 300px; }
       .pf-body, .pc-body, .pc-sm-body { padding: 24px; }
       .products-row2, .products-row3 { gap: 22px; margin-bottom: 22px; }
     }
@@ -714,7 +766,7 @@
     .qa-image-caption span { display: block; margin-top: 4px; font-size: 12px; color: #B7C8DA; }
     .product-flagship:hover .pf-img,
     .product-card:hover .pc-img,
-    .product-card:hover .pc-sm-img,
+    .product-card:hover .pc-sm-img { transform: scale(1.23); filter: saturate(1.02) contrast(1.03); }
     .mfg-video-card:hover .mfg-card-img,
     .qa-image:hover img { transform: scale(1.035); filter: saturate(1.02) contrast(1.03); }
 
@@ -1473,20 +1525,46 @@
     /* Homepage release guardrails */
     .products .pf-img-wrap,
     .products .pc-img-wrap {
-      padding: 8px !important;
-      background: #fff !important;
+      padding: clamp(12px, 1.6vw, 22px) !important;
+      background:
+        radial-gradient(circle at 50% 48%, rgba(74,140,200,.18), rgba(13,34,54,.08) 46%, rgba(6,18,32,.96) 100%),
+        #0d2236 !important;
     }
     .products .pf-img {
-      height: 380px !important;
+      height: clamp(330px, 31vw, 420px) !important;
       object-fit: contain !important;
     }
     .products .pc-img {
-      height: 310px !important;
+      height: clamp(260px, 24vw, 320px) !important;
       object-fit: contain !important;
     }
     .products .pc-sm-img {
-      height: 260px !important;
+      height: clamp(220px, 18vw, 260px) !important;
       object-fit: contain !important;
+    }
+    .products .pf-img,
+    .products .pc-img,
+    .products .pc-sm-img {
+      transform: scale(1.01) !important;
+      filter: saturate(1.04) contrast(1.06) brightness(1.04) drop-shadow(0 18px 28px rgba(0,0,0,.24)) !important;
+    }
+    .products {
+      padding: 74px 0 88px !important;
+    }
+    .products-header {
+      margin-bottom: 38px !important;
+    }
+    .products-row2 {
+      gap: 22px !important;
+      margin-bottom: 22px !important;
+    }
+    .products-row3 {
+      gap: 22px !important;
+    }
+    .product-flagship:hover .pf-img,
+    .product-card:hover .pc-img,
+    .product-card:hover .pc-sm-img {
+      transform: scale(1.045) !important;
     }
     .yiyi-footer .foot-logo-img {
       width: auto !important;
@@ -1545,15 +1623,1160 @@
       .products .pf-img,
       .products .pc-img,
       .products .pc-sm-img {
-        height: 300px !important;
+        height: 260px !important;
       }
       .products .pf-img-wrap,
       .products .pc-img-wrap {
-        padding: 6px !important;
+        padding: 12px !important;
+      }
+    }
+
+    /* Homepage visual correction: video hero + non-distorted product media */
+    .hero-bg-video,
+    .hero-bg-fallback {
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center center !important;
+    }
+    .hero-bg-video {
+      z-index: 1 !important;
+      opacity: .48 !important;
+      filter: saturate(1.02) contrast(1.08) brightness(.82) !important;
+      transform: scale(1.01) !important;
+    }
+    .hero-bg-fallback {
+      z-index: 0 !important;
+      opacity: .34 !important;
+      filter: saturate(.95) contrast(1.04) brightness(.76) !important;
+    }
+    .products .pf-img-wrap,
+    .products .pc-img-wrap {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background:
+        radial-gradient(circle at 50% 44%, rgba(74,140,200,.20), rgba(10,28,48,.10) 42%, rgba(5,16,28,.96) 100%),
+        #0d2236 !important;
+    }
+    .products .pf-img {
+      width: 100% !important;
+      height: clamp(340px, 30vw, 430px) !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      aspect-ratio: auto !important;
+      transform: none !important;
+    }
+    .products .pc-img {
+      width: 100% !important;
+      height: clamp(285px, 23vw, 340px) !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      aspect-ratio: auto !important;
+      transform: none !important;
+    }
+    .products .pc-sm-img {
+      width: 100% !important;
+      height: clamp(235px, 17vw, 280px) !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      aspect-ratio: auto !important;
+      transform: none !important;
+    }
+    .product-flagship:hover .pf-img,
+    .product-card:hover .pc-img,
+    .product-card:hover .pc-sm-img {
+      transform: none !important;
+    }
+    /* Product photo correction: white product frames with belt-sized composition */
+    .products .product-flagship,
+    .products .product-card {
+      background: #0B1F3A !important;
+      border-color: rgba(74,140,200,.22) !important;
+      box-shadow: none !important;
+    }
+    .products .pf-img-wrap,
+    .products .pc-img-wrap {
+      background: #fff !important;
+      padding: clamp(14px, 1.5vw, 24px) !important;
+      border-bottom: 1px solid rgba(20,45,75,.08) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .products .pf-img {
+      height: clamp(300px, 26vw, 390px) !important;
+      max-width: min(100%, 760px) !important;
+      margin: 0 auto !important;
+      filter: saturate(1.02) contrast(1.03) brightness(1.01) !important;
+    }
+    .products .pc-img {
+      height: clamp(230px, 19vw, 300px) !important;
+      max-width: min(100%, 600px) !important;
+      margin: 0 auto !important;
+      filter: saturate(1.02) contrast(1.03) brightness(1.01) !important;
+    }
+    .products .pc-sm-img {
+      height: clamp(190px, 14vw, 240px) !important;
+      max-width: min(100%, 420px) !important;
+      margin: 0 auto !important;
+      filter: saturate(1.02) contrast(1.03) brightness(1.01) !important;
+    }
+    .products .pf-img-badge,
+    .products .pc-badge {
+      top: 14px !important;
+      left: 14px !important;
+    }
+    .products .products-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 22px !important;
+    }
+    .products .products-grid .product-card {
+      display: flex !important;
+      flex-direction: column !important;
+      min-height: 0 !important;
+      overflow: hidden !important;
+    }
+    .products .products-grid .pc-img-wrap {
+      aspect-ratio: 1.34 / 1 !important;
+      min-height: 0 !important;
+      padding: 14px !important;
+    }
+    .products .products-grid .pc-img {
+      height: 100% !important;
+      max-height: 246px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      object-fit: contain !important;
+    }
+    .products .products-grid .pc-body {
+      flex: 1 1 auto !important;
+      padding: 22px 24px 24px !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .products .products-grid .pc-body h3 {
+      font-size: 20px !important;
+      line-height: 1.18 !important;
+      margin-bottom: 10px !important;
+    }
+    .products .products-grid .pc-body p {
+      font-size: 13px !important;
+      line-height: 1.55 !important;
+      margin-bottom: 14px !important;
+    }
+    .products .products-grid .pf-link {
+      margin-top: auto !important;
+      display: inline-flex !important;
+      width: fit-content !important;
+      font-size: 13px !important;
+    }
+    .products .products-row2,
+    .products .products-row3 {
+      display: contents !important;
+    }
+    .mfg-card-video,
+    .qa-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .mfg-proof-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media(max-width:768px) {
+      .hero-bg-video { opacity: .36 !important; }
+      .products .pf-img,
+      .products .pc-img,
+      .products .pc-sm-img {
+        height: 230px !important;
+      }
+      .products .products-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .products .products-grid .pc-img-wrap {
+        aspect-ratio: 1.22 / 1 !important;
+      }
+      .products .products-grid .pc-img {
+        max-height: 230px !important;
+      }
+    }
+    @media(min-width:769px) and (max-width:1100px) {
+      .products .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+    /* Stable homepage proof layouts: summary first, evidence grid second */
+    .manufacturing .mfg-grid,
+    .qa-section .qa-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 34px !important;
+    }
+    .manufacturing .mfg-content,
+    .qa-section .qa-content {
+      order: 1 !important;
+      max-width: 980px !important;
+      margin: 0 auto !important;
+      text-align: center !important;
+    }
+    .manufacturing .mfg-grid > div:first-child,
+    .qa-section .qa-image {
+      order: 2 !important;
+    }
+    .manufacturing .mfg-features,
+    .qa-section .qa-steps {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 14px !important;
+      margin-top: 24px !important;
+      text-align: left !important;
+    }
+    .manufacturing .mfg-feature,
+    .qa-section .qa-step {
+      min-height: 104px !important;
+      align-items: flex-start !important;
+    }
+    .manufacturing {
+      padding: 62px 0 70px !important;
+    }
+    .manufacturing .mfg-content h2 {
+      margin-bottom: 14px !important;
+    }
+    .manufacturing .mfg-content > p {
+      max-width: 720px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .manufacturing .mfg-features {
+      grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      gap: 10px !important;
+      margin-top: 20px !important;
+    }
+    .manufacturing .mfg-feature {
+      min-height: 0 !important;
+      padding: 14px !important;
+      border-radius: 10px !important;
+    }
+    .manufacturing .mfg-feature-icon {
+      width: 34px !important;
+      height: 34px !important;
+      flex: 0 0 34px !important;
+    }
+    .manufacturing .mfg-feature h4 {
+      font-size: 12px !important;
+      line-height: 1.35 !important;
+    }
+    .manufacturing .mfg-feature h4 span,
+    .manufacturing .mfg-feature .gold-badge {
+      display: none !important;
+    }
+    .manufacturing .mfg-grid > div:first-child {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 26px !important;
+    }
+    .manufacturing .mfg-video-card,
+    .manufacturing .mfg-proof-strip {
+      min-height: 0 !important;
+      margin: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .manufacturing .mfg-video-card {
+      aspect-ratio: auto !important;
+    }
+    .manufacturing .mfg-proof-strip {
+      background: rgba(255,255,255,.06) !important;
+      border: 1px solid rgba(255,255,255,.12) !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+    }
+    .manufacturing .mfg-proof-media {
+      width: 100% !important;
+      height: 240px !important;
+      flex: 0 0 auto !important;
+    }
+    .manufacturing .mfg-proof-copy {
+      padding: 18px 20px 20px !important;
+      flex: 1 1 auto !important;
+    }
+    .manufacturing .mfg-proof-copy strong {
+      font-size: 15px !important;
+      line-height: 1.42 !important;
+    }
+    .manufacturing .mfg-proof-copy p {
+      font-size: 12px !important;
+      line-height: 1.6 !important;
+      margin-top: 10px !important;
+    }
+    .manufacturing .mfg-stats-mini {
+      grid-column: 1 / -1 !important;
+      margin-top: 0 !important;
+    }
+    .qa-section {
+      padding: 52px 0 60px !important;
+    }
+    .qa-section .qa-grid {
+      gap: 24px !important;
+    }
+    .qa-section .qa-content {
+      padding: 42px 44px !important;
+    }
+    .qa-section .qa-content h2 {
+      margin-bottom: 14px !important;
+    }
+    .qa-section .qa-content > p {
+      max-width: 760px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .qa-section .qa-steps {
+      margin-top: 20px !important;
+      gap: 12px !important;
+    }
+    .qa-section .qa-step {
+      min-height: 90px !important;
+      padding: 16px !important;
+    }
+    .qa-section .qa-image {
+      width: min(100%, 1040px) !important;
+      margin: 0 auto !important;
+      min-height: 360px !important;
+      aspect-ratio: 16 / 7.8 !important;
+      border-radius: 16px !important;
+    }
+    #trust-evidence .trust-evidence-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+    }
+    #trust-evidence .trust-evidence-media {
+      aspect-ratio: 16 / 9 !important;
+      min-height: 310px !important;
+    }
+    #trust-evidence .trust-evidence-body {
+      padding: 24px !important;
+    }
+    .home-shipment-proof .home-shipment-card:first-child,
+    .home-shipment-proof .home-shipment-card:nth-child(2) {
+      border-top: 3px solid rgba(200,146,42,.74) !important;
+    }
+    .home-exhibition-proof .home-exhibition-card {
+      position: relative !important;
+    }
+    .home-exhibition-proof .home-exhibition-card::after {
+      content: "Trust anchor";
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(31,92,158,.92);
+      color: #fff;
+      font: 700 9px/1 var(--font-mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .home-exhibition-anchors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: -8px 0 28px;
+      justify-content: center;
+    }
+    .home-exhibition-anchors span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(31,92,158,.08);
+      border: 1px solid rgba(31,92,158,.14);
+      color: #1F5C9E;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .process:not(#trust-evidence) {
+      background: linear-gradient(180deg, #EEF4F9 0%, #E4EDF6 100%) !important;
+    }
+    .process:not(#trust-evidence) .process-step {
+      background: #fff !important;
+      border-top: 3px solid rgba(31,92,158,.62) !important;
+      box-shadow: 0 14px 34px rgba(13,27,42,.08) !important;
+    }
+    .process:not(#trust-evidence) .process-step:nth-child(1),
+    .process:not(#trust-evidence) .process-step:nth-child(4) {
+      border-top-color: #C8922A !important;
+    }
+    .process:not(#trust-evidence) .ps-num {
+      background: #1F5C9E !important;
+      color: #fff !important;
+      box-shadow: 0 10px 24px rgba(31,92,158,.18) !important;
+    }
+    .process:not(#trust-evidence) .process-actions {
+      background: rgba(255,255,255,.72) !important;
+      border: 1px solid rgba(31,92,158,.13) !important;
+      border-radius: 14px !important;
+      padding: 24px !important;
+      margin-top: 26px !important;
+    }
+    @media(max-width:900px) {
+      .manufacturing .mfg-features,
+      .qa-section .qa-steps,
+      .manufacturing .mfg-grid > div:first-child,
+      #trust-evidence .trust-evidence-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .manufacturing .mfg-feature {
+        padding: 16px !important;
+      }
+      .manufacturing .mfg-proof-media {
+        height: 220px !important;
+      }
+      .qa-section .qa-content {
+        padding: 28px 22px !important;
+      }
+      .qa-section .qa-image {
+        min-height: 260px !important;
+      }
+      #trust-evidence .trust-evidence-media {
+        min-height: 230px !important;
+      }
+    }
+
+    /* Homepage AIDA/EEAT rebuild: keep the path focused and remove old scattered modules */
+    .home-old-company-intro,
+    .home-hidden-section {
+      display: none !important;
+    }
+    .reasons {
+      padding: 64px 0 76px !important;
+      background: #EEF4F9 !important;
+    }
+    .reasons-header {
+      max-width: 860px !important;
+      margin-bottom: 34px !important;
+    }
+    .reasons-header h2 {
+      max-width: 760px !important;
+    }
+    .reasons-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 18px !important;
+    }
+    @media(min-width:1024px) {
+      .reasons-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+    }
+    .reason-card {
+      min-height: 0 !important;
+      padding: 22px !important;
+      border-radius: 8px !important;
+    }
+    .reason-icon,
+    .reason-link {
+      display: none !important;
+    }
+    .reason-num {
+      margin-bottom: 12px !important;
+      color: #1F5C9E !important;
+    }
+    .reason-title {
+      font-size: 18px !important;
+    }
+    .reason-desc {
+      margin-bottom: 0 !important;
+      font-size: 13px !important;
+    }
+    @media(max-width:720px) {
+      .reasons-grid { grid-template-columns: 1fr !important; }
+    }
+    .home-shipment-proof {
+      background: #0F2438;
+      padding: 68px 0 76px;
+      color: white;
+    }
+    .home-shipment-head {
+      display: grid;
+      grid-template-columns: minmax(0, .82fr) minmax(280px, .5fr);
+      gap: 34px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    .home-shipment-head h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+      margin: 10px 0 0;
+      color: white !important;
+    }
+    .home-shipment-head p {
+      color: #9fb4cb;
+      line-height: 1.75;
+      margin: 0;
+    }
+    .home-shipment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .home-shipment-card {
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(255,255,255,.035);
+    }
+    .home-shipment-card img,
+    .home-shipment-card video {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      display: block;
+      background: #0b1f35;
+    }
+    .home-shipment-body {
+      padding: 20px;
+    }
+    .home-shipment-body span {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #C8922A;
+      margin-bottom: 8px;
+    }
+    .home-shipment-body h3 {
+      color: white !important;
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+    .home-shipment-body p {
+      color: #9fb4cb;
+      line-height: 1.65;
+      font-size: 13px;
+      margin: 0;
+    }
+    .home-privacy-note {
+      margin-top: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 8px;
+      padding: 16px 18px;
+      color: #b9c8d8;
+      background: rgba(255,255,255,.035);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .home-exhibition-proof {
+      background: #EEF4F9;
+      padding: 62px 0 70px;
+    }
+    .home-exhibition-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 26px;
+    }
+    .home-exhibition-head h2 {
+      font-size: clamp(28px, 3.6vw, 40px);
+      line-height: 1.1;
+      margin: 10px 0 0;
+      color: var(--text-primary);
+    }
+    .home-exhibition-head p {
+      max-width: 520px;
+      margin: 0;
+      color: var(--text-body);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    .home-exhibition-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .home-exhibition-card {
+      background: #fff;
+      border: 1px solid #D8E2EE;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 18px 38px rgba(20,45,75,.08);
+    }
+    .home-exhibition-card img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      display: block;
+    }
+    .home-exhibition-card div {
+      padding: 18px;
+    }
+    .home-exhibition-card span {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #C8922A;
+      margin-bottom: 8px;
+    }
+    .home-exhibition-card h3 {
+      font-size: 17px;
+      margin: 0 0 7px;
+      color: var(--text-primary);
+    }
+    .home-exhibition-card p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--text-body);
+    }
+    @media(max-width:900px) {
+      .home-shipment-head,
+      .home-shipment-grid,
+      .home-exhibition-head,
+      .home-exhibition-grid {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+    }
+    /* Homepage correction pass: evidence-first, compact, stable */
+    .home-trust-anchors { display: none !important; }
+    .products {
+      background: #0D1B2E !important;
+      padding: 72px 0 88px !important;
+    }
+    .products-header {
+      max-width: 780px !important;
+      margin-bottom: 34px !important;
+    }
+    .products-header h2 {
+      font-size: clamp(30px,4vw,48px) !important;
+      line-height: 1.05 !important;
+      margin-bottom: 12px !important;
+    }
+    .products-header p {
+      max-width: 640px !important;
+      font-size: 15px !important;
+      line-height: 1.65 !important;
+    }
+    .products .products-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+      gap: 18px !important;
+      align-items: stretch !important;
+    }
+    .products .products-grid .product-card {
+      display: flex !important;
+      flex-direction: column !important;
+      min-height: 0 !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      background: #10243A !important;
+      border: 1px solid rgba(126,169,207,.20) !important;
+      box-shadow: 0 16px 34px rgba(4,11,20,.22) !important;
+    }
+    .products .products-grid .pc-img-wrap {
+      height: auto !important;
+      aspect-ratio: 1.16 / .72 !important;
+      min-height: 0 !important;
+      padding: 14px 16px !important;
+      background: #fff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .products .products-grid .pc-img {
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 255px !important;
+      object-fit: contain !important;
+      transform: none !important;
+      filter: none !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+    }
+    .products .product-card:hover .pc-img { transform: scale(1.035) !important; }
+    .products .products-grid .pc-body {
+      padding: 18px 20px 20px !important;
+      min-height: 184px !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .products .products-grid .pc-body h3 {
+      font-size: 19px !important;
+      margin-bottom: 8px !important;
+      color: #fff !important;
+    }
+    .products .products-grid .pc-body p {
+      font-size: 13px !important;
+      line-height: 1.58 !important;
+      margin-bottom: 12px !important;
+      color: #AFC2D6 !important;
+    }
+    .products .products-grid .pf-link {
+      margin-top: auto !important;
+      color: #D09A36 !important;
+    }
+    .qa-section {
+      background: linear-gradient(180deg,#F6F9FC 0%,#EAF2F8 100%) !important;
+      padding: 64px 0 70px !important;
+    }
+    .qa-section .qa-grid {
+      grid-template-columns: minmax(0,.95fr) minmax(0,1.05fr) !important;
+      gap: 28px !important;
+      align-items: stretch !important;
+    }
+    .qa-section .qa-content {
+      background: #fff !important;
+      border: 1px solid rgba(31,92,158,.12) !important;
+      border-radius: 18px !important;
+      padding: 36px !important;
+      box-shadow: 0 20px 48px rgba(13,27,46,.09) !important;
+    }
+    .qa-section .qa-steps {
+      display: grid !important;
+      grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+      gap: 12px !important;
+    }
+    .qa-section .qa-step {
+      background: #F5F8FB !important;
+      border: 1px solid #E2EAF2 !important;
+      border-radius: 12px !important;
+      padding: 14px !important;
+      gap: 12px !important;
+    }
+    .qa-proof-rail {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .qa-proof-card {
+      display: grid;
+      grid-template-columns: minmax(0,.88fr) minmax(0,1fr);
+      overflow: hidden;
+      min-height: 178px;
+      background: #fff;
+      border: 1px solid rgba(31,92,158,.14);
+      border-radius: 16px;
+      box-shadow: 0 20px 44px rgba(13,27,46,.10);
+    }
+    .qa-proof-card img,
+    .qa-proof-card video {
+      width: 100%;
+      height: 100%;
+      min-height: 178px;
+      object-fit: cover;
+      display: block;
+      background: #E8EEF5;
+    }
+    .qa-proof-card div {
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 7px;
+    }
+    .qa-proof-card span {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .13em;
+      color: #C8922A;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .qa-proof-card strong {
+      color: var(--text-primary);
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    .qa-proof-card p {
+      color: var(--text-body);
+      font-size: 13px;
+      line-height: 1.55;
+      margin: 0;
+    }
+    #trust-evidence {
+      padding: 62px 0 70px !important;
+      background: linear-gradient(180deg,#DDEAF5 0%,#EEF5FA 100%) !important;
+    }
+    #trust-evidence .process-header {
+      margin-bottom: 30px !important;
+    }
+    #trust-evidence .trust-evidence-grid {
+      grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+      gap: 18px !important;
+    }
+    #trust-evidence .trust-evidence-card {
+      border-radius: 14px !important;
+      box-shadow: 0 18px 42px rgba(13,27,46,.10) !important;
+    }
+    .home-shipment-proof {
+      padding: 62px 0 68px !important;
+      background: #0D1B2E !important;
+    }
+    .home-shipment-head { margin-bottom: 24px !important; }
+    .home-exhibition-proof {
+      padding: 58px 0 64px !important;
+      background: #EAF2F8 !important;
+    }
+    .home-oem-process {
+      padding: 60px 0 74px !important;
+      background: linear-gradient(180deg,#F4F8FC 0%,#E7F0F7 100%) !important;
+    }
+    .home-oem-process .process-header {
+      margin-bottom: 32px !important;
+    }
+    .home-oem-process .process-grid-6 {
+      gap: 14px !important;
+    }
+    .home-oem-process .process-step {
+      border-radius: 14px !important;
+      text-align: left !important;
+      padding: 20px !important;
+      min-height: 178px !important;
+    }
+    .home-oem-process .ps-num {
+      margin: 0 0 18px !important;
+    }
+    .yiyi-footer .foot-about,
+    .yiyi-footer .foot-info-item,
+    .yiyi-footer .foot-copy,
+    .yiyi-footer .foot-link,
+    .yiyi-footer .foot-contact-a {
+      color: #B6C9DC !important;
+      font-weight: 600 !important;
+    }
+    .yiyi-footer .foot-col-head,
+    .yiyi-footer .foot-brand {
+      color: #fff !important;
+      font-weight: 800 !important;
+    }
+    @media(max-width:900px) {
+      .products .products-grid,
+      #trust-evidence .trust-evidence-grid,
+      .qa-section .qa-grid,
+      .qa-section .qa-steps {
+        grid-template-columns: 1fr !important;
+      }
+      .qa-proof-card {
+        grid-template-columns: 1fr !important;
+      }
+      .products .products-grid .pc-img-wrap {
+        aspect-ratio: 1.1 / .82 !important;
+      }
+    }
+
+    /* Final homepage correction: engineering buyer view, stable cards, no repeated visual rhythm */
+    .products .products-header {
+      max-width: 980px !important;
+      margin-bottom: 34px !important;
+    }
+    .products .products-header h2 {
+      font-size: clamp(32px, 4vw, 46px) !important;
+      line-height: 1.06 !important;
+      margin-bottom: 12px !important;
+    }
+    .products .products-header p {
+      max-width: 760px !important;
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+    }
+    .products .products-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+      align-items: stretch !important;
+    }
+    .products .product-card {
+      display: flex !important;
+      flex-direction: column !important;
+      min-height: 0 !important;
+      border-radius: 10px !important;
+      overflow: hidden !important;
+      background: #10243B !important;
+      border: 1px solid rgba(74,140,200,.22) !important;
+      box-shadow: 0 16px 36px rgba(0,0,0,.18) !important;
+    }
+    .products .pc-img-wrap {
+      height: 300px !important;
+      min-height: 300px !important;
+      padding: 16px !important;
+      background: #fff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+    }
+    .products .pc-img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      object-position: center !important;
+      transform: none !important;
+      filter: none !important;
+    }
+    .products .pc-body {
+      flex: 1 1 auto !important;
+      min-height: 214px !important;
+      padding: 22px 24px 24px !important;
+      background: #10243B !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    .products .pc-body h3 {
+      font-size: 20px !important;
+      line-height: 1.18 !important;
+      margin-bottom: 10px !important;
+      color: #fff !important;
+    }
+    .products .pc-body p {
+      font-size: 13.5px !important;
+      line-height: 1.62 !important;
+      color: #AFC3D8 !important;
+      margin: 0 0 14px !important;
+    }
+    .products .pc-tags {
+      margin-top: auto !important;
+      gap: 8px !important;
+    }
+    .products .pc-tag {
+      color: #7DB2E5 !important;
+      background: rgba(74,140,200,.13) !important;
+      border: 1px solid rgba(74,140,200,.12) !important;
+    }
+    .products .pf-link {
+      margin-top: 14px !important;
+      color: #C8922A !important;
+      font-size: 13px !important;
+      font-weight: 800 !important;
+    }
+    .qa-section {
+      background: linear-gradient(180deg,#F8FBFE 0%,#E9F1F8 100%) !important;
+      padding: 58px 0 66px !important;
+    }
+    .qa-section .qa-grid {
+      grid-template-columns: 1fr !important;
+      gap: 26px !important;
+    }
+    .qa-section .qa-content {
+      max-width: 1120px !important;
+      margin: 0 auto !important;
+      padding: 38px 42px !important;
+      border-radius: 18px !important;
+      box-shadow: 0 18px 46px rgba(20,45,75,.08) !important;
+    }
+    .qa-section .qa-steps {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+      gap: 14px !important;
+    }
+    .qa-section .qa-step {
+      min-height: 128px !important;
+      align-items: flex-start !important;
+      padding: 18px !important;
+      background: #F4F8FC !important;
+    }
+    .qa-proof-rail {
+      max-width: 1120px !important;
+      margin: 0 auto !important;
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+      gap: 18px !important;
+    }
+    .qa-proof-card {
+      background: #10243B !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+      border: 1px solid rgba(31,92,158,.18) !important;
+      box-shadow: 0 18px 38px rgba(20,45,75,.12) !important;
+    }
+    .qa-proof-card img,
+    .qa-proof-card video {
+      width: 100% !important;
+      height: 240px !important;
+      object-fit: cover !important;
+      display: block !important;
+      background: #0D1B2E !important;
+    }
+    .qa-proof-card div {
+      padding: 18px 20px 20px !important;
+    }
+    .qa-proof-card span {
+      display: block !important;
+      font-family: var(--font-mono) !important;
+      font-size: 10px !important;
+      letter-spacing: .12em !important;
+      color: #C8922A !important;
+      text-transform: uppercase !important;
+      margin-bottom: 7px !important;
+    }
+    .qa-proof-card strong {
+      display: block !important;
+      color: #fff !important;
+      font-size: 17px !important;
+      margin-bottom: 6px !important;
+    }
+    .qa-proof-card p {
+      margin: 0 !important;
+      color: #AFC3D8 !important;
+      font-size: 13px !important;
+      line-height: 1.6 !important;
+    }
+    #trust-evidence {
+      background: linear-gradient(180deg,#173653 0%,#10243B 100%) !important;
+      padding: 66px 0 76px !important;
+      color: #fff !important;
+    }
+    #trust-evidence .process-header h2 {
+      color: #fff !important;
+    }
+    #trust-evidence .process-header p {
+      color: #AFC3D8 !important;
+    }
+    #trust-evidence .trust-evidence-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 22px !important;
+    }
+    #trust-evidence .trust-evidence-card {
+      background: rgba(255,255,255,.06) !important;
+      border: 1px solid rgba(255,255,255,.12) !important;
+      border-radius: 14px !important;
+      overflow: hidden !important;
+    }
+    #trust-evidence .trust-evidence-media {
+      min-height: 300px !important;
+      aspect-ratio: 16/9 !important;
+      background: #0D1B2E !important;
+    }
+    #trust-evidence .trust-evidence-media img,
+    #trust-evidence .trust-evidence-media video {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+    #trust-evidence .trust-evidence-body {
+      padding: 22px 24px 24px !important;
+    }
+    #trust-evidence .trust-evidence-body h3 {
+      color: #fff !important;
+      font-size: 21px !important;
+    }
+    #trust-evidence .trust-evidence-body p,
+    #trust-evidence .trust-evidence-list {
+      color: #AFC3D8 !important;
+    }
+    .home-shipment-proof {
+      padding: 62px 0 68px !important;
+      background: #0D1B2E !important;
+    }
+    .home-exhibition-proof {
+      background: linear-gradient(180deg,#E9F1F8 0%,#F6FAFD 100%) !important;
+      padding: 58px 0 66px !important;
+    }
+    .home-exhibition-anchors {
+      justify-content: flex-start !important;
+      margin: 0 0 24px !important;
+    }
+    .home-oem-process {
+      padding: 60px 0 72px !important;
+      background: linear-gradient(180deg,#F6FAFD 0%,#E9F1F8 100%) !important;
+    }
+    .yiyi-footer .foot-about,
+    .yiyi-footer .foot-info-item,
+    .yiyi-footer .foot-copy,
+    .yiyi-footer .foot-link,
+    .yiyi-footer .foot-contact-a {
+      color: rgba(255,255,255,.72) !important;
+      font-weight: 650 !important;
+    }
+    .stats-bar {
+      display: none !important;
+    }
+    .trust-bar {
+      background: #0D1B2E !important;
+      border-top: 1px solid rgba(255,255,255,.08) !important;
+      border-bottom: 1px solid rgba(255,255,255,.08) !important;
+      padding: 0 !important;
+    }
+    .trust-bar-inner {
+      display: grid !important;
+      grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+      gap: 0 !important;
+      max-width: 1280px !important;
+      margin: 0 auto !important;
+      padding: 16px 24px !important;
+    }
+    .tb-item2 {
+      justify-content: center !important;
+      min-height: 34px !important;
+      padding: 0 12px !important;
+      border-right: 1px solid rgba(255,255,255,.08) !important;
+      white-space: nowrap !important;
+    }
+    .tb-item2:last-child {
+      border-right: 0 !important;
+    }
+    .tb-item2-label {
+      font-size: 12px !important;
+      font-weight: 800 !important;
+      letter-spacing: .02em !important;
+      color: #DCE9F6 !important;
+    }
+    .tb-item2-icon {
+      color: #4A8CC8 !important;
+      opacity: .95 !important;
+    }
+    .products .products-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: 22px !important;
+    }
+    .products .pc-img-wrap {
+      height: 250px !important;
+      min-height: 250px !important;
+      padding: 14px !important;
+    }
+    .products .pc-body {
+      min-height: 226px !important;
+      padding: 20px 20px 22px !important;
+    }
+    .products .pc-body h3 {
+      font-size: 18px !important;
+    }
+    .products .pc-body p {
+      font-size: 13px !important;
+    }
+    @media(max-width:1000px) {
+      .products .products-grid,
+      .qa-section .qa-steps,
+      .qa-proof-rail,
+      #trust-evidence .trust-evidence-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .products .pc-img-wrap {
+        height: 280px !important;
+        min-height: 280px !important;
+      }
+      .trust-bar-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .tb-item2 {
+        justify-content: flex-start !important;
+        border-right: 0 !important;
       }
     }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"YIYI Mesh Belt Factory and Manufacturing Overview","description":"Homepage factory proof video showing automated metal conveyor belt manufacturing, robotic welding, production control, and export-ready supply.","thumbnailUrl":"https://www.yiyimeshbelt.com/assets/homepage-media/home-robotic-welding.jpg","uploadDate":"2026-06-22","contentUrl":"https://www.yiyimeshbelt.com/assets/homepage-hero-banner.mp4","publisher":{"@id":"https://www.yiyimeshbelt.com/#organization"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","name":"YIYI Mesh Belt Robotic Welding Proof","description":"Homepage manufacturing proof video showing robotic welding for automated metal conveyor belt production.","thumbnailUrl":"https://www.yiyimeshbelt.com/assets/homepage-media/home-hero-robotic-welding-new.jpg","uploadDate":"2026-06-22","contentUrl":"https://www.yiyimeshbelt.com/assets/product-media/spiral-freezer-belt/sfb-s6-robot-weld-video-web.mp4","publisher":{"@id":"https://www.yiyimeshbelt.com/#organization"}}</script>
 </head>
 <body>
 
@@ -1884,10 +3107,10 @@
 <!-- HERO - ATTENTION -->
 <section class="hero">
   <div class="hero-bg-media" aria-hidden="true">
-    <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata">
-      <source src="assets/homepage-hero-banner.mp4" type="video/mp4">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="assets/homepage-media/home-robotic-welding.jpg" aria-hidden="true">
+      <source src="assets/factory-media/stainless-steel-wire-drawing-horizontal.mp4" type="video/mp4">
     </video>
-    <!-- Alternative hero background option: robotic welding / belt close-up / belt-sprocket matching -->
+    <img class="hero-bg-fallback" src="assets/homepage-media/home-robotic-welding.jpg" alt="" decoding="async" fetchpriority="high">
   </div>
   <div class="container">
     <div class="hero-inner">
@@ -1901,9 +3124,7 @@
         <div class="hero-subtitle">
           <p>Reducing mismatch risk in OEM conveyor belt projects through verified manufacturing and engineering support.</p>
         </div>
-        <p class="hero-body">YIYI Mesh Belt is a metal conveyor belt manufacturer focused on engineered production and matched drive components for industrial applications.</p>
-        <p class="hero-body">We support OEM equipment builders, professional distributors, and replacement belt projects with drawing-based production, technical confirmation, and long-term stable supply.</p>
-        <p class="hero-body">From in-house wire drawing to robotic welding and final inspection, every production stage is controlled to support consistency, stability, and export-ready quality.</p>
+        <p class="hero-body">YIYI Mesh Belt manufactures automated metal conveyor belts for OEM equipment builders and professional distributors. Send drawings, old belt photos, key dimensions, material requirements, and running direction for engineering review.</p>
         <p class="hero-trust-line">PROVEN · STABLE · VERIFIED</p>
         <div class="hero-btns">
           <a href="contact.html?intent=drawing&source=home" class="btn-primary">Send Drawing →</a>
@@ -1961,7 +3182,7 @@
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="m8.21 13.89-1.75 7.93L12 19l5.54 2.82-1.75-7.94"/></svg>
       </span>
-      <span class="tb-item2-label">Manufacturing Since 1998</span>
+      <span class="tb-item2-label">Since 1998</span>
     </div>
     <div class="tb-item2">
       <span class="tb-item2-icon">
@@ -1973,26 +3194,31 @@
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
       </span>
-      <span class="tb-item2-label">20+ Countries Served</span>
+      <span class="tb-item2-label">27,000 sqm factory</span>
     </div>
     <div class="tb-item2">
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
       </span>
-      <span class="tb-item2-label">27,000㎡ Production Facility</span>
+      <span class="tb-item2-label">280+ machines</span>
     </div>
     <div class="tb-item2">
       <span class="tb-item2-icon">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
       </span>
-      <span class="tb-item2-label">280+ Production Machines</span>
+      <span class="tb-item2-label">200,000m annual output</span>
+    </div>
+    <div class="tb-item2">
+      <span class="tb-item2-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18"/><path d="M12 3a15 15 0 0 0 0 18"/><circle cx="12" cy="12" r="10"/></svg>
+      </span>
+      <span class="tb-item2-label">20+ countries</span>
     </div>
 
   </div>
-  <div style="text-align:center;padding:6px 0 14px;font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:.03em;color:#7FA8CC;opacity:1">200,000m annual output with verified manufacturing proof for OEM supply, distributor sourcing, and replacement coordination.</div>
 </div>
 
-<section style="background:linear-gradient(180deg,#0f1f35 0%,#132845 100%);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)">
+<section class="home-old-company-intro" style="background:linear-gradient(180deg,#0f1f35 0%,#132845 100%);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)">
   <div class="container" style="padding:28px 0">
     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.95fr);gap:26px;align-items:center">
       <div>
@@ -2029,59 +3255,64 @@
 <section class="reasons">
   <div class="container">
     <div class="reasons-header">
-      <div class="eyebrow eyebrow-light">WHO WE ARE</div>
-      <h2>Built for Industrial<br>Conveyor Belt Projects</h2>
-      <p>YIYI Mesh Belt is a manufacturing partner for OEM equipment builders, distributors, and replacement belt buyers who need verified production, engineering confirmation, and repeatable supply.</p>
+      <div class="eyebrow eyebrow-light">BUYER RISK HOOK</div>
+      <h2>High-Risk Belt Projects Need<br>Engineering Confirmation First</h2>
+      <p>For OEM equipment builders and replacement buyers, the question is not only whether a belt can be made. The real risk is whether pitch, width, drum geometry, sprocket engagement, running direction, material grade, and packing requirements are confirmed before production.</p>
     </div>
     <div class="reasons-grid">
       <div class="reason-card">
-        <div class="reason-num">01 / OEM</div>
+        <div class="reason-num">01 / Pitch</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
-        <div class="reason-title">OEM Equipment Projects</div>
-        <p class="reason-desc">Drawing-based belt production for freezer, oven, washing, and industrial conveying systems.</p>
+        <div class="reason-title">Pitch Mismatch</div>
+        <p class="reason-desc">Wrong pitch can affect sprocket engagement, tracking stability, and replacement fit.</p>
         <span class="reason-link">&#8594;Built around equipment fit</span>
       </div>
       <div class="reason-card">
-        <div class="reason-num">02 / Replacement</div>
+        <div class="reason-num">02 / Width</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
         </div>
-        <div class="reason-title">Replacement Belt Support</div>
-        <p class="reason-desc">Old belt photos, dimensions, pitch, and sprocket details are reviewed to reduce mismatch risk.</p>
+        <div class="reason-title">Width and Clearance Risk</div>
+        <p class="reason-desc">Belt width, edge clearance, and side structure must match the equipment path.</p>
         <span class="reason-link">&#8594;Start from the existing system</span>
       </div>
       <div class="reason-card">
-        <div class="reason-num">03 / Manufacturing</div>
+        <div class="reason-num">03 / Drum</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
         </div>
-        <div class="reason-title">Controlled Production</div>
-        <p class="reason-desc">In-house wire drawing, robotic welding, process control, and export packing support stable supply.</p>
+        <div class="reason-title">Drum Geometry Fit</div>
+        <p class="reason-desc">Spiral and turning systems need drum diameter and contraction behavior reviewed early.</p>
         <span class="reason-link">&#8594;Manufacturing proof matters</span>
       </div>
       <div class="reason-card">
-        <div class="reason-num">04 / Components</div>
+        <div class="reason-num">04 / Sprocket</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
         </div>
-        <div class="reason-title">Belt &amp; Sprocket Matching</div>
-        <p class="reason-desc">Matched drive components can be reviewed together when pitch, engagement, and tracking are critical.</p>
+        <div class="reason-title">Sprocket Engagement</div>
+        <p class="reason-desc">Drive fit should be checked with chain pitch, roller size, bore, keyway, and layout.</p>
         <span class="reason-link">&#8594;Reduce system-level risk</span>
       </div>
       <div class="reason-card highlight">
-        <div class="reason-num">05 / Export</div>
+        <div class="reason-num">05 / Direction</div>
         <div class="reason-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
         </div>
-        <div class="reason-title">Long-Term Supply</div>
-        <p class="reason-desc">Repeat orders are supported with production memory, QA records, and international delivery coordination.</p>
+        <div class="reason-title">Running Direction</div>
+        <p class="reason-desc">Running direction and belt orientation affect installation, tracking, and repeat order accuracy.</p>
         <span class="reason-link">&#8594;Designed for repeat cooperation</span>
       </div>
+      <div class="reason-card">
+        <div class="reason-num">06 / Material</div>
+        <div class="reason-title">Material and Surface Risk</div>
+        <p class="reason-desc">Material grade, surface finish, cleaning, and application-specific material requirements must be confirmed by application.</p>
+      </div>
     </div>
-    <div style="text-align:center;margin-top:40px">
-      <a href="contact.html?intent=drawing&source=home-who" class="btn-primary">Send Drawing →</a>
+    <div style="text-align:center;margin-top:34px">
+      <a href="contact.html?intent=drawing&source=home-who" class="btn-primary">Send Drawing / Old Belt Photo →</a>
     </div>
   </div>
 </section>
@@ -2092,136 +3323,121 @@
 <section class="products" id="products">
   <div class="container">
     <div class="products-header">
-      <div class="eyebrow eyebrow-dark">OEM CONVEYOR BELT SYSTEMS</div>
-      <h2>Real Product Families for<br>OEM and Replacement Projects</h2>
-      <p>Clean product photos help engineers and distributors identify the belt family, application environment, and matched drive requirements before sending a drawing.</p>
+      <div class="eyebrow eyebrow-dark">ENGINEERING-CRITICAL BELT FAMILIES</div>
+      <h2>Priority Products for OEM<br>and Replacement Belt Inquiries</h2>
+      <p>These are the product families where drawing review, old belt measurement, material confirmation, and drive matching usually decide whether the project will run correctly after installation.</p>
     </div>
 
-    <!-- Flagship -->
-    <a href="spiral-freezer-belt.html" class="product-flagship">
-      <div class="pf-img-wrap">
-        <span class="pf-img-badge"><span class="gold-badge">&#10052; FLAGSHIP PRODUCT</span></span>
-        <img src="assets/homepage-media/home-spiral-freezer-clean.webp" alt="Spiral Freezer Belt" class="pf-img" decoding="async" loading="lazy">
-        <!-- [IMAGE-05: Spiral Freezer Belt Product / Running Scene] -->
-      </div>
-      <div class="pf-body">
-        <h3>Spiral Freezer Belt</h3>
-        <p>Engineered for low-temperature conveying, stable tracking, and OEM spiral freezer systems where mismatch risk can stop a full production line.</p>
-        <div class="pf-tags">
-          <span class="pf-tag">Robotic Welded</span>
-          <span class="pf-tag">Food Grade SS</span>
-          <span class="pf-tag">Drum Test Support</span>
-          <span class="pf-tag">OEM Custom</span>
+    <div class="products-grid">
+      <a href="spiral-freezer-belt.html" class="product-card">
+        <div class="pc-img-wrap">
+          <span class="pc-badge"><span class="gold-badge" style="font-size:10px">FLAGSHIP</span></span>
+          <img src="assets/homepage-media/yiyi-product-photos/spiral-freezer-belt.webp" alt="Spiral Freezer Belt" class="pc-img" decoding="async" loading="lazy">
         </div>
-        <span class="pf-link">View Product &#8594;</span>
-      </div>
-    </a>
-
-    <!-- Row 2 -->
-    <div class="products-row2">
+        <div class="pc-body">
+          <h3>Spiral Freezer Belt</h3>
+          <p>Confirm belt width, rod pitch, chain pitch, drum diameter, sprocket fit, and running direction for spiral freezer systems.</p>
+          <div class="pc-tags"><span class="pc-tag">Rod Pitch</span><span class="pc-tag">Drum Fit</span></div>
+          <span class="pf-link">View Product &#8594;</span>
+        </div>
+      </a>
       <a href="self-stacking-belt.html" class="product-card">
         <div class="pc-img-wrap">
           <span class="pc-badge"><span class="gold-badge" style="font-size:10px">HIGH VALUE</span></span>
-          <img src="assets/homepage-media/home-self-stacking-belt-clean.webp" alt="Self-Stacking Belt stainless steel product close-up" class="pc-img" decoding="async" loading="lazy">
-          <!-- [IMAGE-06: Self-Stacker Belt Product] -->
+          <img src="assets/homepage-media/yiyi-product-photos/self-stacking-belt.webp" alt="Self-Stacking Belt stainless steel product close-up" class="pc-img" decoding="async" loading="lazy">
         </div>
         <div class="pc-body">
           <h3>Self-Stacking Belt</h3>
-          <p>Built for compact spiral systems where vertical stacking, side plate geometry, and airflow efficiency must be confirmed together.</p>
-          <div class="pc-tags"><span class="pc-tag">Spiral Systems</span><span class="pc-tag">OEM Matched</span></div>
-          <span class="pf-link" style="font-size:13px;margin-top:12px;display:inline-block">View Product &#8594;</span>
+          <p>Confirm rod diameter, pitch, plate height, slot length, upper/lower engagement, and stack-test behavior.</p>
+          <div class="pc-tags"><span class="pc-tag">Stack Test</span><span class="pc-tag">Engagement</span></div>
+          <span class="pf-link">View Product &#8594;</span>
         </div>
       </a>
       <a href="eye-link-belt.html" class="product-card">
         <div class="pc-img-wrap">
           <span class="pc-badge"><span class="pc-badge blue">HEAVY DUTY</span></span>
-          <img src="assets/homepage-media/home-eye-link-belt-clean.webp" alt="Eye Link Belt stainless steel product close-up" class="pc-img" decoding="async" loading="lazy">
-          <!-- [IMAGE-08: Eye Link Belt Product] -->
+          <img src="assets/homepage-media/yiyi-product-photos/eye-link-belt.webp" alt="Eye Link Belt stainless steel product close-up" class="pc-img" decoding="async" loading="lazy">
         </div>
         <div class="pc-body">
           <h3>Eye Link Belt</h3>
-          <p>Heavy-duty open structure for thermal processing, washing, cooling, and industrial conveying where load support and cleanability matter.</p>
-          <div class="pc-tags"><span class="pc-tag">Food Processing</span><span class="pc-tag">Customizable</span></div>
-          <span class="pf-link" style="font-size:13px;margin-top:12px;display:inline-block">View Product &#8594;</span>
+          <p>Confirm eye link pitch, rod diameter, open area, side chain option, load condition, and sprocket matching.</p>
+          <div class="pc-tags"><span class="pc-tag">Open Area</span><span class="pc-tag">Load Review</span></div>
+          <span class="pf-link">View Product &#8594;</span>
         </div>
       </a>
-    </div>
 
-    <!-- Row 3 -->
-    <div class="products-row3">
+      <a href="flat-wire-belt.html" class="product-card">
+        <div class="pc-img-wrap">
+          <span class="pc-badge"><span class="gold-badge" style="font-size:10px">OPEN AREA</span></span>
+          <img src="assets/homepage-media/yiyi-product-photos/flat-wire-honeycomb-belt.webp" alt="Flat Wire / Honeycomb Conveyor Belt stainless steel product close-up" class="pc-img" decoding="async" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <h3>Flat Wire / Honeycomb Belt</h3>
+          <p>Confirm flat strip size, cross rod pitch, open area, edge finish, temperature, and product load.</p>
+          <div class="pc-tags"><span class="pc-tag">Open Area</span><span class="pc-tag">Edge Finish</span></div>
+          <span class="pf-link">View Product &#8594;</span>
+        </div>
+      </a>
       <a href="side-driven-belt.html" class="product-card">
         <div class="pc-img-wrap">
           <span class="pc-badge"><span class="gold-badge" style="font-size:10px">CORE SYSTEM</span></span>
-          <!-- [IMAGE-07: Side Driven Belt Product] -->
-          <img src="assets/homepage-media/home-side-driven-clean.webp" alt="Side Driven Belt" class="pc-sm-img" decoding="async" loading="lazy">
+          <img src="assets/homepage-media/yiyi-product-photos/side-driven-belt.webp" alt="Side Driven Belt" class="pc-img" decoding="async" loading="lazy">
         </div>
-        <div class="pc-sm-body">
+        <div class="pc-body">
           <h3>Side Driven Belt</h3>
-          <p style="font-size:12px;color:#8FA8C0;line-height:1.65;margin-bottom:12px">Positive side drive support for selected process lines where belt path, pitch, and sprocket engagement must be matched.</p>
-          <div class="pc-tags"><span class="pc-tag">Process Lines</span><span class="pc-tag">OEM</span></div>
-          <span class="pf-link" style="font-size:12px;margin-top:10px;display:inline-block">View Product &#8594;</span>
-        </div>
-      </a>
-      <a href="flat-wire-belt.html" class="product-card">
-        <div class="pc-img-wrap">
-          <span class="pc-badge"><span class="gold-badge" style="font-size:10px">HIGH VALUE</span></span>
-          <img src="assets/homepage-media/home-flat-wire-belt-clean.webp" alt="Flat Wire / Honeycomb Conveyor Belt stainless steel product close-up" class="pc-sm-img" decoding="async" loading="lazy">
-          <!-- [IMAGE-09: Flat Wire Honeycomb Conveyor Belts Product] -->
-        </div>
-        <div class="pc-sm-body">
-          <h3>Flat Wire / Honeycomb Conveyor Belt</h3>
-          <p style="font-size:12px;color:#8FA8C0;line-height:1.65;margin-bottom:12px">Open-area honeycomb structure for frying, baking, cooling, coating, washing, and high-airflow conveying.</p>
-          <div class="pc-tags"><span class="pc-tag">Baking</span><span class="pc-tag">Industrial</span></div>
-          <span class="pf-link" style="font-size:12px;margin-top:10px;display:inline-block">View Product &#8594;</span>
-        </div>
-      </a>
-      <a href="drive-sprockets.html" class="product-card">
-        <div class="pc-img-wrap">
-          <span class="pc-badge"><span class="gold-badge" style="font-size:10px;background:rgba(200,146,42,.8);color:white">DRIVE SYSTEM</span></span>
-          <img src="assets/homepage-media/home-sprocket.jpg" alt="Drive Sprockets" class="pc-sm-img" decoding="async" loading="lazy">
-          <!-- [IMAGE-10: Drive Sprockets Product] -->
-        </div>
-        <div class="pc-sm-body">
-          <h3>Drive Sprockets</h3>
-          <p style="font-size:12px;color:#8FA8C0;line-height:1.65;margin-bottom:12px">Matched drive components reviewed together with belt pitch, rod layout, bore, keyway, and OEM system requirements.</p>
-          <div class="pc-tags"><span class="pc-tag">System Matched</span><span class="pc-tag">Precision</span></div>
-          <span class="pf-link" style="font-size:12px;margin-top:10px;display:inline-block">View Product &#8594;</span>
+          <p>Confirm side-drive row, belt path, pitch, sprocket profile, edge clearance, and turning layout.</p>
+          <div class="pc-tags"><span class="pc-tag">Side Drive</span><span class="pc-tag">Clearance</span></div>
+          <span class="pf-link">View Product &#8594;</span>
         </div>
       </a>
       <a href="chain-driven-belt.html" class="product-card">
         <div class="pc-img-wrap">
           <span class="pc-badge"><span class="gold-badge" style="font-size:10px">POSITIVE DRIVE</span></span>
-          <img src="assets/product-media/chain-driven-belt/chain-driven-belt-product-overview.jpg" alt="Chain driven mesh belt with side chain drive structure" class="pc-sm-img" decoding="async" loading="lazy">
+          <img src="assets/homepage-media/yiyi-product-photos/chain-driven-belt.webp" alt="Chain driven mesh belt with side chain drive structure" class="pc-img" decoding="async" loading="lazy">
         </div>
-        <div class="pc-sm-body">
+        <div class="pc-body">
           <h3>Chain Driven Belt</h3>
-          <p style="font-size:12px;color:#8FA8C0;line-height:1.65;margin-bottom:12px">Positive chain drive for heavy load, stable tracking, and industrial conveying where pitch, roller, and sprocket engagement must match.</p>
-          <div class="pc-tags"><span class="pc-tag">Chain Pitch</span><span class="pc-tag">Heavy Load</span></div>
-          <span class="pf-link" style="font-size:12px;margin-top:10px;display:inline-block">View Product &#8594;</span>
+          <p>Confirm chain pitch, roller diameter, sprocket tooth profile, shaft center distance, load, and speed.</p>
+          <div class="pc-tags"><span class="pc-tag">Chain Pitch</span><span class="pc-tag">Sprocket Fit</span></div>
+          <span class="pf-link">View Product &#8594;</span>
         </div>
       </a>
+
       <a href="trapezoidal-mesh-belt.html" class="product-card">
         <div class="pc-img-wrap">
           <span class="pc-badge"><span class="pc-badge blue">TURNING BELT</span></span>
-          <img src="assets/product-media/trapezoidal-mesh-belt/trapezoidal-mesh-belt-product-overview.jpg" alt="Trapezoidal mesh belt product overview for curved conveying and turning systems" class="pc-sm-img" decoding="async" loading="lazy">
+          <img src="assets/homepage-media/yiyi-product-photos/trapezoidal-mesh-belt.webp" alt="Trapezoidal mesh belt product overview for curved conveying and turning systems" class="pc-img" decoding="async" loading="lazy">
         </div>
-        <div class="pc-sm-body">
+        <div class="pc-body">
           <h3>Trapezoidal Mesh Belt</h3>
-          <p style="font-size:12px;color:#8FA8C0;line-height:1.65;margin-bottom:12px">Trapezoidal mesh belt for curved conveying, turning sections, and spiral paths where inner/outer pitch and lateral flexibility must be confirmed together.</p>
-          <div class="pc-tags"><span class="pc-tag">Curved Conveyor</span><span class="pc-tag">Turning Radius</span></div>
-          <span class="pf-link" style="font-size:12px;margin-top:10px;display:inline-block">View Product &#8594;</span>
+          <p>Confirm turning radius, inner/outer pitch, rod layout, lateral flexibility, and conveyor path.</p>
+          <div class="pc-tags"><span class="pc-tag">Turning Radius</span><span class="pc-tag">Inner Pitch</span></div>
+          <span class="pf-link">View Product &#8594;</span>
+        </div>
+      </a>
+      <a href="drive-sprockets.html" class="product-card">
+        <div class="pc-img-wrap">
+          <span class="pc-badge"><span class="gold-badge" style="font-size:10px;background:rgba(200,146,42,.8);color:white">DRIVE SYSTEM</span></span>
+          <img src="assets/homepage-media/tight-products/transparent-v2/drive-sprockets-v2.webp" alt="Drive Sprockets" class="pc-img" decoding="async" loading="lazy">
+        </div>
+        <div class="pc-body">
+          <h3>Drive Sprockets</h3>
+          <p>Confirm tooth profile, pitch, bore, keyway, material, shaft layout, and matched belt specification.</p>
+          <div class="pc-tags"><span class="pc-tag">Tooth Profile</span><span class="pc-tag">Bore / Keyway</span></div>
+          <span class="pf-link">View Product &#8594;</span>
         </div>
       </a>
     </div>
 
     <div style="text-align:center;margin-top:48px">
-      <a href="products.html" class="btn-primary">Browse All Products →</a>
+      <a href="contact.html?intent=drawing&source=home-products" class="btn-primary">Send Belt Drawing / Old Belt Photo →</a>
+      <a href="products.html" class="btn-outline-dark" style="margin-left:10px">Browse All Products →</a>
     </div>
   </div>
 </section>
 
 <!-- PROJECT ENTRY - DESIRE -->
-<section class="project-router">
+<section class="project-router home-hidden-section">
   <div class="container">
     <div class="process-header">
       <div class="eyebrow eyebrow-light">WHAT PROJECT ARE YOU WORKING ON?</div>
@@ -2271,7 +3487,7 @@
 </section>
 
 <!-- INDUSTRIES - DESIRE -->
-<section class="industries">
+<section class="industries home-hidden-section">
   <div class="container">
     <div class="industries-header">
       <div class="eyebrow eyebrow-light">APPLICATION FIELDS</div>
@@ -2417,7 +3633,7 @@
       <!-- Left: Video + Mini Stats -->
       <div>
         <div class="mfg-video-card">
-          <img src="assets/factory-media/yiyi-robotic-welding-line.jpg" alt="YIYI Mesh Belt robotic welding line" class="mfg-card-img" decoding="async" loading="lazy">
+          <video class="mfg-card-img mfg-card-video" muted loop playsinline preload="none" controls poster="assets/homepage-media/home-hero-robotic-welding-new.jpg" aria-label="YIYI Mesh Belt robotic welding and automated production proof video"><source src="assets/product-media/spiral-freezer-belt/sfb-s6-robot-weld-video-web.mp4" type="video/mp4"></video>
           <div class="mfg-card-overlay">
             <p>Robotic Welding / Automated Production Line</p>
             <span>High-consistency welding process for OEM supply, repeat orders, and stable belt performance</span>
@@ -2425,7 +3641,7 @@
         </div>
         <div class="mfg-proof-strip">
           <div class="mfg-proof-media">
-            <img src="assets/homepage-media/home-wire-drawing-equipment.jpg" alt="YIYI Mesh Belt in-house wire drawing and raw material preparation equipment" decoding="async" loading="lazy">
+            <img src="assets/homepage-media/homepage-proof/raw-material-control.png" alt="YIYI Mesh Belt raw material control and workshop stock proof" decoding="async" loading="lazy">
           </div>
           <div class="mfg-proof-copy">
             <span>Raw Material Control</span>
@@ -2440,7 +3656,7 @@
         </div>
         <div class="mfg-proof-strip">
           <div class="mfg-proof-media">
-            <img src="assets/product-media/trapezoidal-mesh-belt/trapezoidal-mesh-belt-production-equipment.jpg" alt="Trapezoidal mesh belt forming equipment for repeatable Z-type belt production" decoding="async" loading="lazy">
+            <video muted loop playsinline preload="none" controls poster="assets/product-media/trapezoidal-mesh-belt/trapezoidal-mesh-belt-production-equipment.jpg" aria-label="Trapezoidal mesh belt forming equipment video"><source src="assets/homepage-media/homepage-proof/trapezoidal-belt-forming-equipment.mp4" type="video/mp4"></video>
           </div>
           <div class="mfg-proof-copy">
             <span>Trapezoidal Belt Forming Equipment</span>
@@ -2451,6 +3667,66 @@
               <span class="mfg-proof-badge">Factory Proof</span>
             </div>
             <p>This equipment proof belongs in the manufacturing capability section, while buyer-facing product cards use clean belt photos for structure review.</p>
+          </div>
+        </div>
+        <div class="mfg-proof-strip">
+          <div class="mfg-proof-media">
+            <video muted loop playsinline preload="none" controls poster="assets/factory-media/factory-wire-drawing-equipment-line.png" aria-label="YIYI Mesh Belt stainless steel wire drawing equipment video"><source src="assets/factory-media/stainless-steel-wire-drawing-horizontal.mp4" type="video/mp4"></video>
+          </div>
+          <div class="mfg-proof-copy">
+            <span>Wire Drawing Equipment</span>
+            <strong>In-house wire drawing supports earlier control of stainless wire preparation.</strong>
+            <p>Wire preparation, stock control, and dimensional consistency are reviewed before belt forming begins.</p>
+          </div>
+        </div>
+        <div class="mfg-proof-strip">
+          <div class="mfg-proof-media">
+            <img src="assets/factory-media/factory-wire-drawing-coil-stock.jpg" alt="YIYI Mesh Belt stainless steel wire coil stock for in-house drawing preparation" decoding="async" loading="lazy">
+          </div>
+          <div class="mfg-proof-copy">
+            <span>Round Bar Drawing</span>
+            <strong>Core wire sizes are prepared for repeat production and replacement orders.</strong>
+            <p>Material control is part of the manufacturing proof, not only a purchasing record.</p>
+          </div>
+        </div>
+        <div class="mfg-proof-strip">
+          <div class="mfg-proof-media">
+            <video muted loop playsinline preload="none" controls poster="assets/homepage-media/home-quality-inspection.png" aria-label="YIYI Mesh Belt raw material testing video"><source src="assets/factory-media/yiyi-raw-material-testing.mp4" type="video/mp4"></video>
+          </div>
+          <div class="mfg-proof-copy">
+            <span>Raw Material Testing</span>
+            <strong>Material checks help reduce risk before production enters welding and assembly.</strong>
+            <p>Raw material review supports buyer confidence for food, freezing, and industrial applications.</p>
+          </div>
+        </div>
+        <div class="mfg-proof-strip">
+          <div class="mfg-proof-media">
+            <img src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Spiral freezer belt dimension check proof before shipment" decoding="async" loading="lazy">
+          </div>
+          <div class="mfg-proof-copy">
+            <span>Dimension Check</span>
+            <strong>Width, pitch, edge structure, and fit points are checked before release.</strong>
+            <p>Dimension control is critical for OEM installation and replacement matching.</p>
+          </div>
+        </div>
+        <div class="mfg-proof-strip">
+          <div class="mfg-proof-media">
+            <img src="assets/product-media/spiral-freezer-belt/sfb-s8-drum-test.jpg" alt="Spiral freezer belt drum test proof for running verification" decoding="async" loading="lazy">
+          </div>
+          <div class="mfg-proof-copy">
+            <span>Drum Test Support</span>
+            <strong>Running fit is reviewed where drum geometry and belt path are critical.</strong>
+            <p>Drum and sprocket matching can be discussed before quotation or replacement release.</p>
+          </div>
+        </div>
+        <div class="mfg-proof-strip">
+          <div class="mfg-proof-media">
+            <img src="assets/product-media/self-stacking-belt/ssb-s6-stack-test.jpg" alt="Self-stacking belt stack test proof for upper and lower engagement" decoding="async" loading="lazy">
+          </div>
+          <div class="mfg-proof-copy">
+            <span>Stack Test Proof</span>
+            <strong>Upper and lower engagement is checked for self-stacking belt projects.</strong>
+            <p>Stacking behavior is verified before release for compact spiral systems.</p>
           </div>
         </div>
         <div class="mfg-stats-mini">
@@ -2507,7 +3783,7 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><path d="m8.21 13.89-1.75 7.93L12 19l5.54 2.82-1.75-7.94"/></svg>
             </div>
             <div>
-              <h4>Export Packing System  - <span>Project packing, labeling, and delivery coordination for overseas shipment</span></h4>
+              <h4>Clean Export Packing  - <span>Neutral outer packing, stretch-film protection, and privacy-safe shipment proof for overseas delivery</span></h4>
             </div>
           </div>
         </div>
@@ -2526,27 +3802,35 @@
       <div class="qa-content">
         <div class="eyebrow eyebrow-light">VERIFIED QUALITY SYSTEM</div>
         <h2>Inspection That Supports<br>Long-Term Belt Performance</h2>
-        <p>Material control, process inspection, drum test verification, and final QA are built into every critical stage to support long-term belt performance.</p>
+        <p>Before shipment, buyers need evidence that material, dimensions, running fit, and packing condition match the agreed specification.</p>
         <div class="qa-steps">
-          <div class="qa-step"><div class="qa-step-num">01</div><div><h4>Raw Material Control</h4><p>Core material quality starts before production begins.</p></div></div>
-          <div class="qa-step"><div class="qa-step-num">02</div><div><h4>Process Inspection</h4><p>Key production stages are checked for consistency and dimensional control.</p></div></div>
-          <div class="qa-step"><div class="qa-step-num">03</div><div><h4>Drum Test Verification</h4><p>Critical belt performance is reviewed through practical verification procedures.</p></div></div>
-          <div class="qa-step"><div class="qa-step-num">04</div><div><h4>Final QA Before Shipment</h4><p>Every project goes through final inspection before packing and export.</p></div></div>
-          <div class="qa-step"><div class="qa-step-num">05</div><div><h4>Food Contact Safety Compliance</h4><p>Applicable materials and processes supported by formal food-contact safety certification.</p></div></div>
+          <div class="qa-step"><div class="qa-step-num">01</div><div><h4>Material Grade Review</h4><p>Stainless steel grade, wire source, and material documents are checked before production release.</p></div></div>
+          <div class="qa-step"><div class="qa-step-num">02</div><div><h4>Wire / Rod Diameter Check</h4><p>Wire diameter, rod diameter, and surface condition are measured against the confirmed specification.</p></div></div>
+          <div class="qa-step"><div class="qa-step-num">03</div><div><h4>Pitch and Width Control</h4><p>Rod pitch, chain pitch, belt width, and edge geometry are verified before final release.</p></div></div>
+          <div class="qa-step"><div class="qa-step-num">04</div><div><h4>Drive Fit Verification</h4><p>Drum diameter, sprocket tooth profile, running direction, and engagement points are reviewed where required.</p></div></div>
+          <div class="qa-step"><div class="qa-step-num">05</div><div><h4>Audit-Ready Records</h4><p>Production records, inspection photos, and buyer-appointed third-party factory audits are supported.</p></div></div>
+          <div class="qa-step"><div class="qa-step-num">06</div><div><h4>Clean Export Release</h4><p>Final QA, neutral outer packing, stretch-film protection, and dispatch photos are checked before shipment.</p></div></div>
         </div>
         <div class="mfg-proof-badges" style="margin-top:18px">
           <span class="mfg-proof-badge">ISO 9001 Certified</span>
           <span class="mfg-proof-badge">National High-Tech Enterprise</span>
-          <span class="mfg-proof-badge">Food Contact Safety Certified</span>
+          <span class="mfg-proof-badge">Third-Party Factory Audit Welcome</span>
         </div>
         <a href="quality-control.html" class="btn-primary" style="margin-top:28px;display:inline-flex">View Quality Control Process →</a>
       </div>
-      <div class="qa-image">
-        <img src="assets/homepage-media/home-quality-inspection.png" alt="Quality inspection process at YIYI Mesh Belt" decoding="async" loading="lazy">
-        <div class="qa-image-caption">
-          <p>Quality Inspection Process Photos</p>
-          <span>Inspection operations · verification points · final QA proof</span>
-        </div>
+      <div class="qa-proof-rail" aria-label="Quality proof examples">
+        <article class="qa-proof-card">
+          <img src="assets/homepage-media/homepage-proof/raw-material-control.png" alt="Raw material control and wire preparation proof" decoding="async" loading="lazy">
+          <div><span>01 Material</span><strong>Material Grade Review</strong><p>Material grade, wire preparation, and batch documents before production.</p></div>
+        </article>
+        <article class="qa-proof-card">
+          <img src="assets/product-media/spiral-freezer-belt/sfb-s7-dimension-check.jpg" alt="Metal conveyor belt dimension and pitch inspection" decoding="async" loading="lazy">
+          <div><span>02 Dimensions</span><strong>Pitch and Width Check</strong><p>Rod pitch, chain pitch, belt width, and edge geometry confirmation.</p></div>
+        </article>
+        <article class="qa-proof-card">
+          <video muted loop playsinline preload="none" controls poster="assets/homepage-media/home-quality-inspection.png" aria-label="Inspection before shipment release video"><source src="assets/homepage-media/homepage-proof/inspection-before-shipment-release.mp4" type="video/mp4"></video>
+          <div><span>03 Release</span><strong>Final QA Before Shipment</strong><p>Photo and video proof can be prepared before dispatch release.</p></div>
+        </article>
       </div>
     </div>
   </div>
@@ -2554,17 +3838,17 @@
 
 
 <!-- TRUST EVIDENCE - FACTORY / QUALITY / DOWNLOAD -->
-<section class="process" id="trust-evidence" style="background:#EEF4F9">
+<section class="process" id="trust-evidence" style="background:linear-gradient(180deg,#E7EFF7 0%,#F5F9FC 100%);border-top:1px solid rgba(31,92,158,.10);border-bottom:1px solid rgba(31,92,158,.10)">
   <div class="container">
     <div class="process-header">
       <div class="eyebrow eyebrow-light">BUYER TRUST EVIDENCE</div>
       <h2>Factory Proof, Quality Proof,<br>and Downloadable Buyer Materials</h2>
-      <p>For OEM builders, distributors, and replacement buyers, trust is built by visible evidence. This section brings the three fastest verification paths into one place without changing the main navigation.</p>
+      <p>For OEM builders, distributors, and replacement buyers, trust is built by visible evidence: workshop video, inspection proof, export packing details, and audit-ready project records.</p>
     </div>
     <div class="trust-evidence-grid">
       <article class="trust-evidence-card">
         <div class="trust-evidence-media">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/homepage-media/home-workshop.png" aria-label="YIYI Mesh Belt factory overview video"><source src="assets/homepage-hero-banner.mp4" type="video/mp4"></video>
+          <video muted loop playsinline preload="none" controls poster="assets/homepage-media/home-hero-robotic-welding-new.jpg" aria-label="YIYI Mesh Belt robotic welding factory proof video"><source src="assets/product-media/spiral-freezer-belt/sfb-s6-robot-weld-video-web.mp4" type="video/mp4"></video>
         </div>
         <div class="trust-evidence-body">
           <span class="trust-evidence-badge">Factory Proof</span>
@@ -2576,37 +3860,142 @@
       </article>
       <article class="trust-evidence-card">
         <div class="trust-evidence-media">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/homepage-media/home-quality-inspection.png" aria-label="YIYI Mesh Belt quality inspection video"><source src="assets/factory-media/yiyi-qa-inspection.mp4" type="video/mp4"></video>
+          <video muted loop playsinline preload="none" controls poster="assets/homepage-media/home-quality-inspection.png" aria-label="YIYI Mesh Belt material and process control video"><source src="assets/homepage-media/homepage-proof/verified-quality-system.mp4" type="video/mp4"></video>
         </div>
         <div class="trust-evidence-body">
           <span class="trust-evidence-badge">Quality Proof</span>
-          <h3>Inspection Before Shipment Release</h3>
-          <p>Connects material control, process inspection, final QA, and shipment release into a visible quality path.</p>
-          <ul class="trust-evidence-list"><li>Incoming and in-process checks</li><li>Dimensional and running verification</li><li>Material documents on request</li></ul>
+          <h3>Material and Process Control Path</h3>
+          <p>Connects material preparation, process checks, final QA logic, and shipment release into a visible quality path.</p>
+          <ul class="trust-evidence-list"><li>Material preparation and review</li><li>Dimensional and running verification</li><li>Material documents on request</li></ul>
           <a href="quality-control.html" class="download-center-action secondary">See Quality Proof</a>
         </div>
       </article>
       <article class="trust-evidence-card">
-        <div class="trust-evidence-media"><img src="assets/factory-media/spiral-freezer-belt-quality-process-cover.png" alt="YIYI Mesh Belt engineering guide and quality document support" decoding="async" loading="lazy"></div>
+        <div class="trust-evidence-media"><img src="assets/homepage-media/etw/etw-factory-exterior-audit.jpg" alt="YIYI factory exterior proof for audit and buyer visit review" decoding="async" loading="lazy"></div>
         <div class="trust-evidence-body">
-          <span class="trust-evidence-badge">Engineering Guides</span>
-          <h3>Process, Structure, and Replacement Checklists</h3>
-          <p>Helps OEM buyers and replacement teams understand risk points before sending drawings, photos, or specifications.</p>
-          <ul class="trust-evidence-list"><li>Spiral belt production flow</li><li>Self-stacking belt structure</li><li>Replacement risk checklist</li></ul>
-          <a href="spiral-freezer-belt-production-process.html" class="download-center-action">Read Spiral Belt Process</a>
+          <span class="trust-evidence-badge">Audit Proof</span>
+          <h3>Factory Visit and Third-Party Audit Welcome</h3>
+          <p>Buyer-appointed inspectors can review factory conditions, production records, and quality-control checkpoints before or during cooperation.</p>
+          <ul class="trust-evidence-list"><li>On-site factory visit support</li><li>Third-party inspection welcome</li><li>Audit-oriented documentation path</li></ul>
+          <a href="manufacturing.html" class="download-center-action">See Factory Proof</a>
+        </div>
+      </article>
+      <article class="trust-evidence-card">
+        <div class="trust-evidence-media"><img src="assets/homepage-media/etw/etw-workshop-equipment-line.jpg" alt="YIYI workshop equipment and production line proof" decoding="async" loading="lazy"></div>
+        <div class="trust-evidence-body">
+          <span class="trust-evidence-badge">Workshop Proof</span>
+          <h3>Equipment Visibility for Supplier Qualification</h3>
+          <p>Real workshop media helps buyers see production environment, equipment condition, and the manufacturing base behind the quotation.</p>
+          <ul class="trust-evidence-list"><li>Factory-controlled production scenes</li><li>Equipment and line visibility</li><li>Evidence before deeper sourcing review</li></ul>
+          <a href="manufacturing.html" class="download-center-action secondary">See Manufacturing Proof</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
+<!-- ANONYMOUS SHIPMENT CASES - TRUST -->
+<section class="home-shipment-proof">
+  <div class="container">
+    <div class="home-shipment-head">
+      <div>
+        <div class="eyebrow eyebrow-dark">ANONYMIZED SHIPMENT CASES</div>
+        <h2>Real Shipment Evidence,<br>Without Customer Exposure</h2>
+      </div>
+      <p>Public shipment proof is used only after privacy review. Customer names, shipping marks, email records, order numbers, faces, and private labels stay out of website pages.</p>
+    </div>
+    <div class="home-shipment-grid">
+      <article class="home-shipment-card">
+        <img src="assets/product-media/spiral-freezer-belt/sfb-s9-shipment.png" alt="Privacy-safe spiral freezer belt shipment proof with customer information removed" decoding="async" loading="lazy">
+        <div class="home-shipment-body">
+          <span>Finished Belt Review</span>
+          <h3>Product Condition Before Dispatch</h3>
+          <p>Shows belt body, surface condition, packing readiness, and release status after customer labels and private marks are removed.</p>
+        </div>
+      </article>
+      <article class="home-shipment-card">
+        <img src="assets/product-media/self-stacking-belt/ssb-s12-packing.png" alt="Self-stacking belt export packing proof without customer information" decoding="async" loading="lazy">
+        <div class="home-shipment-body">
+          <span>Neutral Export Packing</span>
+          <h3>Clean Crate Handover</h3>
+          <p>Outer packing can be prepared without Chinese text and protected with stretch film to reduce terminal-side repacking risk.</p>
+        </div>
+      </article>
+      <article class="home-shipment-card">
+        <video muted loop playsinline preload="none" controls poster="assets/product-media/eye-link-belt/elb-proof-package.jpg" aria-label="Inspection before shipment release video without customer exposure"><source src="assets/homepage-media/homepage-proof/inspection-before-shipment-release.mp4" type="video/mp4"></video>
+        <div class="home-shipment-body">
+          <span>Pre-Shipment Verification</span>
+          <h3>Inspection Before Release</h3>
+          <p>Video proof can support internal buyer review while PO files, emails, order references, faces, and shipping marks stay internal.</p>
+        </div>
+      </article>
+    </div>
+    <div class="home-privacy-note">Public-use rule: clean product photos, testing scenes, packing scenes, and shipment proof can be used after redaction. Email screenshots, PO files, customs documents, customer labels, visible faces, and messy backgrounds stay internal.</div>
+  </div>
+</section>
+
+<!-- EXHIBITION PROOF - LIGHT TRUST -->
+<section class="home-exhibition-proof">
+  <div class="container">
+    <div class="home-exhibition-head">
+      <div>
+        <div class="eyebrow eyebrow-light">EXHIBITION PROOF</div>
+        <h2>International Exhibitions<br>and Buyer Communication</h2>
+      </div>
+      <p>Exhibition proof is kept lightweight on the homepage: domestic and international booth records, product display, and face-to-face technical communication with industrial buyers.</p>
+    </div>
+    <div class="home-exhibition-anchors" aria-label="YIYI Mesh Belt exhibition trust anchors">
+      <span>IBA Germany</span>
+      <span>Shanghai International Bakery Exhibition</span>
+      <span>Domestic Food Processing Shows</span>
+      <span>Booth + Sample Review</span>
+      <span>OEM Buyer Discussion</span>
+    </div>
+    <div class="home-exhibition-grid">
+      <article class="home-exhibition-card">
+        <img src="assets/homepage-media/home-exhibition.png" alt="YIYI Mesh Belt exhibition booth proof" decoding="async" loading="lazy">
+        <div><span>Booth Proof</span><h3>Domestic and International Exhibition Records</h3><p>Real YIYI booth photos show supplier presence, product display, and traceable buyer communication scenes.</p></div>
+      </article>
+      <article class="home-exhibition-card">
+        <img src="assets/homepage-media/home-spiral-freezer-clean-new.jpg" alt="Metal conveyor belt product display for buyer review" decoding="async" loading="lazy">
+        <div><span>Product Display</span><h3>Physical Product Review</h3><p>Samples help buyers check structure, edge detail, wire layout, and application fit before deeper qualification.</p></div>
+      </article>
+      <article class="home-exhibition-card">
+        <img src="assets/homepage-media/etw/etw-laser-processing-detail.jpg" alt="YIYI Mesh Belt equipment detail used for technical buyer communication" decoding="async" loading="lazy">
+        <div><span>Technical Communication</span><h3>OEM and Distributor Discussions</h3><p>Buyer conversations are guided by drawings, samples, operating conditions, material grade, and replacement risk.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BUYER DECISION ANCHORS -->
+<section class="home-trust-anchors">
+  <div class="container">
+    <div class="home-trust-anchors-head">
+      <div>
+        <div class="eyebrow eyebrow-dark">BUYER DECISION ANCHORS</div>
+        <h2>What Industrial Buyers Can Verify Before Inquiry</h2>
+      </div>
+      <p>Use these signals to judge whether YIYI can support OEM production, replacement matching, and distributor supply before sending drawings.</p>
+    </div>
+    <div class="home-trust-anchor-grid">
+      <article><span>Applications</span><strong>IQF, spiral freezing, bakery, washing, cooling, and industrial conveying.</strong></article>
+      <article><span>Factory Audit</span><strong>Buyer-appointed third-party factory audits and inspection visits are welcome.</strong></article>
+      <article><span>Quality System</span><strong>ISO 9001, process inspection, final QA proof, and order-level records.</strong></article>
+      <article><span>Manufacturing</span><strong>Robotic welding, in-house wire drawing, workshop equipment, and production lines.</strong></article>
+      <article><span>Shipment Proof</span><strong>Neutral export packing, stretch-film protection, and privacy-safe dispatch evidence.</strong></article>
+      <article><span>Communication</span><strong>Sunny project support, LinkedIn presence, exhibition proof, and engineering review path.</strong></article>
+    </div>
+  </div>
+</section>
+
 <!-- PROCESS - DESIRE -->
-<section class="process">
+<section class="process home-oem-process">
   <div class="container">
     <div class="process-header">
       <div class="eyebrow eyebrow-light">ENGINEERING &amp; OEM</div>
       <h2>From Drawing Review<br>to Delivery Confirmation</h2>
-      <p>YIYI Mesh Belt supports OEM builders and distributors through drawing-based production, sampling, matched components, quality verification, and export coordination.</p>
+      <p>A clear engineering path from drawing review to export packing and technical follow-up.</p>
     </div>
     <div class="process-grid" style="grid-template-columns:1fr;gap:16px">
       <style>
@@ -2618,12 +4007,12 @@
       </style>
     </div>
     <div class="process-grid process-grid-6" style="display:grid;gap:16px">
-      <div class="process-step"><div class="ps-num">01</div><h4>Drawing Review</h4><p>Width, pitch, rod layout, edge structure, material, belt path, and drive method are reviewed before production begins.</p></div>
-      <div class="process-step"><div class="ps-num">02</div><h4>Sample Confirmation</h4><p>When needed, sample parts or short belt sections are checked to confirm structure, fit, and application alignment.</p></div>
-      <div class="process-step"><div class="ps-num">03</div><h4>Production Confirmation</h4><p>Specifications, quantities, process details, and inspection points are aligned before batch production.</p></div>
-      <div class="process-step"><div class="ps-num">04</div><h4>Matching Support</h4><p>Drive sprockets, drum diameter, edge clearance, and supporting parts are coordinated together when required.</p></div>
-      <div class="process-step"><div class="ps-num">05</div><h4>Export Packaging</h4><p>Clean product, protected packing, and export delivery details are organized for international OEM projects.</p></div>
-      <div class="process-step"><div class="ps-num">06</div><h4>Technical Follow-Up</h4><p>Replacement support, repeat-order traceability, and project communication continue after delivery.</p></div>
+      <div class="process-step"><div class="ps-num">01</div><h4>Drawing Review</h4><p>Width, pitch, rod layout, material, belt path, and drive method.</p></div>
+      <div class="process-step"><div class="ps-num">02</div><h4>Sample Confirmation</h4><p>Short belt sections or parts are checked when needed.</p></div>
+      <div class="process-step"><div class="ps-num">03</div><h4>Production Confirmation</h4><p>Quantity, process details, and inspection points are aligned.</p></div>
+      <div class="process-step"><div class="ps-num">04</div><h4>Matching Support</h4><p>Sprockets, drum diameter, clearance, and supporting parts.</p></div>
+      <div class="process-step"><div class="ps-num">05</div><h4>Export Packaging</h4><p>Neutral packing, stretch-film protection, and dispatch proof.</p></div>
+      <div class="process-step"><div class="ps-num">06</div><h4>Technical Follow-Up</h4><p>Replacement support and repeat-order traceability.</p></div>
     </div>
     <div class="process-actions">
       <p>Structured OEM coordination, from review to delivery.</p>
@@ -2640,7 +4029,7 @@
 </section>
 
 <!-- GLOBAL - DESIRE TO ACTION -->
-<section class="global">
+<section class="global home-hidden-section">
   <div class="container">
     <div class="global-grid">
       <div class="global-content">
@@ -2689,7 +4078,7 @@
 </section>
 
 <!-- PROJECT VALIDATION -->
-<section class="process process-proof" style="background:#0F2438">
+<section class="process process-proof home-hidden-section" style="background:#0F2438">
   <div class="container">
     <div class="process-header">
       <div class="eyebrow eyebrow-light">PROJECT VALIDATION</div>
@@ -2717,7 +4106,7 @@
 </section>
 
 <!-- FOUNDER STORY ENTRY -->
-<section class="process process-proof" style="background:#0F2438">
+<section class="process process-proof home-hidden-section" style="background:#0F2438">
   <div class="container">
     <div class="process-header">
         <div class="eyebrow eyebrow-light">FOUNDER STORY</div>
@@ -2739,7 +4128,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="process" style="background:#EEF4F9">
+<section class="process home-hidden-section" style="background:#EEF4F9">
   <div class="container">
     <div class="process-header">
       <div class="eyebrow eyebrow-light">FAQ</div>
@@ -2813,6 +4202,10 @@
       <div class="cti"><span class="cti-check">&#10003;</span>25+ Years Industry Experience</div>
       <div class="cti"><span class="cti-check">&#10003;</span>Third-Party Audits Welcome</div>
     </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px">
+      <a href="products.html" class="btn-outline-dark">Review Product Families →</a>
+      <a href="https://www.linkedin.com/company/yiyi-mesh-belt" target="_blank" rel="noopener" class="btn-outline-dark">Follow YIYI on LinkedIn →</a>
+    </div>
   </div>
 </section>
 
@@ -2850,7 +4243,7 @@
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> ISO 9001 Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Third-Party Factory Audit Welcome</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> 20+ Countries Served</span>
         </div>
       </div>
@@ -2890,9 +4283,9 @@
             <svg class="fca-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             +86 134 5177 3742
           </a>
-          <a href="https://wa.me/8618653496136" target="_blank" rel="noopener" class="foot-contact-a">
+          <a href="https://wa.me/8613451773742" target="_blank" rel="noopener" class="foot-contact-a">
             <svg class="fca-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            WhatsApp: +86 186 5349 6136
+            WhatsApp: +86 134 5177 3742
           </a>
         </div>
         <a href="contact.html?intent=quote&source=home" class="foot-btn-p">Ask For A Quick Quote &#8594;</a>
@@ -2923,11 +4316,52 @@
       <span class="foot-copy" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
         <a href="privacy-policy.html" style="color:#8FA8C0;text-decoration:none;font-size:12px">Privacy Policy</a>
         <span style="color:#4A6080">&#183;</span>
-        <span>ISO 9001 Certified &#183; 20+ Countries Served &#183; Food Contact Safety Certified</span>
+        <span>ISO 9001 Certified &#183; 20+ Countries Served &#183; Third-Party Factory Audit Welcome</span>
       </span>
     </div>
   </div>
 </footer>
+
+<div class="ai-advisor-wrap" id="ai-advisor-wrap">
+  <div class="ai-advisor-card" id="ai-advisor-card" style="display:none">
+    <div class="ai-advisor-head">
+      <div class="ai-advisor-profile">
+        <img src="assets/team/sunny-yiyi-global-sales-director.jpg" alt="Sunny - YIYI Mesh Belt Global Sales Director" class="ai-advisor-photo" loading="lazy" decoding="async">
+        <div>
+          <div class="ai-advisor-kicker">24H GLOBAL PROJECT SUPPORT</div>
+          <div class="ai-advisor-title">Sunny - YIYI Mesh Belt</div>
+          <div class="ai-advisor-sub">Global Sales Director · Industrial Metal Conveyor Belt Projects · OEM &amp; Distributor Support</div>
+        </div>
+      </div>
+      <button class="ai-advisor-close" onclick="closeAIAdvisor()" aria-label="Close Sunny project support">&times;</button>
+    </div>
+    <div class="ai-advisor-body">
+      <div class="ai-advisor-note">
+        Start in any language. Project messages are reviewed by sales and engineering support before quotation or technical confirmation.
+      </div>
+      <div class="ai-advisor-trust">
+        <span>For industrial metal conveyor belt projects, OEM equipment builders, distributors, and replacement belt support.</span>
+        <span>Send drawings, old belt photos, equipment model, belt width, pitch, material, and sprocket details.</span>
+      </div>
+      <div class="ai-advisor-grid">
+        <button class="ai-advisor-chip" onclick="startAIAdvisor('Spiral freezer belt drawing review')">Spiral freezer belt review</button>
+        <button class="ai-advisor-chip" onclick="startAIAdvisor('Replacement belt without original drawing')">Replacement belt matching</button>
+        <button class="ai-advisor-chip" onclick="startAIAdvisor('Self-stacking belt project')">Self-stacking belt project</button>
+        <button class="ai-advisor-chip" onclick="startAIAdvisor('Distributor or OEM supplier evaluation')">OEM / distributor evaluation</button>
+      </div>
+      <textarea class="ai-advisor-input" id="ai-advisor-msg" placeholder="Example: We need a spiral freezer belt for chicken IQF line. Width, pitch, drum diameter, old belt photos, and sprocket details can be shared."></textarea>
+      <div class="ai-advisor-actions">
+        <button class="ai-advisor-primary" onclick="submitAIAdvisor()">Send Project Details</button>
+        <button class="ai-advisor-secondary" onclick="sendAIAdvisorToWA()">Send to WhatsApp</button>
+      </div>
+      <div class="ai-advisor-guard">Pricing, delivery time, and certificate details are confirmed after engineering review.</div>
+    </div>
+  </div>
+  <button class="ai-advisor-btn" onclick="toggleAIAdvisor()" title="Talk to Sunny - Global Sales Director">
+    <img src="assets/team/sunny-yiyi-global-sales-director.jpg" alt="" class="ai-advisor-btn-photo" loading="lazy" decoding="async">
+    <span class="ai-advisor-label">Ask Sunny About Your Belt Project</span>
+  </button>
+</div>
 
 <div class="wa-wrap" id="wa-wrap">
   <div class="wa-chat" id="wa-chat" style="display:none">
@@ -2972,6 +4406,8 @@
 <script src="assets/site-shell.js"></script>
 </body>
 </html>
+
+
 
 
 

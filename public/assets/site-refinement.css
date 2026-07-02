@@ -793,6 +793,12 @@ textarea:focus {
   }
 }
 
+@media (max-width: 767px) {
+  .btn-nav-quote {
+    display: none !important;
+  }
+}
+
 /* P1 trust evidence modules */
 .trust-evidence-grid,
 .video-proof-grid,
@@ -803,11 +809,26 @@ textarea:focus {
 }
 
 .trust-evidence-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .video-proof-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.video-proof-grid.single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 1060px;
+}
+
+.video-proof-grid.single .video-proof-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  align-items: stretch;
+}
+
+.video-proof-grid.single .video-proof-media {
+  min-height: 360px;
 }
 
 .download-center-grid {
@@ -1278,6 +1299,14 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .video-proof-grid.single .video-proof-card {
+    grid-template-columns: 1fr;
+  }
+
+  .video-proof-grid.single .video-proof-media {
+    min-height: 0;
+  }
+
   .proof-panorama {
     min-height: 460px;
   }
@@ -1296,15 +1325,6 @@ textarea:focus {
 }
 
 @media (max-width: 520px) {
-  .btn-nav-quote {
-    max-width: 154px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding: 0 12px !important;
-    font-size: 12px !important;
-  }
-
   .nav-right {
     gap: 8px !important;
   }
@@ -1420,8 +1440,24 @@ footer.yiyi-footer .foot-brand {
 }
 
 .yiyi-footer .footer-inquiry-panel,
-.footer .footer-inquiry-panel {
-  max-width: 100%;
+.footer .footer-inquiry-panel,
+footer .footer-inquiry-panel {
+  display: none !important;
+}
+
+.yiyi-footer .foot-info-item span.fi-icon,
+.footer .foot-info-item span.fi-icon {
+  width: 8px !important;
+  height: 8px !important;
+  max-width: 8px !important;
+  max-height: 8px !important;
+  flex: 0 0 8px !important;
+  border-radius: 999px !important;
+  background: #4A8CC8 !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  overflow: hidden !important;
 }
 
 @media (max-width: 767px) {

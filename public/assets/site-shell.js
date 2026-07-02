@@ -11,11 +11,97 @@
     return Array.from((root || document).querySelectorAll(selector));
   }
 
+  function ensureAIAdvisorWidget() {
+    if (!document.getElementById("ai-advisor-style")) {
+      const style = document.createElement("style");
+      style.id = "ai-advisor-style";
+      style.textContent = `
+        .ai-advisor-wrap{position:fixed;right:24px;bottom:96px;z-index:901;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+        .ai-advisor-card{width:min(380px,calc(100vw - 32px));background:#071827;border:1px solid rgba(106,159,204,.36);border-radius:14px;box-shadow:0 22px 60px rgba(4,12,22,.46);overflow:hidden;animation:waSlide .2s ease;color:#fff}
+        .ai-advisor-head{padding:15px 16px;background:linear-gradient(135deg,#0D1B2A,#1F5C9E);display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+        .ai-advisor-profile{display:flex;align-items:center;gap:12px;min-width:0}
+        .ai-advisor-photo{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.72);box-shadow:0 6px 18px rgba(0,0,0,.22);flex:0 0 auto}
+        .ai-advisor-kicker{font-family:var(--font-mono,monospace);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#9FD1FF;margin-bottom:5px}
+        .ai-advisor-title{font-size:16px;line-height:1.25;font-weight:800;color:#fff}
+        .ai-advisor-sub{margin-top:4px;font-size:12px;line-height:1.45;color:rgba(255,255,255,.78)}
+        .ai-advisor-close{color:rgba(255,255,255,.82);font-size:22px;background:none;border:none;cursor:pointer;padding:0;line-height:1}
+        .ai-advisor-body{padding:16px;background:linear-gradient(180deg,#0B2034,#071827)}
+        .ai-advisor-note{border-left:3px solid #C8922A;padding:9px 11px;background:rgba(200,146,42,.10);color:#DDEBFA;font-size:13px;line-height:1.55;margin-bottom:12px}
+        .ai-advisor-trust{display:grid;gap:7px;margin-bottom:12px}
+        .ai-advisor-trust span{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.45;color:rgba(221,235,250,.82)}
+        .ai-advisor-trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:#6A9FCC;flex:0 0 auto;margin-top:6px}
+        .ai-advisor-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+        .ai-advisor-chip{border:1px solid rgba(106,159,204,.28);background:rgba(31,92,158,.22);color:#BBD9F4;border-radius:8px;padding:9px 10px;font-size:12px;font-weight:700;line-height:1.25;cursor:pointer;text-align:left;transition:all .18s ease;font-family:var(--font-sans,Arial,sans-serif)}
+        .ai-advisor-chip:hover{background:rgba(74,140,200,.30);border-color:rgba(106,159,204,.52);color:#fff}
+        .ai-advisor-input{box-sizing:border-box;width:100%;min-height:76px;resize:vertical;border:1px solid rgba(143,168,192,.35);border-radius:10px;background:rgba(255,255,255,.06);color:#fff;padding:10px 12px;font-size:13px;line-height:1.5;font-family:var(--font-sans,Arial,sans-serif);outline:none}
+        .ai-advisor-input::placeholder{color:rgba(221,235,250,.58)}
+        .ai-advisor-input:focus{border-color:#6A9FCC;box-shadow:0 0 0 3px rgba(74,140,200,.16)}
+        .ai-advisor-actions{display:flex;gap:8px;margin-top:10px}
+        .ai-advisor-primary,.ai-advisor-secondary{flex:1;border-radius:9px;padding:10px 12px;font-size:13px;font-weight:800;cursor:pointer;font-family:var(--font-sans,Arial,sans-serif)}
+        .ai-advisor-primary{border:1px solid #C8922A;background:#C8922A;color:#071827}
+        .ai-advisor-secondary{border:1px solid rgba(106,159,204,.36);background:transparent;color:#BBD9F4}
+        .ai-advisor-guard{margin-top:10px;font-size:11px;line-height:1.45;color:rgba(221,235,250,.56)}
+        .ai-advisor-btn{min-width:244px;height:50px;border-radius:999px;border:1px solid rgba(159,209,255,.28);background:linear-gradient(135deg,#10263D,#1F5C9E);color:#fff;box-shadow:0 10px 30px rgba(13,27,42,.38);cursor:pointer;display:flex;align-items:center;gap:10px;justify-content:center;padding:0 18px;font-size:13px;font-weight:800;letter-spacing:.01em;font-family:var(--font-sans,Arial,sans-serif);transition:transform .2s,box-shadow .2s}
+        .ai-advisor-btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(31,92,158,.42)}
+        .ai-advisor-btn-photo{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.72);flex:0 0 auto}
+        .ai-advisor-dot{width:8px;height:8px;border-radius:50%;background:#46D77A;box-shadow:0 0 0 4px rgba(70,215,122,.13);flex-shrink:0}
+        @media(max-width:640px){.ai-advisor-wrap{right:16px;bottom:88px}.ai-advisor-btn{min-width:56px;width:56px;height:56px;padding:0;border-radius:50%}.ai-advisor-btn-photo{width:36px;height:36px}.ai-advisor-label{display:none}.ai-advisor-grid{grid-template-columns:1fr}.ai-advisor-actions{flex-direction:column}}
+      `;
+      document.head.appendChild(style);
+    }
+
+    if (document.getElementById("ai-advisor-wrap")) return;
+    document.body.insertAdjacentHTML("beforeend", `
+      <div class="ai-advisor-wrap" id="ai-advisor-wrap">
+        <div class="ai-advisor-card" id="ai-advisor-card" style="display:none">
+          <div class="ai-advisor-head">
+            <div class="ai-advisor-profile">
+              <img src="assets/team/sunny-yiyi-global-sales-director.jpg" alt="Sunny - YIYI Mesh Belt Global Sales Director" class="ai-advisor-photo" loading="lazy" decoding="async">
+              <div>
+                <div class="ai-advisor-kicker">24H GLOBAL PROJECT SUPPORT</div>
+                <div class="ai-advisor-title">Sunny - YIYI Mesh Belt</div>
+                <div class="ai-advisor-sub">Global Sales Director · Industrial Metal Conveyor Belt Projects · OEM &amp; Distributor Support</div>
+              </div>
+            </div>
+            <button class="ai-advisor-close" onclick="closeAIAdvisor()" aria-label="Close Sunny project support">&times;</button>
+          </div>
+          <div class="ai-advisor-body">
+            <div class="ai-advisor-note">Start in any language. Project messages are reviewed by sales and engineering support before quotation or technical confirmation.</div>
+            <div class="ai-advisor-trust">
+              <span>For industrial metal conveyor belt projects, OEM equipment builders, distributors, and replacement belt support.</span>
+              <span>Send drawings, old belt photos, equipment model, belt width, pitch, material, and sprocket details.</span>
+            </div>
+            <div class="ai-advisor-grid">
+              <button class="ai-advisor-chip" onclick="startAIAdvisor('Spiral freezer belt drawing review')">Spiral freezer belt review</button>
+              <button class="ai-advisor-chip" onclick="startAIAdvisor('Replacement belt without original drawing')">Replacement belt matching</button>
+              <button class="ai-advisor-chip" onclick="startAIAdvisor('Self-stacking belt project')">Self-stacking belt project</button>
+              <button class="ai-advisor-chip" onclick="startAIAdvisor('Distributor or OEM supplier evaluation')">OEM / distributor evaluation</button>
+            </div>
+            <textarea class="ai-advisor-input" id="ai-advisor-msg" placeholder="Example: We need a spiral freezer belt for chicken IQF line. Width, pitch, drum diameter, old belt photos, and sprocket details can be shared."></textarea>
+            <div class="ai-advisor-actions">
+              <button class="ai-advisor-primary" onclick="submitAIAdvisor()">Send Project Details</button>
+              <button class="ai-advisor-secondary" onclick="sendAIAdvisorToWA()">Send to WhatsApp</button>
+            </div>
+            <div class="ai-advisor-guard">Pricing, delivery time, and certificate details are confirmed after engineering review.</div>
+          </div>
+        </div>
+        <button class="ai-advisor-btn" onclick="toggleAIAdvisor()" title="Talk to Sunny - Global Sales Director">
+          <img src="assets/team/sunny-yiyi-global-sales-director.jpg" alt="" class="ai-advisor-btn-photo" loading="lazy" decoding="async">
+          <span class="ai-advisor-label">Ask Sunny About Your Belt Project</span>
+        </button>
+      </div>
+    `);
+  }
+
+  ensureAIAdvisorWidget();
+
   const nav = first([".yiyi-nav", ".site-nav"]);
   const mobileMenu = first(["#mob-menu", ".mob-menu", ".mobm"]);
   const mobileToggle = first(["#mob-toggle", ".mob-toggle", ".mobt"]);
   const waChat = first(["#wa-chat", ".wa-chat"]);
   const waInput = first(["#wa-msg", ".wa-input", ".wa-in"]);
+  const aiAdvisorCard = first(["#ai-advisor-card"]);
+  const aiAdvisorInput = first(["#ai-advisor-msg"]);
 
   function setNavScrolled() {
     if (nav) nav.classList.toggle("scrolled", window.scrollY > 16);
@@ -43,7 +129,7 @@
 
   function openWA(message) {
     const text = encodeURIComponent(message || "Hello, I would like to discuss my conveyor belt project.");
-    window.open(`https://wa.me/8618653496136?text=${text}`, "_blank", "noopener");
+    window.open(`https://wa.me/8613451773742?text=${text}`, "_blank", "noopener");
   }
 
   function sendWA(message) {
@@ -53,6 +139,50 @@
   function sendWAInput() {
     const value = waInput ? waInput.value.trim() : "";
     openWA(value || "Hello, I would like to discuss my conveyor belt project.");
+  }
+
+  function closeAIAdvisor() {
+    if (aiAdvisorCard) aiAdvisorCard.style.display = "none";
+  }
+
+  function toggleAIAdvisor() {
+    if (!aiAdvisorCard) return;
+    aiAdvisorCard.style.display = aiAdvisorCard.style.display === "block" ? "none" : "block";
+    if (aiAdvisorCard.style.display === "block" && aiAdvisorInput) aiAdvisorInput.focus();
+  }
+
+  function startAIAdvisor(topic) {
+    if (!aiAdvisorInput) return;
+    const template = topic
+      ? `${topic}: Please help us confirm belt type, application, drawings/photos, key dimensions, sprocket matching, and urgency.`
+      : "Please help us confirm belt type, application, drawings/photos, key dimensions, sprocket matching, and urgency.";
+    aiAdvisorInput.value = template;
+    aiAdvisorInput.focus();
+  }
+
+  function getAIAdvisorMessage() {
+    const value = aiAdvisorInput ? aiAdvisorInput.value.trim() : "";
+    return value || "I would like to start a project review with Sunny from YIYI Mesh Belt for a metal conveyor belt project.";
+  }
+
+  function submitAIAdvisor() {
+    const message = getAIAdvisorMessage();
+    try {
+      window.localStorage.setItem("yiyiSunnySalesDraft", message);
+    } catch (error) {
+      // Local storage can be blocked by browser privacy settings; the URL still carries the intent.
+    }
+    const params = new URLSearchParams({
+      intent: "sunny-global-sales",
+      source: "floating-sunny-sales",
+      message,
+    });
+    window.location.href = `contact.html?${params.toString()}`;
+  }
+
+  function sendAIAdvisorToWA() {
+    const message = `Sunny - YIYI Mesh Belt project review: ${getAIAdvisorMessage()}`;
+    openWA(message);
   }
 
   function setLang(button, lang) {
@@ -235,6 +365,7 @@
   }
 
   function enhanceFooterInquiry() {
+    return;
     const footer = first([".yiyi-footer", ".footer", "footer"]);
     if (!footer || footer.querySelector(".footer-inquiry-panel")) return;
     injectFooterInquiryStyles();
@@ -247,7 +378,7 @@
     panel.innerHTML = `
       <div class="footer-inquiry-head">
         <div>
-          <div class="footer-inquiry-kicker">Engineering Inquiry Paths</div>
+          <div class="footer-inquiry-kicker">Project Support</div>
           <h2 class="footer-inquiry-title">Not ready to quote yet? Send the proof we need first.</h2>
         </div>
         <p class="footer-inquiry-copy">For ${productShort}, buyers can start with a drawing, an old belt photo, a sample detail, or a replacement problem. YIYI will route it to product matching, engineering review, or quotation.</p>
@@ -293,6 +424,11 @@
   window.toggleWA = toggleWA;
   window.sendWA = sendWA;
   window.sendWAInput = sendWAInput;
+  window.closeAIAdvisor = closeAIAdvisor;
+  window.toggleAIAdvisor = toggleAIAdvisor;
+  window.startAIAdvisor = startAIAdvisor;
+  window.submitAIAdvisor = submitAIAdvisor;
+  window.sendAIAdvisorToWA = sendAIAdvisorToWA;
   window.setLang = setLang;
   window.toggleFaq = toggleFaq;
 
@@ -316,7 +452,6 @@
 
   updateIntentLinks();
   hydrateContactForm();
-  enhanceFooterInquiry();
   setNavScrolled();
   window.addEventListener("scroll", setNavScrolled, { passive: true });
   window.addEventListener("resize", () => {

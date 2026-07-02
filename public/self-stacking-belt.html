@@ -271,6 +271,31 @@ html,body{max-width:100%;overflow-x:hidden}
 @media(max-width:1020px){.ssb-review-grid{grid-template-columns:1fr 1fr}.ssb-flow{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:1020px){.ssb-measure-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.ssb-review-grid{grid-template-columns:1fr;gap:14px;margin:26px 0 34px}.ssb-flow{grid-template-columns:1fr;gap:10px;margin-bottom:36px}.ssb-flow-step{min-height:auto}.ssb-measure-grid{grid-template-columns:1fr;gap:14px}.ssb-measure-card img{height:240px}}
+
+/* Compact product-page release: evidence first, less reading pressure */
+.sec{padding:58px 0}
+.sec-h2{font-size:clamp(20px,2.4vw,28px);margin-bottom:12px}
+.body-p{font-size:14px;line-height:1.62;margin-bottom:10px}
+.ssb-review-grid{gap:14px;margin:24px 0 30px}
+.ssb-review-card{padding:18px}
+.ssb-review-card p,.ssb-flow-step span,.param-desc,.qc-desc,.sp-desc{line-height:1.45}
+.ssb-flow{gap:10px;margin-bottom:34px}
+.ssb-flow-step{min-height:auto;padding:14px}
+.media-card.product-tile,.media-card.detail-tile{height:190px}
+.stack-module,.weld-module{padding:62px 0}
+.param-grid,.oem-grid{gap:12px;margin-top:20px}
+.param-card,.oem-card{padding:16px}
+.ssb-evidence-grid,.ssb-case-grid,.ssb-spec-grid{display:grid;gap:16px}
+.ssb-evidence-grid{grid-template-columns:1.2fr 1fr 1fr}
+.ssb-case-grid{grid-template-columns:repeat(3,1fr)}
+.ssb-spec-grid{grid-template-columns:repeat(4,1fr);margin-top:22px}
+.ssb-evidence-card,.ssb-case-card,.ssb-spec-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(11,31,58,.07)}
+.ssb-evidence-card .media-card{height:220px;border:0;border-radius:0;box-shadow:none}
+.ssb-evidence-body,.ssb-case-card,.ssb-spec-card{padding:18px}
+.ssb-evidence-body h3,.ssb-case-card h3,.ssb-spec-card h3{font-size:15px;color:var(--ink);line-height:1.3;margin-bottom:7px}
+.ssb-evidence-body p,.ssb-case-card p,.ssb-spec-card p{font-size:13px;color:var(--ink2);line-height:1.55}
+@media(max-width:900px){.ssb-evidence-grid,.ssb-case-grid,.ssb-spec-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.ssb-evidence-grid,.ssb-case-grid,.ssb-spec-grid{grid-template-columns:1fr}.media-card.product-tile,.media-card.detail-tile{height:240px}}
 </style>
 <link rel="stylesheet" href="assets/site-refinement.css"/>
 </head>
@@ -297,7 +322,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <div class="tb-badges">
         <span class="tb-badge"><span class="tb-dot"></span>Manufacturing Since 1998</span>
         <span class="tb-badge"><span class="tb-dot"></span>ISO 9001 Certified</span>
-        <span class="tb-badge"><span class="tb-dot"></span>Food Contact Safety Certified</span>
+        <span class="tb-badge"><span class="tb-dot"></span>Third-Party Factory Audit Welcome</span>
       </div>
     </div>
     <div class="tb-langs">
@@ -623,7 +648,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <div>
         <div class="hero-overline">CORE PRODUCT - SELF-STACKER BELT</div>
         <h1 class="hero-h1" id="ssb-h1">Self-Stacker Belt for <em>Buyers Who Cannot Risk Poor Stacking Performance</em></h1>
-        <p class="hero-sub">A self-stacker belt is not judged by width alone. Buyers care whether it stacks correctly, engages consistently, matches the existing system geometry, and can be reordered without structural drift. YIYI Mesh Belt supports OEM builds, replacement matching, and repeat supply with stack testing before release, fixture-controlled welding, and drawing-based production.</p>
+        <p class="hero-sub">Self-stacker belts must stack correctly, engage consistently, and match the real system geometry. YIYI supports OEM and replacement projects with drawing-based production, fixture welding, stack testing, and final release proof.</p>
         <div class="hero-badges">
           <span class="tag tag-navy">Stack Testing Before Release</span>
           <span class="tag tag-navy">Fixture-Controlled Welding</span>
@@ -663,7 +688,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <div>
         <div class="eyebrow">PRODUCT DEFINITION</div>
         <h2 class="sec-h2">Built for Systems Where Stacking Geometry Must Be Right</h2>
-        <p class="body-p">Self-stacker belt buyers usually arrive with a very specific concern: will the belt stack correctly inside the real machine, not just on paper. That concern is valid, because uneven engagement, incorrect slot behavior, or poor contraction control will quickly show up as wear, noise, instability, and downtime.</p>
+        <p class="body-p">The main risk is simple: the belt may look correct but fail to stack smoothly in the real machine. YIYI checks engagement, slot behavior, contraction, and drive fit before release.</p>
         <p class="body-p">YIYI Mesh Belt builds self-stacker belts as system-matching industrial components. The focus is not only on dimensions, but on the geometry that determines upper and lower tier engagement, stable stacking behavior, and repeatable supply for future orders.</p>
         <p class="body-p">This makes the page especially relevant for OEM builders integrating a new system, distributors comparing suppliers, and replacement buyers trying to avoid mismatch risk on an existing line.</p>
         <div class="tags">
@@ -685,13 +710,70 @@ html,body{max-width:100%;overflow-x:hidden}
 
 <hr class="sec-divider"/>
 
+<section class="sec">
+  <div class="container">
+    <div style="margin-bottom:26px;max-width:760px">
+      <div class="eyebrow">PRODUCTION EVIDENCE</div>
+      <h2 class="sec-h2">Stack Test, Measurement, and Material Verification</h2>
+      <p class="body-p">For self-stacking belt projects, buyers need proof that the belt stacks correctly in real geometry. YIYI uses stack-test video, fixture welding, dimensional measurement, and material verification before release.</p>
+    </div>
+    <div class="ssb-evidence-grid">
+      <article class="ssb-evidence-card">
+        <figure class="media-card">
+          <video src="assets/product-media/self-stacking-belt/ssb-online-self-stacking-belt-source.mp4" poster="assets/product-media/self-stacking-belt/ssb-stack-test-real-01.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Self-stacking belt stack test video"></video>
+          <figcaption class="media-caption"><div class="media-kicker">Priority Proof</div><div class="media-title">Stack Test Video</div></figcaption>
+        </figure>
+        <div class="ssb-evidence-body">
+          <h3>Upper and lower engagement checked</h3>
+          <p>Stack testing confirms real stacking behavior, engagement depth, contraction movement, and release readiness before shipment.</p>
+        </div>
+      </article>
+      <article class="ssb-evidence-card">
+        <figure class="media-card"><img src="assets/product-media/self-stacking-belt/ssb-welding-fixture-real-01.jpg" alt="Self-stacking belt fixture welding proof" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Fixture Welding</div><div class="media-title">Plate Position Control</div></figcaption></figure>
+        <div class="ssb-evidence-body">
+          <h3>Fixture-controlled welding</h3>
+          <p>Plate position, slot geometry, and rod-end consistency are controlled because small errors change stacking behavior.</p>
+        </div>
+      </article>
+      <article class="ssb-evidence-card">
+        <figure class="media-card"><img src="assets/product-media/self-stacking-belt/ssb-material-test-real-01.jpg" alt="Self-stacking belt raw material verification" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-kicker">Material Check</div><div class="media-title">Raw Material Verification</div></figcaption></figure>
+        <div class="ssb-evidence-body">
+          <h3>Material checked before release</h3>
+          <p>Material verification and dimensional checks support food-processing, OEM, and replacement belt confidence.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt">
+  <div class="container">
+    <div style="margin-bottom:26px;max-width:760px">
+      <div class="eyebrow">ANONYMIZED SHIPMENT CASES</div>
+      <h2 class="sec-h2">Actual Project Evidence Without Customer Details</h2>
+      <p class="body-p">Public case evidence keeps product and inspection value while removing customer names, order numbers, shipping marks, labels, faces, and logistics details.</p>
+    </div>
+    <div class="ssb-case-grid">
+      <article class="ssb-case-card"><h3>OEM compact spiral system</h3><p>Self-stacking belt configured from drawing, fixture welding, and stack test before shipment release.</p></article>
+      <article class="ssb-case-card"><h3>Replacement matching</h3><p>Existing belt photos, sample measurements, plate height, rod pitch, slot length, and chain pitch used for replacement review.</p></article>
+      <article class="ssb-case-card"><h3>Custom-built supply</h3><p>Metal conveyor belts are custom-built. Detailed configuration should be confirmed with drawings, old belt photos, running direction, and stack geometry.</p></article>
+    </div>
+    <div class="ssb-spec-grid" aria-label="Anonymized self-stacking belt production specification statistics">
+      <div class="ssb-spec-card"><h3>Produced width range</h3><p>Recorded self-stacking belt projects include approximately 300-1,070 mm overall width, depending on stack geometry.</p></div>
+      <div class="ssb-spec-card"><h3>Measured items</h3><p>Wire diameter, spiral pitch, rod diameter, rod pitch, plate height, plate thickness, slot length, and running direction.</p></div>
+      <div class="ssb-spec-card"><h3>Stacking layouts</h3><p>Single-side and two-side shrinkable structures, single or double spiral mesh, standard and heavy-duty stack plates.</p></div>
+      <div class="ssb-spec-card"><h3>QA risk points</h3><p>Upper/lower engagement, flexible contraction, weld burn-through prevention, burr-free edges, surface cleaning, and export packing.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="sec sec-alt">
   <div class="container">
     <div style="margin-bottom:34px;max-width:780px">
       <div class="eyebrow">SELF-STACKING BELT ENGINEERING REVIEW</div>
       <h2 class="sec-h2">Stacking Geometry, Engagement, and Release Test</h2>
-      <p class="body-p">A self-stacking belt is selected by the way it stacks under load, not by width alone. For spiral freezer, cooling, proofing, smoking, cooking, and compact vertical conveying systems, the belt must match tier height, stacking pitch, slot length, chain pitch, rod pitch, lateral contraction range, sprocket engagement, belt width, load, and running direction.</p>
-      <p class="body-p">The factory risk is clear: if the stacking plate position, slot geometry, or upper/lower engagement depth is wrong, the belt may bind in the stack, sit unevenly on the lower tier, create side pull, wear the edge chain, or fail as a drop-in replacement. YIYI checks these points before quotation and uses stack testing before release so the buyer can confirm real behavior, not only dimensions on paper.</p>
+      <p class="body-p">A self-stacking belt is custom-built around tier height, stacking pitch, slot length, chain pitch, rod pitch, contraction range, sprocket engagement, load, and running direction.</p>
+      <p class="body-p">If plate position, slot geometry, or upper/lower engagement is wrong, the belt can bind, wear the chain, or fail as a replacement. YIYI checks these points before quotation and verifies stack behavior before release.</p>
     </div>
 
     <div class="ssb-review-grid" aria-label="Self-stacking belt factory engineering review points">
@@ -911,8 +993,7 @@ html,body{max-width:100%;overflow-x:hidden}
           <span>RELEASE STANDARD  - STACK TESTING</span>
         </div>
         <h2 class="sec-h2 sec-h2-lt" id="stack-h2">Stack Testing Before Final Release  - Standard for Every Project</h2>
-        <p class="body-p body-p-lt">Dimensional accuracy is necessary but not sufficient for a self-stacker belt. A belt can meet all nominal measurements and still fail to stack correctly in a real system. This is why YIYI Mesh Belt includes stack testing as a standard part of the release process &#8212; not as an optional add-on.</p>
-        <p class="body-p body-p-lt">Stack testing physically verifies the belt&#8217;s stacking behavior before shipment. It confirms upper and lower tier engagement, checks for binding or resistance in the stacking cycle, and validates that the structural geometry produced by welding and assembly matches the actual system requirement.</p>
+        <p class="body-p body-p-lt">Dimension checks are necessary, but stack behavior must be proven physically. Stack testing verifies upper/lower engagement, binding risk, contraction, and release readiness before shipment.</p>
         <div class="cl" style="margin-top:24px">
           <div class="cl-item">
             <svg class="cl-ico lt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -942,7 +1023,7 @@ html,body{max-width:100%;overflow-x:hidden}
         </figure>
         <div class="g2" style="gap:14px">
           <figure class="media-card detail-tile"><img src="assets/product-media/self-stacking-belt/ssb-stack-test-real-01.jpg" alt="Self-stacker belt stack test proof photo" decoding="async" loading="lazy"><figcaption class="media-caption"><div class="media-title">Stacking Geometry Test</div></figcaption></figure>
-          <figure class="media-card detail-tile"><video class="media-video" autoplay muted loop playsinline preload="metadata" poster="assets/product-media/self-stacking-belt/ssb-finished-stacked-real-01.jpg" aria-label="Self-stacker belt stack test close-up video for engagement confirmation"><source src="assets/product-media/self-stacking-belt/ssb-s6-stack-test-video.mp4" type="video/mp4"></video><figcaption class="media-caption"><div class="media-title">Stack Test Video</div></figcaption></figure>
+          <figure class="media-card detail-tile"><video class="media-video" muted loop playsinline preload="none" controls poster="assets/product-media/self-stacking-belt/ssb-finished-stacked-real-01.jpg" aria-label="Self-stacker belt stack test close-up video for engagement confirmation"><source src="assets/product-media/self-stacking-belt/ssb-s6-stack-test-video.mp4" type="video/mp4"></video><figcaption class="media-caption"><div class="media-title">Stack Test Video</div></figcaption></figure>
         </div>
       </div>
     </div>
@@ -1038,7 +1119,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <div>
         <div class="eyebrow">WELDING DISCIPLINE</div>
         <h2 class="sec-h2">Controlled Welding for Stacking Reliability</h2>
-        <p class="body-p">For self-stacker belts, welding discipline goes beyond joint completeness. Several specific welding risks must be understood and controlled to achieve a belt that stacks reliably in service.</p>
+        <p class="body-p">Self-stacker welding must protect stack geometry. Plate position, weld size, heat input, and rod alignment are controlled because small errors affect engagement.</p>
         <div class="cl" style="margin-top:20px">
           <div class="cl-item">
             <svg class="cl-ico gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1079,7 +1160,7 @@ html,body{max-width:100%;overflow-x:hidden}
     <div style="margin-bottom:40px;max-width:720px">
       <div class="eyebrow eyebrow-lt">QUALITY CONTROL</div>
       <h2 class="sec-h2 sec-h2-lt">Critical Quality Control Points for Self-Stacker Belts</h2>
-      <p class="body-p body-p-lt">Quality control for self-stacker belts must address the specific failure modes of this belt type. The following control points are applied during production and before release.</p>
+      <p class="body-p body-p-lt">Self-stacker QA focuses on stack behavior, plate position, weld consistency, free contraction, surface cleanliness, and packing readiness.</p>
     </div>
     <div class="qc-grid">
       <div class="qc-item">
@@ -1212,7 +1293,7 @@ html,body{max-width:100%;overflow-x:hidden}
     <div style="margin-bottom:40px;max-width:720px">
       <div class="eyebrow">OEM &amp; REPLACEMENT</div>
       <h2 class="sec-h2">OEM and Replacement Support  - From First Build to Long-Term Supply</h2>
-      <p class="body-p">YIYI Mesh Belt supports the full lifecycle of a self-stacker belt supply relationship. The same matching, verification, and release workflow applies whether this is a first OEM build, a direct replacement for an existing system, or a repeat supply order for an ongoing line.</p>
+      <p class="body-p">YIYI supports OEM builds, replacement matching, repeat orders, and urgent maintenance projects through the same drawing, sample, stack-test, and inspection workflow.</p>
     </div>
     <div class="oem-grid">
       <div class="oem-card">
@@ -1273,7 +1354,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <div>
         <div class="eyebrow">SURFACE FINISH &amp; EXPORT PACKING</div>
         <h2 class="sec-h2">Surface Finish, Cleanliness, and Export Packing</h2>
-        <p class="body-p">For food-related applications, surface condition affects cleanability and hygienic compliance. Electropolishing is available for self-stacker belts where food-contact or cleanroom requirements apply. Post-treatment cleaning, inspection, and full drying are completed before export packing.</p>
+        <p class="body-p">For food-related applications, surface condition affects cleanability and hygienic compliance. Electropolishing is available for self-stacker belts where hygiene-sensitive or cleanroom requirements apply. Post-treatment cleaning, inspection, full drying, neutral packing, and stretch-film protection are completed before export release.</p>
         <div class="cl" style="margin-top:20px">
           <div class="cl-item">
             <svg class="cl-ico sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1289,7 +1370,11 @@ html,body{max-width:100%;overflow-x:hidden}
           </div>
           <div class="cl-item">
             <svg class="cl-ico sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div class="cl-text">Export packing configured for safe handling and storage during international shipment</div>
+            <div class="cl-text">Outer packing can be prepared without Chinese text and protected with stretch film for a cleaner terminal-side handover</div>
+          </div>
+          <div class="cl-item">
+            <svg class="cl-ico sky" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <div class="cl-text">Shipment proof is used only after customer marks, order references, and buyer information are removed</div>
           </div>
         </div>
       </div>
@@ -1302,10 +1387,10 @@ html,body{max-width:100%;overflow-x:hidden}
           </figcaption>
         </figure>
         <figure class="media-card detail-tile">
-          <img src="assets/product-media/self-stacking-belt/ssb-s12-packing.png" alt="Export packing proof for self-stacker belt shipment" decoding="async" loading="lazy">
+          <img src="assets/product-media/self-stacking-belt/ssb-s12-packing.png" alt="Neutral export packing proof for self-stacker belt shipment" decoding="async" loading="lazy">
           <figcaption class="media-caption">
             <div class="media-kicker">Export Packing</div>
-            <div class="media-title">Shipment-Ready Protection</div>
+            <div class="media-title">Neutral Packing and Clean Crate Protection</div>
           </figcaption>
         </figure>
       </div>
@@ -1471,7 +1556,7 @@ html,body{max-width:100%;overflow-x:hidden}
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> ISO 9001 Certified</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
-          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Food Contact Safety Certified</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Third-Party Factory Audit Welcome</span>
           <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Third-Party Audit Welcome</span>
         </div>
       </div>
@@ -1514,9 +1599,9 @@ html,body{max-width:100%;overflow-x:hidden}
             <svg class="fca-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span class="fca-number">+86 134 5177 3742</span>
           </a>
-          <a href="https://wa.me/8618653496136" target="_blank" rel="noopener" class="foot-contact-a">
+          <a href="https://wa.me/8613451773742" target="_blank" rel="noopener" class="foot-contact-a">
             <svg class="fca-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span class="fca-number">WhatsApp: +86 186 5349 6136</span>
+            <span class="fca-number">WhatsApp: +86 134 5177 3742</span>
           </a>
         </div>
         <a href="contact.html?intent=quote&source=self-stacking-belt" class="foot-btn-p">Ask For A Quick Quote &#8594;</a>
@@ -1584,7 +1669,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <span class="foot-copy" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
         <a href="privacy-policy.html" style="color:#8FA8C0;text-decoration:none;font-size:12px">Privacy Policy</a>
         <span style="color:#4A6080">&#183;</span>
-        <span>ISO 9001 Certified &#183; Food Contact Safety Certified &#183; National High-Tech Enterprise</span>
+        <span>ISO 9001 Certified &#183; Third-Party Factory Audit Welcome &#183; National High-Tech Enterprise</span>
       </span>
     </div>
   </div>
@@ -1655,7 +1740,7 @@ function closeWA(){
   document.getElementById('wa-chat').style.display = 'none';
   document.getElementById('wa-wrap').classList.remove('open');
 }
-function sendWA(txt){ window.open('https://wa.me/8618653496136?text=' + encodeURIComponent(txt), '_blank'); }
+function sendWA(txt){ window.open('https://wa.me/8613451773742?text=' + encodeURIComponent(txt), '_blank'); }
 function sendWAInput(){
   const inp = document.getElementById('wa-msg');
   if(inp.value.trim()) sendWA(inp.value.trim());
