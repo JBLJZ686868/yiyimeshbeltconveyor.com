@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
@@ -113,7 +113,7 @@ const topics = [
     primary: "Food Processing Conveyor Belt",
     secondary: "Metal Conveyor Belt",
     table: [
-      ["Selection focus", "Food contact, cleanability, drainage, load, temperature"],
+      ["Selection focus", "Cleanability, drainage, load, temperature, corrosion risk"],
       ["Common belts", "Flat wire, eye link, balanced weave, chain driven, spiral freezer"],
       ["Quality checks", "Surface condition, pitch, edge, welds, material proof"],
       ["Buyer risk", "Only choosing by product photo without application details"],
@@ -188,10 +188,10 @@ const topics = [
     cluster: "Application / Meat Processing",
     title: "Conveyor Belt Applications in Meat Processing Industry",
     slug: "conveyor-belt-applications-in-meat-processing-industry",
-    intent: "Target meat processing buyers needing food-grade stainless belts and replacement support.",
+    intent: "Target meat processing buyers needing stainless belts for food processing and replacement support.",
     answer: "Meat processing conveyor belts need hygienic surfaces, corrosion resistance, easy cleaning, stable support, and reliable replacement matching. Eye link belts, flat wire belts, and balanced weave belts are often used depending on product size, washing frequency, load, and line design.",
     primary: "Meat Processing Conveyor Belt",
-    secondary: "Food Grade Metal Belt",
+    secondary: "Metal Belt for Food Processing",
     table: [
       ["Application", "Meat processing, prepared food, poultry, cooling, washing"],
       ["Critical factor", "Hygiene, drainage, cleaning, corrosion resistance"],
@@ -461,3 +461,4 @@ console.log(`Generated ${topics.length} comparison/application blog articles.`);
 for (const topic of topics) {
   console.log(`- public/blog/${topic.slug}.html`);
 }
+

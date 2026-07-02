@@ -340,6 +340,24 @@ img{max-width:100%;height:auto;display:block}
 .qc-item{padding:16px 14px}
 .param-grid,.oem-grid{gap:12px;margin-top:20px}
 .param-card,.oem-card{padding:16px}
+.engineering-desk{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 18px 48px rgba(11,31,58,.08);overflow:hidden}
+.engineering-desk-head{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;padding:28px 30px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#fff 0%,#F4F8FC 100%)}
+.engineering-desk-head h2{font-size:clamp(20px,2.5vw,30px);line-height:1.16;color:var(--ink);letter-spacing:-.02em;margin-bottom:10px}
+.engineering-desk-head p{font-size:14px;line-height:1.65;color:var(--ink2)}
+.desk-cta-box{background:var(--navy);border-radius:14px;padding:20px;color:#fff}
+.desk-cta-box strong{display:block;font-size:16px;margin-bottom:8px}
+.desk-cta-box span{display:block;color:rgba(255,255,255,.68);font-size:13px;line-height:1.55;margin-bottom:14px}
+.desk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.desk-card{padding:22px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);min-height:188px}
+.desk-card:nth-child(3n){border-right:0}
+.desk-kicker{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.desk-card h3{font-size:16px;color:var(--ink);line-height:1.3;margin-bottom:10px}
+.desk-list{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.desk-list li{font-size:13px;color:var(--ink2);line-height:1.42;padding-left:14px;position:relative}
+.desk-list li::before{content:'';position:absolute;left:0;top:.65em;width:5px;height:5px;border-radius:50%;background:var(--sky)}
+.spec-note{background:#F8FBFF;border:1px solid rgba(74,140,200,.20);border-radius:14px;padding:18px;margin-top:18px;font-size:13px;color:var(--ink2);line-height:1.65}
+@media(max-width:900px){.engineering-desk-head{grid-template-columns:1fr}.desk-grid{grid-template-columns:1fr 1fr}.desk-card:nth-child(3n){border-right:1px solid var(--border)}.desk-card:nth-child(2n){border-right:0}}
+@media(max-width:620px){.desk-grid{grid-template-columns:1fr}.desk-card,.desk-card:nth-child(3n){border-right:0}.engineering-desk-head{padding:22px}.desk-card{min-height:auto}}
 .sfb-evidence-grid,.sfb-case-grid,.sfb-spec-grid{display:grid;gap:16px}
 .sfb-evidence-grid{grid-template-columns:1.2fr 1fr 1fr}
 .sfb-case-grid{grid-template-columns:repeat(3,1fr)}
@@ -707,8 +725,8 @@ img{max-width:100%;height:auto;display:block}
           <span class="tag tag-navy">Replacement Support</span>
         </div>
         <div class="hero-btns">
-          <a href="contact.html?intent=quote&product=spiral-freezer-belt&source=spiral-freezer-belt" class="btn-primary">Ask For A Quick Quote &#8594;</a>
-          <a href="contact.html?intent=drawing&product=spiral-freezer-belt&source=spiral-freezer-belt" class="btn-outline btn-outline-lt">Send Your Drawing</a>
+          <a href="contact.html?intent=drawing&product=spiral-freezer-belt&source=spiral-freezer-belt" class="btn-primary">Send Drawing / Old Belt Photo &#8594;</a>
+          <a href="contact.html?intent=engineering&product=spiral-freezer-belt&source=spiral-freezer-belt" class="btn-outline btn-outline-lt">Talk to Engineer</a>
         </div>
       </div>
       <div class="hero-img-col">
@@ -735,6 +753,82 @@ img{max-width:100%;height:auto;display:block}
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">100% Final Inspection</span></div>
   </div>
 </div>
+
+<section class="sec sec-alt">
+  <div class="container">
+    <div class="engineering-desk" aria-label="Spiral freezer belt engineering review desk">
+      <div class="engineering-desk-head">
+        <div>
+          <div class="eyebrow">SPIRAL PROJECT REVIEW DESK</div>
+          <h2>Start With Fit Risk, Not a Generic Belt Quote</h2>
+          <p>For a spiral freezer belt, the buying risk is usually mismatch: chain pitch, rod pitch, belt width, drum diameter, sprocket engagement, running direction, or material condition. YIYI reviews these points before quotation so OEM builders and replacement teams can reduce restart risk.</p>
+        </div>
+        <div class="desk-cta-box">
+          <strong>What should the buyer send first?</strong>
+          <span>Drawing, old belt photos, overall width, chain pitch, rod pitch, drum diameter, sprocket details, running direction, material grade, and application temperature.</span>
+          <a href="contact.html?intent=drawing&product=spiral-freezer-belt&source=spiral-review-desk" class="btn-primary">Send Drawing / Old Belt Photo</a>
+        </div>
+      </div>
+      <div class="desk-grid">
+        <article class="desk-card">
+          <div class="desk-kicker">01 Fit Geometry</div>
+          <h3>Confirm spiral tower and drum fit</h3>
+          <ul class="desk-list">
+            <li>Overall belt width and usable belt width</li>
+            <li>Drum diameter and inside turn radius</li>
+            <li>Left-hand or right-hand running direction</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">02 Pitch Data</div>
+          <h3>Check pitch before production</h3>
+          <ul class="desk-list">
+            <li>Spiral pitch and rod pitch</li>
+            <li>Chain pitch and chain row count</li>
+            <li>Single-row, double-row, or three-row chain option</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">03 Drive Match</div>
+          <h3>Review sprocket engagement</h3>
+          <ul class="desk-list">
+            <li>Sprocket tooth profile and shaft layout</li>
+            <li>Chain edge clearance and drive side</li>
+            <li>Replacement fit against existing equipment</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">04 Production Proof</div>
+          <h3>Robotic welding for repeatability</h3>
+          <ul class="desk-list">
+            <li>Weld position and weld size consistency</li>
+            <li>Edge finish and burr control</li>
+            <li>Repeat order consistency records</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">05 Testing Proof</div>
+          <h3>Drum and QA checks before release</h3>
+          <ul class="desk-list">
+            <li>Drum-fit or contraction review</li>
+            <li>Dimension and surface inspection</li>
+            <li>Pre-shipment photos or video when needed</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">06 Custom Supply</div>
+          <h3>Built to project specification</h3>
+          <ul class="desk-list">
+            <li>304, 316, or project-specified stainless steel</li>
+            <li>Cleaning, drying, and export packing review</li>
+            <li>Neutral shipment proof after privacy check</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <div class="spec-note">Recorded spiral freezer belt production examples include overall widths such as 300, 400, 650, 710, 800, 1000, 1100, 1858, 2000, and 2300 mm, plus different chain-row layouts and drum-fit requirements. Final specification is always confirmed by drawing, old belt photo, or sample measurement.</div>
+  </div>
+</section>
 
 <section class="sec">
   <div class="container">
@@ -841,10 +935,10 @@ img{max-width:100%;height:auto;display:block}
       </article>
     </div>
     <div class="sfb-spec-grid" aria-label="Anonymized spiral freezer belt production specification statistics">
-      <div class="sfb-spec-card"><h3>Produced width range</h3><p>Recorded spiral freezer belt projects include approximately 300-2,300 mm overall width, depending on equipment design.</p></div>
-      <div class="sfb-spec-card"><h3>Wire and rod data</h3><p>Typical recorded wire diameters include 1.2-1.6 mm, with cross-rod diameter commonly around 5 mm for many projects.</p></div>
-      <div class="sfb-spec-card"><h3>Chain and drum fit</h3><p>Single-row, double-row, three-row, and special multi-row chain layouts have been produced for different drum diameters and drive systems.</p></div>
-      <div class="sfb-spec-card"><h3>QA risk points</h3><p>Weld position, weld size, burr-free edge, flatness, smooth contraction, drying, cleaning, and packing are checked before release.</p></div>
+      <div class="sfb-spec-card"><h3>Recorded width examples</h3><p>Production records include 300, 400, 650, 710, 800, 1000, 1100, 1858, 2000, and 2300 mm overall-width examples. Final width is drawing-based.</p></div>
+      <div class="sfb-spec-card"><h3>Pitch and rod checks</h3><p>Review points include spiral pitch, rod diameter, rod pitch, chain pitch, plate thickness, plate height, and chain-center distance.</p></div>
+      <div class="sfb-spec-card"><h3>Chain and drum fit</h3><p>Single-row, double-row, three-row, and multi-row chain layouts are reviewed against drum diameter, inside radius, and sprocket engagement.</p></div>
+      <div class="sfb-spec-card"><h3>Release risk points</h3><p>Weld position, weld size, burr-free edge, flatness, smooth contraction, cleaning, drying, and neutral packing are checked before release.</p></div>
     </div>
   </div>
 </section>

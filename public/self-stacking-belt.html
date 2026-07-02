@@ -285,6 +285,24 @@ html,body{max-width:100%;overflow-x:hidden}
 .stack-module,.weld-module{padding:62px 0}
 .param-grid,.oem-grid{gap:12px;margin-top:20px}
 .param-card,.oem-card{padding:16px}
+.engineering-desk{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:0 18px 48px rgba(11,31,58,.08);overflow:hidden}
+.engineering-desk-head{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;padding:28px 30px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#fff 0%,#F4F8FC 100%)}
+.engineering-desk-head h2{font-size:clamp(20px,2.5vw,30px);line-height:1.16;color:var(--ink);letter-spacing:-.02em;margin-bottom:10px}
+.engineering-desk-head p{font-size:14px;line-height:1.65;color:var(--ink2)}
+.desk-cta-box{background:var(--navy);border-radius:14px;padding:20px;color:#fff}
+.desk-cta-box strong{display:block;font-size:16px;margin-bottom:8px}
+.desk-cta-box span{display:block;color:rgba(255,255,255,.68);font-size:13px;line-height:1.55;margin-bottom:14px}
+.desk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.desk-card{padding:22px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);min-height:188px}
+.desk-card:nth-child(3n){border-right:0}
+.desk-kicker{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.desk-card h3{font-size:16px;color:var(--ink);line-height:1.3;margin-bottom:10px}
+.desk-list{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.desk-list li{font-size:13px;color:var(--ink2);line-height:1.42;padding-left:14px;position:relative}
+.desk-list li::before{content:'';position:absolute;left:0;top:.65em;width:5px;height:5px;border-radius:50%;background:var(--sky)}
+.spec-note{background:#F8FBFF;border:1px solid rgba(74,140,200,.20);border-radius:14px;padding:18px;margin-top:18px;font-size:13px;color:var(--ink2);line-height:1.65}
+@media(max-width:900px){.engineering-desk-head{grid-template-columns:1fr}.desk-grid{grid-template-columns:1fr 1fr}.desk-card:nth-child(3n){border-right:1px solid var(--border)}.desk-card:nth-child(2n){border-right:0}}
+@media(max-width:620px){.desk-grid{grid-template-columns:1fr}.desk-card,.desk-card:nth-child(3n){border-right:0}.engineering-desk-head{padding:22px}.desk-card{min-height:auto}}
 .ssb-evidence-grid,.ssb-case-grid,.ssb-spec-grid{display:grid;gap:16px}
 .ssb-evidence-grid{grid-template-columns:1.2fr 1fr 1fr}
 .ssb-case-grid{grid-template-columns:repeat(3,1fr)}
@@ -657,8 +675,8 @@ html,body{max-width:100%;overflow-x:hidden}
           <span class="tag tag-navy">OEM &amp; Replacement Support</span>
         </div>
         <div class="hero-btns">
-          <a href="contact.html?intent=quote&product=self-stacker-belt&source=self-stacking-belt" class="btn-primary">Ask For A Quick Quote &#8594;</a>
-          <a href="contact.html?intent=drawing&product=self-stacker-belt&source=self-stacking-belt" class="btn-outline btn-outline-lt">Send Your Drawing</a>
+          <a href="contact.html?intent=drawing&product=self-stacker-belt&source=self-stacking-belt" class="btn-primary">Start Stacking Belt Review &#8594;</a>
+          <a href="contact.html?intent=engineering&product=self-stacker-belt&source=self-stacking-belt" class="btn-outline btn-outline-lt">Talk to Engineer</a>
         </div>
       </div>
       <div class="hero-img-col">
@@ -681,6 +699,82 @@ html,body{max-width:100%;overflow-x:hidden}
     <div class="ps-item"><div class="ps-dot"></div><span class="ps-text">100% Final Inspection</span></div>
   </div>
 </div>
+
+<section class="sec sec-alt">
+  <div class="container">
+    <div class="engineering-desk" aria-label="Self-stacking belt engineering review desk">
+      <div class="engineering-desk-head">
+        <div>
+          <div class="eyebrow">SELF-STACKING PROJECT REVIEW DESK</div>
+          <h2>Confirm Stacking Behavior Before Price Discussion</h2>
+          <p>Self-stacking belt risk is not only width or material. The real risk is whether the belt stacks, contracts, and releases correctly in the machine. YIYI reviews upper/lower engagement, plate geometry, slot length, rod pitch, sprocket or drum matching, and running direction before production release.</p>
+        </div>
+        <div class="desk-cta-box">
+          <strong>What should the buyer send first?</strong>
+          <span>Drawing, old belt photos, plate height, slot length, overall width, rod diameter, rod pitch, spiral pitch, chain pitch, running direction, and stack-test requirement.</span>
+          <a href="contact.html?intent=drawing&product=self-stacker-belt&source=self-stacker-review-desk" class="btn-primary">Start Self-Stacking Belt Review</a>
+        </div>
+      </div>
+      <div class="desk-grid">
+        <article class="desk-card">
+          <div class="desk-kicker">01 Stack Fit</div>
+          <h3>Confirm upper/lower engagement</h3>
+          <ul class="desk-list">
+            <li>Stack height and engagement depth</li>
+            <li>One-side or two-side shrinkable layout</li>
+            <li>Release behavior in compact spiral systems</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">02 Plate Geometry</div>
+          <h3>Check plate and slot dimensions</h3>
+          <ul class="desk-list">
+            <li>Plate height and plate thickness</li>
+            <li>Slot length and slot clearance</li>
+            <li>Stacking plate position across belt width</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">03 Belt Pitch</div>
+          <h3>Confirm mesh and rod structure</h3>
+          <ul class="desk-list">
+            <li>Rod diameter and rod pitch</li>
+            <li>Spiral wire diameter and spiral pitch</li>
+            <li>Chain pitch or drum matching data</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">04 Fixture Welding</div>
+          <h3>Control plate position during welding</h3>
+          <ul class="desk-list">
+            <li>Fixture support for plate alignment</li>
+            <li>Heat control to prevent burn-through</li>
+            <li>Rod-end and weld position consistency</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">05 Stack Test</div>
+          <h3>Verify real behavior before release</h3>
+          <ul class="desk-list">
+            <li>Upper/lower tier contact check</li>
+            <li>Contraction and release movement</li>
+            <li>Stack-test photo or video proof</li>
+          </ul>
+        </article>
+        <article class="desk-card">
+          <div class="desk-kicker">06 Shipment Proof</div>
+          <h3>Release after privacy-safe QA</h3>
+          <ul class="desk-list">
+            <li>Final inspection and packing readiness</li>
+            <li>Neutral packing without public buyer data</li>
+            <li>Repeat-order data retained internally</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+    <div class="spec-note">Measured self-stacking belt examples on this page include overall width, plate height, plate thickness, rod diameter, rod pitch, spiral pitch, and spiral wire diameter. Metal conveyor belts are custom-built; final specification should be confirmed by drawing, old belt photo, sample measurement, or application review.</div>
+  </div>
+</section>
 
 <section class="sec">
   <div class="container">
@@ -759,10 +853,10 @@ html,body{max-width:100%;overflow-x:hidden}
       <article class="ssb-case-card"><h3>Custom-built supply</h3><p>Metal conveyor belts are custom-built. Detailed configuration should be confirmed with drawings, old belt photos, running direction, and stack geometry.</p></article>
     </div>
     <div class="ssb-spec-grid" aria-label="Anonymized self-stacking belt production specification statistics">
-      <div class="ssb-spec-card"><h3>Produced width range</h3><p>Recorded self-stacking belt projects include approximately 300-1,070 mm overall width, depending on stack geometry.</p></div>
-      <div class="ssb-spec-card"><h3>Measured items</h3><p>Wire diameter, spiral pitch, rod diameter, rod pitch, plate height, plate thickness, slot length, and running direction.</p></div>
-      <div class="ssb-spec-card"><h3>Stacking layouts</h3><p>Single-side and two-side shrinkable structures, single or double spiral mesh, standard and heavy-duty stack plates.</p></div>
-      <div class="ssb-spec-card"><h3>QA risk points</h3><p>Upper/lower engagement, flexible contraction, weld burn-through prevention, burr-free edges, surface cleaning, and export packing.</p></div>
+      <div class="ssb-spec-card"><h3>Measured width examples</h3><p>Self-stacking belt examples are reviewed by overall width and usable width. Width alone is not enough; stack geometry must be confirmed.</p></div>
+      <div class="ssb-spec-card"><h3>Measured geometry</h3><p>Rod diameter, rod pitch, spiral pitch, spiral wire diameter, plate height, plate thickness, slot length, and running direction.</p></div>
+      <div class="ssb-spec-card"><h3>Stacking layouts</h3><p>Single-side and two-side shrinkable structures, single or double spiral mesh, standard and heavy-duty stacking plates.</p></div>
+      <div class="ssb-spec-card"><h3>Release risk points</h3><p>Upper/lower engagement, contraction movement, weld burn-through prevention, burr-free edges, cleaning, and neutral export packing.</p></div>
     </div>
   </div>
 </section>

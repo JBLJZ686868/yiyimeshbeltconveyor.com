@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const root = path.resolve(__dirname, "..");
@@ -31,7 +31,7 @@ const topics = [
     meta: "Engineering guide for choosing spiral freezer belts for IQF systems, including structure, material, drive matching, inspection points, and quote preparation.",
     answer: "Choose a spiral freezer belt by checking belt pitch, width, edge structure, rod diameter, material grade, drum or sprocket compatibility, load, temperature, and cleanability. For IQF systems, stable tracking, low-temperature strength, and replacement repeatability matter more than appearance alone.",
     pain: "IQF buyers often compare belts by photos, but spiral freezer failures usually come from fit, edge construction, drive matching, or material choices.",
-    intro: "A spiral freezer belt works inside a demanding environment: low temperature, moisture, product load, repeated turning, and strict food-contact expectations. If the belt is not matched correctly, the problem may show up as tracking instability, edge damage, uneven product movement, or early fatigue.",
+    intro: "A spiral freezer belt works inside a demanding environment: low temperature, moisture, product load, repeated turning, and strict hygiene-sensitive operating expectations. If the belt is not matched correctly, the problem may show up as tracking instability, edge damage, uneven product movement, or early fatigue.",
     sections: [
       ["What should you confirm before choosing a spiral freezer belt?", "Start with the system, not only the belt. Confirm the tower type, belt path, inner turning radius, outside width, usable width, pitch, rod diameter, edge link structure, and drive method. In replacement projects, the old belt can provide useful evidence, but it is not always enough. We also like to see photos of the drive drum, return path, product loading area, and any worn edge area. This helps us judge whether the issue is only belt fatigue or whether the system is also creating stress. For new OEM systems, drawings are the fastest path because they show the geometry before production starts."],
       ["Which material is usually suitable for IQF systems?", "Most IQF belt projects use stainless steel because the belt must handle moisture, cleaning, and low-temperature operation. 304 is common for many food processing environments. 316 is considered when corrosion resistance is more important, especially where cleaning chemicals or seafood applications are involved. Material choice should not be separated from wire diameter, edge design, and load. A stronger-looking material is not automatically the best answer if the belt is not matched to the conveyor structure. The useful question is: what material gives enough corrosion resistance, enough mechanical strength, and stable repeat supply for the project?"],
@@ -43,7 +43,7 @@ const topics = [
       ["Usable width", "Must fit product loading and conveyor clearances."],
       ["Edge structure", "Affects spiral turning, tracking stability, and fatigue resistance."],
       ["Rod diameter", "Supports load and affects pitch stability."],
-      ["Material", "Usually 304 or 316 stainless steel depending on corrosion and food-contact needs."],
+      ["Material", "Usually 304 or 316 stainless steel depending on corrosion and corrosion and cleaning needs."],
       ["Drive system", "Drum or sprocket matching must be checked before production."]
     ],
     comparison: "Compared with a self-stacking belt, a spiral freezer belt is usually selected around spiral tower geometry, edge stability, and low-temperature conveying. Compared with flat wire belt, it handles spiral movement differently and needs more attention to turning radius and edge design.",
@@ -76,7 +76,7 @@ const topics = [
       ["Pitch", "Controls movement, support spacing, and drive matching."],
       ["Rod diameter", "Affects load capacity and stability."],
       ["Surface opening", "Balances airflow, product support, and cleanability."],
-      ["Material grade", "Usually selected for food contact and corrosion resistance."]
+      ["Material grade", "Usually selected for corrosion resistance and cleaning conditions."]
     ],
     comparison: "Compared with a spiral freezer belt, a self-stacking belt has a more structural edge system. Compared with eye link belt, it is usually more focused on spiral stacking geometry than heavy-duty straight conveying.",
     faq: [
@@ -99,7 +99,7 @@ const topics = [
     sections: [
       ["What product and process details should guide selection?", "Start from the product. Is it wet, sticky, fragile, heavy, small, or irregular? Then look at the process: washing, cooling, baking, drying, draining, or transfer. A belt for washing needs open area and drainage. A belt for small product transfer needs support and controlled opening size. A belt for heat exposure needs material and structural stability. The right flat wire belt is not selected only by width and length. It is selected by the way product, process, and conveyor design interact during operation."],
       ["How do opening size and wire structure affect food processing?", "Opening size affects drainage, airflow, product support, and cleaning access. A larger opening improves drainage and airflow but may not support small products well. A smaller opening supports product better but may hold more residue. Flat wire thickness and rod diameter affect strength and belt life. The buyer should think about cleaning method, product size, product weight, and whether the belt must transfer product between conveyors. For OEMs, this decision also affects machine performance and after-sales reliability."],
-      ["Which material should be used for flat wire food belts?", "304 stainless steel is common for many food processing belts because it balances corrosion resistance, strength, and cost. 316 may be preferred when the line handles seafood, stronger cleaning chemicals, or more corrosive conditions. High-temperature applications may need a different grade depending on actual temperature and exposure time. Material selection should always be tied to process conditions. If a buyer only says food grade, the answer is incomplete. Food grade must connect to cleaning, temperature, corrosion, and product contact."],
+      ["Which material should be used for flat wire food belts?", "304 stainless steel is common for many food processing belts because it balances corrosion resistance, strength, and cost. 316 may be preferred when the line handles seafood, stronger cleaning chemicals, or more corrosive conditions. High-temperature applications may need a different grade depending on actual temperature and exposure time. Material selection should always be tied to process conditions. If a buyer only says food processing, the answer is incomplete. Material selection must connect to cleaning, temperature, corrosion, and product contact."],
       ["What inspection points reduce replacement risk?", "Flat wire belts should be checked for width, pitch, rod straightness, edge construction, opening consistency, and surface condition. For replacement, we also check sprocket or drum matching if the belt uses a positive drive system. In food lines, burr control and surface finish matter because product contact and cleaning are involved. We suggest sending photos of the belt top surface, underside, edge, drive area, and failure point. These photos often reveal whether the belt itself failed or whether the conveyor alignment contributed to the problem."]
     ],
     specs: [
@@ -131,7 +131,7 @@ const topics = [
     sections: [
       ["What makes an eye link belt suitable for heavy-duty conveying?", "The eye link structure gives the belt flexibility and strength through linked wire eyes and cross rods. This can support heavier loads and allow open area for cleaning or drainage. The design is useful when a belt must carry product reliably under repeated operation. But heavy duty does not mean unlimited load. The belt must still match the conveyor width, pitch, rod diameter, support rails, sprockets, and product load. A good selection starts by understanding the actual working conditions, not only by choosing a thicker wire."],
       ["Which dimensions are most important?", "Pitch, belt width, usable width, rod diameter, wire diameter, and edge structure are the main dimensions. If the belt is sprocket driven, sprocket tooth profile and pitch must be confirmed. If the belt uses side plates, the plate height and spacing must be reviewed. Replacement buyers should measure an unworn area if possible, because old belts can stretch or deform. We also recommend photos of the belt next to a ruler or caliper. These simple photos often prevent mistakes in quotation and production."],
-      ["How do cleaning and food contact affect the choice?", "Many eye link belts are used in food processing because the open structure can be easier to clean than a closed surface. However, cleanability depends on link geometry, surface finish, product residue, and cleaning method. 304 stainless steel is common. 316 may be better for seafood, salt, or chemical washdown. If the belt has too many hidden residue points for the process, another belt type may be better. The supplier should review both mechanical strength and hygiene expectations before making a recommendation."],
+      ["How do cleaning and cleaning requirements affect the choice?", "Many eye link belts are used in food processing because the open structure can be easier to clean than a closed surface. However, cleanability depends on link geometry, surface finish, product residue, and cleaning method. 304 stainless steel is common. 316 may be better for seafood, salt, or chemical washdown. If the belt has too many hidden residue points for the process, another belt type may be better. The supplier should review both mechanical strength and hygiene expectations before making a recommendation."],
       ["What should be checked before confirming production?", "Before production, confirm drawing, material, pitch, width, edge type, rod diameter, link wire diameter, and sprocket requirements. If the buyer needs replacement, confirm whether sprockets should also be replaced or inspected. A new belt running on worn sprockets can create early problems. For heavy-duty systems, quality inspection should include dimensional checks, surface review, edge alignment, and drive engagement confirmation. We prefer to document the critical points before shipment so the buyer has a clear record."]
     ],
     specs: [
@@ -140,7 +140,7 @@ const topics = [
       ["Pitch", "Must match sprockets or drive design."],
       ["Edge type", "Can include chains, side plates, or reinforced edge details."],
       ["Open area", "Important for cleaning, drainage, cooling, and product release."],
-      ["Material", "Selected by food contact, corrosion, and operating environment."]
+      ["Material", "Selected by corrosion, cleaning method, and operating environment."]
     ],
     comparison: "Compared with flat wire belt, eye link belt can be stronger for some heavy-duty applications. Compared with chain driven belt, it may offer more open product support while still requiring careful drive matching.",
     faq: [
@@ -260,7 +260,7 @@ const topics = [
       ["When is 304 stainless steel suitable?", "304 stainless steel is widely used for food processing and many industrial conveyor belt applications. It offers a practical balance of corrosion resistance, mechanical properties, availability, and cost. For many dry, clean, or standard food environments, 304 is a reasonable starting point. However, 304 should not be treated as universal. If the belt is exposed to salt, acidic cleaning, aggressive chemicals, or high heat, another grade may be more suitable. We usually ask about product type, cleaning method, moisture, temperature, and whether corrosion has happened before."],
       ["When should buyers consider 316 stainless steel?", "316 stainless steel is often considered when corrosion resistance is more important. Seafood, salt exposure, wet processing, and stronger cleaning chemicals can make 316 a better choice. But 316 does not solve every problem. If the belt design is wrong, drive matching is poor, or cleaning residue remains trapped, corrosion or failure can still occur. Buyers should treat 316 as one part of the solution. The belt structure, surface finish, drainage, and cleaning access still matter. In replacement cases, photos of corrosion location can help identify whether material or process is the main issue."],
       ["When is 310S used?", "310S is used for higher-temperature applications where heat resistance is more important than ordinary corrosion resistance. It may be considered for ovens, heat treatment, drying, or other thermal systems. The exact decision depends on working temperature, peak temperature, exposure time, and mechanical load. High-temperature systems also need attention to expansion, support, and belt fatigue. Choosing 310S without reviewing the conveyor design can still lead to problems. We prefer to review temperature data together with belt type and support conditions."],
-      ["How should material choice be confirmed for quotation?", "For a reliable quotation, send the target material if known, but also send the operating conditions. If the buyer only says stainless steel, the supplier must guess. Better information includes product type, cleaning chemical, temperature, humidity, load, belt speed, and whether the line is food contact. If the old belt failed, send photos of rust, broken wires, edge damage, or discoloration. Material choice should be confirmed before production and recorded for future repeat orders."]
+      ["How should material choice be confirmed for quotation?", "For a reliable quotation, send the target material if known, but also send the operating conditions. If the buyer only says stainless steel, the supplier must guess. Better information includes product type, cleaning chemical, temperature, humidity, load, belt speed, and whether the line is hygiene-sensitive operation. If the old belt failed, send photos of rust, broken wires, edge damage, or discoloration. Material choice should be confirmed before production and recorded for future repeat orders."]
     ],
     specs: [
       ["304", "Common choice for standard food and industrial applications."],
@@ -273,7 +273,7 @@ const topics = [
     comparison: "304 is the common baseline. 316 is selected for corrosion resistance. 310S is selected for heat resistance. The right answer depends on the environment, not only the product name.",
     faq: [
       ["Is 316 always better than 304?", "No. It is more corrosion resistant but may be unnecessary for standard applications."],
-      ["Is 310S food grade?", "Material suitability depends on application requirements and compliance context; it is mainly selected for heat resistance."],
+      ["Is 310S suitable for food processing lines?", "Material suitability depends on application requirements and compliance context; it is mainly selected for heat resistance."],
       ["Can YIYI help identify material?", "We can review project requirements and suggest a material path. Formal material testing may require lab or supplier certification."]
     ]
   }
@@ -477,3 +477,4 @@ blog = blog.replace(/<li>How should an OEM evaluate surface treatments for spira
 fs.writeFileSync(blogPath, blog);
 
 console.log(JSON.stringify({created: topics.length, blogUpdated: true}, null, 2));
+

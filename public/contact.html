@@ -348,13 +348,14 @@
     .od-item p, .od-item a { font-size: 13px; color: var(--text-body); line-height: 1.6; text-decoration: none; }
     .od-item a:hover { color: var(--brand-blue); }
 
-    /* Map placeholder */
-    .map-placeholder { background: var(--blue-grey-light); border: 1px solid var(--border-light); border-radius: 8px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-    .map-placeholder::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(31,92,158,.03) 20px, rgba(31,92,158,.03) 21px); }
-    .map-inner { text-align: center; color: var(--text-muted); padding: 24px; position: relative; z-index: 1; }
-    .map-pin { width: 48px; height: 48px; background: var(--brand-blue); border-radius: 50% 50% 50% 0; transform: rotate(-45deg); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; box-shadow: 0 4px 16px rgba(31,92,158,.3); }
-    .map-pin svg { transform: rotate(45deg); }
+    /* Google map */
+    .map-placeholder { background: white; border: 1px solid var(--border-light); border-radius: 10px; overflow: hidden; box-shadow: 0 14px 42px rgba(20,43,67,.12); }
+    .map-frame { position: relative; aspect-ratio: 4/3; background: var(--blue-grey-light); }
+    .map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+    .map-inner { padding: 22px 24px; border-top: 3px solid var(--brand-blue); background: linear-gradient(180deg,#fff,#f7fafc); }
     .map-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--brand-blue); margin-bottom: 6px; }
+    .map-note { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.55; }
+    .map-link { display:inline-flex; align-items:center; gap:6px; margin-top:14px; font-size:13px; color:var(--brand-blue); font-weight:700; text-decoration:none; }
 
     .faq-section { background: var(--off-white); padding: 80px 0; }
     .faq-grid { display: grid; grid-template-columns: 1fr; gap: 12px; max-width: 800px; margin: 0 auto; }
@@ -1061,15 +1062,21 @@
           <span class="gold-badge">IBA Germany 5 Years</span>
         </div>
       </div>
-      <div class="map-placeholder">
+      <div class="map-placeholder" aria-label="YIYI Mesh Belt factory location map">
+        <div class="map-frame">
+          <iframe
+            title="YIYI Mesh Belt factory location in Ningjin, Shandong"
+            src="https://www.google.com/maps?q=Huaihe%20East%20Road%2C%20Ningjin%2C%20Shandong%20253400%2C%20China&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
         <div class="map-inner">
-          <div class="map-pin">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
           <div class="map-label">YIYI Mesh Belt Factory</div>
-          <p style="font-size:14px;font-weight:600;color:var(--text-primary)">Ningjin, Shandong 253400, China</p>
-          <p style="font-size:12px;color:var(--text-muted);margin-top:4px">Located in Ningjin, Shandong, with factory visit and third-party audit support available for OEM and distributor projects.</p>
-          <a href="https://maps.google.com/?q=Huaihe+East+Road,Ningjin,Shandong,China" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;color:var(--brand-blue);font-weight:600">Open in Google Maps &#8594;</a>
+          <p style="font-size:14px;font-weight:700;color:var(--text-primary)">Huaihe East Road, Ningjin, Shandong 253400, China</p>
+          <p class="map-note">Factory visits and third-party audits can be coordinated for OEM equipment builders, distributors, and replacement belt projects.</p>
+          <a href="https://maps.google.com/?q=Huaihe+East+Road,Ningjin,Shandong+253400,China" target="_blank" rel="noopener" class="map-link">Open in Google Maps &#8594;</a>
         </div>
       </div>
     </div>

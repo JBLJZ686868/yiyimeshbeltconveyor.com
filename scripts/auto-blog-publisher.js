@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const root = path.join(__dirname, "..");
@@ -23,7 +23,7 @@ function esc(value) {
 
 function paragraphBank(topic) {
   return [
-    `For international buyers, a ${topic.cluster.toLowerCase()} article should do more than define a product name. It should reduce uncertainty before the inquiry begins. The buyer wants to know whether the supplier understands operating conditions, replacement pressure, dimensional matching, food-contact requirements, and the practical information needed to make a reliable recommendation.`,
+    `For international buyers, a ${topic.cluster.toLowerCase()} article should do more than define a product name. It should reduce uncertainty before the inquiry begins. The buyer wants to know whether the supplier understands operating conditions, replacement pressure, dimensional matching, application material requirements, and the practical information needed to make a reliable recommendation.`,
     `YIYI Mesh Belt approaches these questions from the position of a manufacturer, not a trading catalog. The useful answer is usually not "choose this belt" in isolation. The useful answer is to connect belt type, wire structure, edge design, sprocket or drum compatibility, material grade, process control, and delivery readiness into one decision path.`,
     `That is why engineering review matters. A belt that looks similar in a photograph can behave differently once it runs under load, temperature change, washdown, freezing, heating, or repeated start-stop cycles. A small difference in pitch, edge bar design, rod diameter, or drive engagement can become a large operating problem after installation.`,
     `The first task for the buyer is to separate visual similarity from engineering fit. A replacement project should begin with dimensions, photos, operating environment, and the function of the belt in the line. An OEM project should begin with drawings, expected load, line speed, temperature range, drum or sprocket information, and any hygiene or cleanability requirements.`,
@@ -412,3 +412,4 @@ function main() {
 }
 
 main();
+
