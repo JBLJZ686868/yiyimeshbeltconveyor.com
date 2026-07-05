@@ -191,7 +191,13 @@
       all("button", container).forEach((node) => node.classList.remove("active"));
       button.classList.add("active");
     }
-    window.alert(`Language switch placeholder: ${(lang || "en").toUpperCase()}`);
+    const currentPath = window.location.pathname || "/";
+    const cleanPath = currentPath.replace(/^\/(de|ja|ko|pt|es|it|ru)(?=\/)/, "");
+    if (!lang || lang === "en") {
+      window.location.href = cleanPath || "/";
+      return;
+    }
+    window.location.href = `/${lang}${cleanPath === "/" ? "/" : cleanPath}`;
   }
 
   function toggleFaq(trigger) {

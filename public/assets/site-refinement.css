@@ -1563,6 +1563,22 @@ footer .footer-inquiry-panel {
   overflow: hidden !important;
 }
 
+.tb-langs .tb-lang,
+.tblangs .tblang {
+  display: none !important;
+}
+
+.tb-langs .tb-lang[onclick*="'en'"],
+.tb-langs .tb-lang[onclick*="'de'"],
+.tb-langs .tb-lang[onclick*="'es'"],
+.tb-langs .tb-lang[onclick*="'pt'"],
+.tblangs .tblang[onclick*="'en'"],
+.tblangs .tblang[onclick*="'de'"],
+.tblangs .tblang[onclick*="'es'"],
+.tblangs .tblang[onclick*="'pt'"] {
+  display: inline-flex !important;
+}
+
 @media (max-width: 767px) {
   .yiyi-footer,
   .footer,

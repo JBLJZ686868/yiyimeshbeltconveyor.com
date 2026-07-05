@@ -1,0 +1,1189 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belt Selection Guide  - Find Your Conveyor Belt in 4 Steps | YIYI Mesh Belt</title>
+<meta name="description" content="Use the YIYI Mesh Belt selection guide to compare operating temperature, product type, load, and drive method. Get a practical belt recommendation and engineering support for OEM or replacement projects.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0D1B2A;--navy2:#0C1D30;--gold:#C8922A;--gold2:#D4A43A;
+  --blue:#1F5C9E;--blue2:#4A8CC8;
+  --w60:rgba(255,255,255,.6);--w35:rgba(255,255,255,.35);
+  --w15:rgba(255,255,255,.15);--w08:rgba(255,255,255,.08);
+  --ink:#1E2A3A;--ink2:#3D5066;--ink3:#8A9BB0;
+  --surf:#F4F6F9;--surf2:#E4EAF2;
+  --fs:"DM Sans",system-ui,sans-serif;--fm:"IBM Plex Mono",monospace;
+  --mw:1280px;--px:clamp(16px,3vw,32px);
+}
+body{font-family:var(--fs);font-size:16px;-webkit-font-smoothing:antialiased;background:var(--surf);color:var(--ink)}
+h1,h2,h3{font-weight:700;letter-spacing:-.02em;line-height:1.1}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%;height:auto}
+.W{width:100%;max-width:var(--mw);margin:0 auto;padding:0 var(--px)}
+.tag{font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:10px}
+.tag-b{color:var(--blue2)}.tag-g{color:var(--gold)}
+.h2{font-size:clamp(22px,2.6vw,34px);color:var(--ink);margin-bottom:12px}
+.h2d{color:white}
+.sub{font-size:15px;color:var(--ink2);line-height:1.8;max-width:660px}
+.subd{color:rgba(255,255,255,.6)}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:white;font-weight:700;padding:13px 26px;border-radius:4px;font-size:14px}
+.btn-gold:hover{background:var(--gold2)}
+.btn-blue{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:white;font-weight:700;padding:13px 26px;border-radius:4px;font-size:14px}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--w60);font-weight:600;padding:13px 26px;border-radius:4px;font-size:14px;border:1px solid var(--w35)}
+/* NAV */
+.topbar{background:#080f18;border-bottom:1px solid var(--w08);font-size:12px;display:none}
+@media(min-width:768px){.topbar{display:block}}
+.tb-i{max-width:var(--mw);margin:0 auto;padding:0 var(--px);display:flex;justify-content:space-between;align-items:center;height:36px}
+.tb-l{display:flex;align-items:center;gap:16px}
+.tb-a{color:rgba(255,255,255,.45)}
+.tb-sep{width:1px;height:14px;background:var(--w15)}
+.tb-badge{display:flex;align-items:center;gap:5px;color:rgba(255,255,255,.38);font-size:11px;font-family:var(--fm)}
+.tb-dot{width:5px;height:5px;border-radius:50%;background:var(--blue2)}
+.nav{background:var(--navy);border-bottom:1px solid var(--w08);position:sticky;top:0;z-index:500}
+.nav.scrolled{background:rgba(13,27,42,.97);backdrop-filter:blur(16px);box-shadow:0 4px 32px rgba(0,0,0,.5)}
+.nav-i{max-width:var(--mw);margin:0 auto;padding:0 var(--px);display:grid;grid-template-columns:150px 1fr 160px;align-items:center;height:68px}
+.logo{display:flex;align-items:center;gap:8px}
+.logo-mark{width:32px;height:32px;border-radius:6px;background:linear-gradient(135deg,#1a5296,#0b1f3a);border:1px solid rgba(200,146,42,.45);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:var(--gold);font-family:monospace;flex-shrink:0}
+.logo-text{font-size:12px;font-weight:800;letter-spacing:.06em;color:white;text-transform:uppercase}
+.nav-links{display:none;align-items:center;justify-content:center;gap:2px}
+@media(min-width:1100px){.nav-links{display:flex}}
+.nl{padding:6px 10px;font-size:13px;font-weight:600;color:var(--w60);border-radius:3px}
+.nl:hover,.nl.act{color:white;background:var(--w08)}
+.nav-r{display:flex;align-items:center;justify-content:flex-end;gap:8px}
+.btn-nq{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 18px;border-radius:4px;display:none}
+@media(min-width:768px){.btn-nq{display:inline-flex;align-items:center}}
+.mob-btn{display:flex;flex-direction:column;justify-content:center;gap:5px;padding:6px;background:none;border:none;cursor:pointer;width:34px;height:34px}
+@media(min-width:1100px){.mob-btn{display:none}}
+.mob-btn span{width:22px;height:2px;background:var(--w60);border-radius:1px;display:block}
+.mob-menu{display:none;border-top:1px solid var(--w08);background:var(--navy)}
+.mob-menu.open{display:block}
+.mob-menu-i{padding:8px 20px 20px}
+.mob-a{display:block;padding:12px 16px;font-size:15px;color:var(--w60);border-radius:3px;font-weight:500}
+.mob-cta{display:block;margin:12px 16px 0;text-align:center;background:var(--blue);color:white;font-size:15px;font-weight:700;padding:13px;border-radius:3px}
+.bc{background:#0a1826;border-bottom:1px solid var(--w08);padding:10px 0}
+.bc-i{display:flex;align-items:center;gap:8px;font-size:12px;font-family:var(--fm)}
+.bc-a{color:rgba(255,255,255,.35)}.bc-sep{color:rgba(255,255,255,.15)}.bc-cur{color:var(--gold)}
+/* HERO */
+.hero{background:var(--navy);position:relative;overflow:hidden;padding:60px 0 70px}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(31,92,158,.18) 0%,transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:40px;position:relative;z-index:1}
+@media(min-width:960px){.hero-grid{grid-template-columns:1.2fr .8fr;align-items:center}}
+.hero-tag{display:inline-flex;align-items:center;background:rgba(31,92,158,.18);border:1px solid rgba(31,92,158,.35);border-radius:3px;padding:5px 14px;margin-bottom:18px}
+.hero-tag span{font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2)}
+.hero h1{font-size:clamp(28px,3.4vw,48px);font-weight:800;color:white;margin-bottom:14px;line-height:1.05}
+.hero h1 em{color:var(--blue2);font-style:normal}
+.hero-desc{font-size:15px;color:#8FA8C0;line-height:1.85;margin-bottom:24px;max-width:520px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.hp{background:var(--w08);border:1px solid var(--w15);border-radius:3px;padding:6px 12px;font-family:var(--fm);font-size:11px;color:var(--w60);letter-spacing:.06em}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.hero-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media(max-width:480px){.hero-facts{grid-template-columns:repeat(2,1fr)}}
+.hf{background:var(--w08);border:1px solid var(--w15);border-radius:6px;padding:14px;text-align:center}
+.hf-n{font-size:15px;font-weight:800;color:white;font-family:var(--fm)}
+.hf-l{font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#8FA8C0;margin-top:4px}
+.hero-visual{background:rgba(255,255,255,.04);border:1px solid var(--w15);border-radius:12px;padding:24px}
+.photo-placeholder{background:linear-gradient(135deg,#0a1f35,#112840);border-radius:8px;border:2px dashed rgba(255,255,255,.15);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:40px 24px;text-align:center;aspect-ratio:4/3}
+.pp-icon{font-size:36px;opacity:.35}
+.pp-text{font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);line-height:1.6}
+.selection-hero-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+@media(min-width:960px){.selection-hero-grid{grid-template-columns:1.05fr .95fr}}
+.selection-proof-card{background:rgba(255,255,255,.06);border:1px solid var(--w15);border-radius:14px;overflow:hidden;box-shadow:0 22px 60px rgba(0,0,0,.28)}
+.selection-proof-img{height:260px;position:relative;overflow:hidden;background:#0a1f35}
+.selection-proof-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88}
+.selection-proof-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,15,24,.05),rgba(8,15,24,.72))}
+.selection-proof-label{position:absolute;left:18px;bottom:18px;z-index:2;font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:white;background:rgba(13,27,42,.78);border:1px solid rgba(255,255,255,.18);border-radius:3px;padding:7px 10px}
+.selection-proof-body{padding:22px}
+.selection-proof-body h2{font-size:20px;color:white;margin-bottom:10px;line-height:1.2}
+.selection-proof-body p{font-size:14px;color:#8FA8C0;line-height:1.75;margin-bottom:16px}
+.selection-proof-points{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(max-width:520px){.selection-proof-points{grid-template-columns:1fr}}
+.selection-proof-points span{font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.72);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:7px 9px}
+/* SECTIONS */
+.sec{padding:72px 0}
+.sec-white{background:white}
+.sec-surf{background:var(--surf)}
+.sec-navy{background:var(--navy2)}
+.sec-dark{background:linear-gradient(135deg,#081524,#0d2240)}
+/* SPEC */
+.spec-card{background:white;border:1px solid var(--surf2);border-radius:10px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.sc-head{padding:20px 28px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sc-htitle{font-size:16px;font-weight:700;color:white}
+.sc-badge{font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(200,146,42,.15);border:1px solid rgba(200,146,42,.3);padding:4px 10px;border-radius:3px}
+.spec-2col{display:grid;grid-template-columns:1fr}
+@media(min-width:768px){.spec-2col{grid-template-columns:1fr 1fr}}
+.spec-col{border-right:1px solid var(--surf2)}
+.spec-col:last-child{border-right:none}
+.spec-col-head{padding:12px 20px;background:var(--surf);border-bottom:1px solid var(--surf2);font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+.spec-tbl{width:100%;border-collapse:collapse;font-size:13px}
+.spec-tbl tr{border-bottom:1px solid var(--surf2)}
+.spec-tbl tr:last-child{border-bottom:none}
+.spec-tbl td{padding:11px 20px;vertical-align:top;line-height:1.5}
+.spec-tbl td:first-child{font-family:var(--fm);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);width:46%;background:var(--surf);font-weight:600}
+.spec-tbl td:last-child{color:var(--ink);font-weight:500}
+.spec-hl{background:rgba(200,146,42,.06)}
+.spec-hl td:first-child{background:rgba(200,146,42,.06)!important}
+.spec-hl td:last-child{color:var(--gold)!important;font-weight:700!important}
+.spec-note{padding:14px 20px;background:rgba(31,92,158,.05);border-top:1px solid rgba(31,92,158,.1);font-size:12px;color:var(--ink2);line-height:1.65}
+.spec-note strong{color:var(--blue)}
+/* GRADES */
+.grades-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:768px){.grades-grid{grid-template-columns:repeat(4,1fr)}}
+.grade-card{background:var(--w08);border:1px solid var(--w15);border-radius:8px;padding:18px 14px;text-align:center}
+.gc-name{font-family:var(--fm);font-size:14px;font-weight:700;color:var(--gold);margin-bottom:6px}
+.gc-desc{font-size:12px;color:rgba(255,255,255,.6);line-height:1.5}
+.gc-apps{font-size:11px;color:rgba(255,255,255,.4);margin-top:6px;font-family:var(--fm)}
+/* QA STEPS */
+.qa-grid{display:grid;gap:12px}
+@media(min-width:640px){.qa-grid{grid-template-columns:repeat(3,1fr)}}
+.qa-step{background:var(--w08);border:1px solid var(--w15);border-radius:10px;padding:20px}
+.qs-num{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#0f3870);border:2px solid rgba(31,92,158,.5);display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:11px;font-weight:700;color:white;margin-bottom:10px}
+.qs-title{font-size:13px;font-weight:700;color:white;margin-bottom:4px}
+.qs-desc{font-size:12px;color:rgba(255,255,255,.55);line-height:1.6}
+.qs-tag{display:inline-block;font-family:var(--fm);font-size:9px;letter-spacing:.08em;text-transform:uppercase;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.2);color:#4ADE80;padding:2px 8px;border-radius:2px;margin-top:6px}
+/* APPS */
+.app-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:640px){.app-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.app-grid{grid-template-columns:repeat(4,1fr)}}
+.app-card{background:white;border:1px solid var(--surf2);border-radius:8px;padding:18px 14px;text-align:center;transition:all .18s}
+.app-card:hover{border-color:var(--blue2);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.app-icon{font-size:26px;margin-bottom:8px}
+.app-name{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.app-sub{font-size:11px;color:var(--ink3);line-height:1.4}
+/* FEATURES */
+.feat-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:640px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.feat-grid{grid-template-columns:repeat(3,1fr)}}
+.feat-card{background:var(--w08);border:1px solid var(--w15);border-radius:10px;padding:22px}
+.fc-icon{font-size:24px;margin-bottom:10px}
+.fc-title{font-size:14px;font-weight:700;color:white;margin-bottom:6px}
+.fc-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.65}
+/* COMPARE */
+.comp-wrap{background:white;border:1px solid var(--surf2);border-radius:10px;overflow:hidden;overflow-x:auto}
+.comp-tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+.comp-tbl th{padding:13px 16px;background:var(--navy);font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-align:left}
+.comp-tbl th:first-child{color:rgba(255,255,255,.5)}
+.comp-tbl th.hl{color:var(--gold)}
+.comp-tbl th:not(:first-child):not(.hl){color:rgba(255,255,255,.45)}
+.comp-tbl td{padding:11px 16px;border-bottom:1px solid var(--surf2);vertical-align:middle;font-size:13px}
+.comp-tbl tr:last-child td{border-bottom:none}
+.comp-tbl td:first-child{font-size:11px;font-weight:600;color:var(--ink2);font-family:var(--fm)}
+.hl-col{background:rgba(200,146,42,.05)}
+.ico-yes{color:#4ADE80;font-weight:700}
+.ico-no{color:#8A9BB0}
+.cb{font-family:var(--fm);font-size:10px;font-weight:700;padding:3px 7px;border-radius:2px}
+.cb.best{background:rgba(200,146,42,.15);color:var(--gold);border:1px solid rgba(200,146,42,.3)}
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:8px;max-width:860px}
+.faq-item{border:1px solid var(--surf2);border-radius:8px;overflow:hidden;background:white}
+.faq-q{width:100%;padding:17px 20px;display:flex;align-items:center;justify-content:space-between;background:none;border:none;cursor:pointer;font-family:var(--fs);font-size:15px;font-weight:600;color:var(--ink);text-align:left;gap:16px}
+.faq-q:hover{background:var(--surf)}
+.faq-icon{font-size:18px;color:var(--ink3);flex-shrink:0;transition:transform .2s}
+.faq-item.open .faq-icon{transform:rotate(45deg);color:var(--blue)}
+.faq-a{display:none;padding:0 20px 18px;font-size:14px;color:var(--ink2);line-height:1.75}
+.faq-item.open .faq-a{display:block}
+/* CTA / FOOTER */
+.cta-sec{background:linear-gradient(135deg,#0a1929,#0f2438);padding:80px 0;text-align:center}
+.cta-sec h2{font-size:clamp(22px,3vw,36px);color:white;margin-bottom:14px}
+.cta-sec p{font-size:15px;color:#8FA8C0;max-width:520px;margin:0 auto 32px;line-height:1.8}
+.cta-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px}
+.cta-trust{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.ct{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:5px}
+.ct::before{content:"?";color:#4ADE80}
+.trust-strip{background:#1C3A5E;border-top:1px solid #2A4F78;border-bottom:1px solid #2A4F78}
+.ts-inner{max-width:var(--mw);margin:0 auto;padding:14px var(--px);display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+@media(min-width:1024px){.ts-inner{justify-content:space-between}}
+.ts-i span{font-family:var(--fm);font-size:11px;color:var(--w60)}
+.ts-i span::before{content:"\\2714 ";color:#4ADE80}
+.footer{background:#0D1B2E;padding:56px 0 0}
+.foot-grid{max-width:var(--mw);margin:0 auto;padding:0 var(--px) 40px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;border-bottom:1px solid var(--w08)}
+@media(max-width:1023px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:600px){.foot-grid{grid-template-columns:1fr;gap:24px}}
+.foot-mark{width:36px;height:36px;border-radius:6px;background:linear-gradient(135deg,#1a5296,#0b1f3a);border:1px solid rgba(200,146,42,.4);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:var(--gold);font-family:monospace}
+.foot-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.foot-brand{font-size:14px;font-weight:700;letter-spacing:.08em;color:white}
+.foot-about{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:16px;max-width:260px}
+.foot-ch{font-family:var(--fm);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue2);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--w08);font-weight:600}
+.foot-links{display:flex;flex-direction:column;gap:10px}
+.foot-link{font-size:13px;color:rgba(255,255,255,.45)}
+.foot-link:hover{color:white}
+.foot-link.cur{color:var(--gold);font-weight:600}
+.foot-ca{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.45);margin-bottom:10px}
+.foot-qbtn{display:block;text-align:center;background:var(--blue);color:white;font-size:13px;font-weight:700;padding:10px;border-radius:3px;margin-bottom:8px}
+.foot-bottom{max-width:var(--mw);margin:0 auto;padding:18px var(--px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot-copy{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.25)}
+.wa-wrap{position:fixed;right:24px;bottom:24px;z-index:900}
+.wa-btn{width:56px;height:56px;border-radius:50%;background:#25D366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4)}
+@media(max-width:640px){.sec{padding:48px 0}}
+
+/* BELT SELECTOR */
+.selector-wrap{background:white;border:1px solid var(--surf2);border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.07)}
+.sel-step{padding:28px 32px;border-bottom:1px solid var(--surf2)}
+.sel-step:last-of-type{border-bottom:none}
+.sel-step-hdr{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.sel-num{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#0f3870);display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:12px;font-weight:700;color:white;flex-shrink:0}
+.sel-q{font-size:16px;font-weight:700;color:var(--ink)}
+.sel-btns{display:flex;flex-wrap:wrap;gap:8px}
+.sel-btn{background:var(--surf);border:2px solid var(--surf2);border-radius:6px;padding:10px 16px;font-size:13px;font-weight:600;color:var(--ink2);cursor:pointer;transition:all .18s;font-family:var(--fs)}
+.sel-btn:hover{border-color:var(--blue2);color:var(--blue);background:rgba(31,92,158,.04)}
+.sel-btn.active{border-color:var(--blue);background:rgba(31,92,158,.08);color:var(--blue)}
+/* RESULT */
+.sel-result{display:none;background:linear-gradient(135deg,#0a1929,#0d2240);border-top:3px solid var(--gold);padding:32px}
+.sr-label{font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.sr-belt{font-size:24px;font-weight:800;color:white;margin-bottom:4px}
+.sr-grade{font-family:var(--fm);font-size:13px;color:var(--blue2);margin-bottom:12px}
+.sr-reason{font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:18px;max-width:580px}
+.sr-actions{display:flex;gap:12px;flex-wrap:wrap}
+.sr-link{display:inline-flex;align-items:center;gap:6px;background:var(--gold);color:white;font-weight:700;padding:11px 22px;border-radius:4px;font-size:14px}
+.sr-contact{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:white;font-weight:600;padding:11px 22px;border-radius:4px;font-size:14px}
+/* BELT CARDS */
+.belt-cards{display:grid;gap:16px}
+@media(min-width:640px){.belt-cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.belt-cards{grid-template-columns:repeat(3,1fr)}}
+.bc-card{background:white;border:1px solid var(--surf2);border-radius:10px;overflow:hidden;transition:all .2s}
+.bc-card:hover{border-color:var(--blue2);box-shadow:0 4px 20px rgba(0,0,0,.08);transform:translateY(-2px)}
+.bc-card-top{padding:20px 20px 14px;border-bottom:1px solid var(--surf2)}
+.bc-card-icon{font-size:28px;margin-bottom:10px}
+.bc-card-name{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.bc-card-tag{font-family:var(--fm);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.bc-card-body{padding:14px 20px}
+.bc-card-desc{font-size:13px;color:var(--ink2);line-height:1.6;margin-bottom:12px}
+.bc-card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.bct{font-family:var(--fm);font-size:10px;padding:3px 7px;border-radius:2px;background:var(--surf);color:var(--ink3);border:1px solid var(--surf2)}
+.bc-card-link{font-size:13px;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:4px}
+/* COMPARE TABLE */
+.mega-tbl-wrap{overflow-x:auto;border:1px solid var(--surf2);border-radius:10px;background:white}
+.mega-tbl{width:100%;border-collapse:collapse;font-size:12px;min-width:900px}
+.mega-tbl th{padding:12px 14px;background:var(--navy);font-family:var(--fm);font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;text-align:left;white-space:nowrap}
+.mega-tbl th:first-child{color:rgba(255,255,255,.5);width:160px}
+.mega-tbl th:not(:first-child){color:rgba(255,255,255,.7);text-align:center}
+.mega-tbl td{padding:10px 14px;border-bottom:1px solid var(--surf2);vertical-align:middle}
+.mega-tbl tr:last-child td{border-bottom:none}
+.mega-tbl td:first-child{font-size:11px;font-weight:600;color:var(--ink2);font-family:var(--fm);background:var(--surf)}
+.mega-tbl td:not(:first-child){text-align:center;font-size:12px}
+.mega-tbl tr:hover td{background:rgba(31,92,158,.02)}
+.mega-tbl tr:hover td:first-child{background:var(--surf)}
+.ic-y{color:#4ADE80;font-weight:700;font-size:14px}
+.ic-n{color:#CBD5E1;font-size:14px}
+.ic-p{color:#F59E0B;font-weight:700;font-size:13px}
+.pill{font-family:var(--fm);font-size:9px;padding:2px 6px;border-radius:2px;font-weight:700}
+.pill-b{background:rgba(31,92,158,.12);color:var(--blue);border:1px solid rgba(31,92,158,.2)}
+.pill-g{background:rgba(200,146,42,.12);color:var(--gold);border:1px solid rgba(200,146,42,.25)}
+
+    /* Nav font-size override (locked: index-20260312) */
+    .nd-btn { font-size: 15px !important; font-weight: 600 !important; }
+    .nav-brand { font-size: 16px !important; font-weight: 700 !important; }
+  
+    /* Logo system override (locked: index-20260312) */
+    .nav-logo { display: flex; align-items: center; gap: 0; text-decoration: none; flex-shrink: 0; }
+    .nav-brand { font-size: 16px; font-weight: 700; letter-spacing: .06em; color: white; white-space: nowrap; padding-left: 12px; border-left: 2px solid #C8922A; }
+    .foot-logo-row { display: flex; flex-direction: column; align-items: flex-start; gap: 0; margin-bottom: 18px; }
+    .foot-logo-img { height: 36px; width: auto; filter: brightness(0) invert(1); margin-bottom: 10px; }
+    .foot-brand { font-size: 16px; font-weight: 700; letter-spacing: .08em; color: white; margin-bottom: 5px; display: block; }
+    .foot-slogan { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #C8922A; margin-bottom: 8px; display: block; }
+    .foot-identity { font-size: 12px; color: rgba(255,255,255,.40); line-height: 1.6; max-width: 240px; display: block; margin-bottom: 0; }
+  </style>
+<link rel="stylesheet" href="../assets/site-refinement.css"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.yiyimeshbelts.com/#organization","name":"Ningjin Yiyi Mesh Belt Co., Ltd.","alternateName":["YIYI Mesh Belt","YIYI MESH BELT"],"url":"https://www.yiyimeshbelts.com","logo":"https://www.yiyimeshbelts.com/assets/yiyi-logo-source.jpg","telephone":"+86-134-5177-3742","email":"info@yiyimeshbelt.com","foundingDate":"1998","description":"YIYI Mesh Belt is a factory-based metal conveyor belt manufacturer for OEM builders, distributors, and replacement projects, supporting robotic welding, in-house wire drawing, quality control, and export-ready supply.","address":{"@type":"PostalAddress","streetAddress":"Huaihe East Road","addressLocality":"Ningjin","addressRegion":"Shandong","postalCode":"253400","addressCountry":"CN"},"contactPoint":[{"@type":"ContactPoint","telephone":"+86-134-5177-3742","contactType":"sales","email":"info@yiyimeshbelt.com","availableLanguage":["en","zh","de","ja","ko","es","pt","ru"]}],"knowsAbout":["Metal conveyor belts","Spiral freezer belts","Self-stacking belts","Eye link belts","Flat wire conveyor belts","Chain driven belts","Drive sprockets","Robotic welding","Quality control","OEM conveyor belt supply","Replacement conveyor belt matching"],"areaServed":["North America","Europe","Asia","Oceania","Global"],"sameAs":["https://www.yiyimeshbelts.com","https://www.yiyimeshbelts.com"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.yiyimeshbelts.com/"},{"@type":"ListItem","position":2,"name":"Belt Selection Guide","item":"https://www.yiyimeshbelts.com/belt-selection-guide.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Select a Metal Conveyor Belt","description":"A practical four-step guide for selecting a metal conveyor belt by application, temperature, product load, drive method, and replacement requirements.","step":[{"@type":"HowToStep","name":"Confirm application","text":"Identify whether the belt is used for freezing, washing, baking, cooling, drying, or industrial conveying."},{"@type":"HowToStep","name":"Confirm operating conditions","text":"Check temperature, product load, cleaning method, speed, and corrosion exposure."},{"@type":"HowToStep","name":"Confirm drive and geometry","text":"Review sprocket drive, system geometry, belt width, pitch, and running direction."},{"@type":"HowToStep","name":"Send drawing or old belt photos","text":"Provide drawings, dimensions, old belt photos, or samples before final quotation."}],"publisher":{"@id":"https://www.yiyimeshbelts.com/#organization"}}</script>
+    <link rel="canonical" href="https://www.yiyimeshbelts.com/pt/belt-selection-guide.html" />
+  <link rel="alternate" hreflang="en" href="https://www.yiyimeshbelts.com/belt-selection-guide.html" />
+  <link rel="alternate" hreflang="de" href="https://www.yiyimeshbelts.com/de/belt-selection-guide.html" />
+  <link rel="alternate" hreflang="es" href="https://www.yiyimeshbelts.com/es/belt-selection-guide.html" />
+  <link rel="alternate" hreflang="pt" href="https://www.yiyimeshbelts.com/pt/belt-selection-guide.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.yiyimeshbelts.com/belt-selection-guide.html" />
+</head>
+<body>
+<div class="topbar"><div class="tb-i">
+  <div class="tb-l">
+    <a href="tel:+8613451773742" class="tb-a">+86-134 5177 3742</a>
+    <span style="width:1px;height:14px;background:rgba(255,255,255,.15);display:inline-block"></span>
+    <a href="mailto:info@yiyimeshbelt.com" class="tb-a">info@yiyimeshbelt.com</a>
+  </div>
+  <div style="display:flex;gap:14px">
+    <span class="tb-badge"><span class="tb-dot"></span>IBA Germany &mdash; 5 Consecutive Years</span>
+    <span class="tb-badge"><span class="tb-dot"></span>ISO 9001 Certified</span>
+  </div>
+</div></div>
+<div class="yiyi-topbar">
+  <div class="tb-inner">
+    <div class="tb-left">
+      <a href="tel:+8613451773742" class="tb-a">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +86 134 5177 3742
+      </a>
+      <span class="tb-sep"></span>
+      <a href="mailto:info@yiyimeshbelt.com" class="tb-a">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        info@yiyimeshbelt.com
+      </a>
+      <span class="tb-sep"></span>
+      <span class="tb-a">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Mon - Fri 08:00 - 17:00 CST
+      </span>
+      <span class="tb-sep"></span>
+      <div class="tb-badges">
+        <span class="tb-badge"><span class="tb-dot"></span>Manufacturing Since 1998</span>
+        <span class="tb-badge"><span class="tb-dot"></span>ISO 9001 Certified</span>
+        <span class="tb-badge"><span class="tb-dot"></span>Third-Party Factory Audit Welcome</span>
+      </div>
+    </div>
+    <div class="tb-langs">
+      <button class="tb-lang" onclick="setLang(this,'en')">EN</button>
+      <button class="tb-lang" onclick="setLang(this,'de')">DE</button>
+      <button class="tb-lang" onclick="setLang(this,'ja')">JP</button>
+      <button class="tb-lang" onclick="setLang(this,'ko')">KR</button>
+      <button class="tb-lang active" onclick="setLang(this,'pt')">PT</button>
+      <button class="tb-lang" onclick="setLang(this,'es')">ES</button>
+      <button class="tb-lang" onclick="setLang(this,'it')">IT</button>
+      <button class="tb-lang" onclick="setLang(this,'ru')">RU</button>
+    </div>
+  </div>
+</div>
+
+<nav class="yiyi-nav" id="yiyi-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-brand">YIYI MESH BELT</span>
+    </a>
+
+    <div class="nav-desktop">
+      <a href="index.html" class="nav-link-simple">Home</a>
+
+      <div class="nd">
+        <a href="products.html#strategic" class="nd-btn gold-btn nd-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#C8922A"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          Core Belt Systems
+          <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="drop-panel" style="min-width:320px">
+          <div class="drop-box">
+            <div class="drop-gold-bar"></div>
+            <div class="drop-body" style="padding:16px">
+              <a href="spiral-freezer-belt.html" class="core-dl"><span class="cdl-icon">&#10052;</span><div style="flex:1"><span class="cdl-name">Spiral Freezer Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="self-stacking-belt.html" class="core-dl"><span class="cdl-icon">&#8635;</span><div style="flex:1"><span class="cdl-name">Self-Stacker Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="eye-link-belt.html" class="core-dl"><span class="cdl-icon">&#128279;</span><div style="flex:1"><span class="cdl-name">Eye Link Belt</span></div><span class="cdl-badge">STRATEGIC</span></a>
+              <a href="side-driven-belt.html" class="core-dl"><span class="cdl-icon">&#10145;</span><div style="flex:1"><span class="cdl-name">Side Driven Belt</span></div></a>
+              <a href="flat-wire-belt.html" class="core-dl"><span class="cdl-icon">&#9646;</span><div style="flex:1"><span class="cdl-name">Flat Wire Honeycomb Conveyor Belt</span></div></a>
+              <a href="drive-sprockets.html" class="core-dl"><span class="cdl-icon">&#9881;</span><div style="flex:1"><span class="cdl-name">Drive Sprockets</span><span class="cdl-sub">(System Matched)</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd">
+        <a href="products.html" class="nd-btn nd-link">All Products <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="drop-panel" style="left:-180px">
+          <div class="drop-box">
+            <div class="mega-grid">
+              <div class="mega-col">
+                <div class="mega-head">Core Pages</div>
+                <a href="spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Freezer Belt</span><span class="dl-badge">OEM</span></a>
+                <a href="self-stacking-belt.html" class="dl"><span class="dl-icon">&#8635;</span><span class="dl-label">Self-Stacker Belt</span><span class="dl-badge">OEM</span></a>
+                <a href="eye-link-belt.html" class="dl"><span class="dl-icon">&#128279;</span><span class="dl-label">Eye Link Belt</span><span class="dl-badge">Food</span></a>
+                <a href="side-driven-belt.html" class="dl"><span class="dl-icon">&#10145;</span><span class="dl-label">Side-Driven Belt</span></a>
+                <a href="drive-sprockets.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Drive Sprockets</span></a>
+              </div>
+              <div class="mega-col">
+                <div class="mega-head">Food Processing</div>
+                <a href="flat-wire-belt.html" class="dl"><span class="dl-icon">&#9646;</span><span class="dl-label">Flat Wire Honeycomb Conveyor Belt</span></a>
+                <a href="biscuit-belt.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Biscuit Belt</span></a>
+                <a href="balanced-weave-belt.html" class="dl"><span class="dl-icon">&#9878;</span><span class="dl-label">Balanced Weave Belt</span></a>
+                <a href="plastic-modular-belt.html" class="dl"><span class="dl-icon">&#10035;</span><span class="dl-label">Plastic Modular Belt</span></a>
+              </div>
+              <div class="mega-col">
+                <div class="mega-head">Heavy Duty &amp; Parts</div>
+                <a href="compound-weave-belt.html" class="dl"><span class="dl-icon">&#12336;</span><span class="dl-label">Compound Weave Belt</span></a>
+                <a href="chain-driven-belt.html" class="dl"><span class="dl-icon">&#9881;</span><span class="dl-label">Chain-Driven Belt</span></a>
+                <a href="chain-plate-belt.html" class="dl"><span class="dl-icon">&#127959;</span><span class="dl-label">Chain Plate Belt</span></a>
+                <a href="trapezoidal-mesh-belt.html" class="dl"><span class="dl-icon">&#9650;</span><span class="dl-label">Trapezoidal Mesh Belt</span></a>
+                <a href="connecting-accessories.html" class="dl"><span class="dl-icon">&#128204;</span><span class="dl-label">Pins &amp; Connecting Rods</span></a>
+                <a href="replacement-parts.html" class="dl"><span class="dl-icon">&#128297;</span><span class="dl-label">Replacement Parts</span></a>
+              </div>
+              <div class="mega-col">
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C8922A;margin-bottom:12px">Need Help Choosing?</div>
+                <p style="color:rgba(255,255,255,.9);font-size:16px;font-weight:700;line-height:1.35;flex:1">Start with the right path for your project: browse, send a drawing, or ask engineering to confirm the belt type.</p>
+                <a href="products.html" style="color:#4A8CC8;font-size:14px;font-weight:600;margin-top:auto;display:block;padding-top:16px">Browse All Products &#8594;</a>
+                <a href="contact.html?intent=drawing" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Send Your Belt Drawing &#8594;</a>
+                <a href="engineering-oem.html?intent=engineering" style="color:#4A8CC8;font-size:14px;font-weight:600;display:block;padding-top:10px">Get Engineering Support &#8594;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd">
+        <a href="industries.html" class="nd-btn nd-link">Industries <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="drop-panel">
+          <div class="drop-box">
+            <div class="two-col">
+              <div class="two-col-main">
+                <div class="mega-head">Application Sectors</div>
+                <a href="industries.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">IQF &amp; Spiral Freezing</span></a>
+                <a href="industries.html" class="dl"><span class="dl-icon">&#127844;</span><span class="dl-label">Meat &amp; Seafood Processing</span></a>
+                <a href="industries.html" class="dl"><span class="dl-icon">&#127838;</span><span class="dl-label">Baking &amp; Ovens</span></a>
+                <a href="industries.html" class="dl"><span class="dl-icon">&#127850;</span><span class="dl-label">Snack &amp; Biscuit</span></a>
+                <a href="industries.html" class="dl"><span class="dl-icon">&#128663;</span><span class="dl-label">Automotive</span></a>
+                <a href="industries.html" class="dl"><span class="dl-icon">&#129519;</span><span class="dl-label">Can Washing</span></a>
+              </div>
+              <div class="two-col-side">
+                <div class="eeat-card">
+                  <div class="eeat-tag">Experience</div>
+                  <p class="eeat-title">Real installations. Real clients. Real countries.</p>
+                  <a href="case-studies.html" class="eeat-link">View Case Studies &#8594;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd">
+        <a href="engineering-oem.html" class="nd-btn nd-link">Engineering &amp; OEM <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="drop-panel">
+          <div class="drop-box">
+            <div class="two-col">
+              <div class="two-col-main">
+                <div class="mega-head">Technical Resources</div>
+                <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128295;</span><span class="dl-label">Engineering &amp; OEM Overview</span></a>
+                <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Drawing Review</span></a>
+                <a href="replacement-review.html" class="dl"><span class="dl-icon">&#128260;</span><span class="dl-label">Replacement Projects</span></a>
+                <a href="belt-matching.html" class="dl"><span class="dl-icon">&#128269;</span><span class="dl-label">Belt Matching Service</span></a>
+                <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Belt Selection Guide</span></a>
+                <a href="engineering-oem.html" class="dl"><span class="dl-icon">&#127991;</span><span class="dl-label">OEM Private Label</span></a>
+              </div>
+              <div class="two-col-side">
+                <div class="eeat-card">
+                  <div class="eeat-tag">Expertise</div>
+                  <p class="eeat-title">Drawing to final inspection - every order verified.</p>
+                  <a href="engineering-oem.html" class="eeat-link">Start Engineering Review &#8594;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd">
+        <a href="manufacturing.html" class="nd-btn nd-link">Manufacturing Assurance <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="drop-panel" style="min-width:260px">
+          <div class="drop-box">
+            <div class="drop-blue-bar"></div>
+            <div class="drop-body">
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#129489;</span><span class="dl-label">Manufacturing Proof</span></a>
+              <a href="raw-material.html" class="dl"><span class="dl-icon">&#129523;</span><span class="dl-label">In-House Wire Drawing</span></a>
+              <a href="quality-control.html" class="dl"><span class="dl-icon">&#9989;</span><span class="dl-label">Quality Control</span></a>
+              <a href="global-delivery.html" class="dl"><span class="dl-icon">&#128230;</span><span class="dl-label">Packaging &amp; Export</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#9728;</span><span class="dl-label">Solar Factory (ESG)</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd">
+        <a href="about.html" class="nd-btn nd-link">About YIYI <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="drop-panel" style="min-width:260px">
+          <div class="drop-box">
+            <div class="drop-blue-bar"></div>
+            <div class="drop-body">
+              <a href="about.html" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Company Overview</span></a>
+              <a href="quality-control.html" class="dl"><span class="dl-icon">&#127942;</span><span class="dl-label">Certifications &amp; QA</span></a>
+              <a href="manufacturing.html" class="dl"><span class="dl-icon">&#128161;</span><span class="dl-label">Patents &amp; Manufacturing Strength</span></a>
+              <a href="exhibition.html" class="dl"><span class="dl-icon">&#127760;</span><span class="dl-label">Exhibitions &amp; Visits</span></a>
+              <a href="global-delivery.html" class="dl"><span class="dl-icon">&#127758;</span><span class="dl-label">Global Delivery</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd">
+        <a href="knowledge-center.html" class="nd-btn nd-link">Knowledge Center <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="drop-panel" style="min-width:240px">
+          <div class="drop-box">
+            <div class="drop-blue-bar"></div>
+            <div class="drop-body">
+              <a href="knowledge-center.html" class="dl"><span class="dl-icon">&#128218;</span><span class="dl-label">Knowledge Center Overview</span></a>
+              <a href="belt-selection-guide.html" class="dl"><span class="dl-icon">&#128203;</span><span class="dl-label">Selection Guide</span></a>
+              <a href="what-is-a-spiral-freezer-belt.html" class="dl"><span class="dl-icon">&#10052;</span><span class="dl-label">Spiral Engineering Basics</span></a>
+              <a href="case-studies.html" class="dl"><span class="dl-icon">&#128202;</span><span class="dl-label">Case Studies</span></a>
+              <a href="resources.html" class="dl"><span class="dl-icon">&#128229;</span><span class="dl-label">Downloads &amp; Resources</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd">
+        <a href="contact.html" class="nd-btn nd-link">Contact <svg class="nd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="drop-panel" style="min-width:240px">
+          <div class="drop-box">
+            <div class="drop-blue-bar"></div>
+            <div class="drop-body">
+              <a href="contact.html?intent=quote" class="dl"><span class="dl-icon">&#128196;</span><span class="dl-label">Request a Quote</span></a>
+              <a href="contact.html?intent=drawing" class="dl"><span class="dl-icon">&#128395;</span><span class="dl-label">Send Your Belt Drawing</span></a>
+              <a href="contact.html?intent=engineering" class="dl"><span class="dl-icon">&#128172;</span><span class="dl-label">Get Engineering Support</span></a>
+              <a href="contact.html?intent=visit" class="dl"><span class="dl-icon">&#127970;</span><span class="dl-label">Factory Visit</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <a href="contact.html?intent=quote" class="btn-nav-quote">Request a Quote &#8594;</a>
+      <button class="mob-toggle" id="mob-toggle" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mob-menu" id="mob-menu">
+    <div class="mob-inner">
+      <a href="index.html" class="mob-link">Home</a>
+
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Core Belt Systems</div>
+      <a href="products.html#strategic" class="mob-link">Core Belt Systems Overview</a>
+<a href="spiral-freezer-belt.html" class="mob-link">Spiral Freezer Belt</a>
+      <a href="self-stacking-belt.html" class="mob-link">Self-Stacker Belt</a>
+      <a href="side-driven-belt.html" class="mob-link">Side Driven Belt</a>
+      <a href="eye-link-belt.html" class="mob-link">Eye Link Belt</a>
+      <a href="flat-wire-belt.html" class="mob-link">Flat Wire Honeycomb Conveyor Belt</a>
+      <a href="drive-sprockets.html" class="mob-link">Drive Sprockets</a>
+
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">All Products</div>
+      <a href="products.html" class="mob-link">Browse All Products</a>
+      <a href="biscuit-belt.html" class="mob-link">Biscuit Belt</a>
+      <a href="balanced-weave-belt.html" class="mob-link">Balanced Weave Belt</a>
+      <a href="compound-weave-belt.html" class="mob-link">Compound Weave Belt</a>
+      <a href="chain-driven-belt.html" class="mob-link">Chain-Driven Belt</a>
+      <a href="replacement-parts.html" class="mob-link">Replacement Parts</a>
+
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Industries</div>
+      <a href="industries.html" class="mob-link">Industries Overview</a>
+<a href="industries.html" class="mob-link">IQF &amp; Spiral Freezing</a>
+      <a href="industries.html" class="mob-link">Meat &amp; Seafood Processing</a>
+      <a href="industries.html" class="mob-link">Baking &amp; Ovens</a>
+      <a href="industries.html" class="mob-link">Snack &amp; Biscuit</a>
+      <a href="industries.html" class="mob-link">Automotive</a>
+      <a href="industries.html" class="mob-link">Can Washing</a>
+
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Engineering &amp; OEM</div>
+      <a href="engineering-oem.html" class="mob-link">Engineering &amp; OEM Overview</a>
+      <a href="belt-selection-guide.html" class="mob-link">Belt Selection Guide</a>
+      <a href="belt-matching.html" class="mob-link">Belt Matching Service</a>
+      <a href="replacement-review.html" class="mob-link">Replacement Projects</a>
+
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Manufacturing Assurance</div>
+      <a href="manufacturing.html" class="mob-link">Manufacturing Overview</a>
+<a href="manufacturing.html" class="mob-link">Manufacturing Proof</a>
+      <a href="raw-material.html" class="mob-link">In-House Wire Drawing</a>
+      <a href="quality-control.html" class="mob-link">Quality Control</a>
+      <a href="global-delivery.html" class="mob-link">Packaging &amp; Export</a>
+
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">About YIYI</div>
+      <a href="about.html" class="mob-link">Company Overview</a>
+      <a href="quality-control.html" class="mob-link">Certifications &amp; QA</a>
+      <a href="manufacturing.html" class="mob-link">Patents &amp; Manufacturing Strength</a>
+      <a href="exhibition.html" class="mob-link">Exhibitions &amp; Visits</a>
+      <a href="global-delivery.html" class="mob-link">Global Delivery</a>
+
+      <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8922A;padding:14px 0 4px 0;border-top:1px solid rgba(255,255,255,.07);margin-top:6px">Knowledge Center</div>
+      <a href="knowledge-center.html" class="mob-link">Knowledge Center Overview</a>
+      <a href="belt-selection-guide.html" class="mob-link">Selection Guide</a>
+      <a href="what-is-a-spiral-freezer-belt.html" class="mob-link">Spiral Engineering Basics</a>
+      <a href="case-studies.html" class="mob-link">Case Studies</a>
+      <a href="resources.html" class="mob-link">Downloads &amp; Resources</a>
+
+      <div style="border-top:1px solid rgba(255,255,255,.07);margin-top:10px;padding-top:10px"></div>
+      <a href="contact.html" class="mob-link">Contact Overview</a>
+      <a href="contact.html?intent=quote" class="mob-link">Request a Quote</a>
+      <a href="contact.html?intent=drawing" class="mob-link">Send Your Belt Drawing</a>
+      <a href="contact.html?intent=engineering" class="mob-link">Get Engineering Support</a>
+      <a href="contact.html?intent=visit" class="mob-link">Factory Visit</a>
+      <a href="contact.html?intent=quote" class="mob-cta">Request a Quote &#8594;</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bc"><div class="W"><div class="bc-i">
+  <a href="index.html" class="bc-a">Home</a><span class="bc-sep"> &#8250; </span>
+  <a href="products.html" class="bc-a">Products</a><span class="bc-sep"> &#8250; </span>
+  <span class="bc-cur">Belt Selection Guide</span>
+</div></div></div>
+
+<section style="background:var(--navy);padding:56px 0 64px;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(31,92,158,.18) 0%,transparent 60%)"></div>
+  <div class="W" style="position:relative;z-index:1">
+    <div class="selection-hero-grid">
+      <div style="max-width:700px">
+        <div style="display:inline-flex;align-items:center;background:rgba(31,92,158,.18);border:1px solid rgba(31,92,158,.35);border-radius:3px;padding:5px 14px;margin-bottom:18px">
+          <span style="font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2)">&#9670; BELT SELECTION GUIDE &nbsp;&#183;&nbsp; 4 QUESTIONS &nbsp;&#183;&nbsp; INSTANT RECOMMENDATION</span>
+        </div>
+        <h1 style="font-size:clamp(28px,3.4vw,46px);font-weight:800;color:white;margin-bottom:14px;line-height:1.05">Find the Right Belt<br><em style="color:var(--blue2);font-style:normal">in 4 Questions.</em></h1>
+        <p style="font-size:15px;color:#8FA8C0;line-height:1.85;max-width:520px;margin-bottom:28px">Answer the questions below. Get an instant belt type recommendation with material grade. Not sure? Send us your application details and our engineering team will review the suitable belt path.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="#selector" class="btn-gold">Start the Selector &#8595;</a>
+          <a href="contact.html?intent=engineering&source=belt-selection-guide" class="btn-ghost">Ask an Engineer &#8594;</a>
+        </div>
+      </div>
+      <div class="selection-proof-card">
+        <div class="selection-proof-img">
+          <img src="../assets/product-media/drive-sprockets/drive-sprockets-belt-matching.jpg" alt="Matched metal conveyor belt and drive sprocket engineering reference" decoding="async" loading="eager" fetchpriority="high">
+          <div class="selection-proof-label">Engineering Selection Proof</div>
+        </div>
+        <div class="selection-proof-body">
+          <h2>Selection Starts With the Belt System, Not Only the Belt Name.</h2>
+          <p>YIYI checks the belt type, drive match, material grade, load, and operating environment before quoting, so replacement belts fit the real line conditions.</p>
+          <div class="selection-proof-points">
+            <span>Belt Type</span>
+            <span>Drive Match</span>
+            <span>Material Grade</span>
+            <span>Line Condition</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BELT OVERVIEW CARDS -->
+<section class="sec sec-surf"><div class="W">
+  <span class="tag tag-b">All Belt Types at a Glance</span>
+  <h2 class="h2">8 Wire Belt Types &mdash; Which One Is Yours?</h2>
+  <p class="sub" style="margin-bottom:32px">Use the cards below to get a quick overview, or scroll down to the interactive selector for a guided recommendation.</p>
+  <div class="belt-cards">
+    <div class="bc-card">
+      <div class="bc-card-top">
+        <div class="bc-card-icon">&#9906;</div>
+        <div class="bc-card-name">Spiral Freezer Belt</div>
+        <div class="bc-card-tag">Self-stacking &middot; Helical path</div>
+      </div>
+      <div class="bc-card-body">
+        <p class="bc-card-desc">Dedicated belt for spiral freezing and proofing tower systems. Self-stacking design allows tight helical travel. Available in SUS304/316.</p>
+        <div class="bc-card-tags"><span class="bct">Spiral Freezer</span><span class="bct">Proofing Tower</span><span class="bct">SUS304/316</span></div>
+        <a href="spiral-freezer-belt.html" class="bc-card-link">View Details &#8594;</a>
+      </div>
+    </div>
+    <div class="bc-card">
+      <div class="bc-card-top">
+        <div class="bc-card-icon">&#127850;</div>
+        <div class="bc-card-name">Rolled Baking Belt</div>
+        <div class="bc-card-tag">Ultra-thin &middot; 1.5mm wire &middot; Tracking tested</div>
+      </div>
+      <div class="bc-card-body">
+        <p class="bc-card-desc">Industry standard for biscuit and cracker tunnel ovens. Ultra-thin &lt;3mm profile. One-piece, no mid-belt joints. 100% tracking tested.</p>
+        <div class="bc-card-tags"><span class="bct">Biscuit &amp; Cracker</span><span class="bct">Tunnel Oven</span><span class="bct">SUS304</span></div>
+        <a href="biscuit-belt.html" class="bc-card-link">View Details &#8594;</a>
+      </div>
+    </div>
+    <div class="bc-card">
+      <div class="bc-card-top">
+        <div class="bc-card-icon">&#128279;</div>
+        <div class="bc-card-name">Open-Link Belt</div>
+        <div class="bc-card-tag">Maximum open area &middot; Drainage &amp; airflow</div>
+      </div>
+      <div class="bc-card-body">
+        <p class="bc-card-desc">60-70% open area for maximum drainage, airflow, and cooling. Seafood, meat, freezing, washing. SUS316/316L for marine environments.</p>
+        <div class="bc-card-tags"><span class="bct">Seafood</span><span class="bct">Meat</span><span class="bct">Freezing</span><span class="bct">SUS316L</span></div>
+        <a href="products.html" class="bc-card-link">View Details &#8594;</a>
+      </div>
+    </div>
+    <div class="bc-card">
+      <div class="bc-card-top">
+        <div class="bc-card-icon">&#127777;</div>
+        <div class="bc-card-name">Balanced Weave Belt</div>
+        <div class="bc-card-tag">High-temp capable &middot; Versatile</div>
+      </div>
+      <div class="bc-card-body">
+        <p class="bc-card-desc">The industry workhorse. Heat treatment furnaces, baking ovens, general conveying. SUS310S available for continuous 1,100&#176;C service.</p>
+        <div class="bc-card-tags"><span class="bct">Furnace</span><span class="bct">Baking</span><span class="bct">General</span><span class="bct">SUS310S</span></div>
+        <a href="balanced-weave-belt.html" class="bc-card-link">View Details &#8594;</a>
+      </div>
+    </div>
+    <div class="bc-card">
+      <div class="bc-card-top">
+        <div class="bc-card-icon">&#9881;</div>
+        <div class="bc-card-name">Compound Weave Belt</div>
+        <div class="bc-card-tag">Double Z-spiral &middot; Smaller openings</div>
+      </div>
+      <div class="bc-card-body">
+        <p class="bc-card-desc">Two spirals per pitch. Higher load capacity and smaller mesh openings than balanced weave. For small products, food processing, and freezing.</p>
+        <div class="bc-card-tags"><span class="bct">Small Products</span><span class="bct">Food</span><span class="bct">Freezing</span></div>
+        <a href="compound-weave-belt.html" class="bc-card-link">View Details &#8594;</a>
+      </div>
+    </div>
+    <div class="bc-card">
+      <div class="bc-card-top">
+        <div class="bc-card-icon">&#9939;</div>
+        <div class="bc-card-name">Chain Driven Belt</div>
+        <div class="bc-card-tag">Positive drive &middot; No slippage</div>
+      </div>
+      <div class="bc-card-body">
+        <p class="bc-card-desc">Side chain positive sprocket drive. Eliminates belt slippage and lateral drift on heavy loads and wide belts. Accurate product positioning.</p>
+        <div class="bc-card-tags"><span class="bct">Heavy Load</span><span class="bct">Wide Belt</span><span class="bct">Positive Drive</span></div>
+        <a href="chain-driven-belt.html" class="bc-card-link">View Details &#8594;</a>
+      </div>
+    </div>
+    <div class="bc-card">
+      <div class="bc-card-top">
+        <div class="bc-card-icon">&#9646;</div>
+        <div class="bc-card-name">Chain Plate Belt</div>
+        <div class="bc-card-tag">Solid surface &middot; CIP compatible</div>
+      </div>
+      <div class="bc-card-body">
+        <p class="bc-card-desc">Solid stainless plates on side chains. No mesh openings. For liquid products, CIP wash, assembly lines, and pharmaceutical applications.</p>
+        <div class="bc-card-tags"><span class="bct">Liquid Products</span><span class="bct">CIP</span><span class="bct">Assembly</span></div>
+        <a href="chain-plate-belt.html" class="bc-card-link">View Details &#8594;</a>
+      </div>
+    </div>
+    <div class="bc-card">
+      <div class="bc-card-top">
+        <div class="bc-card-icon">&#8635;</div>
+        <div class="bc-card-name">Trapezoidal Mesh Belt</div>
+        <div class="bc-card-tag">Lateral flex &middot; Curved conveyors</div>
+      </div>
+      <div class="bc-card-body">
+        <p class="bc-card-desc">Trapezoidal spiral for curved, turning, and spiral conveying. Navigates bends standard mesh cannot. Flat product surface maintained through turns.</p>
+        <div class="bc-card-tags"><span class="bct">Curved Conveyor</span><span class="bct">Spiral System</span><span class="bct">Food</span></div>
+        <a href="trapezoidal-mesh-belt.html" class="bc-card-link">View Details &#8594;</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- INTERACTIVE SELECTOR -->
+<section class="sec sec-white" id="selector"><div class="W">
+  <span class="tag tag-b">Interactive Belt Selector</span>
+  <h2 class="h2">Answer 4 Questions &mdash; Get Your Belt Recommendation</h2>
+  <p class="sub" style="margin-bottom:32px">Select one answer per question. Recommendation appears automatically at the bottom. Not sure about a question? Skip it &mdash; we use defaults.</p>
+
+  <div class="selector-wrap">
+    <!-- STEP 1: TEMPERATURE -->
+    <div class="sel-step" id="step-temp">
+      <div class="sel-step-hdr">
+        <div class="sel-num">1</div>
+        <div class="sel-q">What is your operating temperature?</div>
+      </div>
+      <div class="sel-btns">
+        <button class="sel-btn" data-value="ambient" onclick="selectAnswer('step-temp','ambient')">&#10052; Ambient / Cold (&lt;50&#176;C)<br><small style="font-weight:400;color:var(--ink3)">Freezing, chilling, washing</small></button>
+        <button class="sel-btn" data-value="food" onclick="selectAnswer('step-temp','food')">&#127777; Food Processing (50&ndash;300&#176;C)<br><small style="font-weight:400;color:var(--ink3)">Baking, cooking, drying</small></button>
+        <button class="sel-btn" data-value="high" onclick="selectAnswer('step-temp','high')">&#128293; High Temp (300&ndash;900&#176;C)<br><small style="font-weight:400;color:var(--ink3)">Industrial furnace, heat treatment</small></button>
+        <button class="sel-btn" data-value="ultra-high" onclick="selectAnswer('step-temp','ultra-high')">&#9762; Ultra-High (&gt;900&#176;C)<br><small style="font-weight:400;color:var(--ink3)">Kiln, sintering, ceramics</small></button>
+      </div>
+    </div>
+
+    <!-- STEP 2: PRODUCT -->
+    <div class="sel-step" id="step-prod" style="display:none">
+      <div class="sel-step-hdr">
+        <div class="sel-num">2</div>
+        <div class="sel-q">What product or application are you conveying?</div>
+      </div>
+      <div class="sel-btns">
+        <button class="sel-btn" data-value="biscuit" onclick="selectAnswer('step-prod','biscuit')">&#127850; Biscuits / Crackers / Cookies</button>
+        <button class="sel-btn" data-value="freeze" onclick="selectAnswer('step-prod','freeze')">&#129362; Freezing / Chilling / IQF</button>
+        <button class="sel-btn" data-value="seafood" onclick="selectAnswer('step-prod','seafood')">&#129424; Seafood / Fish</button>
+        <button class="sel-btn" data-value="meat" onclick="selectAnswer('step-prod','meat')">&#129385; Meat / Poultry</button>
+        <button class="sel-btn" data-value="small" onclick="selectAnswer('step-prod','small')">&#129490; Small / Fragile Food Products</button>
+        <button class="sel-btn" data-value="spiral" onclick="selectAnswer('step-prod','spiral')">&#9906; Spiral Freezer / Proofing Tower</button>
+        <button class="sel-btn" data-value="curved" onclick="selectAnswer('step-prod','curved')">&#8635; Curved / Turning Conveyor</button>
+        <button class="sel-btn" data-value="parts" onclick="selectAnswer('step-prod','parts')">&#128297; Metal Parts / Industrial</button>
+        <button class="sel-btn" data-value="drain" onclick="selectAnswer('step-prod','drain')">&#128167; Drainage / Washing / Airflow</button>
+        <button class="sel-btn" data-value="general" onclick="selectAnswer('step-prod','general')">&#9632; General Conveying</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: LOAD -->
+    <div class="sel-step" id="step-load" style="display:none">
+      <div class="sel-step-hdr">
+        <div class="sel-num">3</div>
+        <div class="sel-q">What is the product load per square metre of belt?</div>
+      </div>
+      <div class="sel-btns">
+        <button class="sel-btn" data-value="light" onclick="selectAnswer('step-load','light')">&#129746; Light (&lt;15 kg/ sqm)<br><small style="font-weight:400;color:var(--ink3)">Baked goods, small food items</small></button>
+        <button class="sel-btn" data-value="normal" onclick="selectAnswer('step-load','normal')">&#9712; Normal (15&ndash;50 kg/ sqm)<br><small style="font-weight:400;color:var(--ink3)">Most food processing</small></button>
+        <button class="sel-btn" data-value="heavy" onclick="selectAnswer('step-load','heavy')">&#9774; Heavy (&gt;50 kg/ sqm)<br><small style="font-weight:400;color:var(--ink3)">Metal parts, dense food products</small></button>
+        <button class="sel-btn" data-value="unknown" onclick="selectAnswer('step-load','unknown')">&#10067; Not Sure</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: DRIVE -->
+    <div class="sel-step" id="step-drive" style="display:none">
+      <div class="sel-step-hdr">
+        <div class="sel-num">4</div>
+        <div class="sel-q">What drive type does your conveyor use?</div>
+      </div>
+      <div class="sel-btns">
+        <button class="sel-btn" data-value="friction" onclick="selectAnswer('step-drive','friction')">&#8623; Friction Drive (drum / roller)<br><small style="font-weight:400;color:var(--ink3)">Most common &mdash; belt pulled by tension</small></button>
+        <button class="sel-btn" data-value="chain" onclick="selectAnswer('step-drive','chain')">&#9939; Chain Drive (side chains &amp; sprockets)<br><small style="font-weight:400;color:var(--ink3)">Heavy load positive drive</small></button>
+        <button class="sel-btn" data-value="chain-plate" onclick="selectAnswer('step-drive','chain-plate')">&#9646; Solid Plate Required<br><small style="font-weight:400;color:var(--ink3)">No mesh &mdash; continuous flat surface needed</small></button>
+        <button class="sel-btn" data-value="unknown" onclick="selectAnswer('step-drive','unknown')">&#10067; Not Sure / Replacing Existing</button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="sel-result" id="sel-result">
+      <div class="sr-label">&#9670; RECOMMENDED BELT</div>
+      <div class="sr-belt" id="res-belt">&#8212;</div>
+      <div class="sr-grade" id="res-grade"></div>
+      <div class="sr-reason" id="res-reason"></div>
+      <div class="sr-actions">
+        <a href="products.html" id="res-link" class="sr-link">View Belt &#8594;</a>
+        <a href="contact.html?intent=engineering&source=belt-selection-guide" class="sr-contact">Send Application Details &#8594;</a>
+        <button onclick="resetSelector()" style="background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.6);font-size:13px;font-weight:600;padding:11px 18px;border-radius:4px;cursor:pointer">&#8635; Start Over</button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- MASTER COMPARISON TABLE -->
+<section class="sec sec-surf"><div class="W">
+  <span class="tag tag-b">Master Comparison</span>
+  <h2 class="h2">All Belt Types Side by Side</h2>
+  <p class="sub" style="margin-bottom:28px">Full comparison across 10 criteria. Use this to confirm your selection or discuss with your engineering team.</p>
+  <div class="mega-tbl-wrap">
+    <table class="mega-tbl">
+      <thead><tr>
+        <th>Criteria</th>
+        <th>Spiral Freezer</th>
+        <th>Rolled Baking</th>
+        <th>Open-Link</th>
+        <th>Balanced Weave</th>
+        <th>Compound Weave</th>
+        <th>Chain Driven</th>
+        <th>Trapezoidal</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>Max Temp</td>
+          <td>&#8722;40&ndash;+350&#176;C</td>
+          <td>&lt;300&#176;C</td>
+          <td>&lt;900&#176;C</td>
+          <td>&lt;1,100&#176;C</td>
+          <td>&lt;1,100&#176;C</td>
+          <td>&lt;900&#176;C</td>
+          <td>&lt;600&#176;C</td>
+        </tr>
+        <tr>
+          <td>Open Area</td>
+          <td>45&ndash;65%</td>
+          <td>40&ndash;50%</td>
+          <td><span class="pill pill-g">60&ndash;70%</span></td>
+          <td>40&ndash;55%</td>
+          <td>30&ndash;45%</td>
+          <td>30&ndash;55%</td>
+          <td>40&ndash;55%</td>
+        </tr>
+        <tr>
+          <td>Load Capacity</td>
+          <td>Medium</td>
+          <td>Medium</td>
+          <td>Medium</td>
+          <td>Medium&ndash;High</td>
+          <td><span class="ic-y">High</span></td>
+          <td><span class="ic-y">High</span></td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <td>Lateral Flex</td>
+          <td><span class="ic-y">&#10003; Yes</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-y">&#10003; Yes</span></td>
+        </tr>
+        <tr>
+          <td>Biscuit / Cracker</td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="pill pill-g">Best</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-p">OK</span></td>
+          <td><span class="ic-p">OK</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+        </tr>
+        <tr>
+          <td>Seafood / Meat</td>
+          <td><span class="ic-p">OK</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="pill pill-g">Best</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-p">OK</span></td>
+          <td><span class="ic-p">OK</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+        </tr>
+        <tr>
+          <td>Furnace / High-Temp</td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-p">OK</span></td>
+          <td><span class="pill pill-g">Best</span></td>
+          <td><span class="ic-p">OK</span></td>
+          <td><span class="ic-p">OK</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+        </tr>
+        <tr>
+          <td>Positive Drive</td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+          <td><span class="pill pill-g">Chain Drive</span></td>
+          <td><span class="ic-n">&#8212;</span></td>
+        </tr>
+        <tr>
+          <td>SUS316L Available</td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+        </tr>
+        <tr>
+          <td>Sample Review</td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+          <td><span class="ic-y">&#10003;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top:14px;background:white;border:1px solid var(--surf2);border-radius:8px;padding:14px 20px;font-size:13px;color:var(--ink2)">
+    <strong style="color:var(--ink)">Still not sure?</strong> Send us your application details &mdash; product, temperature, belt width, line speed, current belt specification &mdash; and our engineers respond with a specific recommendation, drawing review, or sample confirmation path.
+    <a href="contact.html?intent=engineering&source=belt-selection-guide" style="color:var(--blue);font-weight:600;margin-left:8px">Contact an engineer &#8594;</a>
+  </div>
+</div></section>
+
+<!-- GRADE GUIDE -->
+<section class="sec sec-navy"><div class="W">
+  <span class="tag tag-g">Material Grade Guide</span>
+  <h2 class="h2d">Which Stainless Grade for Your Application?</h2>
+  <p class="subd" style="margin-bottom:28px">All grades drawn in-house at YIYI Mesh Belt (1.0&ndash;3.2mm) to 1,200 MPa tensile strength. MTR included every shipment.</p>
+  <div style="background:white;border:1px solid var(--surf2);border-radius:10px;overflow:hidden;overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:640px">
+      <thead><tr style="background:var(--navy)">
+        <th style="padding:13px 18px;font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-align:left;font-weight:600">Grade</th>
+        <th style="padding:13px 18px;font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:left;font-weight:600">Temperature</th>
+        <th style="padding:13px 18px;font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:left;font-weight:600">Key Advantage</th>
+        <th style="padding:13px 18px;font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:left;font-weight:600">Best For</th>
+      </tr></thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--surf2)"><td style="padding:11px 18px;font-weight:700;font-family:var(--fm);font-size:12px;color:var(--ink)">SUS304</td><td style="padding:11px 18px;color:var(--ink2)">Up to 800&#176;C</td><td style="padding:11px 18px;color:var(--ink2)">Standard food-processing. Cost-effective, versatile.</td><td style="padding:11px 18px;color:var(--ink2)">Baking, freezing, general food</td></tr>
+        <tr style="border-bottom:1px solid var(--surf2)"><td style="padding:11px 18px;font-weight:700;font-family:var(--fm);font-size:12px;color:var(--ink)">SUS316</td><td style="padding:11px 18px;color:var(--ink2)">Up to 900&#176;C</td><td style="padding:11px 18px;color:var(--ink2)">Molybdenum-enhanced. Superior salt &amp; acid resistance.</td><td style="padding:11px 18px;color:var(--ink2)">Seafood, marine, chemical</td></tr>
+        <tr style="border-bottom:1px solid var(--surf2)"><td style="padding:11px 18px;font-weight:700;font-family:var(--fm);font-size:12px;color:var(--ink)">SUS316L</td><td style="padding:11px 18px;color:var(--ink2)">Up to 900&#176;C</td><td style="padding:11px 18px;color:var(--ink2)">Low-carbon 316. Minimises weld sensitisation. CIP compatible.</td><td style="padding:11px 18px;color:var(--ink2)">Dairy, pharma, critical food-processing</td></tr>
+        <tr style="border-bottom:1px solid var(--surf2)"><td style="padding:11px 18px;font-weight:700;font-family:var(--fm);font-size:12px;color:var(--ink)">SUS310S</td><td style="padding:11px 18px;color:var(--ink2)">Up to 1,100&#176;C</td><td style="padding:11px 18px;color:var(--ink2)">High-alloy. Excellent oxidation resistance at extreme temperature.</td><td style="padding:11px 18px;color:var(--ink2)">Furnace, heat treatment, kiln</td></tr>
+        <tr><td style="padding:11px 18px;font-weight:700;font-family:var(--fm);font-size:12px;color:var(--ink)">SUS314</td><td style="padding:11px 18px;color:var(--ink2)">Up to 1,150&#176;C</td><td style="padding:11px 18px;color:var(--ink2)">Silicon-enhanced 310. Superior scaling resistance.</td><td style="padding:11px 18px;color:var(--ink2)">Very high-temp furnace, ceramics, sintering</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<section class="cta-sec"><div class="W">
+  <span class="tag tag-b" style="text-align:center;color:#4A8CC8">READY TO CONFIRM</span>
+  <h2>Know Your Belt?<br>Send the Specification for Engineering Review.</h2>
+  <p>Tell us belt type, width, length, wire diameter, material grade, drive method, and application. Our team can confirm the specification, matching risk, and quotation path before production.</p>
+  <div class="cta-btns" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px">
+    <a href="contact.html?intent=sample&source=belt-selection-guide" class="btn-gold">Request a Quote &#8594;</a>
+    <a href="belt-matching.html" class="btn-blue">Match My Existing Belt &#8594;</a>
+    <a href="products.html" class="btn-ghost">Browse All Products</a>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center">
+    <span class="ct">Drawing & Sample Review</span>
+<span class="ct">Engineering Response</span>
+    <span class="ct">ISO 9001 Certified</span>
+    <span class="ct">MTR Every Shipment</span>
+    <span class="ct">IBA Munich &middot; 5 Years</span>
+  </div>
+</div></section>
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="ts-item"><span class="ts-check">27,000 sqm Facility</span></div>
+    <div class="ts-item"><span class="ts-check">15,000 m/month Capacity</span></div>
+    <div class="ts-item"><span class="ts-check">280+ Production Machines</span></div>
+    <div class="ts-item"><span class="ts-check">30+ National Patents</span></div>
+    <div class="ts-item"><span class="ts-check">20+ Countries Served</span></div>
+  </div>
+</div>
+
+<footer class="yiyi-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo-row">
+          <span class="foot-brand">YIYI MESH BELT</span>
+        </div>
+        <p class="foot-about" style="font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:#C8922A;margin-bottom:6px">PROVEN &#183; STABLE &#183; VERIFIED</p>
+        <p class="foot-about">Automated Metal Conveyor Belt Manufacturer for OEMs &amp; Distributors</p>
+        <div class="foot-info-list">
+          <div class="foot-info-item">
+            <svg class="fi-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Ningjin, Shandong 253400, China
+          </div>
+          <div class="foot-info-item">
+            <span class="fi-icon" style="font-size:10px;font-weight:700">Est.</span>
+            Est. 1998 &#183; Corp. 2008 &#183; 27,000 sqm Facility
+          </div>
+        </div>
+        <div style="margin-top:14px;display:flex;flex-direction:column;gap:5px">
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> ISO 9001 Certified</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> National High-Tech Enterprise</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Third-Party Factory Audit Welcome</span>
+          <span style="font-size:12px;color:#8FA8C0;display:flex;align-items:center;gap:6px"><span style="color:#4A8CC8">&#10003;</span> Third-Party Factory Audit Welcome</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-col-head">Core Belt Systems</div>
+        <div class="foot-links">
+          <a href="spiral-freezer-belt.html" class="foot-link gold">Spiral Freezer Belt</a>
+          <a href="self-stacking-belt.html" class="foot-link gold">Self-Stacker Belt</a>
+          <a href="eye-link-belt.html" class="foot-link">Eye Link Belt</a>
+          <a href="flat-wire-belt.html" class="foot-link">Flat Wire Honeycomb Conveyor Belt</a>
+          <a href="side-driven-belt.html" class="foot-link">Side Driven Belt</a>
+          <a href="drive-sprockets.html" class="foot-link">Drive Sprockets</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-col-head">Solutions &amp; Resources</div>
+        <div class="foot-links">
+          <a href="industries.html" class="foot-link">Industries</a>
+          <a href="engineering-oem.html" class="foot-link">Engineering &amp; OEM</a>
+          <a href="manufacturing.html" class="foot-link">Manufacturing Assurance</a>
+          <a href="global-delivery.html" class="foot-link">Global Delivery</a>
+          <a href="knowledge-center.html" class="foot-link">Knowledge Center</a>
+          <a href="resources.html" class="foot-link">Resources</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-col-head">Contact</div>
+        <div class="foot-contact-list">
+          <a href="mailto:info@yiyimeshbelt.com" class="foot-contact-a">
+            <svg class="fca-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            info@yiyimeshbelt.com
+          </a>
+          <a href="tel:+8613451773742" class="foot-contact-a">
+            <svg class="fca-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 9.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +86 134 5177 3742
+          </a>
+          <a href="https://wa.me/8613451773742" target="_blank" rel="noopener" class="foot-contact-a">
+            <svg class="fca-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            WhatsApp: +86 134 5177 3742
+          </a>
+        </div>
+        <a href="contact.html?intent=quote&source=belt-selection-guide" class="foot-btn-p">Request a Quote &#8594;</a>
+        <a href="contact.html?intent=drawing&source=belt-selection-guide" class="foot-btn-o">Send Your Belt Drawing &#8594;</a>
+
+        <div style="margin-top:24px">
+          <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8FA8C0;margin-bottom:12px;font-weight:600">CONNECT WITH US</div>
+          <div style="display:flex;gap:8px;align-items:stretch">
+            <a href="https://www.linkedin.com/company/yiyi-mesh-belt" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:64px;padding:10px 6px;border-radius:4px;text-decoration:none;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#0A66C2;transition:all .2s;" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A66C2" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;line-height:1;color:#6A9FCC">LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@yiyimeshbelt6684" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:64px;padding:10px 6px;border-radius:4px;text-decoration:none;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#FF0000;transition:all .2s;" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF0000" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+              <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;line-height:1;color:#CC7070">YouTube</span>
+            </a>
+            <a href="https://www.facebook.com/yiyimeshbelt" target="_blank" rel="noopener" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:64px;padding:10px 6px;border-radius:4px;text-decoration:none;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#1877F2;transition:all .2s;" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1877F2" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <span style="font-family:var(--font-mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;line-height:1;color:#6A9FCC">Facebook</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span class="foot-copy">&#169; 2026 YIYI MESH BELT. All rights reserved.</span>
+      <span class="foot-copy" style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <a href="privacy-policy.html" style="color:#8FA8C0;text-decoration:none;font-size:12px">Privacy Policy</a>
+        <span style="color:#4A6080">&#183;</span>
+        <span>ISO 9001 Certified &#183; Third-Party Factory Audit Welcome &#183; National High-Tech Enterprise</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<div class="wa-wrap">
+  <a href="https://wa.me/8613451773742" target="_blank">
+    <button class="wa-btn" aria-label="WhatsApp">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </button>
+  </a>
+</div>
+<script>
+function toggleMobile(){var m=document.getElementById("mob-menu"),b=document.getElementById("mob-btn");if(m)m.classList.toggle("open");if(b)b.classList.toggle("open");}
+function toggleFaq(btn){btn.parentElement.classList.toggle("open")}
+window.addEventListener("scroll",function(){var n=document.getElementById("yiyi-nav");if(n)n.classList.toggle("scrolled",window.scrollY>10);});
+var answers={};
+function selectAnswer(stepId,value){
+  var step=document.getElementById(stepId);
+  if(!step)return;
+  step.querySelectorAll(".sel-btn").forEach(function(b){b.classList.remove("active");});
+  var t=step.querySelector('[data-value="'+value+'"]');
+  if(t)t.classList.add("active");
+  answers[stepId]=value;
+  showNextStep(stepId);
+  updateResult();
+}
+function showNextStep(currentId){
+  var order=["step-temp","step-prod","step-load","step-drive"];
+  var idx=order.indexOf(currentId);
+  if(idx>=0 && idx<order.length-1){
+    var next=document.getElementById(order[idx+1]);
+    if(next)next.style.display="block";
+  }
+}
+function updateResult(){
+  var res=document.getElementById("sel-result");
+  if(!res)return;
+  var temp=answers["step-temp"],prod=answers["step-prod"];
+  if(!temp||!prod){res.style.display="none";return;}
+  res.style.display="block";
+  var load=answers["step-load"]||"normal",drive=answers["step-drive"]||"friction";
+  var rec=getRecommendation(temp,prod,load,drive);
+  document.getElementById("res-belt").textContent=rec.belt;
+  document.getElementById("res-grade").textContent="Recommended grade: "+rec.grade;
+  document.getElementById("res-reason").textContent=rec.reason;
+  var lnk=document.getElementById("res-link");
+  lnk.href=rec.href;lnk.textContent="View "+rec.belt+" &#8594;;
+  res.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+function getRecommendation(temp,prod,load,drive){
+  if(temp==="ultra-high")return{belt:"Balanced Weave Belt",grade:"SUS310S / SUS314",reason:"Temperatures above 900&#176;C require SUS310S or SUS314 high-alloy grade. Balanced weave open structure provides stable continuous duty in industrial furnaces and kilns.",href:"balanced-weave-belt.html"};
+  if(temp==="high"){
+    if(prod==="parts")return{belt:"Balanced Weave Belt",grade:"SUS310S / SUS314",reason:"Metal parts in heat treatment furnaces: balanced weave is the long-established industry standard. Select SUS310S or SUS314 for 800-1100&#176;C continuous service.",href:"balanced-weave-belt.html"};
+    return{belt:"Balanced Weave Belt",grade:"SUS304 / SUS314",reason:"High temperature conveying (600-900&#176;C): balanced weave open structure allows heat and gas circulation. Select grade to match peak temperature.",href:"balanced-weave-belt.html"};
+  }
+  if(prod==="biscuit")return{belt:"Rolled Baking Belt",grade:"SUS304",reason:"Biscuits and crackers demand an ultra-thin flat belt surface for dough stability at high speed. Rolled Baking Belt is the dedicated industry standard for tunnel oven biscuit lines.",href:"biscuit-belt.html"};
+  if(prod==="spiral")return{belt:"Spiral Freezer Belt",grade:"SUS304 / SUS316",reason:"Spiral freezer and proofing tower systems require a specialised self-stacking spiral belt engineered for helical travel path and continuous cold temperature operation.",href:"spiral-freezer-belt.html"};
+  if(prod==="curved")return{belt:"Trapezoidal Mesh Belt",grade:"SUS304 / SUS316",reason:"Curved and horizontal turning conveyors require trapezoidal spiral design that allows the belt to navigate bends without distortion.",href:"trapezoidal-mesh-belt.html"};
+  if(drive==="chain-plate")return{belt:"Chain Plate Belt",grade:"SUS304 / SUS316L",reason:"Solid surface required: liquid products, very small items, or high-pressure CIP wash. Chain plate provides flat enclosed surface with positive drive.",href:"chain-plate-belt.html"};
+  if(drive==="chain")return{b
+
+
+
+
+
+
+
+
+
+
+
+
+
